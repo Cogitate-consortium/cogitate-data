@@ -2,5 +2,5 @@
 
 ```
 sudo apt install ruby-full
-sudo gem install bundler
+sudo gem install bundler jekyll
 ```
