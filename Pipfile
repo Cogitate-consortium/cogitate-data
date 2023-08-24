@@ -5,12 +5,13 @@ name = "pypi"
 
 [packages]
 mkdocs = "*"
+mkdocs-material = "*"
+mkdocs-material-extensions = "*"
 
 [dev-packages]
-pytest = "*"
 mkdocs = "*"
-black = "*"
-flake8 = "*"
+mkdocs-material = "*"
+mkdocs-material-extensions = "*"
 
 [requires]
 python_version = "3.11"
