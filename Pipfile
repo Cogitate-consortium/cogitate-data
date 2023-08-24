@@ -7,6 +7,8 @@ name = "pypi"
 mkdocs = "*"
 mkdocs-material = "*"
 mkdocs-material-extensions = "*"
+mkdocs-windmill = "*"
+mkdocs-ivory = "*"
 
 [dev-packages]
 mkdocs = "*"

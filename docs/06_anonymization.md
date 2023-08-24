@@ -4,15 +4,13 @@ All data acquired was reviewed and anonymized. The anonymization scripts that we
 
 List of main procedures
 
-Defaced,
-
-ID datasets w/ PHI
-
-run scripts to anonymize [link to cogcurate]
-
-upload to XNAT
-
-Create bundles
+```
+- Defaced,
+- ID datasets w/ PHI
+- run scripts to anonymize [link to cogcurate]
+- upload to XNAT
+- Create bundles
+```
 
 Defacing numbers as of 07.08.2023
 
