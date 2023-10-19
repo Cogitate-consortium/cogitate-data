@@ -36,17 +36,12 @@ intracranial electroencephalography (iEEG, N=34).
 
 iEEG SOPs: New York University; Harvard University; Wisconsin University
 
-- 25 Subjects from each lab
-
-- Total: ca. 26 (is this still right?)
-
-- Measurements
-
-- SOPs
-
-- Techniques
-
-- etc.
+    - 25 Subjects from each lab
+    - Total: ca. 26 (is this still right?)
+    - Measurements
+    - SOPs
+    - Techniques
+    - etc.
 
 - Acquisition sites:
 
@@ -85,3 +80,6 @@ MEEG SOPs: Peking University; Birmingham University
 ## Eye tracking and Behavioral data acquisition
 
 All modalities acquired Eye Tracking and Behavioral data for Experiment 1 using …
+
+
+---

@@ -1,7 +1,8 @@
 site_name: Cogitate Data Release
 
 theme:
-    name: material
+    name: readthedocs
+
     palette:
         # Palette toggle for dark mode
         - scheme: slate
@@ -13,3 +14,5 @@ theme:
           toggle:
               icon: material/brightness-7
               name: Switch to dark mode
+    extra:
+        generator: false
