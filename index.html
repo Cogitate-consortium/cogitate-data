@@ -1,406 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Cogitate Data Release</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Welcome to the Cogitate Data Release Documentation";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.3">
-    
-    
-      
-        <title>Cogitate Data Release</title>
-      
-    
-    
-      <link rel="stylesheet" href="assets/stylesheets/main.0e669242.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.85d0ee34.min.css">
-      
-      
+<body class="wy-body-for-nav" role="document">
 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Cogitate Data Release
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
 
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
-  
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#welcome-to-the-cogitate-data-release-documentation" class="md-skip">
-          Skip to content
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Cogitate Data Release" class="md-header__button md-logo" aria-label="Cogitate Data Release" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Cogitate Data Release
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Welcome to the Cogitate Data Release Documentation
-            
-          </span>
-        </div>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Welcome to the Cogitate Data Release Documentation</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="01_intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="02_subjects/">Subjects</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="03_experiments/">Experiments</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="04_data/">Data description</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="05_acquisition/">Acquisition Modalities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="06_data_curation/">Data Curation Procedures</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="07_access/">Access COGITATE data</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="08_tutorials/">Tutorials and Examples</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="09_next/">Next steps</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="10_support/">Support</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="11_appendix/">Appendix</a>
+                </li>
+              </ul>
       </div>
     </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Cogitate Data Release</a>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
       </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">Welcome to the Cogitate Data Release Documentation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="welcome-to-the-cogitate-data-release-documentation">Welcome to the Cogitate Data Release Documentation</h1>
+<p><img alt="" src="https://slabstatic.com/prod/uploads/e7s1u9rt/posts/images/YhCPpII6QTj1tIubvGw378Ea.png" /></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>Kahraman, K., Sripad, P., Brown, T., Melloni, L., Bonacchi, N.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Editor(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>April, 2023</td>
+<td>Kahraman, K., Sripad, P., Brown, T., Melloni, L., Bonacchi, N.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Scraps</p>
+<p>Intro to Cogitate goal and experiment [link to website]</p>
+<p>→ What is in the release</p>
+<p>Data release description</p>
+<p>→ Subjects &amp; Modalities</p>
+<p>→ Format of the release (Database &amp; archival format)</p>
+<p>→ Raw / BIDS / sample_data for analysis repro</p>
+<p>→ Link to Bundles</p>
+<p>Miscellaneous</p>
+<p>→ SOPs</p>
+<p>→ Anonymization</p>
+<p>Examples and Tutorials</p>
+<p>Processing Tools</p>
+<ol>
+<li>Matlab and Python code used to analyze or pre-process the data</li>
+<li>Any MRI pulse sequences (binaries) developed and used to acquire the data</li>
+<li>All (de-identified, PHI removed and defaced) MRI, neurophysiological, eye tracking and behavioral data adhering to the FAIR principle. The FAIR Data Principles refer to a set of guidelines to make data findable, accessible, interoperable and reusable (Wilkinson et al., 2016). Specifically, all data will be transformed to Brain Imaging Data Structure BIDS format (<a href="https://www.google.com/url?q=http://bids.neuroimaging.io/&amp;sa=D&amp;source=editors&amp;ust=1691514940855904&amp;usg=AOvVaw1UB9wRRG9UEgUU64qFERxY">http://bids.neuroimaging.io</a>) and all metadata will be made available.</li>
+<li>Data will be converted to shareable data formats (BIDS).</li>
+</ol>
+<p>The neurophysiological recordings (clinical ECoG and experimental electrodes), relevant task data, electrode coordinates in MNI space and essential, de-identified clinical data using NINDS Common Data Elements (age, sex, duration of epilepsy, epilepsy etiology, preoperative imaging findings) and schematics of seizure onset areas will also be made available.</p>
+<p>In order to access or download files containing behavioral, eye tracking, neurophysiological or MRI data, users will have to register. As they register, they will agree to restrictions against attempting to identify study participants, restrictions on redistribution of the data to third parties, and to properly acknowledge the data resource.<a href="#cmnt5">[e]</a></p>
+<p>This document provides information and guidance on how to use data released by the TWCF COGITATE Project consortium.</p>
+<p>The COGITATE Project aimed to study …</p>
+<p>Given the richness of the COGITATE datasets and their utility for a wide range of research purposes, it is important that potential users understand what data are currently released, how the datasets are organized, how they can be accessed, what has changed since the last releases ….</p>
+<p>(copied by HCP 1200 Subjects data release for orientation)</p>
+<p>Final COGITATE Study Overall Totals:</p>
+<p>X subjects with XY Modality</p>
+<p>COGITATE subjects include</p>
+<p>X</p>
+<p>This data release included behavioral measures, eye tracking, fMRI and M-EEG data on subjects collected in the COGITATE production data phase (YEAR-YEAR) including unprocessed (raw defaced), pre-processed and final processed fMRI etc. pp.</p>
+<p>fMRI data</p>
+<ul>
+<li>
+<p>50 Subjects from each lab</p>
+</li>
+<li>
+<p>Total: 122</p>
+</li>
+<li>
+<p>Measurements?</p>
+</li>
+<li>
+<p>Techniques?</p>
+</li>
+<li>
+<p>Acquisition sites:</p>
+</li>
+<li>
+<p>Donders Center for Cognitive Neuroimaging (DCCN)</p>
+</li>
+<li>
+<p>Yale Magnetic Resonance Research Center (MRRC) SOP: <a href="https://twcf-arc.slab.com/posts/kpb18fmw#h1f9d-yale">Standard Operating Procedures</a></p>
+</li>
+</ul>
+<p>data acqusition:</p>
+<p>Anatomical and functional MRI data were acquired on two 3T Prisma scanners (Siemens, Erlangen, Germany), using 32-channel head coils. Anatomical images were acquired using a T1-weighted magnetization prepared rapid gradient echo sequence (MP-RAGE; GRAPPA acceleration factor = 2, TR/TE = 2300/3.03 ms, voxel size 1 mm isotropic, 8° flip angle). Functional images were acquired using a whole-brain T2-weighted multiband-4 sequence (time repetition [TR] / time echo [TE] = 1500/39.6 ms, 68 slices, voxel size 2 mm isotropic, 75° flip angle, A/P phase encoding direction, FOV = 210 mm, BW = 2090 Hz/Px). In addition, a single band reference image was acquired before each run. To allow for signal stabilization, the first three volumes of each run were discarded. Additional scans using the same T2-weighted sequence, but with inverted phase encoding direction (inverted RO/PE polarity), were collected at multiple points throughout the experiments.</p>
+<p>data preprocessing:</p>
+<p>Source DICOM data was converted to a BIDS compliant dataset using BIDScoin v3.6.3 (https://bidscoin.readthedocs.io). This includes converting DICOM data to nifti using dcm2niix (Li et al., 2016, PMID: 26945974) and creating event files using custom Python (Python Software Foundation, RRID:SCR_008394) code. BIDS compliance of the resulting dataset was controlled using BIDS-Validator (https://doi.org/10.5281/zenodo.3688707). Subsequently, MRI data quality control was performed using MRIQC (Esteban et al., 2017) and custom scripts for data rejection. All (f)MRI data was preprocessed using fMRIPrep 20.2.3 (Esteban, Markiewicz, et al. (2018); Esteban, Blair, et al. (2018); RRID:SCR_016216), based on Nipype 1.6.1 (Gorgolewski et al. (2011); Gorgolewski et al. (2018); RRID:SCR_002502). In addition, analysis specific preprocessing was performed using FSL 6.0.2 (FMRIB Software Library; Oxford, UK; Smith et al., 2004, RRID:SCR_002823) and custom Python scripts using the following packages: NumPy XX (van der Walt et al., 2011, RRID:SCR_008633), Pandas XX (McKinney et al., 2010) NiBabel XX (https://doi.org/10.5281/zenodo.4295521), SciPy XX (Jones et al., 2001, RRID:SCR_008058), Matplotlib XX (Hunter, 2007, RRID:SCR_008624), Scikit-learn XX (Pedregosa et al., 2011, RRID:SCR_002577).</p>
+<p>COPY PASTED THE DOC “fMRI_data_workflow_and_analyses” FROM KEEPER/GOOGLE DRIVE</p>
+<p>fMRI data quality control:</p>
+<p>MRI data quality was screened using MRIQC (Esteban et al., 2017). Visual inspection of (f)MRI data was performed on the visual reports output by MRIQC and datasets with artifacts or other indicators of low data quality flagged by a trained observer, not involved in the MRI data acquisition. If the detected problems with data quality were judged severe enough to warrant potential exclusion, data was inspected by an additional observer. In total XX datasets were excluded due to low-quality. Quantitative data rejection. Additionally, fMRI datasets with excessive motion or subpar signal quality were rejected using the image quality metrics reported by MRIQC. The percentage of fMRI volumes that exceeded a thresholded of 0.2mm framewise displacement (fd_perc) was calculated per run and then averaged across runs per MRI session. Similarly, the DVARS (Power et al., 2012; dvars_nstd) was extracted per run and then averaged for each session. Finally, each MRI session that showed 2SD above the group mean on percentage framewise displacement or DVARS was rejected from all MRI data analysis. This resulted in an additional exclusion of XX MRI datasets.</p>
+<p>Anatomical data preprocessing:</p>
+<p>Per participant, the T1-weighted (T1w) image was corrected for intensity non-uniformity (INU) with N4BiasFieldCorrection (Tustison et al. 2010), distributed with ANTs 2.3.3 (Avants et al. 2008, RRID:SCR_004757), and used as T1w-reference throughout the workflow. The T1w-reference was then skull-stripped with a Nipype implementation of the antsBrainExtraction.sh workflow (from ANTs), using OASIS30ANTs as target template. Brain tissue segmentation of cerebrospinal fluid (CSF), white-matter (WM) and gray-matter (GM) was performed on the brain-extracted T1w using fast (FSL 5.0.9, RRID:SCR_002823, Zhang, Brady, and Smith 2001). Brain surfaces were reconstructed using recon-all (FreeSurfer 6.0.1, RRID:SCR_001847, Dale, Fischl, and Sereno 1999), and the brain mask estimated previously was refined with a custom variation of the method to reconcile ANTs-derived and FreeSurfer-derived segmentations of the cortical gray-matter of Mindboggle (RRID:SCR_002438, Klein et al. 2017). Volume-based spatial normalization to one standard space (MNI152NLin2009cAsym) was performed through nonlinear registration with antsRegistration (ANTs 2.3.3), using brain-extracted versions of both T1w reference and the T1w template. The following template was selected for spatial normalization: ICBM 152 Nonlinear Asymmetrical template version 2009c [Fonov et al. (2009), RRID:SCR_008796; TemplateFlow ID: MNI152NLin2009cAsym],</p>
+<p>Functional data preprocessing:</p>
+<p>For each of the fMRI BOLD runs per subject, the following preprocessing was performed. First, a reference volume and its skull-stripped version were generated using a custom methodology of fMRIPrep. A B0-nonuniformity map (or fieldmap) was estimated based on two (or more) echo-planar imaging (EPI) references with opposing phase-encoding directions, with 3dQwarp Cox and Hyde (1997) (AFNI 20160207). Based on the estimated susceptibility distortion, a corrected EPI (echo-planar imaging) reference was calculated for a more accurate co-registration with the anatomical reference. The BOLD reference was then co-registered to the T1w reference using bbregister (FreeSurfer) which implements boundary-based registration (Greve and Fischl 2009). Co-registration was configured with six degrees of freedom. Head-motion parameters with respect to the BOLD reference (transformation matrices, and six corresponding rotation and translation parameters) are estimated before any spatiotemporal filtering using mcflirt (FSL 5.0.9, Jenkinson et al. 2002). The BOLD time-series (without slice-timing correction) were resampled onto their original, native space by applying a single, composite transform to correct for head-motion and susceptibility distortions. These resampled BOLD time-series will be referred to as preprocessed BOLD in original space, or just preprocessed BOLD. The BOLD time-series were resampled into standard space, generating a preprocessed BOLD run in MNI152NLin2009cAsym space. Several confounding time-series were calculated based on the preprocessed BOLD: framewise displacement (FD), DVARS and three region-wise global signals. FD was computed using two formulations following Power (absolute sum of relative motions, Power et al. (2014)) and Jenkinson (relative root mean square displacement between affines, Jenkinson et al. (2002)). FD and DVARS are calculated for each functional run, both using their implementations in Nipype (following the definitions by Power et al. 2014). The three global signals are extracted within the CSF, the WM, and the whole-brain masks. Additionally, a set of physiological regressors were extracted to allow for component-based noise correction (CompCor, Behzadi et al. 2007). Principal components are estimated after high-pass filtering the preprocessed BOLD time-series (using a discrete cosine filter with 128s cut-off) for the two CompCor variants: temporal (tCompCor) and anatomical (aCompCor). tCompCor components are then calculated from the top 2% variable voxels within the brain mask. For aCompCor, three probabilistic masks (CSF, WM and combined CSF+WM) are generated in anatomical space. The implementation differs from that of Behzadi et al. in that instead of eroding the masks by 2 pixels on BOLD space, the aCompCor masks are subtracted a mask of pixels that likely contain a volume fraction of GM. This mask is obtained by dilating a GM mask extracted from the FreeSurfer’s aseg segmentation, and it ensures components are not extracted from voxels containing a minimal fraction of GM. Finally, these masks are resampled into BOLD space and binarized by thresholding at 0.99 (as in the original implementation). Components are also calculated separately within the WM and CSF masks. For each CompCor decomposition, the k components with the largest singular values are retained, such that the retained components’ time series are sufficient to explain 50 percent of variance across the nuisance mask (CSF, WM, combined, or temporal). The remaining components are dropped from consideration. The head-motion estimates calculated in the correction step were also placed within the corresponding confounds file. The confound time series derived from head motion estimates and global signals were expanded with the inclusion of temporal derivatives and quadratic terms for each (Satterthwaite et al. 2013). Frames that exceeded a threshold of 0.5 mm FD or 1.5 standardised DVARS were annotated as motion outliers. All resamplings can be performed with a single interpolation step by composing all the pertinent transformations (i.e. head-motion transform matrices, susceptibility distortion correction when available, and co-registrations to anatomical and output spaces). Gridded (volumetric) resamplings were performed using antsApplyTransforms (ANTs), configured with Lanczos interpolation to minimize the smoothing effects of other kernels (Lanczos 1964). Non-gridded (surface) resamplings were performed using mri_vol2surf (FreeSurfer).</p>
+<p>What is missing? What should go somewhere else?</p>
+<p>iEEG (ECoG) data</p>
+<ul>
+<li>
+<p>25 Subjects from each lab</p>
+</li>
+<li>
+<p>Total: ca. 26 (is this still right?)</p>
+</li>
+<li>
+<p>Measurements</p>
+</li>
+<li>
+<p>SOPs</p>
+</li>
+<li>
+<p>Techniques</p>
+</li>
+<li>
+<p>etc.</p>
+</li>
+<li>
+<p>Acquisition sites:</p>
+</li>
+<li>
+<p>Harvard University at Boston Children's Hospital</p>
+</li>
+<li>
+<p>Brigham and Women's Hospital</p>
+</li>
+<li>
+<p>New York University Langone (NYU)</p>
+</li>
+<li>
+<p>University of Wisconsin</p>
+</li>
+</ul>
+<p>= LINK HERE INFORMATION FROM OTHER SLAB POSTS</p>
+<p>MEEG data</p>
+<ul>
+<li>
+<p>50 Subjects from each lab</p>
+</li>
+<li>
+<p>Total: 102</p>
+</li>
+<li>
+<p>measurements</p>
+</li>
+<li>
+<p>SOPs</p>
+</li>
+<li>
+<p>Techniques</p>
+</li>
+<li>
+<p>etc.</p>
+</li>
+<li>
+<p>Acquisition sites:</p>
+</li>
+<li>
+<p>University of Birmingham's Centre for Human Brain Health (CHBH)</p>
+</li>
+<li>
+<p>Peking University (PKU)</p>
+</li>
+</ul>
+<p>= LINK HERE INFORMATION FROM OTHER SLAB POSTS</p>
+<p>= 550 Datasets total</p>
+<p>→ Eye tracking in all modalities (all sites have same eye tracker except NYU) NOT SURE HOW TO HANDLE INFORMATION/WHERE TO PUT</p>
+<p>→ Behavior data should get a separate section</p>
+<p>SUMMARY SUBJECTS INFO [graphs?]</p>
+<ul>
+<li>
+<p>Age</p>
+</li>
+<li>
+<p>Gender</p>
+</li>
+<li>
+<p>Dominant Hand</p>
+</li>
+<li>
+<p>Eye dominance</p>
+</li>
+<li>
+<p>Visual acuity (eye chart results, 20/20, 20/30, 20/40, etc.)</p>
+</li>
+<li>
+<p>No glasses, glasses, contact lenses</p>
+</li>
+<li>
+<p>Dioptre for both eyes for subject wearing glasses or contact lenses (if known)</p>
+</li>
+<li>
+<p>Colour blindness</p>
+</li>
+<li>
+<p>Auditory sensitivity</p>
+</li>
+<li>
+<p>Level of education</p>
+</li>
+<li>
+<p>Ethnicity</p>
+</li>
+<li>
+<p>Primary language</p>
+</li>
+<li>
+<p>Secondary language</p>
+</li>
+</ul>
+<p><img alt="" src="https://slabstatic.com/prod/uploads/e7s1u9rt/posts/images/QtoiUtFOUy6u5AOQKUg6cnFL.png" /></p>
+<p>COGITATE Data Release                         <a href="https://www.google.com/url?q=https://arc-cogitate.com/&amp;sa=D&amp;source=editors&amp;ust=1691514940871202&amp;usg=AOvVaw2NtPywRBEu9N1JyNNm13g7">arc-cogitate.com</a></p>
+<p><img alt="" src="https://docs.google.com/drawings/d/sgVDJLdgJUqzBLj6OP88ybQ/image?parent=14XIQaL1khTwJhSfXDwW4xQi8GbSfqZc16-irY4wpoBI&amp;rev=1&amp;drawingRevisionAccessToken=4qgMPAnNt8xA2w&amp;h=2&amp;w=639&amp;ac=1" /></p>
+<p><a href="#cmnt_ref1">[a]</a>MAybe add summary graphs for subjects demographics. Do we have these?</p>
+<p><a href="#cmnt_ref2">[b]</a><em>Marked as resolved</em></p>
+<p><a href="#cmnt_ref3">[c]</a><em>Re-opened</em></p>
+<p><a href="#cmnt_ref4">[d]</a>to each release type</p>
+<p><a href="#cmnt_ref5">[e]</a>Review this and put it in the intro/description</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="01_intro/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
         </div>
       </div>
-    </div>
+
+    </section>
+
   </div>
-</div>
-    
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
 
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="." title="Cogitate Data Release" class="md-nav__button md-logo" aria-label="Cogitate Data Release" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
-
-    </a>
-    Cogitate Data Release
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
     
-      
-      
-  
-  
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Welcome to the Cogitate Data Release Documentation
+    
+      <span><a href="01_intro/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
   </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Welcome to the Cogitate Data Release Documentation
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-<h1 id="welcome-to-the-cogitate-data-release-documentation">Welcome to the Cogitate Data Release Documentation</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="assets/javascripts/bundle.78eede0e.min.js"></script>
-      
-    
-  </body>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
 </html>
+
+<!--
+MkDocs version : 1.5.2
+Build Date UTC : 2023-10-19 11:50:29.011443+00:00
+-->
