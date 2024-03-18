@@ -1,3 +1,0 @@
-The xlsx companion file contains the curated demographic information of all Cogitate subjects.
-
-2024-01-15_subjects_demographics_msp1_curated.xlsx
