@@ -1,27 +1,23 @@
 # Introduction
 
-[COGITATE](https://www.arc-cogitate.com/) is a groundbreaking endeavor within Open Science, featuring a pre-registered adversarial collaboration aimed at resolving the debate between two prominent theories of consciousness: Integrated Information Theory (IIT) and Global Neuronal Workspace theory (GNW). This initiative encompasses eleven distinct research institutions spanning three continents, utilizing three distinct neuroimaging methods in human neuroscience—fMRI, M-EEG, and iEEG—across an extensive cohort of human volunteers and patients. A comprehensive outline of Experiment 1 is available in our **[pre-registration document](https://osf.io/gm3vd)**, **[preprint manuscript](https://www.biorxiv.org/content/10.1101/2023.06.23.546249v2)**, and forthcoming publication.
+This document provides guidance and detailed information on the datasets released by COGITATE, how to access them, the directory structure, and a description on various types of data acquired for each modality.
 
-        TODO:
-        - CODE Release [**[link to MSP-1 repo](https://github.com/Cogitate-consortium/cogitate-msp1)**] explain here, if too big add chapter at end
+## Updates
 
-### **[Access COGITATE data](/docs/07_access.md)**
+This is the first version (V1.0) of the COGITATE data release document. New updates or any changes to the previous versions will be announced here, and as a versioned document [here](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/MEEG-DR-doc_2024-03-18_v1.0.pdf) as well.
 
-The primary objective of this data release is to provide a comprehensive dataset that will enable further research in the field of consciousness studies. By making our data publicly available, we aim to foster transparency, encourage reproducibility, and facilitate collaborative efforts in unraveling the complexities of human consciousness.
+In V1.0, we released a subset of magnetoencephalography (MEG) data (batch 1) in the Brain Imaging Data Structure ([BIDS](https://bids-specification.readthedocs.io/en/stable/)) format. It includes data from 48 subjects who participated in Experiment 1, packaged in a Bundle format.
 
-This data release encompasses a wide array of data types, including but not limited to:
+**The demography of subjects for this release can be found in an excel document [here](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/2024-03-18_cog_meeg_exp1_batch1_bids.xlsx).**
 
+## Future Releases
 
+Here are the items that will be released soon:
 
-* Behavioral Data
-* Eye Tracking Data
-* Neurophysiological Data
-* MRI Data
+### Experiment 1
 
-For a detailed description of each data type and its corresponding file formats, please refer to the "Data Description" and "File Type Glossary" sections. 
+* BIDS format of the rest of the M-EEG data along with the unprocessed/raw data
+* Unprocessed/raw and BIDS format of fMRI and iEEG data
 
-The dataset is intended for use by researchers, clinicians, and data scientists interested in the study of consciousness.
-
-Users are required to register to access or download data. By registering, users agree to restrictions against attempting to identify study participants and redistributing the data to third parties. Proper acknowledgment of the data resource is also mandatory.
-
-We would like to extend our gratitude to all team members and participants who have made this study and data release possible.
+<span style="background-color: red"><b>Attention:</b></span>
+**M-EEG, MEEG, M/EEG, MEG/EEG or MEG might be used interchangeably throughout this document or the name of data folders, but all of them pertain to a singular data. This also applies to iEEG and ECoG (Electrocorticography).**
