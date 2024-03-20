@@ -62,9 +62,9 @@ COG_MEEG_EXP1_RELEASE/
         └── CB036__MR/                          # MR anatomical scan data (fif)
 ```
 
-### BIDS Format
+## BIDS Format
 
-#### BIDS M-EEG Data Directory Structure
+### BIDS M-EEG Data Directory Structure
 
 ```bash
 COG_MEEG_EXP1_BIDS_RELEASE/
