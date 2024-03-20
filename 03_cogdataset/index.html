@@ -106,6 +106,8 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#eye-tracking">Eye Tracking</a>
     </li>
+    <li class="toctree-l4"><a class="reference internal" href="#behavioral-data-code-scheme">Behavioral Data Code Scheme</a>
+    </li>
     <li class="toctree-l4"><a class="reference internal" href="#eye-tracker-and-meg-trigger-scheme">Eye Tracker and MEG Trigger Scheme</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#empty-room-recording">Empty Room Recording</a>
@@ -136,7 +138,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../06_Experiment1/">Experiment 1: Directory Structure of Data Bundles</a>
+                <li class="toctree-l1"><a class="reference internal" href="../06_experiment1/">Experiment 1: Directory Structure of Data Bundles</a>
                 </li>
               </ul>
               <ul>
@@ -187,10 +189,10 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="cogitate-dataset">COGITATE Dataset</h1>
-<p>The COGITATE dataset is a comprehensive collection of multimodal neuroimaging data, encompassing a total of 256 subjects. COGITATE employs three distinct neuroimaging techniques: fMRI, M-EEG, and iEEG/ECoG.</p>
+<p>The COGITATE dataset is a comprehensive collection of multimodal neuroimaging data, encompassing a total of 266 subjects. COGITATE employs three distinct neuroimaging techniques: fMRI, M-EEG, and iEEG/ECoG.</p>
 <p>The MEG modality comprised 102 healthy subjects, also above the age of 18, with no known psychiatric or neurological issues. These participants were sourced from the Centre for Human Brain Health at the University of Birmingham (Birmingham, United Kingdom) and the Center for MRI Research of Peking University (Beijing, China).</p>
 <p>Similarly, the fMRI modality included 120 healthy volunteers, all of whom were above the age of 18 and predominantly right-handed. These participants had no known history of psychiatric or neurological disorders and were recruited from the Yale Magnetic Resonance Research Center (New Haven, CT, United States) and the Donders Centre for Cognitive Neuroimaging (Nijmegen, Netherlands).</p>
-<p>In contrast, the iEEG modality involved a more specialized cohort of 34 patients diagnosed with pharmaco-resistant focal epilepsy. These participants ranged in age from 10 to 65 years, had an IQ above 70, and met specific health criteria. They were recruited from multiple medical centers specializing in epilepsy treatment, including the Comprehensive Epilepsy Center at New York University (New York, NY, United States), Brigham and Women’s Hospital, Boston Children’s Hospital (Boston, MA, United States), and the University of Wisconsin School of Medicine and Public Health (Madison, WI, United States).</p>
+<p>In contrast, the iEEG modality involved a more specialized cohort of 44 patients diagnosed with pharmaco-resistant focal epilepsy. These participants ranged in age from 10 to 65 years, had an IQ above 70, and met specific health criteria. They were recruited from multiple medical centers specializing in epilepsy treatment, including the Comprehensive Epilepsy Center at New York University (New York, NY, United States), Brigham and Women’s Hospital, Boston Children’s Hospital (Boston, MA, United States), and the University of Wisconsin School of Medicine and Public Health (Madison, WI, United States).</p>
 <p><strong>Age Histograms across Modalities</strong>
 <img alt="Cogitate subjects age distribution" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/age_distribution.png" /></p>
 <p><strong>Sex Proportions across Modalities</strong>
@@ -198,11 +200,11 @@
 <p><strong>Handedness Proportions across Modalities</strong>
 <img alt="Cogitate subjects age distribution" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/hand_distribution.png" /></p>
 <h2 id="demography-of-subjects">Demography of Subjects</h2>
-<p>You can find the profile of participants for all modalities at <a href="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/2024-03-18_cog_meeg_exp1_batch1_bids.xlsx">subjects_demography</a>. Here is a brief explanation about the information collected from the subjects.</p>
+<p>You can find the profile of participants for all modalities at <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/2024-01-15_subjects_demographics_msp1_curated.xlsx">subjects_demography</a>. Here is a brief explanation about the information collected from the subjects.</p>
 <h3 id="demographic-information-for-m-eeg"><strong>Demographic Information for M-EEG</strong></h3>
 <p>The below items are included in the subjects’ demography for M-EEG modality:</p>
 <p>Participant_ID (participant identifier), sex (biological sex of participant), age (age of participant at the time of testing), handedness (right, left or ambidextrous), included in <a href="https://doi.org/10.1371/journal.pone.0268577">MSP</a> (whether the data was used for the experiments or not), phase* (determining in which stage the data is, phase 2/phaseII (optimization) or phase 3/phaseIII (replication)), QC** status (passed/not), if Not (in QC status) QC rejection reason, weight (weight of participant at the time of study in pounds), height (height of participant at the time of study in inches), primary and secondary language, race (ethnicity of the participant), education, compensation (whether the subject was paid or not), colorblind (determining whether the subject can distinguish the colors and perceiving them correctly or not), visual correction (none or using any glasses or contact lenses), eye dominance (which eye is dominant), eye chart results (the outcome of a visual acuity test performed using the eye chart) and dioptry (visual acuity of the participant in Diopters).</p>
-<p>*<strong>Phase:</strong> COGITATE project has three phases. In <strong>phase 1</strong>, all data were acquired by theory neutral teams. To ensure replicability of the results, the entire dataset was split into two halves, each with an equal mixture of data from each of the labs for each modality. In <strong>phase 2</strong>, after evaluating data quality, the first half of the data were used for developing analysis tools (optimization of methods). The purpose of <strong>phase 2</strong>was to define the best analysis practices and to agree upon, in consultation with expert advisors. In <strong>phase 3</strong>, the replication phase, the second half of the data were analyzed using the concurred procedure, agreed upon protocols, thereby allowing an in-house replication of the results obtained in phase 2.</p>
+<p>*<strong>Phase:</strong> COGITATE project has three phases. In <strong>phase 1</strong>, all data were acquired by theory neutral teams. To ensure replicability of the results, the entire dataset was split into two halves, each with an equal mixture of data from each of the labs for each modality. In <strong>phase 2</strong>, after evaluating data quality, the first half of the data were used for developing analysis tools (optimization of methods). The purpose of <strong>phase 2</strong> was to define the best analysis practices and to agree upon, in consultation with expert advisors. In <strong>phase 3</strong>, the replication phase, the second half of the data were analyzed using the concurred procedure, agreed upon protocols, thereby allowing an in-house replication of the results obtained in phase 2.</p>
 <p>*<strong>*QC (quality control):</strong> A number of items were checked for all the data of each modality which are elaborated in the section of <a href="#quality-check">Quality Check</a> and <a href="#exclusion-criteria">Exclusion Criteria</a>.</p>
 <h3 id="demographic-information-for-fmri"><strong>Demographic Information for fMRI</strong></h3>
 <p>All of the items are similar to the M-EEG modality.</p>
@@ -221,9 +223,9 @@
 <li>BIDS Format</li>
 </ol>
 <h3 id="1-unprocessedraw-data"><strong>1. Unprocessed/Raw Data</strong></h3>
-<p>The unprocessed data format closely resembles the original acquired data, having undergone <a href="#description-of-cogitate-data">minimal processing</a> to ensure compliance with <a href="https://gdpr-info.eu">GDPR</a> (General Data Protection Regulation)/<a href="https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html">HIPAA</a> (Health Insurance Portability &amp; Accountability Act) anonymity standards.</p>
+<p>The unprocessed data format closely resembles the original acquired data, having undergone minimal processing to ensure compliance with <a href="https://gdpr-info.eu">GDPR</a> (General Data Protection Regulation)/<a href="https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html">HIPAA</a> (Health Insurance Portability &amp; Accountability Act) anonymity standards.</p>
 <h3 id="2-bids-format"><strong>2. BIDS Format</strong></h3>
-<p>BIDS format, widely adopted in cognitive neuroscience, enhances data reusability. To facilitate others in leveraging our data, we have released it in <a href="https://bids-specification.readthedocs.io/en/stable/">BIDS</a> format. The conversion scripts employed to transform the raw data into BIDS format can be accessed via <a href="https://github.com/Cogitate-consortium/cogcurate/tree/main/bids">this link</a>.</p>
+<p>BIDS format, widely adopted in cognitive neuroscience, enhances data reusability. To facilitate others in leveraging our data, we have released it in <a href="https://bids-specification.readthedocs.io/en/stable/">BIDS</a> format.</p>
 <h3 id="file-type-glossary"><strong>File type glossary</strong></h3>
 <p>Here are the various file formats used for each modality of the COGITATE dataset along with a short description of them.</p>
 <h4 id="eye-tracking-behavioral-data"><strong>Eye Tracking &amp; Behavioral Data</strong></h4>
@@ -278,7 +280,7 @@
 <li>Sensor locations and orientations: Information about the physical positions and orientations of sensors used in the measurements.</li>
 <li>Head geometry: Information about the shape and structure of the subject's head, which is crucial for accurate source localization.</li>
 <li>Covariance matrices: Statistical information about the relationships between sensor measurements at different time points or frequencies.</li>
-<li>Anatomical MRI data: High-resolution structural images of the subject's brain, used for source localization and spatial alignment.|</li>
+<li>Anatomical MRI data: High-resolution structural images of the subject's brain, used for source localization and spatial alignment.</li>
 </ol>
 <h2 id="data-acquisition">Data Acquisition</h2>
 <p>The Cogitate dataset encompasses three distinct neuroimaging modalities, along with synchronized eye-tracking and behavioral data linked to each of these modalities. Here we detail the acquisition protocol for each modality in the corresponding data release: M-EEG</p>
@@ -307,6 +309,12 @@ Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
 <p>Visual stimuli were presented on a screen placed in front of the subjects with a PROPixx DLP LED projector (VPixx Technologies Inc.) at a resolution of 1920 x 1080 pixels and a refresh rate of 120 Hz. The distance between the subject’s eyes and the screen was different at each site (CHBH: 119 cm, PKU: 85 cm) to achieve the same FOV of 36.6 x 21.2 degrees.</p>
 <h4 id="eye-tracking">Eye Tracking</h4>
 <p>Eye movements were monitored and recorded from both eyes (binocular eye-tracking) using the MEG-compatible EyeLink 1000 Plus eye-tracker (SR Research Ltd., Ottawa, Canada). Nine-point calibration was performed at the beginning of the experiment, and recalibrated if necessary at the beginning of each block/word. Pupil size and corneal reflection data were collected at a sampling rate of 1000 Hz.</p>
+<h4 id="behavioral-data-code-scheme">Behavioral Data Code Scheme</h4>
+<p>Stimuli are coded as a 4-digit number.<br />
+1st digit = stimulus type (1 = face; 2 = object; 3 = letter; 4 = false font)<br />
+2nd digit = stimulus orientation (1 = center; 2 = left; 3 = right)<br />
+3rd &amp; 4th digits = stimulus id (1...20; for faces 1...10 is male, 11...20 is female)  </p>
+<p>e.g., "1219" = 1 is face, 2 is left orientation and 19 is a female stimulus #19</p>
 <h4 id="eye-tracker-and-meg-trigger-scheme">Eye Tracker and MEG Trigger Scheme</h4>
 <p>The channel name that contains the eye tracker data in the FIF file is as follows: MISC1 (X), MISC2 (Y), and MISC3 (pupil)</p>
 <h5 id="defining-some-terms"><strong>Defining some terms</strong></h5>

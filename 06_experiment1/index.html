@@ -13,7 +13,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "Experiment 1: Directory Structure of Data Bundles";
-        var mkdocs_page_input_path = "06_Experiment1.md";
+        var mkdocs_page_input_path = "06_experiment1.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -70,11 +70,11 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#raw-m-eeg-data-directory-structure">Raw M-EEG Data Directory Structure</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#bids-format">BIDS Format</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#bids-m-eeg-data-directory-structure">BIDS M-EEG Data Directory Structure</a>
-    </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bids-format">BIDS Format</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#bids-m-eeg-data-directory-structure">BIDS M-EEG Data Directory Structure</a>
     </li>
         </ul>
     </li>
@@ -185,8 +185,8 @@
         ├── CB036_Rnoise_MEEG/                  # MEEG data collected during Rnoise task (fif)
         └── CB036__MR/                          # MR anatomical scan data (fif)
 </code></pre>
-<h3 id="bids-format">BIDS Format</h3>
-<h4 id="bids-m-eeg-data-directory-structure">BIDS M-EEG Data Directory Structure</h4>
+<h2 id="bids-format">BIDS Format</h2>
+<h3 id="bids-m-eeg-data-directory-structure">BIDS M-EEG Data Directory Structure</h3>
 <pre><code class="language-bash">COG_MEEG_EXP1_BIDS_RELEASE/
 |-- dataset_description.json           # Contains information on BIDS version, type of dataset  
 |-- derivatives                           # Contains processed or derived data generated from raw data  
