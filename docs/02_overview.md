@@ -46,7 +46,7 @@ This experiment followed a 3x3x4x2 factorial design, with the following items:
 
 #### Sample Size
 
-The sample sizes were determined based on common practices in the literature, resulting in a total of 120 subjects for fMRI, 102 for M-EEG, and 34 for iEEG. All subjects met specific criteria, including age and health conditions, to ensure data quality.
+The sample sizes were determined based on common practices in the literature, resulting in a total of 120 subjects for fMRI, 102 for M-EEG, and 44 for iEEG. All subjects met specific criteria, including age and health conditions, to ensure data quality.
 
 #### Task Description
 

@@ -1,12 +1,12 @@
 # COGITATE Dataset
 
-The COGITATE dataset is a comprehensive collection of multimodal neuroimaging data, encompassing a total of 256 subjects. COGITATE employs three distinct neuroimaging techniques: fMRI, M-EEG, and iEEG/ECoG.
+The COGITATE dataset is a comprehensive collection of multimodal neuroimaging data, encompassing a total of 266 subjects. COGITATE employs three distinct neuroimaging techniques: fMRI, M-EEG, and iEEG/ECoG.
 
 The MEG modality comprised 102 healthy subjects, also above the age of 18, with no known psychiatric or neurological issues. These participants were sourced from the Centre for Human Brain Health at the University of Birmingham (Birmingham, United Kingdom) and the Center for MRI Research of Peking University (Beijing, China).
 
 Similarly, the fMRI modality included 120 healthy volunteers, all of whom were above the age of 18 and predominantly right-handed. These participants had no known history of psychiatric or neurological disorders and were recruited from the Yale Magnetic Resonance Research Center (New Haven, CT, United States) and the Donders Centre for Cognitive Neuroimaging (Nijmegen, Netherlands).
 
-In contrast, the iEEG modality involved a more specialized cohort of 34 patients diagnosed with pharmaco-resistant focal epilepsy. These participants ranged in age from 10 to 65 years, had an IQ above 70, and met specific health criteria. They were recruited from multiple medical centers specializing in epilepsy treatment, including the Comprehensive Epilepsy Center at New York University (New York, NY, United States), Brigham and Women’s Hospital, Boston Children’s Hospital (Boston, MA, United States), and the University of Wisconsin School of Medicine and Public Health (Madison, WI, United States).
+In contrast, the iEEG modality involved a more specialized cohort of 44 patients diagnosed with pharmaco-resistant focal epilepsy. These participants ranged in age from 10 to 65 years, had an IQ above 70, and met specific health criteria. They were recruited from multiple medical centers specializing in epilepsy treatment, including the Comprehensive Epilepsy Center at New York University (New York, NY, United States), Brigham and Women’s Hospital, Boston Children’s Hospital (Boston, MA, United States), and the University of Wisconsin School of Medicine and Public Health (Madison, WI, United States).
 
 **Age Histograms across Modalities**
 ![Cogitate subjects age distribution](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/age_distribution.png)
@@ -19,7 +19,7 @@ In contrast, the iEEG modality involved a more specialized cohort of 34 patients
 
 ## Demography of Subjects
 
-You can find the profile of participants for all modalities at [subjects_demography](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/2024-03-18_cog_meeg_exp1_batch1_bids.xlsx). Here is a brief explanation about the information collected from the subjects.
+You can find the profile of participants for all modalities at [subjects_demography](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/2024-01-15_subjects_demographics_msp1_curated.xlsx). Here is a brief explanation about the information collected from the subjects.
 
 ### **Demographic Information for M-EEG**
 
@@ -27,7 +27,7 @@ The below items are included in the subjects’ demography for M-EEG modality:
 
 Participant_ID (participant identifier), sex (biological sex of participant), age (age of participant at the time of testing), handedness (right, left or ambidextrous), included in [MSP](https://doi.org/10.1371/journal.pone.0268577) (whether the data was used for the experiments or not), phase\* (determining in which stage the data is, phase 2/phaseII (optimization) or phase 3/phaseIII (replication)), QC\** status (passed/not), if Not (in QC status) QC rejection reason, weight (weight of participant at the time of study in pounds), height (height of participant at the time of study in inches), primary and secondary language, race (ethnicity of the participant), education, compensation (whether the subject was paid or not), colorblind (determining whether the subject can distinguish the colors and perceiving them correctly or not), visual correction (none or using any glasses or contact lenses), eye dominance (which eye is dominant), eye chart results (the outcome of a visual acuity test performed using the eye chart) and dioptry (visual acuity of the participant in Diopters).
 
-\***Phase:** COGITATE project has three phases. In **phase 1**, all data were acquired by theory neutral teams. To ensure replicability of the results, the entire dataset was split into two halves, each with an equal mixture of data from each of the labs for each modality. In **phase 2**, after evaluating data quality, the first half of the data were used for developing analysis tools (optimization of methods). The purpose of **phase 2**was to define the best analysis practices and to agree upon, in consultation with expert advisors. In **phase 3**, the replication phase, the second half of the data were analyzed using the concurred procedure, agreed upon protocols, thereby allowing an in-house replication of the results obtained in phase 2.
+\***Phase:** COGITATE project has three phases. In **phase 1**, all data were acquired by theory neutral teams. To ensure replicability of the results, the entire dataset was split into two halves, each with an equal mixture of data from each of the labs for each modality. In **phase 2**, after evaluating data quality, the first half of the data were used for developing analysis tools (optimization of methods). The purpose of **phase 2** was to define the best analysis practices and to agree upon, in consultation with expert advisors. In **phase 3**, the replication phase, the second half of the data were analyzed using the concurred procedure, agreed upon protocols, thereby allowing an in-house replication of the results obtained in phase 2.
 
 \****QC (quality control):** A number of items were checked for all the data of each modality which are elaborated in the section of [Quality Check](#quality-check) and [Exclusion Criteria](#exclusion-criteria).
 
@@ -60,11 +60,11 @@ We have made available two primary formats for the data acquired during the expe
 
 ### **1. Unprocessed/Raw Data**
 
-The unprocessed data format closely resembles the original acquired data, having undergone [minimal processing](#description-of-cogitate-data) to ensure compliance with [GDPR](https://gdpr-info.eu) (General Data Protection Regulation)/[HIPAA](https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html) (Health Insurance Portability & Accountability Act) anonymity standards.
+The unprocessed data format closely resembles the original acquired data, having undergone minimal processing to ensure compliance with [GDPR](https://gdpr-info.eu) (General Data Protection Regulation)/[HIPAA](https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html) (Health Insurance Portability & Accountability Act) anonymity standards.
 
 ### **2. BIDS Format**
 
-BIDS format, widely adopted in cognitive neuroscience, enhances data reusability. To facilitate others in leveraging our data, we have released it in [BIDS](https://bids-specification.readthedocs.io/en/stable/) format. The conversion scripts employed to transform the raw data into BIDS format can be accessed via [this link](https://github.com/Cogitate-consortium/cogcurate/tree/main/bids).
+BIDS format, widely adopted in cognitive neuroscience, enhances data reusability. To facilitate others in leveraging our data, we have released it in [BIDS](https://bids-specification.readthedocs.io/en/stable/) format.
 
 ### **File type glossary**
 
@@ -118,7 +118,7 @@ FIF files contain various types of information related to neuroimaging data, inc
 3. Sensor locations and orientations: Information about the physical positions and orientations of sensors used in the measurements.
 4. Head geometry: Information about the shape and structure of the subject's head, which is crucial for accurate source localization.
 5. Covariance matrices: Statistical information about the relationships between sensor measurements at different time points or frequencies.
-6. Anatomical MRI data: High-resolution structural images of the subject's brain, used for source localization and spatial alignment.|
+6. Anatomical MRI data: High-resolution structural images of the subject's brain, used for source localization and spatial alignment.
 
 ## Data Acquisition
 
@@ -170,6 +170,15 @@ Visual stimuli were presented on a screen placed in front of the subjects with a
 #### Eye Tracking
 
 Eye movements were monitored and recorded from both eyes (binocular eye-tracking) using the MEG-compatible EyeLink 1000 Plus eye-tracker (SR Research Ltd., Ottawa, Canada). Nine-point calibration was performed at the beginning of the experiment, and recalibrated if necessary at the beginning of each block/word. Pupil size and corneal reflection data were collected at a sampling rate of 1000 Hz.
+
+#### Behavioral Data Code Scheme
+
+Stimuli are coded as a 4-digit number.  
+1st digit = stimulus type (1 = face; 2 = object; 3 = letter; 4 = false font)  
+2nd digit = stimulus orientation (1 = center; 2 = left; 3 = right)  
+3rd & 4th digits = stimulus id (1...20; for faces 1...10 is male, 11...20 is female)  
+
+e.g., "1219" = 1 is face, 2 is left orientation and 19 is a female stimulus #19
 
 #### Eye Tracker and MEG Trigger Scheme
 

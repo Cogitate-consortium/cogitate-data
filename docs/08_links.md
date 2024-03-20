@@ -17,9 +17,9 @@
 |---|---|---|---|
 |Modality|Place of Acquisition|Number of <br>Subjects|Reference Materials|
 |M-EEG|University of <br>Birmingham, <br>Center for <br>Human Brain <br>Health (CHBH)|102|[M-EEG Wiring Diagram](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/cogitate_wiring_diagrams_MEEG.pdf)<br>[M-EEG Experiment 1 Code](https://github.com/Cogitate-consortium/cogitate-experiment-code/tree/MEEG-Exp1)<br>[M-EEG SOP](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf)|
-|Peking University <br>(PKU)|
+| |Peking University <br>(PKU)|
 |fMRI|Donders <br>Center for <br>Cognitive <br>Neuroimaging <br>(DCCN)|120||
-|Yale <br>Magnetic <br>Resonance <br> Research <br>Center <br>(MRRC)|
-|ECoG (iEEG)|Harvard <br>University at <br>Boston <br>Children’s <br>Hospital|34||
-|New York <br>University <br>Langone (NYU)|
-|University of <br>Wisconsin|
+| |Yale <br>Magnetic <br>Resonance <br> Research <br>Center <br>(MRRC)|
+|ECoG (iEEG)|Harvard <br>University at <br>Boston <br>Children’s <br>Hospital|44||
+| |New York <br>University <br>Langone (NYU)|
+| |University of <br>Wisconsin|
