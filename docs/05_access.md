@@ -70,11 +70,11 @@ Under the folder of MEEG, there are some tabs on the top where you can find info
 
 ![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/xnat_meg_meg-data.png)
 
-#### Naming Convention on XNAT
+### Naming Convention on XNAT
 
 The data on XNAT is organized into subjects and sessions under a given project. The subjects are identified using the format “CX???” and the sessions follow the format CX???_MODALITY_VISIT_PARADIGMRUN e.g. CA103_MEEG_1_DurR1 indicated MEEG measurement for subject ID CA103 during the first visit with Dur experimental paradigm run 1 (R1).
 
-### **2. Bundles**
+## **2. Bundles**
 
 This approach involves providing a collection of links to the prepared bundles of the data and accompanying metadata, which are available in zip format. These links grant users the ability to download specific modalities, example datasets, or the complete dataset.
 
@@ -83,7 +83,11 @@ This approach involves providing a collection of links to the prepared bundles o
 ![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/bundles_full_datasets.png "Bundles Full Datasets")
 
 Here is a brief explanation about how to access the data bundles:
+
+### Step 1: Create a Data User Account
+
 <p>
+
     <a href="https://www.youtube.com/watch?v=FFqN5Pech0w"
         ><img
             src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/youtube_logo.png"
@@ -92,7 +96,7 @@ Here is a brief explanation about how to access the data bundles:
             width="48"
             height="48"
     />
-    Step 1: Create a Data User Account
+    <strong>Step 1: Create a Data User Account</strong>
 </p></a>
 
 Access to the data bundles requires a quick and easy registration process.
@@ -106,6 +110,8 @@ Access to the data bundles requires a quick and easy registration process.
     4. **_Mailing List Subscription:_** In order to stay up-to-date and informed about news related to COGITATE data releases, you must activate your email subscription (this is in compliance with GDPR requirements).
 
 <span style="background-color: #ffc7c7"><strong>Tip:</strong> The registration procedure needed for accessing the data bundles is a separate step than what is required to access XNAT.</span>
+
+### Step 2: Login and logout of your Data User account
 
 <p>
     <a href="https://www.youtube.com/watch?v=6BR3uYqiDiU"
@@ -140,7 +146,7 @@ Access to the data bundles requires a quick and easy registration process.
 2. Scroll down and click on the “Access Data Bundles”
 3. Click on the download button next to each dataset
 
-#### Naming Convention for Bundles
+### Naming Convention for Bundles
 
 Raw data bundles follow the below naming convention. The project root directory consists of subdirectories named after the subject's ID which is of the format “CX???”. The subject directories consist of various sub directories as described below. Except for the metadata directory the sessions follow the pattern subject-ID_PARADIGM_MODALITY. If the modality data is paradigm agnostic, e.g. MR, CT then the paradigm is left blank.
 
