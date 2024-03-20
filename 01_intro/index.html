@@ -40,55 +40,65 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Cogitate Data Release Documentation</a>
+                <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Cogitate Data Release Documentation</p></a>
                 </li>
               </ul>
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="./">Introduction</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#access-cogitate-data">Access COGITATE data</a>
+    <li class="toctree-l2"><a class="reference internal" href="#updates">Updates</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#future-releases">Future Releases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#experiment-1">Experiment 1</a>
+    </li>
+        </ul>
     </li>
     </ul>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../02_subjects/">Subjects</a>
+                <li class="toctree-l1"><a class="reference internal" href="../02_overview/">Overview of COGITATE</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../03_experiments/">Experiments</a>
+                <li class="toctree-l1"><a class="reference internal" href="../03_cogdataset/">COGITATE Dataset</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../04_data/">Data description</a>
+                <li class="toctree-l1"><a class="reference internal" href="../04_data/">Data curation procedurs</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../05_acquisition/">Acquisition Modalities</a>
+                <li class="toctree-l1"><a class="reference internal" href="../05_access/">Access to COGITATE Data</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../06_data_curation/">Data Curation Procedures</a>
+                <li class="toctree-l1"><a class="reference internal" href="../06_Experiment1/">Experiment 1: Directory Structure of Data Bundles</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../07_access/">Access COGITATE data</a>
+                <li class="toctree-l1"><a class="reference internal" href="../07_bug-reports/">Support and Report Bugs</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../08_tutorials/">Tutorials and Examples</a>
+                <li class="toctree-l1"><a class="reference internal" href="../08_links/">Links and Reference Materials</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../09_next/">Next steps</a>
+                <li class="toctree-l1"><a class="reference internal" href="../09_appendices/">Appendices</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../10_support/">Support</a>
+                <li class="toctree-l1"><a class="reference internal" href="../10_acknowledgements/">Acknowledgements</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../11_appendix/">Appendix</a>
+                <li class="toctree-l1"><a class="reference internal" href="../11_glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_references/">References</a>
                 </li>
               </ul>
       </div>
@@ -115,29 +125,26 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="introduction">Introduction</h1>
-<p><a href="https://www.arc-cogitate.com/">COGITATE</a> is a groundbreaking endeavor within Open Science, featuring a pre-registered adversarial collaboration aimed at resolving the debate between two prominent theories of consciousness: Integrated Information Theory (IIT) and Global Neuronal Workspace theory (GNW). This initiative encompasses eleven distinct research institutions spanning three continents, utilizing three distinct neuroimaging methods in human neuroscience—fMRI, M-EEG, and iEEG—across an extensive cohort of human volunteers and patients. A comprehensive outline of Experiment 1 is available in our <strong><a href="https://osf.io/gm3vd">pre-registration document</a></strong>, <strong><a href="https://www.biorxiv.org/content/10.1101/2023.06.23.546249v2">preprint manuscript</a></strong>, and forthcoming publication.</p>
-<pre><code>    TODO:
-    - CODE Release [**[link to MSP-1 repo](https://github.com/Cogitate-consortium/cogitate-msp1)**] explain here, if too big add chapter at end
-</code></pre>
-<h3 id="access-cogitate-data"><strong><a href="/docs/07_access.md">Access COGITATE data</a></strong></h3>
-<p>The primary objective of this data release is to provide a comprehensive dataset that will enable further research in the field of consciousness studies. By making our data publicly available, we aim to foster transparency, encourage reproducibility, and facilitate collaborative efforts in unraveling the complexities of human consciousness.</p>
-<p>This data release encompasses a wide array of data types, including but not limited to:</p>
+<p>This document provides guidance and detailed information on the datasets released by COGITATE, how to access them, the directory structure, and a description on various types of data acquired for each modality.</p>
+<h2 id="updates">Updates</h2>
+<p>This is the first version (V1.0) of the COGITATE data release document. New updates or any changes to the previous versions will be announced here, and as a versioned document <a href="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/MEEG-DR-doc_2024-03-18_v1.0.pdf">here</a> as well.</p>
+<p>In V1.0, we released a subset of magnetoencephalography (MEG) data (batch 1) in the Brain Imaging Data Structure (<a href="https://bids-specification.readthedocs.io/en/stable/">BIDS</a>) format. It includes data from 48 subjects who participated in Experiment 1, packaged in a Bundle format.</p>
+<p><strong>The demography of subjects for this release can be found in an excel document <a href="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/2024-03-18_cog_meeg_exp1_batch1_bids.xlsx">here</a>.</strong></p>
+<h2 id="future-releases">Future Releases</h2>
+<p>Here are the items that will be released soon:</p>
+<h3 id="experiment-1">Experiment 1</h3>
 <ul>
-<li>Behavioral Data</li>
-<li>Eye Tracking Data</li>
-<li>Neurophysiological Data</li>
-<li>MRI Data</li>
+<li>BIDS format of the rest of the M-EEG data along with the unprocessed/raw data</li>
+<li>Unprocessed/raw and BIDS format of fMRI and iEEG data</li>
 </ul>
-<p>For a detailed description of each data type and its corresponding file formats, please refer to the "Data Description" and "File Type Glossary" sections. </p>
-<p>The dataset is intended for use by researchers, clinicians, and data scientists interested in the study of consciousness.</p>
-<p>Users are required to register to access or download data. By registering, users agree to restrictions against attempting to identify study participants and redistributing the data to third parties. Proper acknowledgment of the data resource is also mandatory.</p>
-<p>We would like to extend our gratitude to all team members and participants who have made this study and data release possible.</p>
+<p><span style="background-color: red"><b>Attention:</b></span>
+<strong>M-EEG, MEEG, M/EEG, MEG/EEG or MEG might be used interchangeably throughout this document or the name of data folders, but all of them pertain to a singular data. This also applies to iEEG and ECoG (Electrocorticography).</strong></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Welcome to the Cogitate Data Release Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../02_subjects/" class="btn btn-neutral float-right" title="Subjects">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href=".." class="btn btn-neutral float-left" title="Welcome to the Cogitate Data Release Documentation</p>"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../02_overview/" class="btn btn-neutral float-right" title="Overview of COGITATE">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -163,7 +170,7 @@
       <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../02_subjects/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../02_overview/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
