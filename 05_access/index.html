@@ -67,16 +67,18 @@
     <li class="toctree-l3"><a class="reference internal" href="#step-1-registration">Step 1: Registration</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#step-2-navigating-at-xnat">Step 2: Navigating at XNAT</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#naming-convention-on-xnat">Naming Convention on XNAT</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#naming-convention-on-xnat">Naming Convention on XNAT</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#2-bundles">2. Bundles</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2-bundles">2. Bundles</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#naming-convention-for-bundles">Naming Convention for Bundles</a>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-create-a-data-user-account">Step 1: Create a Data User Account</a>
     </li>
-        </ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-login-and-logout-of-your-data-user-account">Step 2: Login and logout of your Data User account</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#naming-convention-for-bundles">Naming Convention for Bundles</a>
     </li>
         </ul>
     </li>
@@ -184,14 +186,16 @@
 <p>Under the folder of MEEG, there are some tabs on the top where you can find information regarding the Case Report Form, Exit Questionnaire, experiment checklist form, data details within the BIDS framework, and at the bottom, you can download different runs of MEG data.</p>
 <p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/xnat_meg_upload_form.png" /></p>
 <p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/xnat_meg_meg-data.png" /></p>
-<h4 id="naming-convention-on-xnat">Naming Convention on XNAT</h4>
+<h3 id="naming-convention-on-xnat">Naming Convention on XNAT</h3>
 <p>The data on XNAT is organized into subjects and sessions under a given project. The subjects are identified using the format “CX???” and the sessions follow the format CX???_MODALITY_VISIT_PARADIGMRUN e.g. CA103_MEEG_1_DurR1 indicated MEEG measurement for subject ID CA103 during the first visit with Dur experimental paradigm run 1 (R1).</p>
-<h3 id="2-bundles"><strong>2. Bundles</strong></h3>
+<h2 id="2-bundles"><strong>2. Bundles</strong></h2>
 <p>This approach involves providing a collection of links to the prepared bundles of the data and accompanying metadata, which are available in zip format. These links grant users the ability to download specific modalities, example datasets, or the complete dataset.</p>
 <p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/bundles_sample_datasets.png" title="Bundles Sample Datasets" /></p>
 <p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/bundles_full_datasets.png" title="Bundles Full Datasets" /></p>
 <p>Here is a brief explanation about how to access the data bundles:</p>
+<h3 id="step-1-create-a-data-user-account">Step 1: Create a Data User Account</h3>
 <p>
+
     <a href="https://www.youtube.com/watch?v=FFqN5Pech0w"
         ><img
             src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/youtube_logo.png"
@@ -200,7 +204,7 @@
             width="48"
             height="48"
     />
-    Step 1: Create a Data User Account
+    <strong>Step 1: Create a Data User Account</strong>
 </p>
 <p></a></p>
 <p>Access to the data bundles requires a quick and easy registration process.</p>
@@ -216,6 +220,7 @@
 </li>
 </ol>
 <p><span style="background-color: #ffc7c7"><strong>Tip:</strong> The registration procedure needed for accessing the data bundles is a separate step than what is required to access XNAT.</span></p>
+<h3 id="step-2-login-and-logout-of-your-data-user-account">Step 2: Login and logout of your Data User account</h3>
 <p>
     <a href="https://www.youtube.com/watch?v=6BR3uYqiDiU"
         ><img
@@ -250,7 +255,7 @@
 <li>Scroll down and click on the “Access Data Bundles”</li>
 <li>Click on the download button next to each dataset</li>
 </ol>
-<h4 id="naming-convention-for-bundles">Naming Convention for Bundles</h4>
+<h3 id="naming-convention-for-bundles">Naming Convention for Bundles</h3>
 <p>Raw data bundles follow the below naming convention. The project root directory consists of subdirectories named after the subject's ID which is of the format “CX???”. The subject directories consist of various sub directories as described below. Except for the metadata directory the sessions follow the pattern subject-ID_PARADIGM_MODALITY. If the modality data is paradigm agnostic, e.g. MR, CT then the paradigm is left blank.</p>
 <p>We currently have two paradigms in the data EXP1 indicating the experiment described and FingerLoc for the finger localiser. The session directories further contains individual scans following the format CX???_MODALITY_1_DurR1.EDF.</p>
 <p>The metadata subdirectory further consists of various assessments and questionnaires that provide valuable information.</p>
