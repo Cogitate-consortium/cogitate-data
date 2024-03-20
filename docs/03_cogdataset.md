@@ -21,7 +21,7 @@ In contrast, the iEEG modality involved a more specialized cohort of 34 patients
 
 You can find the profile of participants for all modalities at [subjects_demography](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/2024-03-18_cog_meeg_exp1_batch1_bids.xlsx). Here is a brief explanation about the information collected from the subjects.
 
-**Demographic Information for M-EEG**
+### **Demographic Information for M-EEG**
 
 The below items are included in the subjects’ demography for M-EEG modality:
 
@@ -31,11 +31,11 @@ Participant_ID (participant identifier), sex (biological sex of participant), ag
 
 \****QC (quality control):** A number of items were checked for all the data of each modality which are elaborated in the section of [Quality Check](#quality-check) and [Exclusion Criteria](#exclusion-criteria).
 
-**Demographic Information for fMRI**
+### **Demographic Information for fMRI**
 
 All of the items are similar to the M-EEG modality.
 
-**Demographic Information for iEEG**
+### **Demographic Information for iEEG**
 
 In addition to the properties mentioned for M-EEG modality, the below parameters were also provided for this modality:
 
@@ -58,19 +58,19 @@ We have made available two primary formats for the data acquired during the expe
 1. Unprocessed/Raw Data
 2. BIDS Format
 
-**1. Unprocessed/Raw Data**
+### **1. Unprocessed/Raw Data**
 
 The unprocessed data format closely resembles the original acquired data, having undergone [minimal processing](#description-of-cogitate-data) to ensure compliance with [GDPR](https://gdpr-info.eu) (General Data Protection Regulation)/[HIPAA](https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html) (Health Insurance Portability & Accountability Act) anonymity standards.
 
-**2. BIDS Format**
+### **2. BIDS Format**
 
 BIDS format, widely adopted in cognitive neuroscience, enhances data reusability. To facilitate others in leveraging our data, we have released it in [BIDS](https://bids-specification.readthedocs.io/en/stable/) format. The conversion scripts employed to transform the raw data into BIDS format can be accessed via [this link](https://github.com/Cogitate-consortium/cogcurate/tree/main/bids).
 
-**File type glossary**
+### **File type glossary**
 
 Here are the various file formats used for each modality of the COGITATE dataset along with a short description of them.
 
-**Eye Tracking & Behavioral Data**
+#### **Eye Tracking & Behavioral Data**
 
 - **Unprocessed/Raw release format**
         - Filetype: ASC/CSV
@@ -101,7 +101,7 @@ Behavioral data is available in CSV format and it provides below information:
 4. Stimulus and jitter duration
 5. Subject's responses
 
-**M-EEG data**
+#### **M-EEG data**
 
 - **Unprocessed/Raw release format**
       - Filetype: FIF
@@ -175,7 +175,7 @@ Eye movements were monitored and recorded from both eyes (binocular eye-tracking
 
 The channel name that contains the eye tracker data in the FIF file is as follows: MISC1 (X), MISC2 (Y), and MISC3 (pupil)
 
-**Defining some terms**
+##### **Defining some terms**
 
 **Trial**: Stimulus presentation followed by a fixation (the two add up to 2 sec) followed by a jitter of 200 msec to 2000 ms.
 
@@ -185,11 +185,11 @@ The channel name that contains the eye tracker data in the FIF file is as follow
 
 **Break**: Pause between 2 blocks
 
-**Successive trigger scheme**
+##### **Successive trigger scheme**
 
 The triggers were sent successively. The first trigger represented the stimulus type, followed by orientation, stimulus duration, and task relevance, all interspaced by 50 ms. Additionally, a trigger was sent upon key press.
 
-**1st Trigger (on Stimulus Onset): Stimulus Type**
+##### **1st Trigger (on Stimulus Onset): Stimulus Type**
 
 - 1 to 20: faces
         - 1 to 10 males,
@@ -198,53 +198,53 @@ The triggers were sent successively. The first trigger represented the stimulus 
 - 41 to 60: letters
 - 61 to 80: falses
 
-**2nd Trigger (2 Frames after Stimulus Onset): Stimulus Orientation**
+##### **2nd Trigger (2 Frames after Stimulus Onset): Stimulus Orientation**
 
 - 101: Center
 - 102: Left
 - 103: Right
 
-**3rd Trigger (4 Frames after Stimulus Onset): Stimulus Duration**
+##### **3rd Trigger (4 Frames after Stimulus Onset): Stimulus Duration**
 
 - 151: 500 msec
 - 152: 1000 msec
 - 153: 1500 msec
 
-**4th Trigger (6 Frames after Stimulus Onset): Stimulus Task Relevance**
+##### **4th Trigger (6 Frames after Stimulus Onset): Stimulus Task Relevance**
 
 - 201: Task relevant target
 - 202: Task relevant non target
 - 203: Task irrelevant
 
-**5th Trigger (8 Frames after Stimulus Onset): Trial ID Triggers**
+##### **5th Trigger (8 Frames after Stimulus Onset): Trial ID Triggers**
 
 - 111-148: Trial number
 
-**Response Trigger**
+##### **Response Trigger**
 
 - 255: Following button press.
 
-**Stimulus Presentation End**
+##### **Stimulus Presentation End**
 
 - 96: Offset of stimulus presentation (onset of blank)
 - 97: Offset of blank (onset of jitter period)
       - Note that both these are fixations, they are just divided into blank and jitter.
 
-**General Triggers to Mark Experiment Progression**
+##### **General Triggers to Mark Experiment Progression**
 
 86: Onset of experiment  
 81: Onset of recording  
 83: Offset of recording
 
-**Miniblock ID Triggers**
+##### **Miniblock ID Triggers**
 
 161-200: Miniblock ID trigger
 
-**Zeroes**
+##### **Zeroes**
 
 0: Zeros were sent between the successive triggers to reset the LPT, see below. These were also sent to the eye tracker but did not mean anything and they can safely be ignored.
 
-**How The LPT Triggers Were Sent**
+##### **How The LPT Triggers Were Sent**
 
 The LPT port of the computer was used for sending the triggers and it was done by using the sendTrig function. This function sets the port in a specific state (whatever trigger we want to send) and logs the trigger afterwards, noting if it is sent and what time the command for sending it is executed. For each trigger that is being sent, the port is being reset after a frame to 0.
 
