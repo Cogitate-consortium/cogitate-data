@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>References - Cogitate Data Release</title>
+    <title>FAQ - Cogitate Data Release</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "References";
-        var mkdocs_page_input_path = "12_references.md";
+        var mkdocs_page_name = "FAQ";
+        var mkdocs_page_input_path = "13_faq.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -87,14 +87,28 @@
                 <li class="toctree-l1"><a class="reference internal" href="../11_glossary/">Glossary</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">References</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_references/">References</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../13_faq/">FAQ</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">FAQ</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#cogitate-m-eeg-bids-faqs">Cogitate M-EEG BIDS FAQs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#where-are-the-trans-files">Where are the trans files?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-under-derivativesadditional_metadata">What is under derivatives/additional_metadata?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-does-batch1-mean">What does BATCH1 mean?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#i-cannot-find-the-eog-channel-in-the-data">I cannot find the EOG channel in the data?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-do-the-channels-misc1-misc2-and-misc3-contain">What do the channels MISC1, MISC2 and MISC3 contain?</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                 </li>
               </ul>
       </div>
@@ -111,7 +125,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-      <li class="breadcrumb-item active">References</li>
+      <li class="breadcrumb-item active">FAQ</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -120,26 +134,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="references">References</h1>
-<ol>
-<li>
-<p>Tarr,       M.       J.       (1996).       The       Object       Databank. Carnegie       Mellon       University,<br />
-<a href="https://sites.google.com/andrew.cmu.edu/tarrlab/stimuli?authuser=0">Tarr Lab page</a><br />
-<a href="https://drive.google.com/file/d/1_2H7byO2xSXTOOCZP4zDIHbMPTs5XIx3/view">Databank direct link</a>.  </p>
-</li>
-<li>
-<p>Willenbockel, V., Sadr, J., Fiset, D., Horne, G. O., Gosselin, F., &amp; Tanaka, J. W. (2010). Controlling low-level image properties: the SHINE toolbox. Behavior Research Methods, 42(3), 671-684.</p>
-</li>
-<li><a href="https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html">https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html</a></li>
-<li><a href="https://doi.org/10.1371/journal.pone.0268577">https://doi.org/10.1371/journal.pone.0268577</a></li>
-<li><a href="https://osf.io/gm3vd">https://osf.io/gm3vd</a></li>
-</ol>
+                <h1 id="faq">FAQ</h1>
+<h2 id="cogitate-m-eeg-bids-faqs">Cogitate M-EEG BIDS FAQs</h2>
+<h3 id="where-are-the-trans-files">Where are the trans files?</h3>
+<p>The trans.fif files are provided under /derivatives/coreg. They are the results of the coregistration. This information is also included as landmarks in sidecar json of the NIFTI file.</p>
+<h3 id="what-is-under-derivativesadditional_metadata">What is under derivatives/additional_metadata?</h3>
+<p>This directory contains some additional metadata collected along with the data. The top level METADATA directory contains some files common to all subjects: They are analysis.json, devices_MEEG.json, protocols.json, tasks_EXP1_MEEG.json, tasks_RestinEO_MEEG.json, tasks_Rnoise_MEEG.json, wiring_MEEG.pdf.</p>
+<p>Subject level directories contain three files: CXXXX_CRF.json, CXXXX_demographics.json, CXXXX_EXQU.json which are respectively subject specific demographics, case report form and the exit questionnaire. The demographics information is redundant with the information in the participants.tsv files.</p>
+<h3 id="what-does-batch1-mean">What does BATCH1 mean?</h3>
+<p>The M-EEG datasets for COGITATE are being released in two batches in order to facilitate the BIOMAG Connectivity Challenge 2024. This means that one half of the data is initially made available to the participants of the challenge followed by the second half a few months later. This is where BATCH1 and BATCH2 come in.</p>
+<h3 id="i-cannot-find-the-eog-channel-in-the-data">I cannot find the EOG channel in the data?</h3>
+<p>The EOG channel for site A can be found in <code>EOG004</code> and the EOG channels for site B can be found in <code>BIO002</code>. Typically in our code, we prefer to rename the channels as below.</p>
+<pre><code># Fix EOG001 channel name (required for CA only)
+if 'EOG004' in raw.ch_names:
+raw. rename_channels ({ 'EOG004': 'EOG001'})
+
+# Fix EOG001 channel name(required for CB only)
+eog_ch = raw.copy().pick_types(meg=False, eeg=False, eog=True)
+if len(eog_ch. ch_names) &lt; 2:
+raw.set_channel_types({'BIO002': 'eog'})
+raw.rename_channels({'BIO002': 'EOG002'})
+</code></pre>
+<h3 id="what-do-the-channels-misc1-misc2-and-misc3-contain">What do the channels MISC1, MISC2 and MISC3 contain?</h3>
+<p>These channels contain the eye tracker data with MISC1 (X), MISC2 (Y), and MISC3 (pupil) channels containing the X, Y (gaze) and the Pupil information respectively. This information is however also shared separately in the eye tracking data release.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../11_glossary/" class="btn btn-neutral float-left" title="Glossary"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../13_faq/" class="btn btn-neutral float-right" title="FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../12_references/" class="btn btn-neutral float-left" title="References"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -162,10 +184,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../11_glossary/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../12_references/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../13_faq/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
