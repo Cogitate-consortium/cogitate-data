@@ -2,6 +2,8 @@
 
 The COGITATE dataset is a comprehensive collection of multimodal neuroimaging data, encompassing a total of 266 subjects. COGITATE employs three distinct neuroimaging techniques: fMRI, M-EEG, and iEEG/ECoG.
 
+![Cogitate overview map](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/overview_map.png)
+
 The MEG modality comprised 102 healthy subjects, also above the age of 18, with no known psychiatric or neurological issues. These participants were sourced from the Centre for Human Brain Health at the University of Birmingham (Birmingham, United Kingdom) and the Center for MRI Research of Peking University (Beijing, China).
 
 Similarly, the fMRI modality included 120 healthy volunteers, all of whom were above the age of 18 and predominantly right-handed. These participants had no known history of psychiatric or neurological disorders and were recruited from the Yale Magnetic Resonance Research Center (New Haven, CT, United States) and the Donders Centre for Cognitive Neuroimaging (Nijmegen, Netherlands).

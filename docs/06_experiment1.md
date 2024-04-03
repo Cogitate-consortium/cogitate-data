@@ -68,355 +68,49 @@ COG_MEEG_EXP1_RELEASE/
 
 ```bash
 COG_MEEG_EXP1_BIDS_RELEASE/
-|-- dataset_description.json           # Contains information on BIDS version, type of dataset  
-|-- derivatives                           # Contains processed or derived data generated from raw data  
-|   |-- dicom2nifti                   # Converted NIFTI files generated from DICOM files of anatomical data
-|   |   |-- sub-CA103
-|   |   |   `-- ses-0
-|   |   |       `-- anat
-|   |   |           |-- CA103_MR_0_anat.nii.gz
-|   |   |           `-- T1_defaced.png
-|   |-- fs
-|   |   |-- fsaverage 
-|   |   |-- sub-CA103
-|   |   |   |-- label
-|   |   |   |   |-- aparc.annot.a2009s.ctab
-|   |   |   |   |-- aparc.annot.ctab
-|   |   |   |   |-- aparc.annot.DKTatlas.ctab
-|   |   |   |   |-- BA_exvivo.ctab
-|   |   |   |   |-- BA_exvivo.thresh.ctab
-|   |   |   |   |-- lh.aparc.a2009s.annot
-|   |   |   |   |-- lh.aparc.annot
-|   |   |   |   |-- lh.aparc.DKTatlas.annot
-|   |   |   |   |-- lh.BA1_exvivo.label
-|   |   |   |   |-- lh.BA1_exvivo.thresh.label
-|   |   |   |   |-- lh.BA2_exvivo.label
-|   |   |   |   |-- lh.BA2_exvivo.thresh.label
-|   |   |   |   |-- lh.BA3a_exvivo.label
-|   |   |   |   |-- lh.BA3a_exvivo.thresh.label
-|   |   |   |   |-- lh.BA3b_exvivo.label
-|   |   |   |   |-- lh.BA3b_exvivo.thresh.label
-|   |   |   |   |-- lh.BA44_exvivo.label
-|   |   |   |   |-- lh.BA44_exvivo.thresh.label
-|   |   |   |   |-- lh.BA45_exvivo.label
-|   |   |   |   |-- lh.BA45_exvivo.thresh.label
-|   |   |   |   |-- lh.BA4a_exvivo.label
-|   |   |   |   |-- lh.BA4a_exvivo.thresh.label
-|   |   |   |   |-- lh.BA4p_exvivo.label
-|   |   |   |   |-- lh.BA4p_exvivo.thresh.label
-|   |   |   |   |-- lh.BA6_exvivo.label
-|   |   |   |   |-- lh.BA6_exvivo.thresh.label
-|   |   |   |   |-- lh.BA_exvivo.annot
-|   |   |   |   |-- lh.BA_exvivo.thresh.annot
-|   |   |   |   |-- lh.cortex.label
-|   |   |   |   |-- lh.entorhinal_exvivo.label
-|   |   |   |   |-- lh.entorhinal_exvivo.thresh.label
-|   |   |   |   |-- lh.MT_exvivo.label
-|   |   |   |   |-- lh.MT_exvivo.thresh.label
-|   |   |   |   |-- lh.perirhinal_exvivo.label
-|   |   |   |   |-- lh.perirhinal_exvivo.thresh.label
-|   |   |   |   |-- lh.V1_exvivo.label
-|   |   |   |   |-- lh.V1_exvivo.thresh.label
-|   |   |   |   |-- lh.V2_exvivo.label
-|   |   |   |   |-- lh.V2_exvivo.thresh.label
-|   |   |   |   |-- rh.aparc.a2009s.annot
-|   |   |   |   |-- rh.aparc.annot
-|   |   |   |   |-- rh.aparc.DKTatlas.annot
-|   |   |   |   |-- rh.BA1_exvivo.label
-|   |   |   |   |-- rh.BA1_exvivo.thresh.label
-|   |   |   |   |-- rh.BA2_exvivo.label
-|   |   |   |   |-- rh.BA2_exvivo.thresh.label
-|   |   |   |   |-- rh.BA3a_exvivo.label
-|   |   |   |   |-- rh.BA3a_exvivo.thresh.label
-|   |   |   |   |-- rh.BA3b_exvivo.label
-|   |   |   |   |-- rh.BA3b_exvivo.thresh.label
-|   |   |   |   |-- rh.BA44_exvivo.label
-|   |   |   |   |-- rh.BA44_exvivo.thresh.label
-|   |   |   |   |-- rh.BA45_exvivo.label
-|   |   |   |   |-- rh.BA45_exvivo.thresh.label
-|   |   |   |   |-- rh.BA4a_exvivo.label
-|   |   |   |   |-- rh.BA4a_exvivo.thresh.label
-|   |   |   |   |-- rh.BA4p_exvivo.label
-|   |   |   |   |-- rh.BA4p_exvivo.thresh.label
-|   |   |   |   |-- rh.BA6_exvivo.label
-|   |   |   |   |-- rh.BA6_exvivo.thresh.label
-|   |   |   |   |-- rh.BA_exvivo.annot
-|   |   |   |   |-- rh.BA_exvivo.thresh.annot
-|   |   |   |   |-- rh.cortex.label
-|   |   |   |   |-- rh.entorhinal_exvivo.label
-|   |   |   |   |-- rh.entorhinal_exvivo.thresh.label
-|   |   |   |   |-- rh.MT_exvivo.label
-|   |   |   |   |-- rh.MT_exvivo.thresh.label
-|   |   |   |   |-- rh.perirhinal_exvivo.label
-|   |   |   |   |-- rh.perirhinal_exvivo.thresh.label
-|   |   |   |   |-- rh.V1_exvivo.label
-|   |   |   |   |-- rh.V1_exvivo.thresh.label
-|   |   |   |   |-- rh.V2_exvivo.label
-|   |   |   |   `-- rh.V2_exvivo.thresh.label
-|   |   |   |-- mri
-|   |   |   |   |-- aparc.a2009s+aseg.mgz
-|   |   |   |   |-- aparc+aseg.mgz
-|   |   |   |   |-- aparc.DKTatlas+aseg.mgz
-|   |   |   |   |-- aseg.auto.mgz
-|   |   |   |   |-- aseg.auto_noCCseg.label_intensities.txt
-|   |   |   |   |-- aseg.auto_noCCseg.mgz
-|   |   |   |   |-- aseg.mgz
-|   |   |   |   |-- aseg.presurf.hypos.mgz
-|   |   |   |   |-- aseg.presurf.mgz
-|   |   |   |   |-- brain.finalsurfs.mgz
-|   |   |   |   |-- brainmask.auto.mgz
-|   |   |   |   |-- brainmask.mgz
-|   |   |   |   |-- brain.mgz
-|   |   |   |   |-- ctrl_pts.mgz
-|   |   |   |   |-- filled.mgz
-|   |   |   |   |-- lh.ribbon.mgz
-|   |   |   |   |-- mri_nu_correct.mni.log
-|   |   |   |   |-- mri_nu_correct.mni.log.bak
-|   |   |   |   |-- norm.mgz
-|   |   |   |   |-- nu.mgz
-|   |   |   |   |-- orig
-|   |   |   |   |   `-- 001.mgz
-|   |   |   |   |-- orig.mgz
-|   |   |   |   |-- orig_nu.mgz
-|   |   |   |   |-- rawavg.mgz
-|   |   |   |   |-- rh.ribbon.mgz
-|   |   |   |   |-- ribbon.mgz
-|   |   |   |   |-- segment.dat
-|   |   |   |   |-- T1.mgz
-|   |   |   |   |-- talairach.label_intensities.txt
-|   |   |   |   |-- talairach.log
-|   |   |   |   |-- talairach_with_skull.log
-|   |   |   |   |-- transforms
-|   |   |   |   |   |-- bak
-|   |   |   |   |   |-- cc_up.lta
-|   |   |   |   |   |-- talairach.auto.xfm
-|   |   |   |   |   |-- talairach.auto.xfm.lta
-|   |   |   |   |   |-- talairach_avi.log
-|   |   |   |   |   |-- talairach_avi_QA.log
-|   |   |   |   |   |-- talairach.lta
-|   |   |   |   |   |-- talairach.m3z
-|   |   |   |   |   |-- talairach_with_skull.lta
-|   |   |   |   |   |-- talairach.xfm
-|   |   |   |   |   `-- talsrcimg_to_711-2C_as_mni_average_305_t4_vox2vox.txt
-|   |   |   |   |-- wm.asegedit.mgz
-|   |   |   |   |-- wm.mgz
-|   |   |   |   |-- wmparc.mgz
-|   |   |   |   `-- wm.seg.mgz
-|   |   |   |-- scripts
-|   |   |   |   |-- build-stamp.txt
-|   |   |   |   |-- lastcall.build-stamp.txt
-|   |   |   |   |-- patchdir.txt
-|   |   |   |   |-- pctsurfcon.log
-|   |   |   |   |-- pctsurfcon.log.old
-|   |   |   |   |-- ponscc.cut.log
-|   |   |   |   |-- recon-all.cmd
-|   |   |   |   |-- recon-all.done
-|   |   |   |   |-- recon-all.env
-|   |   |   |   |-- recon-all.local-copy
-|   |   |   |   |-- recon-all.log
-|   |   |   |   `-- recon-all-status.log
-|   |   |   |-- stats
-|   |   |   |   |-- aseg.stats
-|   |   |   |   |-- lh.aparc.a2009s.stats
-|   |   |   |   |-- lh.aparc.DKTatlas.stats
-|   |   |   |   |-- lh.aparc.pial.stats
-|   |   |   |   |-- lh.aparc.stats
-|   |   |   |   |-- lh.BA_exvivo.stats
-|   |   |   |   |-- lh.BA_exvivo.thresh.stats
-|   |   |   |   |-- lh.curv.stats
-|   |   |   |   |-- lh.w-g.pct.stats
-|   |   |   |   |-- rh.aparc.a2009s.stats
-|   |   |   |   |-- rh.aparc.DKTatlas.stats
-|   |   |   |   |-- rh.aparc.pial.stats
-|   |   |   |   |-- rh.aparc.stats
-|   |   |   |   |-- rh.BA_exvivo.stats
-|   |   |   |   |-- rh.BA_exvivo.thresh.stats
-|   |   |   |   |-- rh.curv.stats
-|   |   |   |   |-- rh.w-g.pct.stats
-|   |   |   |   `-- wmparc.stats
-|   |   |   |-- surf
-|   |   |   |   |-- lh.area
-|   |   |   |   |-- lh.area.mid
-|   |   |   |   |-- lh.area.pial
-|   |   |   |   |-- lh.avg_curv
-|   |   |   |   |-- lh.curv
-|   |   |   |   |-- lh.curv.pial
-|   |   |   |   |-- lh.defect_borders
-|   |   |   |   |-- lh.defect_chull
-|   |   |   |   |-- lh.defect_labels
-|   |   |   |   |-- lh.inflated
-|   |   |   |   |-- lh.inflated.H
-|   |   |   |   |-- lh.inflated.K
-|   |   |   |   |-- lh.inflated.nofix
-|   |   |   |   |-- lh.jacobian_white
-|   |   |   |   |-- lh.orig
-|   |   |   |   |-- lh.orig.nofix
-|   |   |   |   |-- lh.pial
-|   |   |   |   |-- lh.qsphere.nofix
-|   |   |   |   |-- lh.smoothwm
-|   |   |   |   |-- lh.smoothwm.BE.crv
-|   |   |   |   |-- lh.smoothwm.C.crv
-|   |   |   |   |-- lh.smoothwm.FI.crv
-|   |   |   |   |-- lh.smoothwm.H.crv
-|   |   |   |   |-- lh.smoothwm.K1.crv
-|   |   |   |   |-- lh.smoothwm.K2.crv
-|   |   |   |   |-- lh.smoothwm.K.crv
-|   |   |   |   |-- lh.smoothwm.nofix
-|   |   |   |   |-- lh.smoothwm.S.crv
-|   |   |   |   |-- lh.sphere
-|   |   |   |   |-- lh.sphere.reg
-|   |   |   |   |-- lh.sulc
-|   |   |   |   |-- lh.thickness
-|   |   |   |   |-- lh.volume
-|   |   |   |   |-- lh.w-g.pct.mgh
-|   |   |   |   |-- lh.white
-|   |   |   |   |-- lh.white.H -> lh.white.preaparc.H
-|   |   |   |   |-- lh.white.K -> lh.white.preaparc.K
-|   |   |   |   |-- lh.white.preaparc
-|   |   |   |   |-- lh.white.preaparc.H
-|   |   |   |   |-- lh.white.preaparc.K
-|   |   |   |   |-- rh.area
-|   |   |   |   |-- rh.area.mid
-|   |   |   |   |-- rh.area.pial
-|   |   |   |   |-- rh.avg_curv
-|   |   |   |   |-- rh.curv
-|   |   |   |   |-- rh.curv.pial
-|   |   |   |   |-- rh.defect_borders
-|   |   |   |   |-- rh.defect_chull
-|   |   |   |   |-- rh.defect_labels
-|   |   |   |   |-- rh.inflated
-|   |   |   |   |-- rh.inflated.H
-|   |   |   |   |-- rh.inflated.K
-|   |   |   |   |-- rh.inflated.nofix
-|   |   |   |   |-- rh.jacobian_white
-|   |   |   |   |-- rh.orig
-|   |   |   |   |-- rh.orig.nofix
-|   |   |   |   |-- rh.pial
-|   |   |   |   |-- rh.qsphere.nofix
-|   |   |   |   |-- rh.smoothwm
-|   |   |   |   |-- rh.smoothwm.BE.crv
-|   |   |   |   |-- rh.smoothwm.C.crv
-|   |   |   |   |-- rh.smoothwm.FI.crv
-|   |   |   |   |-- rh.smoothwm.H.crv
-|   |   |   |   |-- rh.smoothwm.K1.crv
-|   |   |   |   |-- rh.smoothwm.K2.crv
-|   |   |   |   |-- rh.smoothwm.K.crv
-|   |   |   |   |-- rh.smoothwm.nofix
-|   |   |   |   |-- rh.smoothwm.S.crv
-|   |   |   |   |-- rh.sphere
-|   |   |   |   |-- rh.sphere.reg
-|   |   |   |   |-- rh.sulc
-|   |   |   |   |-- rh.thickness
-|   |   |   |   |-- rh.volume
-|   |   |   |   |-- rh.w-g.pct.mgh
-|   |   |   |   |-- rh.white
-|   |   |   |   |-- rh.white.H -> rh.white.preaparc.H
-|   |   |   |   |-- rh.white.K -> rh.white.preaparc.K
-|   |   |   |   |-- rh.white.preaparc
-|   |   |   |   |-- rh.white.preaparc.H
-|   |   |   |   `-- rh.white.preaparc.K
-|   |   |   |-- tmp
-|   |   |   |-- touch
-|   |   |   |   |-- aparc.a2009s2aseg.touch
-|   |   |   |   |-- aparc.DKTatlas2aseg.touch
-|   |   |   |   |-- apas2aseg.touch
-|   |   |   |   |-- asegmerge.touch
-|   |   |   |   |-- ca_label.touch
-|   |   |   |   |-- ca_normalize.touch
-|   |   |   |   |-- ca_register.touch
-|   |   |   |   |-- conform.touch
-|   |   |   |   |-- cortical_ribbon.touch
-|   |   |   |   |-- em_register.touch
-|   |   |   |   |-- fill.touch
-|   |   |   |   |-- inorm1.touch
-|   |   |   |   |-- inorm2.touch
-|   |   |   |   |-- lh.aparc2.touch
-|   |   |   |   |-- lh.aparcstats2.touch
-|   |   |   |   |-- lh.aparcstats3.touch
-|   |   |   |   |-- lh.aparcstats.touch
-|   |   |   |   |-- lh.aparc.touch
-|   |   |   |   |-- lh.avgcurv.touch
-|   |   |   |   |-- lh.curvstats.touch
-|   |   |   |   |-- lh.final_surfaces.touch
-|   |   |   |   |-- lh.inflate1.touch
-|   |   |   |   |-- lh.inflate2.touch
-|   |   |   |   |-- lh.inflate.H.K.touch
-|   |   |   |   |-- lh.jacobian_white.touch
-|   |   |   |   |-- lh.pctsurfcon.touch
-|   |   |   |   |-- lh.pial_surface.touch
-|   |   |   |   |-- lh.qsphere.touch
-|   |   |   |   |-- lh.smoothwm1.touch
-|   |   |   |   |-- lh.smoothwm2.touch
-|   |   |   |   |-- lh.sphmorph.touch
-|   |   |   |   |-- lh.sphreg.touch
-|   |   |   |   |-- lh.surfvolume.touch
-|   |   |   |   |-- lh.tessellate.touch
-|   |   |   |   |-- lh.topofix.touch
-|   |   |   |   |-- lh.white.H.K.touch
-|   |   |   |   |-- lh.white_surface.touch
-|   |   |   |   |-- nu.touch
-|   |   |   |   |-- relabelhypos.touch
-|   |   |   |   |-- rh.aparc2.touch
-|   |   |   |   |-- rh.aparcstats2.touch
-|   |   |   |   |-- rh.aparcstats3.touch
-|   |   |   |   |-- rh.aparcstats.touch
-|   |   |   |   |-- rh.aparc.touch
-|   |   |   |   |-- rh.avgcurv.touch
-|   |   |   |   |-- rh.curvstats.touch
-|   |   |   |   |-- rh.final_surfaces.touch
-|   |   |   |   |-- rh.inflate1.touch
-|   |   |   |   |-- rh.inflate2.touch
-|   |   |   |   |-- rh.inflate.H.K.touch
-|   |   |   |   |-- rh.jacobian_white.touch
-|   |   |   |   |-- rh.pctsurfcon.touch
-|   |   |   |   |-- rh.pial_surface.touch
-|   |   |   |   |-- rh.qsphere.touch
-|   |   |   |   |-- rh.smoothwm1.touch
-|   |   |   |   |-- rh.smoothwm2.touch
-|   |   |   |   |-- rh.sphmorph.touch
-|   |   |   |   |-- rh.sphreg.touch
-|   |   |   |   |-- rh.surfvolume.touch
-|   |   |   |   |-- rh.tessellate.touch
-|   |   |   |   |-- rh.topofix.touch
-|   |   |   |   |-- rh.white.H.K.touch
-|   |   |   |   |-- rh.white_surface.touch
-|   |   |   |   |-- rusage.mri_ca_register.dat
-|   |   |   |   |-- rusage.mri_em_register.dat
-|   |   |   |   |-- rusage.mri_em_register.skull.dat
-|   |   |   |   |-- rusage.mris_fix_topology.lh.dat
-|   |   |   |   |-- rusage.mris_fix_topology.rh.dat
-|   |   |   |   |-- rusage.mris_inflate.lh.dat
-|   |   |   |   |-- rusage.mris_inflate.rh.dat
-|   |   |   |   |-- rusage.mris_register.lh.dat
-|   |   |   |   |-- rusage.mris_register.rh.dat
-|   |   |   |   |-- rusage.mris_sphere.lh.dat
-|   |   |   |   |-- rusage.mris_sphere.rh.dat
-|   |   |   |   |-- rusage.mri_watershed.dat
-|   |   |   |   |-- segstats.touch
-|   |   |   |   |-- skull.lta.touch
-|   |   |   |   |-- skull_strip.touch
-|   |   |   |   |-- talairach.touch
-|   |   |   |   |-- wmaparc.stats.touch
-|   |   |   |   |-- wmaparc.touch
-|   |   |   |   `-- wmsegment.touch
-|   |   |   `-- trash
-|-- participants.json                          # Participants demography in json format 
-|-- participants.tsv                   # Participants demography in tsv format
-|-- README                           # References for how to convert M-EEG data to BIDS format
-|-- sub-CA103                           # Subject folder
-|   `-- ses-1                           # Session/visit 1 (Experiment 1)
-|       |-- anat                   # Anatomical data folder
-|       |   |-- sub-CA103_ses-1_T1w.json  # Anatomical landmark coordinates for LPA: Left Preauricular Point, NAS: Nasion, RPA: Right Preauricular Point
-|       |   `-- sub-CA103_ses-1_T1w.nii.gz  # T1-weighted anatomical data
-|       |-- meg                           # MEG data folder
-|       |   |-- sub-CA103_ses-1_acq-calibration_meg.dat # Generic data file containing raw or unprocessed data acquired during a calibration session
-|       |   |-- sub-CA103_ses-1_acq-crosstalk_meg.fif # MEG data recorded during the crosstalk session
-|       |   |-- sub-CA103_ses-1_coordsystem.json # Contains information on MEG coordinate system, units, head coil and anatomical landmark coordinates
-|       |   |-- sub-CA103_ses-1_task-dur_run-01_channels.tsv # Contains information on the channel names, types, units, sampling rate, status, and frequency cutoffs of the filter applied to the recorded data
-|       |   |-- sub-CA103_ses-1_task-dur_run-01_events.json # Contains information about the events/stimuli presented during Experiment 1, run 1 such as the event onset time, event code (trigger code), and event's category
-|       |   |-- sub-CA103_ses-1_task-dur_run-01_events.tsv # Contains the same information as json file in tsv format
-|       |   |-- sub-CA103_ses-1_task-dur_run-01_meg.fif  # Contains the raw/preprocessed MEG data for Experiment 1/session 1, run 1
-|       |   |-- sub-CA103_ses-1_task-dur_run-01_meg.json
+|-- dataset_description.json                                  # General information about BIDS version, type of dataset, Authors, Acknowledgments, Funding, Ethics Approvals, and the link of COGITATE website 
+|-- derivatives                                               # Including metadata and coreg (coregistration)
+|   |-- additional_metadata                                   # Containing all of the metadata
+|   |   |-- dataset_description.json                          # General information about BIDS version, type of dataset
+|   |   |-- METADATA                                          # Including metadata including the list of devices, link to COGITATE GitHub repository, types of tasks, stimuli and responses and wiring diagram of MEG data 
+|   |   |   |-- analysis.json                                 # Analysis steps, the order of them and the link of analysis code repository
+|   |   |   |-- devices_MEEG.json                             # List of devices used for MEG data acquisition
+|   |   |   |-- protocols.json                                # Link of COGITATE wiki and MEG SOP
+|   |   |   |-- tasks_EXP1_MEEG.json                          # Description of behavioral task, stimuli and responses
+|   |   |   |-- tasks_RestinEO_MEEG.json                      # Description of resting-state task and type of the response
+|   |   |   |-- tasks_Rnoise_MEEG.json                        # Description of empty room task
+|   |   |   `-- wiring_MEEG.pdf                               # Wiring diagram of MEG
+|   |   |-- README.md                                         # Containing an explanation about additional_metadata directory
+|   |   |-- sub-CA103                                         # Subject folder
+|   |   |   `-- METADATA                                      # Containing Case Report Form, Exit Questionnaire and subject’s demography 
+|   |   |       |-- CA103_CRF.json                            # Case Report Form
+|   |   |       |-- CA103_demographics.json                    # Subject’s demography
+|   |   |       `-- CA103_EXQU.json                            # Exit Questionnaire
+
+|   `-- coreg                                                  # The results of the coregistration
+|       |-- dataset_description.json                           # BIDS version, Data Type, and description of the files of this directory
+|       |-- README.md                               
+|       |-- sub-CA103                                          # Subject folder
+|       |   `-- ses-1                                          # Session 1/visit 1
+|       |       `-- meg                                        # MEG folder
+|       |           `-- sub-CA103_ses-1_trans.fif              # The output of coregistering MEG sensors and head to the anatomical data
+|-- participants.json                                          # General information about subjects’ demography
+|-- participants.tsv                                           # Subjects’ demography in tsv format
+|-- README.md                                                  # Overview of MEG data and the BIDS format
+|-- sub-CA103                                                  # Subject folder
+|   `-- ses-1                                                  # Session 1/visit 1
+|       |-- anat                                               # Folder of anatomical data
+|       |   |-- sub-CA103_ses-1_T1w.json                       # Anatomical landmark coordinates
+|       |   `-- sub-CA103_ses-1_T1w.nii.gz                     # Anatomical data
+|       |-- meg                                                # Folder of MEG data
+|       |   |-- sub-CA103_ses-1_acq-calibration_meg.dat        # Calibration data
+|       |   |-- sub-CA103_ses-1_acq-crosstalk_meg.fif          # Crosstalk data
+|       |   |-- sub-CA103_ses-1_coordsystem.json               # Including Information about MEG and head coil and coordinate system, units, description and anatomical landmark coordinates
+|       |   |-- sub-CA103_ses-1_task-dur_run-01_channels.tsv   # Contains information on the channel names, types, units, sampling rate, status, and frequency cutoffs of the filter applied to the recorded data during run 1
+|       |   |-- sub-CA103_ses-1_task-dur_run-01_events.json    # Description of sample, value and trial type    
+|       |   |-- sub-CA103_ses-1_task-dur_run-01_events.tsv     # Contains information about the events/stimuli presented during Experiment 1, run 1, event’s onset time and duration, type of event, event code (trigger code) and sample
+|       |   |-- sub-CA103_ses-1_task-dur_run-01_meg.fif        # Contains the raw/unprocessed MEG data during the task of Experiment 1/session 1, run 1
+|       |   |-- sub-CA103_ses-1_task-dur_run-01_meg.json       # Contains power line and sampling frequencies, duration of recording, MEG, EOG and ECG and trigger channel counts during run 1
 |       |   |-- sub-CA103_ses-1_task-dur_run-02_channels.tsv
 |       |   |-- sub-CA103_ses-1_task-dur_run-02_events.json
 |       |   |-- sub-CA103_ses-1_task-dur_run-02_events.tsv
@@ -437,13 +131,13 @@ COG_MEEG_EXP1_BIDS_RELEASE/
 |       |   |-- sub-CA103_ses-1_task-dur_run-05_events.tsv
 |       |   |-- sub-CA103_ses-1_task-dur_run-05_meg.fif
 |       |   |-- sub-CA103_ses-1_task-dur_run-05_meg.json
-|       |   |-- sub-CA103_ses-1_task-noise_channels.tsv
-|       |   |-- sub-CA103_ses-1_task-noise_meg.fif
-|       |   |-- sub-CA103_ses-1_task-noise_meg.json
-|       |   |-- sub-CA103_ses-1_task-rest_channels.tsv
-|       |   |-- sub-CA103_ses-1_task-rest_meg.fif
-|       |   `-- sub-CA103_ses-1_task-rest_meg.json
-|       `-- sub-CA103_ses-1_scans.tsv
+|       |   |-- sub-CA103_ses-1_task-noise_channels.tsv        # Contains information on the channel names, types, units, sampling rate, status, and frequency cutoffs of the filter applied to the recorded data during noise recording
+|       |   |-- sub-CA103_ses-1_task-noise_meg.fif             # Contains the raw/unprocessed MEG data during noise recording of Experiment 1/session 1
+|       |   |-- sub-CA103_ses-1_task-noise_meg.json            # Contains power line and sampling frequencies, duration of recording, MEG, EOG and ECG and trigger channel counts during noise recording
+|       |   |-- sub-CA103_ses-1_task-rest_channels.tsv         # Contains information on the channel names, types, units, sampling rate, status, and frequency cutoffs of the filter applied to the recorded data during resting-state recording
+|       |   |-- sub-CA103_ses-1_task-rest_meg.fif              # Contains the raw/unprocessed MEG data during resting-state recording of Experiment 1/session 1
+|       |   `-- sub-CA103_ses-1_task-rest_meg.json             # Contains power line and sampling frequencies, duration of recording, MEG, EOG and ECG and trigger channel counts during resting-state recording            
+|       `-- sub-CA103_ses-1_scans.tsv                          # List of MEG data files
 ```
 
    </td>

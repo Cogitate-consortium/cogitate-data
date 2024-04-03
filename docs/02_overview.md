@@ -4,6 +4,8 @@ What are the mechanisms that give rise to consciousness? This question has been 
 
 COGITATE is a pioneering Open Science adversarial collaboration to bridge this gap and evaluate GNWT and IIT through two studies, named [Experiment 1](#experiment-1-conscious-perception) (EXP1) and [Experiment 2](#experiment-2-video-game-engagement) (EXP2). In these experiments, multimodal empirical tests are conducted on human volunteers (over 550 subjects from different populations), combining magneto-electroencephalography (M-EEG), functional magnetic resonance imaging (fMRI) and invasive intracortical recordings (iEEG) along with behavioral and eye tracking measurements. The reason for this approach is to maximize the sensitivity and specificity to the tests of each hypothesis, while accounting for trade-offs between temporal and spatial specificity inherent to the currently available methods in human neuroscience.
 
+![Cogitate overview graphic](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/overview_graphic_final.png)
+
 ## Goals
 
 The aim of the COGITATE project is to accelerate research on consciousness and establish a groundbreaking model for scientific practices in cognitive neuroscience at large, by demonstrating the impact of team-based adversary research and open data to address some of the major riddles in the field, much like established practices in other fields of inquiry such as physics and genomics.
@@ -54,7 +56,7 @@ A sequence of images including faces, objects, letters or meaningless symbols (â
 
 The duration of each sequence was approximately 2 minutes. The next sequence started when the subjects pressed the space key. Here is an example of the tasks:
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/Experiment%201%20-%20paradigm%20figure%20v1.png)
+![Experiment 1](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/Experiment%201%20-%20paradigm%20figure%20v1.png)
 
 ___
 For a comprehensive summary of more details about the experiments, please refer to the following supplementary resources:
