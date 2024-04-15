@@ -8,7 +8,7 @@ There are two ways of accessing the COGITATE data:
 <table>
     <tr>
         <td>
-            <a href="https://cogitate-data.ae.mpg.de/app/template/Login.vm#!">
+            <a href="">
                 <img
                     src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/xnat.png"
                     width=""
@@ -27,6 +27,8 @@ There are two ways of accessing the COGITATE data:
         </td>
     </tr>
 </table>
+
+<span style="background-color: #ffc7c7"><strong>NOTE: XNAT release not available yet!</strong></span>
 
 ## 1. XNAT
 
