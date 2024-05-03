@@ -2,9 +2,9 @@
 
 What are the mechanisms that give rise to consciousness? This question has been the focus of extensive research, leading to the development of several prominent theories, including Global Neuronal Workspace Theory (GNWT) and Integrated Information Theory (IIT). Critically, however, the focus so far has been on testing each theory independently, gathering evidence for/against them separately, leaving open a crucial question: which theory has higher explanatory power when tested against each other directly?
 
-COGITATE is a pioneering Open Science adversarial collaboration to bridge this gap and evaluate GNWT and IIT through two studies, named [Experiment 1](#experiment-1-conscious-perception) (EXP1) and [Experiment 2](#experiment-2-video-game-engagement) (EXP2). In these experiments, multimodal empirical tests are conducted on human volunteers (over 550 subjects from different populations), combining magneto-electroencephalography (M-EEG), functional magnetic resonance imaging (fMRI) and invasive intracortical recordings (iEEG) along with behavioral and eye tracking measurements. The reason for this approach is to maximize the sensitivity and specificity to the tests of each hypothesis, while accounting for trade-offs between temporal and spatial specificity inherent to the currently available methods in human neuroscience.
+COGITATE is a pioneering Open Science adversarial collaboration to bridge this gap and evaluate GNWT and IIT through two studies, named [Experiment 1](#experiment-1-conscious-perception) (EXP1) and [Experiment 2](#experiment-2-video-game-engagement) (EXP2). In these experiments, multimodal empirical tests are conducted on human volunteers, combining magneto-electroencephalography (M-EEG), functional magnetic resonance imaging (fMRI) and invasive intracortical recordings (iEEG) along with behavioral and eye tracking measurements. The reason for this approach is to maximize the sensitivity and specificity to the tests of each hypothesis, while accounting for trade-offs between temporal and spatial specificity inherent to the currently available methods in human neuroscience.
 
-![Cogitate overview graphic](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/overview_graphic_final.png)
+![Cogitate overview graphic](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/graphics_v1.1/overview_graphic_2024-04-26_v1.1.png)
 
 ## Goals
 
@@ -48,7 +48,7 @@ This experiment followed a 3x3x4x2 factorial design, with the following items:
 
 #### Sample Size
 
-The sample sizes were determined based on common practices in the literature, resulting in a total of 120 subjects for fMRI, 102 for M-EEG, and 44 for iEEG. All subjects met specific criteria, including age and health conditions, to ensure data quality.
+The sample sizes were determined based on common practices in the literature, resulting in a total of 122 subjects for fMRI, 102 for M-EEG, and 38 for iEEG. All subjects met specific criteria, including age and health conditions, to ensure data quality.
 
 #### Task Description
 
