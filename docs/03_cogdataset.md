@@ -1,27 +1,27 @@
 # COGITATE Dataset
 
-The COGITATE dataset is a comprehensive collection of multimodal neuroimaging data, encompassing a total of 266 subjects. COGITATE employs three distinct neuroimaging techniques: fMRI, M-EEG, and iEEG/ECoG.
+The COGITATE dataset is a comprehensive collection of multimodal neuroimaging data, encompassing a total of 262 subjects. COGITATE employs three distinct neuroimaging techniques: fMRI, M-EEG, and iEEG/ECoG.
 
 ![Cogitate overview map](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/overview_map.png)
 
 The MEG modality comprised 102 healthy subjects, also above the age of 18, with no known psychiatric or neurological issues. These participants were sourced from the Centre for Human Brain Health at the University of Birmingham (Birmingham, United Kingdom) and the Center for MRI Research of Peking University (Beijing, China).
 
-Similarly, the fMRI modality included 120 healthy volunteers, all of whom were above the age of 18 and predominantly right-handed. These participants had no known history of psychiatric or neurological disorders and were recruited from the Yale Magnetic Resonance Research Center (New Haven, CT, United States) and the Donders Centre for Cognitive Neuroimaging (Nijmegen, Netherlands).
+Similarly, the fMRI modality included 122 healthy volunteers, all of whom were above the age of 18 and predominantly right-handed. These participants had no known history of psychiatric or neurological disorders and were recruited from the Yale Magnetic Resonance Research Center (New Haven, CT, United States) and the Donders Centre for Cognitive Neuroimaging (Nijmegen, Netherlands).
 
-In contrast, the iEEG modality involved a more specialized cohort of 44 patients diagnosed with pharmaco-resistant focal epilepsy. These participants ranged in age from 10 to 65 years, had an IQ above 70, and met specific health criteria. They were recruited from multiple medical centers specializing in epilepsy treatment, including the Comprehensive Epilepsy Center at New York University (New York, NY, United States), Brigham and Women’s Hospital, Boston Children’s Hospital (Boston, MA, United States), and the University of Wisconsin School of Medicine and Public Health (Madison, WI, United States).
+In contrast, the iEEG modality involved a more specialized cohort of 38 patients diagnosed with pharmaco-resistant focal epilepsy. These participants ranged in age from 10 to 65 years, had an IQ above 70, and met specific health criteria. They were recruited from multiple medical centers specializing in epilepsy treatment, including the Comprehensive Epilepsy Center at New York University (New York, NY, United States), Brigham and Women’s Hospital, Boston Children’s Hospital (Boston, MA, United States), and the University of Wisconsin School of Medicine and Public Health (Madison, WI, United States).
 
-**Age Histograms across Modalities**
-![Cogitate subjects age distribution](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/age_distribution.png)
+**Age histograms across modalities**
+![Cogitate subjects age distribution](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/age%20histograms%20across%20modalities_2024-04-26_v1.1.png)
 
-**Sex Proportions across Modalities**
-![Cogitate subjects age distribution](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/sex_distribution.png)
+**Sex proportions across modalities**
+![Cogitate subjects age distribution](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/sex%20proportions%20across%20modalities_2024-04-26_v1.1.png)
 
-**Handedness Proportions across Modalities**
-![Cogitate subjects age distribution](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/hand_distribution.png)
+**Handedness proportions across modalities**
+![Cogitate subjects age distribution](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/handedness%20proportions%20across%20modalities_2024-04-26_v1.1.png)
 
 ## Demography of Subjects
 
-You can find the profile of participants for all modalities at [subjects_demography](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/2024-01-15_subjects_demographics_msp1_curated.xlsx). Here is a brief explanation about the information collected from the subjects.
+You can find the profile of participants for all modalities at [subjects_demography](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx). Here is a brief explanation about the information collected from the subjects.
 
 ### **Demographic Information for M-EEG**
 
@@ -121,6 +121,18 @@ FIF files contain various types of information related to neuroimaging data, inc
 4. Head geometry: Information about the shape and structure of the subject's head, which is crucial for accurate source localization.
 5. Covariance matrices: Statistical information about the relationships between sensor measurements at different time points or frequencies.
 6. Anatomical MRI data: High-resolution structural images of the subject's brain, used for source localization and spatial alignment.
+
+#### **iEEG data**
+
+- **Unprocessed/Raw release format**
+      - Filetype: EDF
+
+- **BIDS Format**
+      - Filetype: EDF
+
+European Data Format files used for storing and exchanging time-series biological and physiological data
+
+EDF files are designed to accommodate data from multiple channels, allowing researchers to store and manage data collected simultaneously from different sensors or electrodes. The format supports both raw signal data and associated metadata, including information about sampling rates, units of measurement, patient demographics, and recording conditions.
 
 ## Data Acquisition
 

@@ -4,7 +4,7 @@ What are the mechanisms that give rise to consciousness? This question has been 
 
 COGITATE is a pioneering Open Science adversarial collaboration to bridge this gap and evaluate GNWT and IIT through two studies, named [Experiment 1](#experiment-1-conscious-perception) (EXP1) and [Experiment 2](#experiment-2-video-game-engagement) (EXP2). In these experiments, multimodal empirical tests are conducted on human volunteers, combining magneto-electroencephalography (M-EEG), functional magnetic resonance imaging (fMRI) and invasive intracortical recordings (iEEG) along with behavioral and eye tracking measurements. The reason for this approach is to maximize the sensitivity and specificity to the tests of each hypothesis, while accounting for trade-offs between temporal and spatial specificity inherent to the currently available methods in human neuroscience.
 
-![Cogitate overview graphic](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/graphics_v1.1/overview_graphic_2024-04-26_v1.1.png)
+![Cogitate overview graphic](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/overview_graphic_2024-04-26_v1.1.png)
 
 ## Goals
 
