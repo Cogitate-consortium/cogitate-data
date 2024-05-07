@@ -106,7 +106,7 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#behavioral-data-acquisition">Behavioral Data Acquisition</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#eye-tracking">Eye Tracking</a>
+    <li class="toctree-l4"><a class="reference internal" href="#eye-tracking-data-acquisition">Eye Tracking Data Acquisition</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#behavioral-data-code-scheme">Behavioral Data Code Scheme</a>
     </li>
@@ -330,7 +330,7 @@ Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
 <p>For each subject, a high resolution T1-weighted MRI volume (3T Siemens MRI Prisma scanner) was acquired. At CHBH, a 32-channel coil with a resolution of 1 x 1 x 1 mm, TR/TE = 2000/2.03ms; TI = 880 ms; 8° flip angle, 208 sagittal slices and field of view (FOV): 256 x 256 matrix was acquired for source localization with individual realistic head modeling. At PKU, a 64-channel coil with a resolution of 0.5 x 0.5 x 1 mm, TR/TE = 2530/2.98ms; TI = 1100 ms; 7° flip angle, 192 sagittal slices; FOV: 448 × 512 matrix was used. To avoid possible interference of body magnetization on the MEG recording, all MRI scans were acquired at least one week before the MEG session, or at any time afterwards. The FreeSurfer standard template was used (fsaverage) for participants lacking an anatomical scan (N=5).</p>
 <h4 id="behavioral-data-acquisition">Behavioral Data Acquisition</h4>
 <p>The task was executed using Matlab (PKU: R2018b; UB: R2019b) with Psychtoolbox v.3 (Pelli, 1997) on a custom PC at UB and a Dell XPS desktop PC at PKU. Visual stimuli were presented on a screen placed in front of the subjects with a PROPixx DLP LED projector (VPixx Technologies Inc.) at a resolution of 1920 x 1080 pixels and a refresh rate of 120 Hz. The distance between the subject’s eyes and the screen was different at each site (CHBH: 119 cm, PKU: 85 cm) to achieve the same FOV of 36.6 x 21.2 degrees. Subjects responded with an 8-button response box (Millikey LH-8).</p>
-<h4 id="eye-tracking">Eye Tracking</h4>
+<h4 id="eye-tracking-data-acquisition">Eye Tracking Data Acquisition</h4>
 <p>Eye movements were monitored and recorded from both eyes (binocular eye-tracking) using the MEG-compatible EyeLink 1000 Plus eye-tracker (SR Research Ltd., Ottawa, Canada). Nine-point calibration was performed at the beginning of the experiment, and recalibrated if necessary at the beginning of each block/word. Pupil size and corneal reflection data were collected at a sampling rate of 1000 Hz.</p>
 <h4 id="behavioral-data-code-scheme">Behavioral Data Code Scheme</h4>
 <p>Stimuli are coded as a 4-digit number.<br />
@@ -406,7 +406,7 @@ Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
 <h4 id="resting-state-rm-eeg">Resting-State (rM-EEG)</h4>
 <p>The resting-state data for each participant was also recorded for 5-minutes and the subjects were asked to keep their eyes open and fixated on a point presented at the center of the screen. M-EEG signals were sampled at a rate of 1 kHz and band-pass filtered between 0.01 and 330 Hz prior to sampling.</p>
 <h4 id="task-tm-eeg">Task (tM-EEG)</h4>
-<p>Following the empty room and rM-EEG recordings, subjects were asked to complete the task defined in the <a href="#procedure">Procedure</a> section.</p>
+<p>Following the empty room and rM-EEG recordings, subjects were asked to complete the task defined in the <a href="#procedure">Procedure</a> section. tM-EEG consisted of 10 runs, with 4 blocks each. During each block, a ratio of 34-38 trials was presented, with 32 non-targets (8 of each category) and 2-6 targets (number chosen randomly). Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli.</p>
 <table>
 <thead>
 <tr>
