@@ -179,7 +179,7 @@ For each subject, a high resolution T1-weighted MRI volume (3T Siemens MRI Prism
 
 The task was executed using Matlab (PKU: R2018b; UB: R2019b) with Psychtoolbox v.3 (Pelli, 1997) on a custom PC at UB and a Dell XPS desktop PC at PKU. Visual stimuli were presented on a screen placed in front of the subjects with a PROPixx DLP LED projector (VPixx Technologies Inc.) at a resolution of 1920 x 1080 pixels and a refresh rate of 120 Hz. The distance between the subject’s eyes and the screen was different at each site (CHBH: 119 cm, PKU: 85 cm) to achieve the same FOV of 36.6 x 21.2 degrees. Subjects responded with an 8-button response box (Millikey LH-8).
 
-#### Eye Tracking
+#### Eye Tracking Data Acquisition
 
 Eye movements were monitored and recorded from both eyes (binocular eye-tracking) using the MEG-compatible EyeLink 1000 Plus eye-tracker (SR Research Ltd., Ottawa, Canada). Nine-point calibration was performed at the beginning of the experiment, and recalibrated if necessary at the beginning of each block/word. Pupil size and corneal reflection data were collected at a sampling rate of 1000 Hz.
 
