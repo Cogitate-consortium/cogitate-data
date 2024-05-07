@@ -281,7 +281,7 @@ The resting-state data for each participant was also recorded for 5-minutes and 
 
 #### Task (tM-EEG)
 
-Following the empty room and rM-EEG recordings, subjects were asked to complete the task defined in the [Procedure](#procedure) section.
+Following the empty room and rM-EEG recordings, subjects were asked to complete the task defined in the [Procedure](#procedure) section. tM-EEG consisted of 10 runs, with 4 blocks each. During each block, a ratio of 34-38 trials was presented, with 32 non-targets (8 of each category) and 2-6 targets (number chosen randomly). Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli.
 
 |              |          |            |                 |                  |
 | ------------ | -------- | ---------- | --------------- | ---------------- |
