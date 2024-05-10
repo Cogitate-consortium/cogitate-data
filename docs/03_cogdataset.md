@@ -192,7 +192,7 @@ Stimuli are coded as a 4-digit number.
 
 e.g., "1219" = 1 is face, 2 is left orientation and 19 is a female stimulus #19
 
-#### Eye Tracker and MEG Trigger Scheme
+#### Eye Tracker and MEG Code Scheme
 
 The channel name that contains the eye tracker data in the FIF file is as follows: MISC1 (X), MISC2 (Y), and MISC3 (pupil)
 
@@ -311,3 +311,273 @@ The items below were assessed for the subjects before the data was acquired:
 #### Quality Check and Exclusion Criteria
 
 For M-EEG, the first stage of the third-level checks focused on system-related and external noise generators. It was tested using the signal spectra in the empty room recording, the resting state session, and the experiment itself for all sensors. Any sensor and/or specific frequency revealing extensive noise using visual inspection, was flagged to document potential problems. Ultimately, this did not lead to any exclusions. Next, all experimental data blocks were visually inspected for abnormalities in spectra (peaks not explainable by physiology), and in ICA components, and checked for extremely noisy (based on the score of differences between the original and Maxwell-filtered data > 7) and flat sensors. The latter step was performed in a collaboration between the data monitoring team and members of the centers where data was acquired to check whether any potential changes in preprocessing for particular subjects were needed. Finally, we tested if all experimental cells (i.e. task-relevant non-targets and task-irrelevant stimuli for each one of the four categories) have enough trials (N=30).
+
+### iEEG Data Acquisition
+
+iEEG recordings were obtained from patients with pharmacologically resistant epilepsy undergoing invasive electrophysiological monitoring at the Comprehensive Epilepsy Center at New York University (NYU) Langone Health Center, Brigham and Women’s Hospital, Children’s Hospital Boston (Harvard Medical School), and University of Wisconsin School of Medicine and Public Health (WU).
+
+#### Hardware
+
+Brain activity was recorded with a combination of intracranially subdural platinum-iridium electrodes embedded in SILASTIC sheets (2.3 mm diameter contacts, Ad-Tech Medical Instrument and PMT Corporation) and/or depth stereo-electroencephalographic platinum- iridium electrodes (PMT Corporation; 0.8-mm diameter, 2.0-mm length cylinders; separated from adjacent contacts by 1.5 to 2.43 mm), or Behnke-Fried depth stereo- electroencephalographic platinum-iridium electrodes (Ad-Tech Medical, BF08R-SP21X-0C2, 1.28 mm in diameter, 1.57 mm in length, 3 to 5.5 mm spacing). The decision to implant, electrode targeting, and the duration of invasive monitoring was solely determined on clinical grounds and without reference to this or any other study. Electrodes were arranged as grid arrays (either 8 × 8 with 10 mm center-to-center spacing, 8 x 16 contacts with 3 mm spacing, or hybrid macro/micro 8 x 8 contacts with 10 mm spacing and 64 integrated microcontacts with 5 mm spacing), linear strips (1 × 8/12 contacts), depth electrodes (1 × 8/12 contacts), or a combination thereof. Subdural electrodes covered extensive portions of lateral and medial frontal, parietal, occipital, and temporal cortex of the left and/or right hemisphere. Recordings from grid, strip and depth electrode arrays were done using a Natus Quantum amplifier (Pleasonton, CA) or a Neuralynx Atlas amplifier (Bozeman, MT). A total of 4057 electrodes (892 grids, 346 strips, 2819 depths) were implanted across 32 patients with drug-resistant focal epilepsy undergoing clinically motivated invasive monitoring. 3512 electrodes (780 grids, 307 strips, 2425 depths) that were unaffected by epileptic activity, artifacts, or electrical noise were used in subsequent analyses. To determine the electrode localization for each patient, a postoperative CT (computed tomography) scan and a pre-operative T1 MRI were acquired and co-registered. Recordings were obtained continuously during the patients’ stay in the hospital. All data was stored with stimulus and timing markers permitting offline synchronization.
+
+#### Anatomical MRI Data Acquisition
+
+Before the participants underwent surgery and electrode implantation, T1-weighted MR data were acquired from them. At NYU, imaging was performed using the Siemens Biograph mMR scanner. At Harvard, the imaging sequence utilized was MPRAGE (magnetization-prepared rapid gradient-echo), with a Siemens Skyra 3T scanner. At WU, imaging was conducted using the GE MEDICAL SYSTEMS SIGNA Artist scanner. The rationale behind acquiring MR scans was the spatial resolution it offers for brain tissue visualization.
+
+#### CT Data Acquisition
+
+Following surgery, post-operative CT scans were obtained from the subjects to assist in localizing the electrodes on specific brain tissue. At NYU, scans were performed using a Siemens SOMATOM Force scanner. At Harvard, imaging was conducted using the Medtronic O-arm MVS O2, manufactured by Medtronic. At WU, scans were acquired utilizing the GE MEDICAL SYSTEMS Optima CT660 scanner.
+
+<span style="background-color: red"><b>Please note:</b></span>
+**MR and CT data were collected for the subjects at Brigham and Women’s Hospital and Children’s Hospital Boston. However, due to the data protection policies, they are not included in the COGITATE Data Release.**
+
+#### Behavioral Data Acquisition
+
+The task was implemented using Matlab (Harvard: R2020b; NYU: R2020a, WU: 2021a), Psychtoolbox v.3 (Pelli, 1997), and run on a Dell Precision 5540 laptop, with a 15.6" Ultrasharp screen (screen size 345 x 195 mm2; resolution 1920 x 1080) at NYU and Harvard and on a Dell D29M PC with an Acer V196WL 19" LED LCD monitor (screen size 406.4 x 254 mm2; resolution 1440 x 990) at WU. The distance between the subject’s eyes and the screen was 80 cm. But the actual distance was measured for each subject before the start of recording to ensure that the size of the stimulus was 6 x 6 of visual angle. Participants responded using an 8-button response box (Millikey LH-8; response hand(s) varied based on the setting in the patient’s room).
+
+#### Eye Tracking Data Acquisition
+
+At Harvard and Wisconsin, EyeLink 1000 Plus Camera was used to collect eye-tracking data, and a thirteen-point calibration was performed several times during the experiment. The calibration was performed at the beginning of the experiment, and recalibrated in-between blocks, if necessary to meet precision requirements. At NYU, eye-tracking data was collected throughout the duration of the experiment using a Tobii-4C eye-tracker. A nine-point calibration was performed several times during the experiment. Pupil size and corneal reflection data were collected at a sampling rate of 500 Hz at Harvard and Wisconsin and at a sampling rate of 90 Hz at NYU. The Eyelink system recorded monocular data, while the Tobii system recorded binocular data. For the former cases, only one eye was recorded as determined by ocular dominance. The experiment was not influenced by the Eye-tracking recording.
+
+#### Behavioral Data Code Scheme
+
+The behavioral code scheme is similar to the M-EEG modality which is explained in [this section](#behavioral-data-code-scheme).
+
+#### Eye Tracker Data Code 
+
+The eye tracker code scheme for the iEEG modality follows a similar structure to that described for M-EEG data. You can find detailed explanations [here](#eye-tracker-and-MEG-code-scheme).
+
+#### iEEG Code Scheme
+##### Photodiode Trigger Scheme
+
+For ECOG patients, the type of port utilized by the M-EEG team (LPT) was incompatible with our recording system. Consequently, a photodiode was employed. A photodiode is an electronic device that records changes in luminance and converts them into voltage.
+
+![An example of a photodiode](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/photodiode.png)
+An example of a photodiode
+
+In the experimental code, it was ensured that when a new event occurred on the screen (such as stimulus onset or stimulus offset), a white flash appeared in the bottom right corner. The photodiode device was positioned atop the flashing square and connected to the amplifier recording the iEEG channel signals. This additional channel facilitated the identification of event onsets in our task. This type of recording only allows binary signals (the photodiode is either on or off). However, specific events were encoded with varying numbers of subsequent pulses.
+
+**Stimulus Presentation Onset**
+
+The flashing square was flashed only once at the onset of each new stimulus.
+
+**Stimulus Presentation Offset**
+
+The flashing square was flashed only once at the offset of each stimulus.
+
+**Start of the Inter-Trial Interval**
+
+The flashing square was flashed only once at the beginning of the inter-trial interval. The inter-trial interval was initiated 2 seconds after stimulus onset and persisted for a random duration (following a truncated exponential distribution between 0.2 and 2 seconds, with a mean of 0.4 seconds).
+
+**Block Start**
+
+The start of an experimental block was marked by sending 4 consecutive pulses.
+
+**Block End**
+
+The end of an experimental block was marked by sending 2 consecutive pulses.
+
+**Experiment Start and End**
+
+The beginning and end of the experiment were marked by sending 3 consecutive pulses.
+
+<a name="schematic-representation-of-the-photodiode-channel"></a>
+
+![Schematic representation of the photodiode channel](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Schematic%20representation%20of%20the%20photodiode%20channel.png)Schematic representation of the photodiode channel
+
+##### Log File Alignment
+
+The photodiode channel solely indicates when a specific event occurred in the iEEG signals, lacking any information about the nature of the event (unlike an LPT trigger in MEG). To identify specific events in the signal, the timing information from the log file was combined with that from the photodiode.
+
+The log file contains a description of each presented event along with a corresponding time stamp from the experimental computer. The photodiode channel recorded time stamps for each event, indicating when it occurred according to the acquisition computer clock. The goal was to align the log file and the photodiode to associate each event in the photodiode signal with the corresponding event description in the log file. This step was crucial since misalignment could lead to incorrect event descriptions in the iEEG signal, compromising the entire analysis.
+
+The procedure relies on the fact that both the log file and the photodiode had timestamps. These timestamps were recorded on different clocks. Unfortunately, computer clocks tended to drift away from one another, and these drifts accumulated to be quite significant over extended periods of time (they could be several seconds apart after 1 hour). Therefore, the timestamps of the photodiode and the log file could not be used interchangeably. However, over short periods of time, these drifts were negligible. What this meant was that the interval between two successive timestamps in the log file should be quite consistent with the intervals between two successive events in the photodiode. This provided us with the most thorough check possible: if the events in the log file and in the photodiode were aligned, then there should be only tiny differences between the differences between successive events in both. Here is a step-by-step description of the alignment procedure.
+
+**Extract the Photodiode Timestamps**
+
+The timestamps from the photodiode triggers were extracted as the first step. As illustrated in the figure [Schematic representation of the photodiode channel](#schematic-representation-of-the-photodiode-channel), a square pulse was generated for each event during the recording. The onset of each of these pulses was sought. To achieve this, a threshold was initially established, below which the photodiode was considered to be in the off state and above which it was considered to be on (based on visual inspection of the data, which was facilitated by the clean nature of photodiode signals). Subsequently, the signal was binarized using this threshold (signal_bin = signal > threshold), resulting in a signal consisting only of ones and zeros. Next, the discrete difference of the binary signal was computed (y(i + 1) = y(i + 1) - y(i)). This operation produced a “1” when the photodiode transitioned from off to on (onset) and a “-1” when it transitioned from on to off (offset). Since only the onset was of interest, the timestamps of the ones were extracted, representing the timestamps of the photodiode.
+
+**Verify Event Count Alignment**
+
+The first step in aligning the photodiode events and the log files was to check if the number of events in each matched. If they did not match, then there was a problem.
+
+**Aligning the Two Signals**
+
+To ensure alignment of both signals, the discrete difference between the photodiode and log file timestamps was computed, providing the interval between successive events for each signal. The resulting arrays were then plotted atop each other. Misalignment between the two sources of timing information could be easily detected, as they did not overlap. Perfect overlap between the two was necessary to consider the signals aligned. Additionally, the difference between the two signals was computed to ensure minimal deviation.
+
+**Integrating Information**
+
+Once the two signals were properly aligned, the log file events could be used as descriptors of the events marked at the timestamps from the photodiode.
+
+![Illustration of the alignment pipeline](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Illustration%20of%20the%20alignment%20pipeline.png)Illustration of the alignment pipeline
+
+The alignment procedure allowed the information from the log file to be utilized in generating well-described events in the iEEG data. The events were encoded as “/” separated strings and stored in an events.tsv table. An extensive description of each event type and their levels are as follows:
+
+**Task Name:** Dur
+
+**Task Description:** Description of the experimental factors and their level with the correct syntax to access them from the MNE epochs object. Note that factor and level names are case-sensitive. We describe the syntax for each condition separately. However, note that you can fetch a combination of factors from the epochs using a forward slash. For example, if you wish to fetch the face target trials, you can combine both conditions like so: epochs['face/Relevant target'] will fetch all face target trials. In addition, the epochs objects are equipped with metadata, where the name of the column is the name of the factor, and the level follows the same nomenclature as below. This can be used for more sophisticated trial filtering and retrieval.
+
+**Experimental Design:**
+
+- Event Type:
+  - Marks the different events occurring within a trial.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: stimulus onset
+    - Description: Marks the onset of the visual stimuli. With epochs['stimulus onset'], extract all epochs time-locked to the visual stimulus onset.
+  - Factor 2:
+    - Name: stimulus offset
+    - Description: Marks the offset of the visual stimuli. With epochs['stimulus offset'], extract all epochs time-locked to the offset of the visual stimulus.
+  - Factor 3:
+    - Name: jitter onset
+    - Description: Marks the beginning of the inter-trial jitter. All trials lasted 2 sec., with an added jitter of 400ms on average. With epochs['jitter onset'], extract all epochs time-locked to the beginning of the jitter period (2 sec. after stimulus onset).
+- Block:
+  - Marks the experimental blocks.
+  - Factor Type: Discrete
+  - Factor 1:
+    - Name: block_*
+    - Description: Experimental blocks. Our experiment consisted of 5 blocks, in between which participants were allowed to take a break. With epochs['block_1'], extract all epochs of the first experimental block.
+- Miniblock:
+  - Marks the experimental miniblocks.
+  - Factor Type: Discrete
+  - Factor 1:
+    - Name: miniblock_*
+    - Description: Experimental miniblocks. Each experimental block consisted of 4 miniblocks. At the beginning of each miniblock, the two target stimuli were presented to the participant, which the participant had to remember to be able to detect in the stream of stimuli. With epochs['miniblock_1'], extract all epochs of the first experimental miniblock.
+- Category:
+  - Category of the visual stimuli.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: face
+    - Description: Identifies face trials. With epochs['face'], extract all epochs in which a face was presented.
+  - Factor 2:
+    - Name: object
+    - Description: Identifies object trials. With epochs['object'], extract all epochs in which an object was presented.
+  - Factor 3:
+    - Name: letter
+    - Description: Identifies letter trials. With epochs['letter'], extract all epochs in which a letter was presented.
+  - Factor 4:
+    - Name: false
+    - Description: Identifies false font trials (i.e., symbols). With epochs['false'], extract all epochs in which a false font was presented.
+- Identity:
+  - Identity of the visual stimuli.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: face_*
+    - Description: Identifies the identity of face trials. With epochs['face_*'], extract all epochs in which that specific face was presented. From 1-9, leading 0.
+  - Factor 2:
+    - Name: object_*
+    - Description: Identifies the identity of object trials. With epochs['object_*'], extract all epochs in which that specific object was presented. From 1-9, leading 0.
+  - Factor 3:
+    - Name: letter_*
+    - Description: Identifies the identity of letter trials. With epochs['letter_*'], extract all epochs in which that specific letter was presented. From 1-9, leading 0.
+  - Factor 4:
+    - Name: false_*
+    - Description: Identifies the identity of false font trials (i.e., symbols). With epochs['false__*'], extract all epochs in which that specific false font was presented. From 1-9, leading 0.
+- Orientation:
+  - Orientation of the displayed stimuli.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: Center
+    - Description: Identifies stimuli presented in the center orientation. With epochs['Center'], extract all epochs in which a stimulus was presented in the center orientation.
+  - Factor 2:
+    - Name: Left
+    - Description: Identifies stimuli presented in the Left orientation. With epochs['Left'], extract all epochs in which a stimulus was presented in the Left orientation.
+  - Factor 3:
+    - Name: Right
+    - Description: Identifies stimuli presented in the Right orientation. With epochs['Right'], extract all epochs in which a stimulus was presented in the Right orientation.
+- Duration:
+  - Duration a visual stimulus was presented for.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: 500ms
+    - Description: Identifies stimuli presented for 500ms. With epochs['500ms'], extract all epochs in which the stimulus was displayed for 500ms.
+  - Factor 2:
+    - Name: 1000ms
+    - Description: Identifies stimuli presented for 1000ms. With epochs['1000ms'], extract all epochs in which the stimulus was displayed for 1000ms.
+  - Factor 3:
+    - Name: 1500ms
+    - Description: Identifies stimuli presented for 1500ms. With epochs['1500ms'], extract all epochs in which the stimulus was displayed for 1500ms.
+- Task Relevance:
+  - Task relevance of a given trial.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: Relevant target
+    - Description: Identifies target stimuli. Target stimuli are presented at the beginning of each miniblock, and participants must detect them among the sequence of presented stimuli by pressing a button. With epochs['Relevant target'], extract all target trials.
+  - Factor 2:
+    - Name: Relevant non-target
+    - Description: Identifies task-relevant non-target stimuli. We considered task-relevant stimuli that were of the same category as the target but of a different identity. With epochs['Relevant non-target'], extract all task-relevant non-target trials.
+  - Factor 3:
+    - Name: Irrelevant
+    - Description: Identifies task-irrelevant non-target stimuli. We considered task-irrelevant stimuli that were of a different category than the target. With epochs['Irrelevant'], extract all task-irrelevant non-target trials.
+- Response:
+  - Rated response of the participants.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: Hit
+    - Description: Participants correctly identified a target by pressing a button. With epochs['Hit'], extract all target trials for which the participants pressed a key.
+  - Factor 2:
+    - Name: CorrRej
+    - Description: Participants correctly rejected a non-target stimulus and did not press any button. With epochs['CorrRej'], extract all non-target trials for which the participants did not press a key.
+  - Factor 3:
+    - Name: Miss
+    - Description: Participants failed to press a button when a target stimulus was presented. With epochs['Miss'], extract all target trials in which participants failed to press a button.
+  - Factor 4:
+    - Name: FA
+    - Description: Participants mistakenly pressed a button when a non-target stimulus was presented. With epochs['FA'], extract all non-target trials in which participants pressed a button.
+  - Factor 5:
+    - Name: n.a.
+    - Description: For the events stimulus offset and jitter onset, the response is set to n.a. as the response relates to the visual stimulus, not to the other events. This should not be used to access the data.
+
+#### Surface Reconstruction and Electrode Localization
+
+Subject-specific pial surfaces were automatically reconstructed based on a pre-implant T1 weighted MR image using the Freesurfer image analysis suite (‘recon-all’, http://surfer.nmr.mgh.harvard.edu; Dale et al., 1999). Post-implant CT images were co-registered with the pre-implant MR images using FLIRT (Jenkinson and Smith, 2001), as implemented in FSL (Smith et al., 2004; http://fsl.fmrib.ox.ac.uk/fsl/). For NYU patients, we used a semi-automatic approach to generating electrode labels. For manual cases, co-registered MR and CT slices were examined using FSLView (Smith et al., 2004). For grids, we localized three corner electrodes and the remaining electrodes coordinates were then automatically interpolated along the shared plane using the known inter-electrode distances. Strip and depth electrodes were localized manually when they did not follow straight trajectories. When depth electrodes were in a straight line, the first and last electrodes were localized manually, and electrodes in between were automatically interpolated and labeled based on known inter-electrode distances and serial labeling convention. For WU patients, electrodes were localized manually using the SubNuclear toolbox (ckovach/ SubNuclear (github.com)). Electrode locations were further refined within the space of the pre-operative MRI using three-dimensional non-linear thin-plate spline warping (Rohr et al., 2001), which corrected for post-operative shift and distortion. The warping was constrained with manually selected points through the brain, which was visually aligned with landmarks in pre-implantation MRI and post-implantation CT. For Harvard subjects, individual contacts from depth electrodes were labeled manually from the CT image using the BioImageSuite’s  Electrode Editor tool (legacy version 3.5; https://bioimagesuiteweb.github.io/webapp/; Joshi, et al., 2011). The coordinates in CT image-space were converted to coordinates within the patient’s segmented MRI brain-space using the iELVis toolbox (https://github.com/iELVis/ iELVis, yangWangElecPjct; Yang, Wang, et al., 2012; Groppe et al., 2017). For all sites, the electrode spatial coordinates were transformed from the individual patient space into the standard space of the Montreal Neurological Institute (MNI-152) template for plotting purposes. At NYU, this transformation was performed using the DARTEL algorithm (Ashburner, 2007) implemented in SPM8 (Wellcome Department of Imaging Neuroscience, London, United Kingdom). At Harvard, this transformation was performed using the iELVis toolkit. At WU the transformation was performed with the SubNuclear toolbox (ckovach/SubNuclear (github.com)) using img2imgcoord utility.
+
+#### Finger Localizer Task
+
+In the Finger Localizer task, participants were presented with four circles, one of which was filled with a specific color, serving as a cue for participants to press the corresponding colored button on the response box. The filled state of the circle persisted for the duration of the response time, followed by an additional delay of 200 milliseconds. The Inter-Trial Intervals (ITIs) were uniformly distributed, with a mean of 0.55 seconds and a range from 0.400 to 0.700 seconds. The experimental protocol comprised 80 trials, distributed equally among the four colors, with 20 trials per color, and the sequence of trials was randomized. This task aimed to identify brain regions responsible for motor control, particularly those governing finger movements, and to pinpoint electrodes selectively activated by specific motor responses, such as button presses.
+
+![An illustration depicting a trial in which the participant is required to press the blue button](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/FingerLoc.png)An illustration depicting a trial in which the participant is required to press the blue button
+
+<span style="background-color: red"><b>Please note:</b></span> **Although participants completed this task concurrently with [Experiment 1](#experiment-1-conscious-perception), we did not utilize the data in the analysis, as it was primarily acquired for use in [Experiment 2](#experiment-2-video-game-engagement). Consequently, the data pertaining to the Finger Localizer task is not included in this version of our data release.**
+
+#### Task (tiEEG)
+
+Participants proceeded to Experiment 1 either after or before completing the [Finger Localizer task](#finger-localizer-task). tiEEG consisted of 5 runs containing 4 blocks each, and 34-38 trials per block, 32 non-targets (8 of each category) and 2-6 targets, with each trial lasting 2.4 s approximately, for a total of 720 trials. Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli. Additional information about the task can be found [here](#procedure).
+
+|              |          |            |                 |                  |
+| ------------ | -------- | ---------- | --------------- | ---------------- |
+| **Task**     | **Runs** | **Blocks** | **Trials**      | **Total trials** |
+| Experiment 1 | 5       | 4          | 34-38 per block | 720             |
+
+#### Full Structure of Session
+
+Complete standard procedure of an iEEG session is available in [iEEG Standard Operating Procedure](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf).
+
+#### Inclusion Criteria
+
+For the iEEG studies, subjects were 10-65 years old, able to provide informed consent, had IQ > 70, fluent in English, with self-reported normal hearing, normal or corrected-to-normal vision, and cognitive and language abilities within or above the normal range in formal neuropsychological testing performed before surgery. They must not have had an electrographic seizure within 3-hours prior to testing.
+
+#### Quality Check
+
+A comprehensive quality assessment was conducted on the iEEG data. The data underwent manual annotation by epileptologists, excluding channels within the epileptic onset zone, as well as those exhibiting artifacts or showing complete flatness due to electrode contact issues. Channel rejection was independently performed by both the data monitoring and iEEG teams, with results compared to ensure consistency. Additionally, electrode reconstruction was verified to align with subjects' CT scans. Finally, we inspected for significant disturbances in the spectra.
+
+#### Exclusion Criteria
+
+Subjects who were unable to complete a sufficient number of trials due to excessive muscular artifacts, movement, noisy recordings, or a decision by the subject to terminate the experiment were excluded. Subjects who exhibited a low performance in the attention task were also excluded – this translates to <70% Hits and >30% FAs. In addition, data was also excluded if it did not pass any of the pre-defined data quality checks.
+
+#### Deviations from Data Curation Procedure
+
+Our approach to defacing MR/CT DICOM images involved utilizing the built-in face masking tool from XNAT. However, for 12 iEEG subjects, we encountered difficulties in executing this step. This was primarily due to variations in the DICOM images, which could include cropped images, aliasing artifacts, broken headers, missing slices, non-equidistant slices within a series, and other issues. Below is the list of subjects where the execution of the XNAT facemasking tool failed:
+
+**Subject_ID:** CF103, CF104, CF112, CF113, CF116, CF117, CF120, CF121, CF122, CF124, CF125, CF126
+
+To address this issue, we implemented a slightly different workflow that allowed us to successfully deface MR/CT images of these 12 subjects. However, this new approach differed in its ability to regenerate the original DICOM images post-defacement (the original output from the XNAT facemasking tool). Instead, it generated defaced NIFTI images as the primary output. For our current version of data release, we have decided to share only the defaced NIFTI images for these subjects. Details about this workflow are provided below:
+
+1. Anonymization: MR/CT DICOM images underwent anonymization to remove the subject’s Protected Health Information (PHI).
+2. NIFTI Conversion: Anonymized DICOM images were then converted to the NIFTI image format using the dcm2niix package (version: 1.0.20220505) (Li et al., 2016).
+3. Defacing of NIFTI: Defacing of the NIFTI images was performed using the PyDeface package (version: 2.0.2) (Gulban et al., 2022).
+4. Verification: This step involved checking the quality of the defaced NIFTI images using 2D/3D image plots to compare before and after the defacing stage.
+
+![Alternative workflow for defacing 12 challenging MR/CT DICOM Images](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png)Alternative workflow for defacing 12 challenging MR/CT DICOM Images
+
+<span style="background-color: red"><b>Miscellaneous:</b></span> **In the MR data for subject CF103, one DICOM slice was inadvertently dropped during the conversion process from DICOM to NIFTI format. However, the resulting NIFTI file remains functional and usable.**
