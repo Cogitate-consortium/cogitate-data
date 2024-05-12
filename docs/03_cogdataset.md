@@ -292,14 +292,10 @@ The resting-state data for each participant was also recorded for 5-minutes and 
 
 Following the empty room and rM-EEG recordings, subjects were asked to complete the task defined in the [Procedure](#procedure) section. tM-EEG consisted of 10 runs, with 4 blocks each. During each block, a ratio of 34-38 trials was presented, with 32 non-targets (8 of each category) and 2-6 targets (number chosen randomly). Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli.
 
-<div style="text-align:center;">
-
 |              |          |            |                 |                  |
 | ------------ | -------- | ---------- | --------------- | ---------------- |
 | **Task**     | **Runs** | **Blocks** | **Trials**      | **Total trials** |
 | Experiment 1 | 10       | 4          | 34-38 per block | 1440             |
-
-</div>
 
 #### Full Structure of Session
 
@@ -317,9 +313,9 @@ The items below were assessed for the subjects before the data was acquired:
 - No MRI in the last week
 - MRI compatible: no metal, medical implants, etc. No claustrophobia. Note: dental implants are allowed (particularly for non-magnetic materials) unless it generates big impacts on MEG signals, and this will be checked prior to MEG recording.
 - No known history of psychiatric or neurological disorders, e.g.,
-  - Not have been formally diagnosed with attention deficit (hyperactivity) disorder (AD(H)D).
-  - Not have been formally diagnosed with autism spectrum disorder (ASD)
-  - Not suffer from epilepsy
+    - Not have been formally diagnosed with attention deficit (hyperactivity) disorder (AD(H)D).
+    - Not have been formally diagnosed with autism spectrum disorder (ASD)
+    - Not suffer from epilepsy
 
 #### Quality Check and Exclusion Criteria
 
@@ -444,110 +440,110 @@ The alignment procedure allowed the information from the log file to be utilized
     - Marks the different events occurring within a trial.
     - Factor Type: Categorical
     - Factor 1:
-      - Name: stimulus onset
-      - Description: Marks the onset of the visual stimuli. With epochs['stimulus onset'], extract all epochs time-locked to the visual stimulus onset.
+        - Name: stimulus onset
+        - Description: Marks the onset of the visual stimuli. With epochs['stimulus onset'], extract all epochs time-locked to the visual stimulus onset.
     - Factor 2:
-      - Name: stimulus offset
-      - Description: Marks the offset of the visual stimuli. With epochs['stimulus offset'], extract all epochs time-locked to the offset of the visual stimulus.
+        - Name: stimulus offset
+        - Description: Marks the offset of the visual stimuli. With epochs['stimulus offset'], extract all epochs time-locked to the offset of the visual stimulus.
     - Factor 3:
-      - Name: jitter onset
-      - Description: Marks the beginning of the inter-trial jitter. All trials lasted 2 sec., with an added jitter of 400ms on average. With epochs['jitter onset'], extract all epochs time-locked to the beginning of the jitter period (2 sec. after stimulus onset).
+        - Name: jitter onset
+        - Description: Marks the beginning of the inter-trial jitter. All trials lasted 2 sec., with an added jitter of 400ms on average. With epochs['jitter onset'], extract all epochs time-locked to the beginning of the jitter period (2 sec. after stimulus onset).
 - Block:
     - Marks the experimental blocks.
     - Factor Type: Discrete
     - Factor 1:
-      - Name: block_*
-      - Description: Experimental blocks. Our experiment consisted of 5 blocks, in between which participants were allowed to take a break. With epochs['block_1'], extract all epochs of the first experimental block.
+        - Name: block_*
+        - Description: Experimental blocks. Our experiment consisted of 5 blocks, in between which participants were allowed to take a break. With epochs['block_1'], extract all epochs of the first experimental block.
 - Miniblock:
     - Marks the experimental miniblocks.
     - Factor Type: Discrete
     - Factor 1:
-      - Name: miniblock_*
-      - Description: Experimental miniblocks. Each experimental block consisted of 4 miniblocks. At the beginning of each miniblock, the two target stimuli were presented to the participant, which the participant had to remember to be able to detect in the stream of stimuli. With epochs['miniblock_1'], extract all epochs of the first experimental miniblock.
+        - Name: miniblock_*
+        - Description: Experimental miniblocks. Each experimental block consisted of 4 miniblocks. At the beginning of each miniblock, the two target stimuli were presented to the participant, which the participant had to remember to be able to detect in the stream of stimuli. With epochs['miniblock_1'], extract all epochs of the first experimental miniblock.
 - Category:
     - Category of the visual stimuli.
     - Factor Type: Categorical
     - Factor 1:
-      - Name: face
-      - Description: Identifies face trials. With epochs['face'], extract all epochs in which a face was presented.
+        - Name: face
+        - Description: Identifies face trials. With epochs['face'], extract all epochs in which a face was presented.
     - Factor 2:
-      - Name: object
-      - Description: Identifies object trials. With epochs['object'], extract all epochs in which an object was presented.
+        - Name: object
+        - Description: Identifies object trials. With epochs['object'], extract all epochs in which an object was presented.
     - Factor 3:
-      - Name: letter
-      - Description: Identifies letter trials. With epochs['letter'], extract all epochs in which a letter was presented.
+        - Name: letter
+        - Description: Identifies letter trials. With epochs['letter'], extract all epochs in which a letter was presented.
     - Factor 4:
-      - Name: false
-      - Description: Identifies false font trials (i.e., symbols). With epochs['false'], extract all epochs in which a false font was presented.
+        - Name: false
+        - Description: Identifies false font trials (i.e., symbols). With epochs['false'], extract all epochs in which a false font was presented.
 - Identity:
     - Identity of the visual stimuli.
     - Factor Type: Categorical
     - Factor 1:
-      - Name: face_*
-      - Description: Identifies the identity of face trials. With epochs['face_*'], extract all epochs in which that specific face was presented. From 1-9, leading 0.
+        - Name: face_*
+        - Description: Identifies the identity of face trials. With epochs['face_*'], extract all epochs in which that specific face was presented. From 1-9, leading 0.
     - Factor 2:
-      - Name: object_*
-      - Description: Identifies the identity of object trials. With epochs['object_*'], extract all epochs in which that specific object was presented. From 1-9, leading 0.
+        - Name: object_*
+        - Description: Identifies the identity of object trials. With epochs['object_*'], extract all epochs in which that specific object was presented. From 1-9, leading 0.
     - Factor 3:
-      - Name: letter_*
-      - Description: Identifies the identity of letter trials. With epochs['letter_*'], extract all epochs in which that specific letter was presented. From 1-9, leading 0.
+        - Name: letter_*
+        - Description: Identifies the identity of letter trials. With epochs['letter_*'], extract all epochs in which that specific letter was presented. From 1-9, leading 0.
     - Factor 4:
-      - Name: false_*
-      - Description: Identifies the identity of false font trials (i.e., symbols). With epochs['false__*'], extract all epochs in which that specific false font was presented. From 1-9, leading 0.
+        - Name: false_*
+        - Description: Identifies the identity of false font trials (i.e., symbols). With epochs['false__*'], extract all epochs in which that specific false font was presented. From 1-9, leading 0.
 - Orientation:
     - Orientation of the displayed stimuli.
     - Factor Type: Categorical
     - Factor 1:
-      - Name: Center
-      - Description: Identifies stimuli presented in the center orientation. With epochs['Center'], extract all epochs in which a stimulus was presented in the center orientation.
+        - Name: Center
+        - Description: Identifies stimuli presented in the center orientation. With epochs['Center'], extract all epochs in which a stimulus was presented in the center orientation.
     - Factor 2:
-      - Name: Left
-      - Description: Identifies stimuli presented in the Left orientation. With epochs['Left'], extract all epochs in which a stimulus was presented in the Left orientation.
+        - Name: Left
+        - Description: Identifies stimuli presented in the Left orientation. With epochs['Left'], extract all epochs in which a stimulus was presented in the Left orientation.
     - Factor 3:
-      - Name: Right
-      - Description: Identifies stimuli presented in the Right orientation. With epochs['Right'], extract all epochs in which a stimulus was presented in the Right orientation.
+        - Name: Right
+        - Description: Identifies stimuli presented in the Right orientation. With epochs['Right'], extract all epochs in which a stimulus was presented in the Right orientation.
 - Duration:
     - Duration a visual stimulus was presented for.
     - Factor Type: Categorical
     - Factor 1:
-      - Name: 500ms
-      - Description: Identifies stimuli presented for 500ms. With epochs['500ms'], extract all epochs in which the stimulus was displayed for 500ms.
+        - Name: 500ms
+        - Description: Identifies stimuli presented for 500ms. With epochs['500ms'], extract all epochs in which the stimulus was displayed for 500ms.
     - Factor 2:
-      - Name: 1000ms
-      - Description: Identifies stimuli presented for 1000ms. With epochs['1000ms'], extract all epochs in which the stimulus was displayed for 1000ms.
+        - Name: 1000ms
+        - Description: Identifies stimuli presented for 1000ms. With epochs['1000ms'], extract all epochs in which the stimulus was displayed for 1000ms.
     - Factor 3:
-      - Name: 1500ms
-      - Description: Identifies stimuli presented for 1500ms. With epochs['1500ms'], extract all epochs in which the stimulus was displayed for 1500ms.
+        - Name: 1500ms
+        - Description: Identifies stimuli presented for 1500ms. With epochs['1500ms'], extract all epochs in which the stimulus was displayed for 1500ms.
 - Task Relevance:
     - Task relevance of a given trial.
     - Factor Type: Categorical
     - Factor 1:
-      - Name: Relevant target
-      - Description: Identifies target stimuli. Target stimuli are presented at the beginning of each miniblock, and participants must detect them among the sequence of presented stimuli by pressing a button. With epochs['Relevant target'], extract all target trials.
+        - Name: Relevant target
+        - Description: Identifies target stimuli. Target stimuli are presented at the beginning of each miniblock, and participants must detect them among the sequence of presented stimuli by pressing a button. With epochs['Relevant target'], extract all target trials.
     - Factor 2:
-      - Name: Relevant non-target
-      - Description: Identifies task-relevant non-target stimuli. We considered task-relevant stimuli that were of the same category as the target but of a different identity. With epochs['Relevant non-target'], extract all task-relevant non-target trials.
+        - Name: Relevant non-target
+        - Description: Identifies task-relevant non-target stimuli. We considered task-relevant stimuli that were of the same category as the target but of a different identity. With epochs['Relevant non-target'], extract all task-relevant non-target trials.
     - Factor 3:
-      - Name: Irrelevant
-      - Description: Identifies task-irrelevant non-target stimuli. We considered task-irrelevant stimuli that were of a different category than the target. With epochs['Irrelevant'], extract all task-irrelevant non-target trials.
+        - Name: Irrelevant
+        - Description: Identifies task-irrelevant non-target stimuli. We considered task-irrelevant stimuli that were of a different category than the target. With epochs['Irrelevant'], extract all task-irrelevant non-target trials.
 - Response:
     - Rated response of the participants.
     - Factor Type: Categorical
     - Factor 1:
-      - Name: Hit
-      - Description: Participants correctly identified a target by pressing a button. With epochs['Hit'], extract all target trials for which the participants pressed a key.
+        - Name: Hit
+        - Description: Participants correctly identified a target by pressing a button. With epochs['Hit'], extract all target trials for which the participants pressed a key.
     - Factor 2:
-      - Name: CorrRej
-      - Description: Participants correctly rejected a non-target stimulus and did not press any button. With epochs['CorrRej'], extract all non-target trials for which the participants did not press a key.
+        - Name: CorrRej
+        - Description: Participants correctly rejected a non-target stimulus and did not press any button. With epochs['CorrRej'], extract all non-target trials for which the participants did not press a key.
     - Factor 3:
-      - Name: Miss
-      - Description: Participants failed to press a button when a target stimulus was presented. With epochs['Miss'], extract all target trials in which participants failed to press a button.
+        - Name: Miss
+        - Description: Participants failed to press a button when a target stimulus was presented. With epochs['Miss'], extract all target trials in which participants failed to press a button.
     - Factor 4:
-      - Name: FA
-      - Description: Participants mistakenly pressed a button when a non-target stimulus was presented. With epochs['FA'], extract all non-target trials in which participants pressed a button.
+        - Name: FA
+        - Description: Participants mistakenly pressed a button when a non-target stimulus was presented. With epochs['FA'], extract all non-target trials in which participants pressed a button.
     - Factor 5:
-      - Name: n.a.
-      - Description: For the events stimulus offset and jitter onset, the response is set to n.a. as the response relates to the visual stimulus, not to the other events. This should not be used to access the data.
+        - Name: n.a.
+        - Description: For the events stimulus offset and jitter onset, the response is set to n.a. as the response relates to the visual stimulus, not to the other events. This should not be used to access the data.
 
 #### Surface Reconstruction and Electrode Localization
 
@@ -568,14 +564,10 @@ In the Finger Localizer task, participants were presented with four circles, one
 
 Participants proceeded to Experiment 1 either after or before completing the [Finger Localizer task](#finger-localizer-task). tiEEG consisted of 5 runs containing 4 blocks each, and 34-38 trials per block, 32 non-targets (8 of each category) and 2-6 targets, with each trial lasting 2.4 s approximately, for a total of 720 trials. Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli. Additional information about the task can be found [here](#procedure).
 
-<div style="text-align:center;">
-
 |              |          |            |                 |                  |
 | ------------ | -------- | ---------- | --------------- | ---------------- |
 | **Task**     | **Runs** | **Blocks** | **Trials**      | **Total trials** |
 | Experiment 1 | 5       | 4          | 34-38 per block | 720             |
-
-</div>
 
 #### Full Structure of Session
 
