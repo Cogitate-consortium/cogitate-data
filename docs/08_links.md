@@ -5,7 +5,7 @@
 [**COGITATE Preregistration v4 - December 2022**](https://osf.io/gm3vd)  
 [**COGITATE GitHub Repositories**](https://github.com/Cogitate-consortium)  
 [**COGITATE Wiki**](https://cogitate-consortium.github.io/cogitate-data/)  
-[**Subjects Demography**](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/2024-01-15_subjects_demographics_msp1_curated.xlsx)  
+[**Subjects Demography**](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx)  
 [**YouTube Channel**](https://www.youtube.com/@ARC-COGITATE) videos:  
 &nbsp;&nbsp;&nbsp;&nbsp;- [COGITATE Experiment 1](https://www.youtube.com/watch?v=V93Agvo4G2Y)  
 &nbsp;&nbsp;&nbsp;&nbsp;- [HOW TO create a COGITATE Data User account](https://www.youtube.com/watch?v=FFqN5Pech0w)  
@@ -18,8 +18,8 @@
 |Modality|Place of Acquisition|Number of <br>Subjects|Reference Materials|
 |M-EEG|University of <br>Birmingham, <br>Center for <br>Human Brain <br>Health (CHBH)|102|[M-EEG Wiring Diagram](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/cogitate_wiring_diagrams_MEEG.pdf)<br>[M-EEG Experiment 1 Code](https://github.com/Cogitate-consortium/cogitate-experiment-code/tree/MEEG-Exp1)<br>[M-EEG SOP](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf)|
 | |Peking University <br>(PKU)|
-|fMRI|Donders <br>Center for <br>Cognitive <br>Neuroimaging <br>(DCCN)|120||
+|fMRI|Donders <br>Center for <br>Cognitive <br>Neuroimaging <br>(DCCN)|122||
 | |Yale <br>Magnetic <br>Resonance <br> Research <br>Center <br>(MRRC)|
-|ECoG (iEEG)|Harvard <br>University at <br>Boston <br>Children’s <br>Hospital|44||
+|ECoG (iEEG)|Harvard <br>University at <br>Boston <br>Children’s <br>Hospital|38|[iEEG Wiring Diagram](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/cogitate-wiring-diagrams_ECOG_2024-04-26_v1.1.pdf)<br>[iEEG Experiment 1 Code](https://github.com/Cogitate-consortium/cogitate-experiment-code/tree/ECOG-Exp1-Latest)<br>[iEEG SOP](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf)|
 | |New York <br>University <br>Langone (NYU)|
 | |University of <br>Wisconsin|
