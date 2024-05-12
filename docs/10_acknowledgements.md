@@ -44,7 +44,7 @@ Michael Pitts (Reed College)
 
 ```bash
 COGITATE’s Data Release Team:
-Niccolò Bonacchi, Tanya Brown, Kyle Kahraman, Lucia Melloni, Praveen Sripad, Fatemeh Taheriyan
+Niccolò Bonacchi, Tanya Brown, Kyle Kahraman, Lucia Melloni, Praveen Sripad, Fatemeh Taheriyan, Diptyajit Das
 
 Flywheel Cloud Services (XNAT):
 James Dickson, Angela Farrar, Dan Marcus,
