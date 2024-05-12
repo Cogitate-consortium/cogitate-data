@@ -4,9 +4,9 @@ This document provides guidance and detailed information on the datasets release
 
 ## Updates
 
-This is the second version (V1.1) of the COGITATE data release document. New updates or any changes to the previous versions will be announced here, and as a versioned document [here](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/MEEG-DR-doc_2024-03-18_v1.0.pdf) as well.
+This is the <span style="color:red;">second version</span> (<span style="color:red;">V1.1</span>) of the COGITATE data release document. New updates or any changes to the previous versions will be announced here, and as a versioned document [here](https://github.com/Cogitate-consortium/cogitate-data/tree/main/assets/documentation_v1.1) as well.
 
-In V1.1, the raw/unprocessed and [BIDS](https://bids-specification.readthedocs.io/en/stable/) (Brain Imaging Data Structure) format of iEEG (intracranial electroencephalography) data, collected by the Cogitate Consortium for Experiment 1, are released.
+In <span style="color:red;">V1.1</span>, the raw/unprocessed and [BIDS](https://bids-specification.readthedocs.io/en/stable/) (Brain Imaging Data Structure) format of iEEG (intracranial electroencephalography) data, collected by the Cogitate Consortium for Experiment 1, are released.
 
 ## Future Releases
 
