@@ -27,7 +27,7 @@ In contrast, the iEEG modality involved a more specialized cohort of 38 patients
 
 ## Demography of Subjects
 
-You can find the profile of participants for all modalities at [subjects_demography](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx). Here is a brief explanation about the information collected from the subjects.
+You can find the profile of participants for all modalities at [subjects_demography](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx). Here is a brief explanation about the information collected from the subjects.
 
 ### **Demographic Information for M-EEG**
 
