@@ -13,7 +13,7 @@ This questionnaire should be filled by the participant before the experiment. It
 * Have you been formally diagnosed with autism spectrum disorder (ASD)?
 * Other information (e.g. spectacle prescription)
 
-## Appendix 2. Case Report Form**
+## Appendix 2. Case Report Form
 
 This form was for reporting any issues that might have happened during the experiment. After the end of the experiment and saving the data, the operator filled out this form.
 
@@ -48,16 +48,16 @@ The iEEG case report form contained essential details such as the subject's ID, 
 - Eye Tracking Sticker
 - Glasses or Lenses
 - Trigger Information:
-  - Trigger Channel
-  - Trigger Reference Channel
-  - Trigger Channel Gain
-  - Audio Channels
+    - Trigger Channel
+    - Trigger Reference Channel
+    - Trigger Channel Gain
+    - Audio Channels
 - Eye Tracker Setup:
-  - Eye Tracked
-  - Sampling Rate
-  - Calibration Type
-  - Pupil
-  - Camera Lens
+    - Eye Tracked
+    - Sampling Rate
+    - Calibration Type
+    - Pupil
+    - Camera Lens
 
 ## Appendix 3. Exit Questionnaire
 
