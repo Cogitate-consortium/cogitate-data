@@ -457,15 +457,33 @@
 <p>The resting-state data for each participant was also recorded for 5-minutes and the subjects were asked to keep their eyes open and fixated on a point presented at the center of the screen. M-EEG signals were sampled at a rate of 1 kHz and band-pass filtered between 0.01 and 330 Hz prior to sampling.</p>
 <h4 id="task-tm-eeg">Task (tM-EEG)</h4>
 <p>Following the empty room and rM-EEG recordings, subjects were asked to complete the task defined in the <a href="#procedure">Procedure</a> section. tM-EEG consisted of 10 runs, with 4 blocks each. During each block, a ratio of 34-38 trials was presented, with 32 non-targets (8 of each category) and 2-6 targets (number chosen randomly). Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli.</p>
-<div style="text-align:center;">
-
-|              |          |            |                 |                  |
-| ------------ | -------- | ---------- | --------------- | ---------------- |
-| **Task**     | **Runs** | **Blocks** | **Trials**      | **Total trials** |
-| Experiment 1 | 10       | 4          | 34-38 per block | 1440             |
-
-</div>
-
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task</strong></td>
+<td><strong>Runs</strong></td>
+<td><strong>Blocks</strong></td>
+<td><strong>Trials</strong></td>
+<td><strong>Total trials</strong></td>
+</tr>
+<tr>
+<td>Experiment 1</td>
+<td>10</td>
+<td>4</td>
+<td>34-38 per block</td>
+<td>1440</td>
+</tr>
+</tbody>
+</table>
 <h4 id="full-structure-of-session">Full Structure of Session</h4>
 <p>Complete standard procedure of an M-EEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf">MEG Standard Operating Procedure</a>.</p>
 <h4 id="inclusion-criteria">Inclusion Criteria</h4>
@@ -478,10 +496,12 @@
 <li>Vision problems: no, or corrected-to-normal with soft lenses</li>
 <li>No MRI in the last week</li>
 <li>MRI compatible: no metal, medical implants, etc. No claustrophobia. Note: dental implants are allowed (particularly for non-magnetic materials) unless it generates big impacts on MEG signals, and this will be checked prior to MEG recording.</li>
-<li>No known history of psychiatric or neurological disorders, e.g.,</li>
+<li>No known history of psychiatric or neurological disorders, e.g.,<ul>
 <li>Not have been formally diagnosed with attention deficit (hyperactivity) disorder (AD(H)D).</li>
 <li>Not have been formally diagnosed with autism spectrum disorder (ASD)</li>
 <li>Not suffer from epilepsy</li>
+</ul>
+</li>
 </ul>
 <h4 id="quality-check-and-exclusion-criteria">Quality Check and Exclusion Criteria</h4>
 <p>For M-EEG, the first stage of the third-level checks focused on system-related and external noise generators. It was tested using the signal spectra in the empty room recording, the resting state session, and the experiment itself for all sensors. Any sensor and/or specific frequency revealing extensive noise using visual inspection, was flagged to document potential problems. Ultimately, this did not lead to any exclusions. Next, all experimental data blocks were visually inspected for abnormalities in spectra (peaks not explainable by physiology), and in ICA components, and checked for extremely noisy (based on the score of differences between the original and Maxwell-filtered data &gt; 7) and flat sensors. The latter step was performed in a collaboration between the data monitoring team and members of the centers where data was acquired to check whether any potential changes in preprocessing for particular subjects were needed. Finally, we tested if all experimental cells (i.e. task-relevant non-targets and task-irrelevant stimuli for each one of the four categories) have enough trials (N=30).</p>
@@ -555,127 +575,181 @@
 <li>Event Type:<ul>
 <li>Marks the different events occurring within a trial.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:</li>
+<li>Factor 1:<ul>
 <li>Name: stimulus onset</li>
 <li>Description: Marks the onset of the visual stimuli. With epochs['stimulus onset'], extract all epochs time-locked to the visual stimulus onset.</li>
-<li>Factor 2:</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
 <li>Name: stimulus offset</li>
 <li>Description: Marks the offset of the visual stimuli. With epochs['stimulus offset'], extract all epochs time-locked to the offset of the visual stimulus.</li>
-<li>Factor 3:</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
 <li>Name: jitter onset</li>
 <li>Description: Marks the beginning of the inter-trial jitter. All trials lasted 2 sec., with an added jitter of 400ms on average. With epochs['jitter onset'], extract all epochs time-locked to the beginning of the jitter period (2 sec. after stimulus onset).</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Block:<ul>
 <li>Marks the experimental blocks.</li>
 <li>Factor Type: Discrete</li>
-<li>Factor 1:</li>
+<li>Factor 1:<ul>
 <li>Name: block_*</li>
 <li>Description: Experimental blocks. Our experiment consisted of 5 blocks, in between which participants were allowed to take a break. With epochs['block_1'], extract all epochs of the first experimental block.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Miniblock:<ul>
 <li>Marks the experimental miniblocks.</li>
 <li>Factor Type: Discrete</li>
-<li>Factor 1:</li>
+<li>Factor 1:<ul>
 <li>Name: miniblock_*</li>
 <li>Description: Experimental miniblocks. Each experimental block consisted of 4 miniblocks. At the beginning of each miniblock, the two target stimuli were presented to the participant, which the participant had to remember to be able to detect in the stream of stimuli. With epochs['miniblock_1'], extract all epochs of the first experimental miniblock.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Category:<ul>
 <li>Category of the visual stimuli.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:</li>
+<li>Factor 1:<ul>
 <li>Name: face</li>
 <li>Description: Identifies face trials. With epochs['face'], extract all epochs in which a face was presented.</li>
-<li>Factor 2:</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
 <li>Name: object</li>
 <li>Description: Identifies object trials. With epochs['object'], extract all epochs in which an object was presented.</li>
-<li>Factor 3:</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
 <li>Name: letter</li>
 <li>Description: Identifies letter trials. With epochs['letter'], extract all epochs in which a letter was presented.</li>
-<li>Factor 4:</li>
+</ul>
+</li>
+<li>Factor 4:<ul>
 <li>Name: false</li>
 <li>Description: Identifies false font trials (i.e., symbols). With epochs['false'], extract all epochs in which a false font was presented.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Identity:<ul>
 <li>Identity of the visual stimuli.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:</li>
+<li>Factor 1:<ul>
 <li>Name: face_*</li>
 <li>Description: Identifies the identity of face trials. With epochs['face_*'], extract all epochs in which that specific face was presented. From 1-9, leading 0.</li>
-<li>Factor 2:</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
 <li>Name: object_*</li>
 <li>Description: Identifies the identity of object trials. With epochs['object_*'], extract all epochs in which that specific object was presented. From 1-9, leading 0.</li>
-<li>Factor 3:</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
 <li>Name: letter_*</li>
 <li>Description: Identifies the identity of letter trials. With epochs['letter_*'], extract all epochs in which that specific letter was presented. From 1-9, leading 0.</li>
-<li>Factor 4:</li>
+</ul>
+</li>
+<li>Factor 4:<ul>
 <li>Name: false_*</li>
 <li>Description: Identifies the identity of false font trials (i.e., symbols). With epochs['false__*'], extract all epochs in which that specific false font was presented. From 1-9, leading 0.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Orientation:<ul>
 <li>Orientation of the displayed stimuli.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:</li>
+<li>Factor 1:<ul>
 <li>Name: Center</li>
 <li>Description: Identifies stimuli presented in the center orientation. With epochs['Center'], extract all epochs in which a stimulus was presented in the center orientation.</li>
-<li>Factor 2:</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
 <li>Name: Left</li>
 <li>Description: Identifies stimuli presented in the Left orientation. With epochs['Left'], extract all epochs in which a stimulus was presented in the Left orientation.</li>
-<li>Factor 3:</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
 <li>Name: Right</li>
 <li>Description: Identifies stimuli presented in the Right orientation. With epochs['Right'], extract all epochs in which a stimulus was presented in the Right orientation.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Duration:<ul>
 <li>Duration a visual stimulus was presented for.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:</li>
+<li>Factor 1:<ul>
 <li>Name: 500ms</li>
 <li>Description: Identifies stimuli presented for 500ms. With epochs['500ms'], extract all epochs in which the stimulus was displayed for 500ms.</li>
-<li>Factor 2:</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
 <li>Name: 1000ms</li>
 <li>Description: Identifies stimuli presented for 1000ms. With epochs['1000ms'], extract all epochs in which the stimulus was displayed for 1000ms.</li>
-<li>Factor 3:</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
 <li>Name: 1500ms</li>
 <li>Description: Identifies stimuli presented for 1500ms. With epochs['1500ms'], extract all epochs in which the stimulus was displayed for 1500ms.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Task Relevance:<ul>
 <li>Task relevance of a given trial.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:</li>
+<li>Factor 1:<ul>
 <li>Name: Relevant target</li>
 <li>Description: Identifies target stimuli. Target stimuli are presented at the beginning of each miniblock, and participants must detect them among the sequence of presented stimuli by pressing a button. With epochs['Relevant target'], extract all target trials.</li>
-<li>Factor 2:</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
 <li>Name: Relevant non-target</li>
 <li>Description: Identifies task-relevant non-target stimuli. We considered task-relevant stimuli that were of the same category as the target but of a different identity. With epochs['Relevant non-target'], extract all task-relevant non-target trials.</li>
-<li>Factor 3:</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
 <li>Name: Irrelevant</li>
 <li>Description: Identifies task-irrelevant non-target stimuli. We considered task-irrelevant stimuli that were of a different category than the target. With epochs['Irrelevant'], extract all task-irrelevant non-target trials.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Response:<ul>
 <li>Rated response of the participants.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:</li>
+<li>Factor 1:<ul>
 <li>Name: Hit</li>
 <li>Description: Participants correctly identified a target by pressing a button. With epochs['Hit'], extract all target trials for which the participants pressed a key.</li>
-<li>Factor 2:</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
 <li>Name: CorrRej</li>
 <li>Description: Participants correctly rejected a non-target stimulus and did not press any button. With epochs['CorrRej'], extract all non-target trials for which the participants did not press a key.</li>
-<li>Factor 3:</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
 <li>Name: Miss</li>
 <li>Description: Participants failed to press a button when a target stimulus was presented. With epochs['Miss'], extract all target trials in which participants failed to press a button.</li>
-<li>Factor 4:</li>
+</ul>
+</li>
+<li>Factor 4:<ul>
 <li>Name: FA</li>
 <li>Description: Participants mistakenly pressed a button when a non-target stimulus was presented. With epochs['FA'], extract all non-target trials in which participants pressed a button.</li>
-<li>Factor 5:</li>
+</ul>
+</li>
+<li>Factor 5:<ul>
 <li>Name: n.a.</li>
 <li>Description: For the events stimulus offset and jitter onset, the response is set to n.a. as the response relates to the visual stimulus, not to the other events. This should not be used to access the data.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -691,15 +765,33 @@
 <p><span style="background-color: red"><b>Please note:</b></span> <strong>Although participants completed this task concurrently with <a href="../02_overview/#experiment-1-conscious-perception">Experiment 1</a>, we did not utilize the data in the analysis, as it was primarily acquired for use in <a href="../02_overview/#experiment-2-video-game-engagement">Experiment 2</a>. Consequently, the data pertaining to the Finger Localizer task is not included in this version of our data release.</strong></p>
 <h4 id="task-tieeg">Task (tiEEG)</h4>
 <p>Participants proceeded to Experiment 1 either after or before completing the <a href="#finger-localizer-task">Finger Localizer task</a>. tiEEG consisted of 5 runs containing 4 blocks each, and 34-38 trials per block, 32 non-targets (8 of each category) and 2-6 targets, with each trial lasting 2.4 s approximately, for a total of 720 trials. Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli. Additional information about the task can be found <a href="#procedure">here</a>.</p>
-<div style="text-align:center;">
-
-|              |          |            |                 |                  |
-| ------------ | -------- | ---------- | --------------- | ---------------- |
-| **Task**     | **Runs** | **Blocks** | **Trials**      | **Total trials** |
-| Experiment 1 | 5       | 4          | 34-38 per block | 720             |
-
-</div>
-
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task</strong></td>
+<td><strong>Runs</strong></td>
+<td><strong>Blocks</strong></td>
+<td><strong>Trials</strong></td>
+<td><strong>Total trials</strong></td>
+</tr>
+<tr>
+<td>Experiment 1</td>
+<td>5</td>
+<td>4</td>
+<td>34-38 per block</td>
+<td>720</td>
+</tr>
+</tbody>
+</table>
 <h4 id="full-structure-of-session_1">Full Structure of Session</h4>
 <p>Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf">iEEG Standard Operating Procedure</a>.</p>
 <h4 id="inclusion-criteria_1">Inclusion Criteria</h4>
