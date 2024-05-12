@@ -236,12 +236,21 @@
 <p>The MEG modality comprised 102 healthy subjects, also above the age of 18, with no known psychiatric or neurological issues. These participants were sourced from the Centre for Human Brain Health at the University of Birmingham (Birmingham, United Kingdom) and the Center for MRI Research of Peking University (Beijing, China).</p>
 <p>Similarly, the fMRI modality included 122 healthy volunteers, all of whom were above the age of 18 and predominantly right-handed. These participants had no known history of psychiatric or neurological disorders and were recruited from the Yale Magnetic Resonance Research Center (New Haven, CT, United States) and the Donders Centre for Cognitive Neuroimaging (Nijmegen, Netherlands).</p>
 <p>In contrast, the iEEG modality involved a more specialized cohort of 38 patients diagnosed with pharmaco-resistant focal epilepsy. These participants ranged in age from 10 to 65 years, had an IQ above 70, and met specific health criteria. They were recruited from multiple medical centers specializing in epilepsy treatment, including the Comprehensive Epilepsy Center at New York University (New York, NY, United States), Brigham and Women’s Hospital, Boston Children’s Hospital (Boston, MA, United States), and the University of Wisconsin School of Medicine and Public Health (Madison, WI, United States).</p>
-<p><strong>Age histograms across modalities</strong>
-<img alt="Cogitate subjects age distribution" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/age%20histograms%20across%20modalities_2024-04-26_v1.1.png" /></p>
-<p><strong>Sex proportions across modalities</strong>
-<img alt="Cogitate subjects age distribution" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/sex%20proportions%20across%20modalities_2024-04-26_v1.1.png" /></p>
-<p><strong>Handedness proportions across modalities</strong>
-<img alt="Cogitate subjects age distribution" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/handedness%20proportions%20across%20modalities_2024-04-26_v1.1.png" /></p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/age%20histograms%20across%20modalities_2024-04-26_v1.1.png" alt="Age histograms across modalities">
+  <p>Age histograms across modalities</p>
+</div>
+
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/sex%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Sex proportions across modalities">
+  <p>Sex proportions across modalities</p>
+</div>
+
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/handedness%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Handedness proportions across modalities">
+  <p>Handedness proportions across modalities</p>
+</div>
+
 <h2 id="demography-of-subjects">Demography of Subjects</h2>
 <p>You can find the profile of participants for all modalities at <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx">subjects_demography</a>. Here is a brief explanation about the information collected from the subjects.</p>
 <h3 id="demographic-information-for-m-eeg"><strong>Demographic Information for M-EEG</strong></h3>
@@ -355,13 +364,18 @@
 <p>Both centers had a 306-channel, whole-head TRIUX MEG system from MEGIN (York Instruments; formerly Elekta). The MEG system comprised 204 planar gradiometers and 102 magnetometers in a helmet-shaped array. Simultaneous EEG was recorded using an integrated EEG system and a 64-channel electrode cap. The MEG system was equipped with a zero boil-off Helium recycling system and the noise-resilient ARMOR sensors and placed in a shielded room (2 layers of mu-metal and 1 layer of aluminum). To reduce environmental noise, the integrated active shielding system was used at PKU. In order to cover the brain more homogeneously, the MEG gantry was positioned at 68 degrees.</p>
 <h4 id="location-of-electrodes-and-ecgeog-measurements">Location of Electrodes and ECG/EOG Measurements</h4>
 <p>The location of the fiducials, the positions of the 64 EEG electrodes and the participant’s head shape were recorded using a 3-D digitizer system (Polhemus Isotrak). A set of bipolar electrodes were placed on the subject’s chest (upper left and upper right chest position) to record the cardiac signal (ECG). Two sets of bipolar electrodes were placed around the eyes (two located at the outer canthi of the right and left eyes and two above and below the center of the right eye) to record eye movements and blinks (EOG). Ground and reference electrodes were placed on the back of the neck and on the right cheek, respectively. The impedance of all of the electrodes was checked to be below 10 kOhm.</p>
-<p><img alt="Standard Locations of EOG and ECG electrodes" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/eog_ecg_electrodes_meg.png" />
-Standard Locations of EOG and ECG electrodes</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/eog_ecg_electrodes_meg.png" alt="Standard Locations of EOG and ECG electrodes">
+  <p>Standard Locations of EOG and ECG electrodes</p>
+</div>
+
 <h4 id="head-position-indicator-hpi-coils">Head Position Indicator (HPI) Coils</h4>
 <p>The participant’s head position inside the MEG system was measured at the beginning and at the end of each run using four head position indicator (HPI) coils placed on the EEG cap. Specifically, the HPI coils were placed next to the left and right mastoids and on the left and right forehead. Their location relative to anatomical landmarks was digitized with a Polhemus Isotrak System. During the measurement, high frequency (&gt;200 Hz) signals were produced by those coils and the localization of these signals was used to estimate the head position in the sensor space. To avoid the potential artifacts produced by the non-linear interaction between the signals generated by these coils, head position measurement was performed only during resting periods (as opposed to continuously).</p>
-<p><img alt="Standard Locations of HPI coils" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/hpi_coils_meg.png" />
-Standard locations of HPI coils.<br />
-Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/hpi_coils_meg.png">
+  <p>Standard locations of HPI coils. Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
+</div>
+
 <h4 id="anatomical-mri-data-acquisition">Anatomical MRI Data Acquisition</h4>
 <p>For each subject, a high resolution T1-weighted MRI volume (3T Siemens MRI Prisma scanner) was acquired. At CHBH, a 32-channel coil with a resolution of 1 x 1 x 1 mm, TR/TE = 2000/2.03ms; TI = 880 ms; 8° flip angle, 208 sagittal slices and field of view (FOV): 256 x 256 matrix was acquired for source localization with individual realistic head modeling. At PKU, a 64-channel coil with a resolution of 0.5 x 0.5 x 1 mm, TR/TE = 2530/2.98ms; TI = 1100 ms; 7° flip angle, 192 sagittal slices; FOV: 448 × 512 matrix was used. To avoid possible interference of body magnetization on the MEG recording, all MRI scans were acquired at least one week before the MEG session, or at any time afterwards. The FreeSurfer standard template was used (fsaverage) for participants lacking an anatomical scan (N=5).</p>
 <h4 id="behavioral-data-acquisition">Behavioral Data Acquisition</h4>
@@ -443,33 +457,15 @@ Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
 <p>The resting-state data for each participant was also recorded for 5-minutes and the subjects were asked to keep their eyes open and fixated on a point presented at the center of the screen. M-EEG signals were sampled at a rate of 1 kHz and band-pass filtered between 0.01 and 330 Hz prior to sampling.</p>
 <h4 id="task-tm-eeg">Task (tM-EEG)</h4>
 <p>Following the empty room and rM-EEG recordings, subjects were asked to complete the task defined in the <a href="#procedure">Procedure</a> section. tM-EEG consisted of 10 runs, with 4 blocks each. During each block, a ratio of 34-38 trials was presented, with 32 non-targets (8 of each category) and 2-6 targets (number chosen randomly). Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli.</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Task</strong></td>
-<td><strong>Runs</strong></td>
-<td><strong>Blocks</strong></td>
-<td><strong>Trials</strong></td>
-<td><strong>Total trials</strong></td>
-</tr>
-<tr>
-<td>Experiment 1</td>
-<td>10</td>
-<td>4</td>
-<td>34-38 per block</td>
-<td>1440</td>
-</tr>
-</tbody>
-</table>
+<div style="text-align:center;">
+
+|              |          |            |                 |                  |
+| ------------ | -------- | ---------- | --------------- | ---------------- |
+| **Task**     | **Runs** | **Blocks** | **Trials**      | **Total trials** |
+| Experiment 1 | 10       | 4          | 34-38 per block | 1440             |
+
+</div>
+
 <h4 id="full-structure-of-session">Full Structure of Session</h4>
 <p>Complete standard procedure of an M-EEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf">MEG Standard Operating Procedure</a>.</p>
 <h4 id="inclusion-criteria">Inclusion Criteria</h4>
@@ -692,38 +688,20 @@ Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
   <p>An illustration depicting a trial in which the participant is required to press the blue button</p>
 </div>
 
-<p><span style="background-color: red"><b>Please note:</b></span> <strong>Although participants completed this task concurrently with <a href="#experiment-1-conscious-perception">Experiment 1</a>, we did not utilize the data in the analysis, as it was primarily acquired for use in <a href="#experiment-2-video-game-engagement">Experiment 2</a>. Consequently, the data pertaining to the Finger Localizer task is not included in this version of our data release.</strong></p>
+<p><span style="background-color: red"><b>Please note:</b></span> <strong>Although participants completed this task concurrently with <a href="../02_overview/#experiment-1-conscious-perception">Experiment 1</a>, we did not utilize the data in the analysis, as it was primarily acquired for use in <a href="../02_overview/#experiment-2-video-game-engagement">Experiment 2</a>. Consequently, the data pertaining to the Finger Localizer task is not included in this version of our data release.</strong></p>
 <h4 id="task-tieeg">Task (tiEEG)</h4>
 <p>Participants proceeded to Experiment 1 either after or before completing the <a href="#finger-localizer-task">Finger Localizer task</a>. tiEEG consisted of 5 runs containing 4 blocks each, and 34-38 trials per block, 32 non-targets (8 of each category) and 2-6 targets, with each trial lasting 2.4 s approximately, for a total of 720 trials. Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli. Additional information about the task can be found <a href="#procedure">here</a>.</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Task</strong></td>
-<td><strong>Runs</strong></td>
-<td><strong>Blocks</strong></td>
-<td><strong>Trials</strong></td>
-<td><strong>Total trials</strong></td>
-</tr>
-<tr>
-<td>Experiment 1</td>
-<td>5</td>
-<td>4</td>
-<td>34-38 per block</td>
-<td>720</td>
-</tr>
-</tbody>
-</table>
+<div style="text-align:center;">
+
+|              |          |            |                 |                  |
+| ------------ | -------- | ---------- | --------------- | ---------------- |
+| **Task**     | **Runs** | **Blocks** | **Trials**      | **Total trials** |
+| Experiment 1 | 5       | 4          | 34-38 per block | 720             |
+
+</div>
+
 <h4 id="full-structure-of-session_1">Full Structure of Session</h4>
-<p>Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf">iEEG Standard Operating Procedure</a>.</p>
+<p>Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf">iEEG Standard Operating Procedure</a>.</p>
 <h4 id="inclusion-criteria_1">Inclusion Criteria</h4>
 <p>For the iEEG studies, subjects were 10-65 years old, able to provide informed consent, had IQ &gt; 70, fluent in English, with self-reported normal hearing, normal or corrected-to-normal vision, and cognitive and language abilities within or above the normal range in formal neuropsychological testing performed before surgery. They must not have had an electrographic seizure within 3-hours prior to testing.</p>
 <h4 id="quality-check_1">Quality Check</h4>
@@ -741,7 +719,7 @@ Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
 <li>Verification: This step involved checking the quality of the defaced NIFTI images using 2D/3D image plots to compare before and after the defacing stage.</li>
 </ol>
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png" alt="Alternative workflow for defacing 12 challenging MR/CT DICOM Images" style="width:25%;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png" alt="Alternative workflow for defacing 12 challenging MR/CT DICOM Images">
   <p>Alternative workflow for defacing 12 challenging MR/CT DICOM Images</p>
 </div>
 
