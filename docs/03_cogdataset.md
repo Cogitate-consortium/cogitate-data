@@ -345,15 +345,17 @@ The behavioral code scheme is similar to the M-EEG modality which is explained i
 
 #### Eye Tracker Data Code 
 
-The eye tracker code scheme for the iEEG modality follows a similar structure to that described for M-EEG data. You can find detailed explanations [here](#eye-tracker-and-MEG-code-scheme).
+The eye tracker code scheme for the iEEG modality follows a similar structure to that described for M-EEG data. You can find detailed explanations [here](#eye-tracker-and-meg-code-scheme).
 
 #### iEEG Code Scheme
 ##### Photodiode Trigger Scheme
 
 For ECOG patients, the type of port utilized by the M-EEG team (LPT) was incompatible with our recording system. Consequently, a photodiode was employed. A photodiode is an electronic device that records changes in luminance and converts them into voltage.
 
-![An example of a photodiode](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/photodiode.png)
-An example of a photodiode
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/photodiode.png" alt="An example of a photodiode" style="width:25%;">
+  <p>An example of a photodiode</p>
+</div>
 
 In the experimental code, it was ensured that when a new event occurred on the screen (such as stimulus onset or stimulus offset), a white flash appeared in the bottom right corner. The photodiode device was positioned atop the flashing square and connected to the amplifier recording the iEEG channel signals. This additional channel facilitated the identification of event onsets in our task. This type of recording only allows binary signals (the photodiode is either on or off). However, specific events were encoded with varying numbers of subsequent pulses.
 
@@ -383,7 +385,10 @@ The beginning and end of the experiment were marked by sending 3 consecutive pul
 
 <a name="schematic-representation-of-the-photodiode-channel"></a>
 
-![Schematic representation of the photodiode channel](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Schematic%20representation%20of%20the%20photodiode%20channel.png)Schematic representation of the photodiode channel
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Schematic%20representation%20of%20the%20photodiode%20channel.png" alt="Schematic representation of the photodiode channel">
+  <p>Schematic representation of the photodiode channel</p>
+</div>
 
 ##### Log File Alignment
 
@@ -409,7 +414,10 @@ To ensure alignment of both signals, the discrete difference between the photodi
 
 Once the two signals were properly aligned, the log file events could be used as descriptors of the events marked at the timestamps from the photodiode.
 
-![Illustration of the alignment pipeline](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Illustration%20of%20the%20alignment%20pipeline.png)Illustration of the alignment pipeline
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Illustration%20of%20the%20alignment%20pipeline.png" alt="Illustration of the alignment pipeline">
+  <p>Illustration of the alignment pipeline</p>
+</div>
 
 The alignment procedure allowed the information from the log file to be utilized in generating well-described events in the iEEG data. The events were encoded as “/” separated strings and stored in an events.tsv table. An extensive description of each event type and their levels are as follows:
 
@@ -420,113 +428,113 @@ The alignment procedure allowed the information from the log file to be utilized
 **Experimental Design:**
 
 - Event Type:
-  - Marks the different events occurring within a trial.
-  - Factor Type: Categorical
-  - Factor 1:
-    - Name: stimulus onset
-    - Description: Marks the onset of the visual stimuli. With epochs['stimulus onset'], extract all epochs time-locked to the visual stimulus onset.
-  - Factor 2:
-    - Name: stimulus offset
-    - Description: Marks the offset of the visual stimuli. With epochs['stimulus offset'], extract all epochs time-locked to the offset of the visual stimulus.
-  - Factor 3:
-    - Name: jitter onset
-    - Description: Marks the beginning of the inter-trial jitter. All trials lasted 2 sec., with an added jitter of 400ms on average. With epochs['jitter onset'], extract all epochs time-locked to the beginning of the jitter period (2 sec. after stimulus onset).
+    - Marks the different events occurring within a trial.
+    - Factor Type: Categorical
+    - Factor 1:
+      - Name: stimulus onset
+      - Description: Marks the onset of the visual stimuli. With epochs['stimulus onset'], extract all epochs time-locked to the visual stimulus onset.
+    - Factor 2:
+      - Name: stimulus offset
+      - Description: Marks the offset of the visual stimuli. With epochs['stimulus offset'], extract all epochs time-locked to the offset of the visual stimulus.
+    - Factor 3:
+      - Name: jitter onset
+      - Description: Marks the beginning of the inter-trial jitter. All trials lasted 2 sec., with an added jitter of 400ms on average. With epochs['jitter onset'], extract all epochs time-locked to the beginning of the jitter period (2 sec. after stimulus onset).
 - Block:
-  - Marks the experimental blocks.
-  - Factor Type: Discrete
-  - Factor 1:
-    - Name: block_*
-    - Description: Experimental blocks. Our experiment consisted of 5 blocks, in between which participants were allowed to take a break. With epochs['block_1'], extract all epochs of the first experimental block.
+    - Marks the experimental blocks.
+    - Factor Type: Discrete
+    - Factor 1:
+      - Name: block_*
+      - Description: Experimental blocks. Our experiment consisted of 5 blocks, in between which participants were allowed to take a break. With epochs['block_1'], extract all epochs of the first experimental block.
 - Miniblock:
-  - Marks the experimental miniblocks.
-  - Factor Type: Discrete
-  - Factor 1:
-    - Name: miniblock_*
-    - Description: Experimental miniblocks. Each experimental block consisted of 4 miniblocks. At the beginning of each miniblock, the two target stimuli were presented to the participant, which the participant had to remember to be able to detect in the stream of stimuli. With epochs['miniblock_1'], extract all epochs of the first experimental miniblock.
+    - Marks the experimental miniblocks.
+    - Factor Type: Discrete
+    - Factor 1:
+      - Name: miniblock_*
+      - Description: Experimental miniblocks. Each experimental block consisted of 4 miniblocks. At the beginning of each miniblock, the two target stimuli were presented to the participant, which the participant had to remember to be able to detect in the stream of stimuli. With epochs['miniblock_1'], extract all epochs of the first experimental miniblock.
 - Category:
-  - Category of the visual stimuli.
-  - Factor Type: Categorical
-  - Factor 1:
-    - Name: face
-    - Description: Identifies face trials. With epochs['face'], extract all epochs in which a face was presented.
-  - Factor 2:
-    - Name: object
-    - Description: Identifies object trials. With epochs['object'], extract all epochs in which an object was presented.
-  - Factor 3:
-    - Name: letter
-    - Description: Identifies letter trials. With epochs['letter'], extract all epochs in which a letter was presented.
-  - Factor 4:
-    - Name: false
-    - Description: Identifies false font trials (i.e., symbols). With epochs['false'], extract all epochs in which a false font was presented.
+    - Category of the visual stimuli.
+    - Factor Type: Categorical
+    - Factor 1:
+      - Name: face
+      - Description: Identifies face trials. With epochs['face'], extract all epochs in which a face was presented.
+    - Factor 2:
+      - Name: object
+      - Description: Identifies object trials. With epochs['object'], extract all epochs in which an object was presented.
+    - Factor 3:
+      - Name: letter
+      - Description: Identifies letter trials. With epochs['letter'], extract all epochs in which a letter was presented.
+    - Factor 4:
+      - Name: false
+      - Description: Identifies false font trials (i.e., symbols). With epochs['false'], extract all epochs in which a false font was presented.
 - Identity:
-  - Identity of the visual stimuli.
-  - Factor Type: Categorical
-  - Factor 1:
-    - Name: face_*
-    - Description: Identifies the identity of face trials. With epochs['face_*'], extract all epochs in which that specific face was presented. From 1-9, leading 0.
-  - Factor 2:
-    - Name: object_*
-    - Description: Identifies the identity of object trials. With epochs['object_*'], extract all epochs in which that specific object was presented. From 1-9, leading 0.
-  - Factor 3:
-    - Name: letter_*
-    - Description: Identifies the identity of letter trials. With epochs['letter_*'], extract all epochs in which that specific letter was presented. From 1-9, leading 0.
-  - Factor 4:
-    - Name: false_*
-    - Description: Identifies the identity of false font trials (i.e., symbols). With epochs['false__*'], extract all epochs in which that specific false font was presented. From 1-9, leading 0.
+    - Identity of the visual stimuli.
+    - Factor Type: Categorical
+    - Factor 1:
+      - Name: face_*
+      - Description: Identifies the identity of face trials. With epochs['face_*'], extract all epochs in which that specific face was presented. From 1-9, leading 0.
+    - Factor 2:
+      - Name: object_*
+      - Description: Identifies the identity of object trials. With epochs['object_*'], extract all epochs in which that specific object was presented. From 1-9, leading 0.
+    - Factor 3:
+      - Name: letter_*
+      - Description: Identifies the identity of letter trials. With epochs['letter_*'], extract all epochs in which that specific letter was presented. From 1-9, leading 0.
+    - Factor 4:
+      - Name: false_*
+      - Description: Identifies the identity of false font trials (i.e., symbols). With epochs['false__*'], extract all epochs in which that specific false font was presented. From 1-9, leading 0.
 - Orientation:
-  - Orientation of the displayed stimuli.
-  - Factor Type: Categorical
-  - Factor 1:
-    - Name: Center
-    - Description: Identifies stimuli presented in the center orientation. With epochs['Center'], extract all epochs in which a stimulus was presented in the center orientation.
-  - Factor 2:
-    - Name: Left
-    - Description: Identifies stimuli presented in the Left orientation. With epochs['Left'], extract all epochs in which a stimulus was presented in the Left orientation.
-  - Factor 3:
-    - Name: Right
-    - Description: Identifies stimuli presented in the Right orientation. With epochs['Right'], extract all epochs in which a stimulus was presented in the Right orientation.
+    - Orientation of the displayed stimuli.
+    - Factor Type: Categorical
+    - Factor 1:
+      - Name: Center
+      - Description: Identifies stimuli presented in the center orientation. With epochs['Center'], extract all epochs in which a stimulus was presented in the center orientation.
+    - Factor 2:
+      - Name: Left
+      - Description: Identifies stimuli presented in the Left orientation. With epochs['Left'], extract all epochs in which a stimulus was presented in the Left orientation.
+    - Factor 3:
+      - Name: Right
+      - Description: Identifies stimuli presented in the Right orientation. With epochs['Right'], extract all epochs in which a stimulus was presented in the Right orientation.
 - Duration:
-  - Duration a visual stimulus was presented for.
-  - Factor Type: Categorical
-  - Factor 1:
-    - Name: 500ms
-    - Description: Identifies stimuli presented for 500ms. With epochs['500ms'], extract all epochs in which the stimulus was displayed for 500ms.
-  - Factor 2:
-    - Name: 1000ms
-    - Description: Identifies stimuli presented for 1000ms. With epochs['1000ms'], extract all epochs in which the stimulus was displayed for 1000ms.
-  - Factor 3:
-    - Name: 1500ms
-    - Description: Identifies stimuli presented for 1500ms. With epochs['1500ms'], extract all epochs in which the stimulus was displayed for 1500ms.
+    - Duration a visual stimulus was presented for.
+    - Factor Type: Categorical
+    - Factor 1:
+      - Name: 500ms
+      - Description: Identifies stimuli presented for 500ms. With epochs['500ms'], extract all epochs in which the stimulus was displayed for 500ms.
+    - Factor 2:
+      - Name: 1000ms
+      - Description: Identifies stimuli presented for 1000ms. With epochs['1000ms'], extract all epochs in which the stimulus was displayed for 1000ms.
+    - Factor 3:
+      - Name: 1500ms
+      - Description: Identifies stimuli presented for 1500ms. With epochs['1500ms'], extract all epochs in which the stimulus was displayed for 1500ms.
 - Task Relevance:
-  - Task relevance of a given trial.
-  - Factor Type: Categorical
-  - Factor 1:
-    - Name: Relevant target
-    - Description: Identifies target stimuli. Target stimuli are presented at the beginning of each miniblock, and participants must detect them among the sequence of presented stimuli by pressing a button. With epochs['Relevant target'], extract all target trials.
-  - Factor 2:
-    - Name: Relevant non-target
-    - Description: Identifies task-relevant non-target stimuli. We considered task-relevant stimuli that were of the same category as the target but of a different identity. With epochs['Relevant non-target'], extract all task-relevant non-target trials.
-  - Factor 3:
-    - Name: Irrelevant
-    - Description: Identifies task-irrelevant non-target stimuli. We considered task-irrelevant stimuli that were of a different category than the target. With epochs['Irrelevant'], extract all task-irrelevant non-target trials.
+    - Task relevance of a given trial.
+    - Factor Type: Categorical
+    - Factor 1:
+      - Name: Relevant target
+      - Description: Identifies target stimuli. Target stimuli are presented at the beginning of each miniblock, and participants must detect them among the sequence of presented stimuli by pressing a button. With epochs['Relevant target'], extract all target trials.
+    - Factor 2:
+      - Name: Relevant non-target
+      - Description: Identifies task-relevant non-target stimuli. We considered task-relevant stimuli that were of the same category as the target but of a different identity. With epochs['Relevant non-target'], extract all task-relevant non-target trials.
+    - Factor 3:
+      - Name: Irrelevant
+      - Description: Identifies task-irrelevant non-target stimuli. We considered task-irrelevant stimuli that were of a different category than the target. With epochs['Irrelevant'], extract all task-irrelevant non-target trials.
 - Response:
-  - Rated response of the participants.
-  - Factor Type: Categorical
-  - Factor 1:
-    - Name: Hit
-    - Description: Participants correctly identified a target by pressing a button. With epochs['Hit'], extract all target trials for which the participants pressed a key.
-  - Factor 2:
-    - Name: CorrRej
-    - Description: Participants correctly rejected a non-target stimulus and did not press any button. With epochs['CorrRej'], extract all non-target trials for which the participants did not press a key.
-  - Factor 3:
-    - Name: Miss
-    - Description: Participants failed to press a button when a target stimulus was presented. With epochs['Miss'], extract all target trials in which participants failed to press a button.
-  - Factor 4:
-    - Name: FA
-    - Description: Participants mistakenly pressed a button when a non-target stimulus was presented. With epochs['FA'], extract all non-target trials in which participants pressed a button.
-  - Factor 5:
-    - Name: n.a.
-    - Description: For the events stimulus offset and jitter onset, the response is set to n.a. as the response relates to the visual stimulus, not to the other events. This should not be used to access the data.
+    - Rated response of the participants.
+    - Factor Type: Categorical
+    - Factor 1:
+      - Name: Hit
+      - Description: Participants correctly identified a target by pressing a button. With epochs['Hit'], extract all target trials for which the participants pressed a key.
+    - Factor 2:
+      - Name: CorrRej
+      - Description: Participants correctly rejected a non-target stimulus and did not press any button. With epochs['CorrRej'], extract all non-target trials for which the participants did not press a key.
+    - Factor 3:
+      - Name: Miss
+      - Description: Participants failed to press a button when a target stimulus was presented. With epochs['Miss'], extract all target trials in which participants failed to press a button.
+    - Factor 4:
+      - Name: FA
+      - Description: Participants mistakenly pressed a button when a non-target stimulus was presented. With epochs['FA'], extract all non-target trials in which participants pressed a button.
+    - Factor 5:
+      - Name: n.a.
+      - Description: For the events stimulus offset and jitter onset, the response is set to n.a. as the response relates to the visual stimulus, not to the other events. This should not be used to access the data.
 
 #### Surface Reconstruction and Electrode Localization
 
@@ -536,7 +544,10 @@ Subject-specific pial surfaces were automatically reconstructed based on a pre-i
 
 In the Finger Localizer task, participants were presented with four circles, one of which was filled with a specific color, serving as a cue for participants to press the corresponding colored button on the response box. The filled state of the circle persisted for the duration of the response time, followed by an additional delay of 200 milliseconds. The Inter-Trial Intervals (ITIs) were uniformly distributed, with a mean of 0.55 seconds and a range from 0.400 to 0.700 seconds. The experimental protocol comprised 80 trials, distributed equally among the four colors, with 20 trials per color, and the sequence of trials was randomized. This task aimed to identify brain regions responsible for motor control, particularly those governing finger movements, and to pinpoint electrodes selectively activated by specific motor responses, such as button presses.
 
-![An illustration depicting a trial in which the participant is required to press the blue button](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/FingerLoc.png)An illustration depicting a trial in which the participant is required to press the blue button
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/FingerLoc.png" alt="An illustration depicting a trial in which the participant is required to press the blue button" style="width:25%;">
+  <p>An illustration depicting a trial in which the participant is required to press the blue button</p>
+</div>
 
 <span style="background-color: red"><b>Please note:</b></span> **Although participants completed this task concurrently with [Experiment 1](#experiment-1-conscious-perception), we did not utilize the data in the analysis, as it was primarily acquired for use in [Experiment 2](#experiment-2-video-game-engagement). Consequently, the data pertaining to the Finger Localizer task is not included in this version of our data release.**
 
@@ -578,6 +589,9 @@ To address this issue, we implemented a slightly different workflow that allowed
 3. Defacing of NIFTI: Defacing of the NIFTI images was performed using the PyDeface package (version: 2.0.2) (Gulban et al., 2022).
 4. Verification: This step involved checking the quality of the defaced NIFTI images using 2D/3D image plots to compare before and after the defacing stage.
 
-![Alternative workflow for defacing 12 challenging MR/CT DICOM Images](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png)Alternative workflow for defacing 12 challenging MR/CT DICOM Images
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png" alt="Alternative workflow for defacing 12 challenging MR/CT DICOM Images" style="width:25%;">
+  <p>Alternative workflow for defacing 12 challenging MR/CT DICOM Images</p>
+</div>
 
 <span style="background-color: red"><b>Miscellaneous:</b></span> **In the MR data for subject CF103, one DICOM slice was inadvertently dropped during the conversion process from DICOM to NIFTI format. However, the resulting NIFTI file remains functional and usable.**
