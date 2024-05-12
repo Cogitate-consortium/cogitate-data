@@ -62,7 +62,43 @@ COG_MEEG_EXP1_RELEASE/
         └── CB036__MR/                          # MR anatomical scan data (fif)
 ```
 
+### Raw iEEG Data Directory Structure
+
+```bash
+COG_ECOG_EXP1_RELEASE/				   # Experiment modality top level folder
+    ├── metadata/				   # Experiment modality level metadata folder
+    │    ├── devices_ECOG.json			   # List of devices used to collect the data
+    │    ├── protocols_ECOG.json		  # A link to the Standard Operating Procedure (SOP) document used for the data collection
+    │	 ├── subjects_demographics_ECOG.json     # Full set of experiment modality subjects with their respective demographic information
+    │    ├── tasks_EXP1.json                      # Description of the 1st Cogitate task 
+    │    ├── tasks_FingerLoc.json                 # Description of the Finger Localizer task
+    │    └── wirings_ECOG.pdf			  # Wiring pdf file showing how the devices described in devices_ECOG.json  are connected to each other
+    └── CE103                                     # Subject folder
+        ├──metadata/                              # Subject level metadata folder
+        │    ├── CE103_EXP1_CRF.json              # Subject Case Report Form (CRF) 
+        │    └── CE103_EXP1_EXQU.json             # Subject Exit Questionnaire responses
+        ├── CE103_EXP1_BEH/                       # Behavioral Events data collected during EXP1
+        ├── CE103_EXP1_ECOG/                      # ECOG data files collected during EXP1
+        ├── CE103_EXP1_ET/                        # Eye Tracking data collected during EXP1
+        ├── CE103_FingerLoc_ECOG/       	  # Ecog data collected during the Finger Localizer task
+        ├── CE103_FingerLoc_BEH/             # Behavioral event data collected during the Finger Localizer task
+        ├── CE103__CT/                            # CT scan data (no task)
+        ├── CE103__MR/                            # MR anatomical data
+        └── CE103__ElecCoords/			 # Contains coordinate output files of MR/CT coregistration end electrode reconstruction pipeline
+```
+
 ## BIDS Format
+
+The BIDS (Brain Imaging Data Structure) file structure for M-EEG (Magnetoencephalography) and iEEG (intracranial EEG) data adheres to a standardized format for organizing neuroimaging data. Each file follows a structured naming convention indicating subject, session, task, and data type. Here's a breakdown of the key elements within each modality's data directory structure:
+- dataset_description.json: Provides general information about the dataset.
+- participants.json and participants.tsv: Contain demographic information about subjects.
+- README.md: Offers an overview of the data and BIDS format.
+- Subject-specific data: Organized under sub-[SubjectID]/.
+- Session-specific data: Organized under ses-[SessionID]/.
+- Anatomical and functional data: Stored in appropriate folders (anat/ for anatomical, meg/ for MEG, and ieeg/ for iEEG).
+- Metadata: Related to subjects and experiments is stored in metadata/ directories.
+
+This structured approach ensures clarity and consistency in data organization, facilitating ease of access and analysis for researchers and collaborators.
 
 ### BIDS M-EEG Data Directory Structure
 
@@ -138,6 +174,40 @@ COG_MEEG_EXP1_BIDS_RELEASE/
 |       |   |-- sub-CA103_ses-1_task-rest_meg.fif              # Contains the raw/unprocessed MEG data during resting-state recording of Experiment 1/session 1
 |       |   `-- sub-CA103_ses-1_task-rest_meg.json             # Contains power line and sampling frequencies, duration of recording, MEG, EOG and ECG and trigger channel counts during resting-state recording            
 |       `-- sub-CA103_ses-1_scans.tsv                          # List of MEG data files
+```
+
+### BIDS iEEG Data Directory Structure
+
+```bash
+
+COG_ECOG_EXP1_BIDS_RELEASE/
+|-- dataset_description.json					# General information about BIDS version, type of dataset, Authors, Acknowledgments, Funding, Ethics Approvals, and the link of COGITATE website
+|-- derivatives							# Directory containing derived data
+|   |-- fs							# Outputs of FreeSurfer processing
+|   |   `-- sub-CF102						# Subject folder
+|   |       |-- label						# Contains files representing segmented brain regions
+|   |       |-- mri						# Contains various outputs of the FreeSurfer MRI processing pipeline, such as brain masks, tissue segmentations, and cortical surface reconstructions
+|   |       |-- scripts						# Contains relevant information related to the execution and status tracking of the FreeSurfer's recon-all pipeline for MRI data processing, including build and status stamps, logs, and environment settings
+|   |       |-- stats						# statistical data related to various anatomical and morphometric measurements derived from brain segmentation and parcellation processes
+|   |       |-- surf						# Contains various surface representations of the cerebral cortex, including vertex-wise measurements such as cortical area, curvature, thickness, sulcal depth, and surface normals, for both left and right hemispheres, derived from structural MRI data
+|   |       `-- touch						# Contains information about completion of various processing steps related to surface generation, segmentation, registration, normalization, and quality control for both left and right hemispheres
+|-- participants.json						# Demographic information about participants
+|-- participants.tsv						# Subjects’ demography in tsv format
+|-- README
+|-- sub-CF102							# Subject folder
+|   `-- ses-1							# Session 1/visit 1
+|       |-- ieeg						# Folder of iEEG data
+|       |   |-- sub-CF102_ses-1_laplace_mapping_ieeg.json	# Contains electrode groups and their references for laplace mapping for session 1
+|       |   |-- sub-CF102_ses-1_space-ACPC_coordsystem.json	# Contains information about the coordinate system during session 1
+|       |   |-- sub-CF102_ses-1_space-ACPC_electrodes.tsv	# Contains spatial coordinates (x, y, z)/locations of electrodes on the subject's brain surface
+|       |   |-- sub-CF102_ses-1_task-Dur_channels.tsv		# Contains information about the iEEG data channels during task and session 1 including their names, type, units, frequency cutoffs, description, sampling frequency, and status
+|       |   |-- sub-CF102_ses-1_task-Dur_events.json		# Contains description for “sample”, “value”, and “trial_type” 
+|       |   |-- sub-CF102_ses-1_task-Dur_events.tsv		# Contains event-related data during the task and session 1 including onset, duration, trial type, value and sample
+|       |   |-- sub-CF102_ses-1_task-Dur_ieeg.eeg		# Contains iEEG data during task and session 1
+|       |   |-- sub-CF102_ses-1_task-Dur_ieeg.json		# Contains metadata for iEEG recorded during the task and session 1
+|       |   |-- sub-CF102_ses-1_task-Dur_ieeg.vhdr		# Contains metadata for iEEG recorded during the task and session 1
+|       |   `-- sub-CF102_ses-1_task-Dur_ieeg.vmrk		# A marker file containing annotations or event markers corresponding to the events during the task and session 1
+|       `-- sub-CF102_ses-1_scans.tsv
 ```
 
    </td>
