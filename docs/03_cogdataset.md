@@ -74,7 +74,7 @@ The unprocessed data format closely resembles the original acquired data, having
 
 BIDS format, widely adopted in cognitive neuroscience, enhances data reusability. To facilitate others in leveraging our data, we have released it in [BIDS](https://bids-specification.readthedocs.io/en/stable/) format.
 
-### **File type glossary**
+### **File Type Glossary**
 
 Here are the various file formats used for each modality of the COGITATE dataset along with a short description of them.
 
