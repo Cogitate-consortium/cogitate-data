@@ -89,14 +89,13 @@ Here is a brief explanation about how to access the data bundles:
 ### Step 1: Create a Data User Account
 
 <p>
-
     <a href="https://www.youtube.com/watch?v=FFqN5Pech0w"
         ><img
             src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/youtube_logo.png"
             alt="alt_text"
             title="image_tooltip"
-            width="48"
-            height="48"
+            width="20"
+            height="15"
     />
     <strong>Step 1: Create a Data User Account</strong>
 </p></a>
@@ -121,8 +120,8 @@ Access to the data bundles requires a quick and easy registration process.
             src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/youtube_logo.png"
             alt="alt_text"
             title="image_tooltip"
-            width="48"
-            height="48"
+            width="20"
+            height="15"
     />
         <strong>Step 2: Login and logout of your Data User account</strong>
 </p></a>
@@ -138,8 +137,8 @@ Access to the data bundles requires a quick and easy registration process.
             src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/youtube_logo.png"
             alt="alt_text"
             title="image_tooltip"
-            width="48"
-            height="48"
+            width="20"
+            height="15"
     />
         <strong>Step 3: How To Download the Data</strong>
 </p></a>
