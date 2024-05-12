@@ -2,6 +2,8 @@
 
 ## Appendix 1. Screening Form
 
+### M-EEG Screening Form
+
 This questionnaire should be filled by the participant before the experiment. It asks for some information such as name, weight (kg), email, data of birth and phone number of the subject following by a couple of questions including:
 
 * Have you participated in a MEG study before?
@@ -11,13 +13,13 @@ This questionnaire should be filled by the participant before the experiment. It
 * Have you been formally diagnosed with autism spectrum disorder (ASD)?
 * Other information (e.g. spectacle prescription)
 
-## **Appendix 2. Case Report Form**
+## Appendix 2. Case Report Form**
 
-This form is for reporting any issues that might have happened during the experiment. After the end of the experiment and saving the data, the operator should fill out this form.
+This form was for reporting any issues that might have happened during the experiment. After the end of the experiment and saving the data, the operator filled out this form.
 
-### **M-EEG Case Report Form**
+### M-EEG Case Report Form
 
-For M-EEG modality, the below items are asked for different sections of the data acquisition (Data for Empty Room, Resting-state, run 1, …, run 5) in the Case Report Form:
+For M-EEG modality, the below items were asked for different sections of the data acquisition (Data for Empty Room, Resting-state, run 1, …, run 5) in the Case Report Form:
 
 * Eye tracking not working
 * Eye tracking showing bad patterns
@@ -29,7 +31,35 @@ For M-EEG modality, the below items are asked for different sections of the data
 * Bad EEG sensors
 * Notes: explaining about the issue in a more detail
 
-## **Appendix 3. Exit Questionnaire**
+### iEEG Case Report Form
+
+The iEEG case report form contained essential details such as the subject's ID, task name, and the distance from the stimulus interface to the subject in centimeters. It also included comprehensive information about the eye-tracking setup, specifying which eye was tracked, the sampling rate, calibration method, pupil shape, and camera lens used. Additionally, trigger information, including the trigger channels utilized and other relevant parameters, was documented. Furthermore, some fields were provided for notes and miscellaneous information. Here are the specific fields listed in the iEEG case report form:
+
+- Subject ID
+- Task Name
+- Stimulus Interface Computer Name
+- Distance (cm)
+- Practice Run
+- Pre-Task Equipment Disinfected
+- Post-Task Equipment Disinfected
+- Other
+- Notes
+- Screen Brightness
+- Eye Tracking Sticker
+- Glasses or Lenses
+- Trigger Information:
+  - Trigger Channel
+  - Trigger Reference Channel
+  - Trigger Channel Gain
+  - Audio Channels
+- Eye Tracker Setup:
+  - Eye Tracked
+  - Sampling Rate
+  - Calibration Type
+  - Pupil
+  - Camera Lens
+
+## Appendix 3. Exit Questionnaire
 
 This Form should be filled by the participant after the experiment and asks the below questions:
 
@@ -49,8 +79,14 @@ This Form should be filled by the participant after the experiment and asks the 
 * Would the task have been easier if the stimulus duration didn't vary so much?
 * Do you have any additional comments to share?
 
-## [Appendix 4. MEG Standard Operating Procedure](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf)
+## [Appendix 4. MEG Standard Operating Procedure](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf)
 
-## [Appendix 5. GDPR Requirements](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_GDPR_v1.pdf)
+## [Appendix 5. GDPR Requirements](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_GDPR_v1.pdf)
 
-## [Appendix 6. Terms of Use](https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_ToU_v1.pdf)
+## [Appendix 6. Terms of Use](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_ToU_v1.pdf)
+
+## Appendix 7. Data Curation Standard Operating Procedure
+
+## [Appendix 8. iEEG Standard Operating Procedure](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf)
+
+## Appendix 9. Documentation Changes
