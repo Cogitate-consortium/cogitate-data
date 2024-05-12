@@ -506,12 +506,15 @@ Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
 <h4 id="behavioral-data-code-scheme_1">Behavioral Data Code Scheme</h4>
 <p>The behavioral code scheme is similar to the M-EEG modality which is explained in <a href="#behavioral-data-code-scheme">this section</a>.</p>
 <h4 id="eye-tracker-data-code">Eye Tracker Data Code</h4>
-<p>The eye tracker code scheme for the iEEG modality follows a similar structure to that described for M-EEG data. You can find detailed explanations <a href="#eye-tracker-and-MEG-code-scheme">here</a>.</p>
+<p>The eye tracker code scheme for the iEEG modality follows a similar structure to that described for M-EEG data. You can find detailed explanations <a href="#eye-tracker-and-meg-code-scheme">here</a>.</p>
 <h4 id="ieeg-code-scheme">iEEG Code Scheme</h4>
 <h5 id="photodiode-trigger-scheme">Photodiode Trigger Scheme</h5>
 <p>For ECOG patients, the type of port utilized by the M-EEG team (LPT) was incompatible with our recording system. Consequently, a photodiode was employed. A photodiode is an electronic device that records changes in luminance and converts them into voltage.</p>
-<p><img alt="An example of a photodiode" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/photodiode.png" />
-An example of a photodiode</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/photodiode.png" alt="An example of a photodiode" style="width:25%;">
+  <p>An example of a photodiode</p>
+</div>
+
 <p>In the experimental code, it was ensured that when a new event occurred on the screen (such as stimulus onset or stimulus offset), a white flash appeared in the bottom right corner. The photodiode device was positioned atop the flashing square and connected to the amplifier recording the iEEG channel signals. This additional channel facilitated the identification of event onsets in our task. This type of recording only allows binary signals (the photodiode is either on or off). However, specific events were encoded with varying numbers of subsequent pulses.</p>
 <p><strong>Stimulus Presentation Onset</strong></p>
 <p>The flashing square was flashed only once at the onset of each new stimulus.</p>
@@ -526,7 +529,11 @@ An example of a photodiode</p>
 <p><strong>Experiment Start and End</strong></p>
 <p>The beginning and end of the experiment were marked by sending 3 consecutive pulses.</p>
 <p><a name="schematic-representation-of-the-photodiode-channel"></a></p>
-<p><img alt="Schematic representation of the photodiode channel" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Schematic%20representation%20of%20the%20photodiode%20channel.png" />Schematic representation of the photodiode channel</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Schematic%20representation%20of%20the%20photodiode%20channel.png" alt="Schematic representation of the photodiode channel">
+  <p>Schematic representation of the photodiode channel</p>
+</div>
+
 <h5 id="log-file-alignment">Log File Alignment</h5>
 <p>The photodiode channel solely indicates when a specific event occurred in the iEEG signals, lacking any information about the nature of the event (unlike an LPT trigger in MEG). To identify specific events in the signal, the timing information from the log file was combined with that from the photodiode.</p>
 <p>The log file contains a description of each presented event along with a corresponding time stamp from the experimental computer. The photodiode channel recorded time stamps for each event, indicating when it occurred according to the acquisition computer clock. The goal was to align the log file and the photodiode to associate each event in the photodiode signal with the corresponding event description in the log file. This step was crucial since misalignment could lead to incorrect event descriptions in the iEEG signal, compromising the entire analysis.</p>
@@ -539,170 +546,138 @@ An example of a photodiode</p>
 <p>To ensure alignment of both signals, the discrete difference between the photodiode and log file timestamps was computed, providing the interval between successive events for each signal. The resulting arrays were then plotted atop each other. Misalignment between the two sources of timing information could be easily detected, as they did not overlap. Perfect overlap between the two was necessary to consider the signals aligned. Additionally, the difference between the two signals was computed to ensure minimal deviation.</p>
 <p><strong>Integrating Information</strong></p>
 <p>Once the two signals were properly aligned, the log file events could be used as descriptors of the events marked at the timestamps from the photodiode.</p>
-<p><img alt="Illustration of the alignment pipeline" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Illustration%20of%20the%20alignment%20pipeline.png" />Illustration of the alignment pipeline</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Illustration%20of%20the%20alignment%20pipeline.png" alt="Illustration of the alignment pipeline">
+  <p>Illustration of the alignment pipeline</p>
+</div>
+
 <p>The alignment procedure allowed the information from the log file to be utilized in generating well-described events in the iEEG data. The events were encoded as “/” separated strings and stored in an events.tsv table. An extensive description of each event type and their levels are as follows:</p>
 <p><strong>Task Name:</strong> Dur</p>
 <p><strong>Task Description:</strong> Description of the experimental factors and their level with the correct syntax to access them from the MNE epochs object. Note that factor and level names are case-sensitive. We describe the syntax for each condition separately. However, note that you can fetch a combination of factors from the epochs using a forward slash. For example, if you wish to fetch the face target trials, you can combine both conditions like so: epochs['face/Relevant target'] will fetch all face target trials. In addition, the epochs objects are equipped with metadata, where the name of the column is the name of the factor, and the level follows the same nomenclature as below. This can be used for more sophisticated trial filtering and retrieval.</p>
 <p><strong>Experimental Design:</strong></p>
 <ul>
-<li>Event Type:</li>
+<li>Event Type:<ul>
 <li>Marks the different events occurring within a trial.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:<ul>
+<li>Factor 1:</li>
 <li>Name: stimulus onset</li>
 <li>Description: Marks the onset of the visual stimuli. With epochs['stimulus onset'], extract all epochs time-locked to the visual stimulus onset.</li>
-</ul>
-</li>
-<li>Factor 2:<ul>
+<li>Factor 2:</li>
 <li>Name: stimulus offset</li>
 <li>Description: Marks the offset of the visual stimuli. With epochs['stimulus offset'], extract all epochs time-locked to the offset of the visual stimulus.</li>
-</ul>
-</li>
-<li>Factor 3:<ul>
+<li>Factor 3:</li>
 <li>Name: jitter onset</li>
 <li>Description: Marks the beginning of the inter-trial jitter. All trials lasted 2 sec., with an added jitter of 400ms on average. With epochs['jitter onset'], extract all epochs time-locked to the beginning of the jitter period (2 sec. after stimulus onset).</li>
 </ul>
 </li>
-<li>Block:</li>
+<li>Block:<ul>
 <li>Marks the experimental blocks.</li>
 <li>Factor Type: Discrete</li>
-<li>Factor 1:<ul>
+<li>Factor 1:</li>
 <li>Name: block_*</li>
 <li>Description: Experimental blocks. Our experiment consisted of 5 blocks, in between which participants were allowed to take a break. With epochs['block_1'], extract all epochs of the first experimental block.</li>
 </ul>
 </li>
-<li>Miniblock:</li>
+<li>Miniblock:<ul>
 <li>Marks the experimental miniblocks.</li>
 <li>Factor Type: Discrete</li>
-<li>Factor 1:<ul>
+<li>Factor 1:</li>
 <li>Name: miniblock_*</li>
 <li>Description: Experimental miniblocks. Each experimental block consisted of 4 miniblocks. At the beginning of each miniblock, the two target stimuli were presented to the participant, which the participant had to remember to be able to detect in the stream of stimuli. With epochs['miniblock_1'], extract all epochs of the first experimental miniblock.</li>
 </ul>
 </li>
-<li>Category:</li>
+<li>Category:<ul>
 <li>Category of the visual stimuli.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:<ul>
+<li>Factor 1:</li>
 <li>Name: face</li>
 <li>Description: Identifies face trials. With epochs['face'], extract all epochs in which a face was presented.</li>
-</ul>
-</li>
-<li>Factor 2:<ul>
+<li>Factor 2:</li>
 <li>Name: object</li>
 <li>Description: Identifies object trials. With epochs['object'], extract all epochs in which an object was presented.</li>
-</ul>
-</li>
-<li>Factor 3:<ul>
+<li>Factor 3:</li>
 <li>Name: letter</li>
 <li>Description: Identifies letter trials. With epochs['letter'], extract all epochs in which a letter was presented.</li>
-</ul>
-</li>
-<li>Factor 4:<ul>
+<li>Factor 4:</li>
 <li>Name: false</li>
 <li>Description: Identifies false font trials (i.e., symbols). With epochs['false'], extract all epochs in which a false font was presented.</li>
 </ul>
 </li>
-<li>Identity:</li>
+<li>Identity:<ul>
 <li>Identity of the visual stimuli.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:<ul>
+<li>Factor 1:</li>
 <li>Name: face_*</li>
 <li>Description: Identifies the identity of face trials. With epochs['face_*'], extract all epochs in which that specific face was presented. From 1-9, leading 0.</li>
-</ul>
-</li>
-<li>Factor 2:<ul>
+<li>Factor 2:</li>
 <li>Name: object_*</li>
 <li>Description: Identifies the identity of object trials. With epochs['object_*'], extract all epochs in which that specific object was presented. From 1-9, leading 0.</li>
-</ul>
-</li>
-<li>Factor 3:<ul>
+<li>Factor 3:</li>
 <li>Name: letter_*</li>
 <li>Description: Identifies the identity of letter trials. With epochs['letter_*'], extract all epochs in which that specific letter was presented. From 1-9, leading 0.</li>
-</ul>
-</li>
-<li>Factor 4:<ul>
+<li>Factor 4:</li>
 <li>Name: false_*</li>
 <li>Description: Identifies the identity of false font trials (i.e., symbols). With epochs['false__*'], extract all epochs in which that specific false font was presented. From 1-9, leading 0.</li>
 </ul>
 </li>
-<li>Orientation:</li>
+<li>Orientation:<ul>
 <li>Orientation of the displayed stimuli.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:<ul>
+<li>Factor 1:</li>
 <li>Name: Center</li>
 <li>Description: Identifies stimuli presented in the center orientation. With epochs['Center'], extract all epochs in which a stimulus was presented in the center orientation.</li>
-</ul>
-</li>
-<li>Factor 2:<ul>
+<li>Factor 2:</li>
 <li>Name: Left</li>
 <li>Description: Identifies stimuli presented in the Left orientation. With epochs['Left'], extract all epochs in which a stimulus was presented in the Left orientation.</li>
-</ul>
-</li>
-<li>Factor 3:<ul>
+<li>Factor 3:</li>
 <li>Name: Right</li>
 <li>Description: Identifies stimuli presented in the Right orientation. With epochs['Right'], extract all epochs in which a stimulus was presented in the Right orientation.</li>
 </ul>
 </li>
-<li>Duration:</li>
+<li>Duration:<ul>
 <li>Duration a visual stimulus was presented for.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:<ul>
+<li>Factor 1:</li>
 <li>Name: 500ms</li>
 <li>Description: Identifies stimuli presented for 500ms. With epochs['500ms'], extract all epochs in which the stimulus was displayed for 500ms.</li>
-</ul>
-</li>
-<li>Factor 2:<ul>
+<li>Factor 2:</li>
 <li>Name: 1000ms</li>
 <li>Description: Identifies stimuli presented for 1000ms. With epochs['1000ms'], extract all epochs in which the stimulus was displayed for 1000ms.</li>
-</ul>
-</li>
-<li>Factor 3:<ul>
+<li>Factor 3:</li>
 <li>Name: 1500ms</li>
 <li>Description: Identifies stimuli presented for 1500ms. With epochs['1500ms'], extract all epochs in which the stimulus was displayed for 1500ms.</li>
 </ul>
 </li>
-<li>Task Relevance:</li>
+<li>Task Relevance:<ul>
 <li>Task relevance of a given trial.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:<ul>
+<li>Factor 1:</li>
 <li>Name: Relevant target</li>
 <li>Description: Identifies target stimuli. Target stimuli are presented at the beginning of each miniblock, and participants must detect them among the sequence of presented stimuli by pressing a button. With epochs['Relevant target'], extract all target trials.</li>
-</ul>
-</li>
-<li>Factor 2:<ul>
+<li>Factor 2:</li>
 <li>Name: Relevant non-target</li>
 <li>Description: Identifies task-relevant non-target stimuli. We considered task-relevant stimuli that were of the same category as the target but of a different identity. With epochs['Relevant non-target'], extract all task-relevant non-target trials.</li>
-</ul>
-</li>
-<li>Factor 3:<ul>
+<li>Factor 3:</li>
 <li>Name: Irrelevant</li>
 <li>Description: Identifies task-irrelevant non-target stimuli. We considered task-irrelevant stimuli that were of a different category than the target. With epochs['Irrelevant'], extract all task-irrelevant non-target trials.</li>
 </ul>
 </li>
-<li>Response:</li>
+<li>Response:<ul>
 <li>Rated response of the participants.</li>
 <li>Factor Type: Categorical</li>
-<li>Factor 1:<ul>
+<li>Factor 1:</li>
 <li>Name: Hit</li>
 <li>Description: Participants correctly identified a target by pressing a button. With epochs['Hit'], extract all target trials for which the participants pressed a key.</li>
-</ul>
-</li>
-<li>Factor 2:<ul>
+<li>Factor 2:</li>
 <li>Name: CorrRej</li>
 <li>Description: Participants correctly rejected a non-target stimulus and did not press any button. With epochs['CorrRej'], extract all non-target trials for which the participants did not press a key.</li>
-</ul>
-</li>
-<li>Factor 3:<ul>
+<li>Factor 3:</li>
 <li>Name: Miss</li>
 <li>Description: Participants failed to press a button when a target stimulus was presented. With epochs['Miss'], extract all target trials in which participants failed to press a button.</li>
-</ul>
-</li>
-<li>Factor 4:<ul>
+<li>Factor 4:</li>
 <li>Name: FA</li>
 <li>Description: Participants mistakenly pressed a button when a non-target stimulus was presented. With epochs['FA'], extract all non-target trials in which participants pressed a button.</li>
-</ul>
-</li>
-<li>Factor 5:<ul>
+<li>Factor 5:</li>
 <li>Name: n.a.</li>
 <li>Description: For the events stimulus offset and jitter onset, the response is set to n.a. as the response relates to the visual stimulus, not to the other events. This should not be used to access the data.</li>
 </ul>
@@ -712,7 +687,11 @@ An example of a photodiode</p>
 <p>Subject-specific pial surfaces were automatically reconstructed based on a pre-implant T1 weighted MR image using the Freesurfer image analysis suite (‘recon-all’, http://surfer.nmr.mgh.harvard.edu; Dale et al., 1999). Post-implant CT images were co-registered with the pre-implant MR images using FLIRT (Jenkinson and Smith, 2001), as implemented in FSL (Smith et al., 2004; http://fsl.fmrib.ox.ac.uk/fsl/). For NYU patients, we used a semi-automatic approach to generating electrode labels. For manual cases, co-registered MR and CT slices were examined using FSLView (Smith et al., 2004). For grids, we localized three corner electrodes and the remaining electrodes coordinates were then automatically interpolated along the shared plane using the known inter-electrode distances. Strip and depth electrodes were localized manually when they did not follow straight trajectories. When depth electrodes were in a straight line, the first and last electrodes were localized manually, and electrodes in between were automatically interpolated and labeled based on known inter-electrode distances and serial labeling convention. For WU patients, electrodes were localized manually using the SubNuclear toolbox (ckovach/ SubNuclear (github.com)). Electrode locations were further refined within the space of the pre-operative MRI using three-dimensional non-linear thin-plate spline warping (Rohr et al., 2001), which corrected for post-operative shift and distortion. The warping was constrained with manually selected points through the brain, which was visually aligned with landmarks in pre-implantation MRI and post-implantation CT. For Harvard subjects, individual contacts from depth electrodes were labeled manually from the CT image using the BioImageSuite’s  Electrode Editor tool (legacy version 3.5; https://bioimagesuiteweb.github.io/webapp/; Joshi, et al., 2011). The coordinates in CT image-space were converted to coordinates within the patient’s segmented MRI brain-space using the iELVis toolbox (https://github.com/iELVis/ iELVis, yangWangElecPjct; Yang, Wang, et al., 2012; Groppe et al., 2017). For all sites, the electrode spatial coordinates were transformed from the individual patient space into the standard space of the Montreal Neurological Institute (MNI-152) template for plotting purposes. At NYU, this transformation was performed using the DARTEL algorithm (Ashburner, 2007) implemented in SPM8 (Wellcome Department of Imaging Neuroscience, London, United Kingdom). At Harvard, this transformation was performed using the iELVis toolkit. At WU the transformation was performed with the SubNuclear toolbox (ckovach/SubNuclear (github.com)) using img2imgcoord utility.</p>
 <h4 id="finger-localizer-task">Finger Localizer Task</h4>
 <p>In the Finger Localizer task, participants were presented with four circles, one of which was filled with a specific color, serving as a cue for participants to press the corresponding colored button on the response box. The filled state of the circle persisted for the duration of the response time, followed by an additional delay of 200 milliseconds. The Inter-Trial Intervals (ITIs) were uniformly distributed, with a mean of 0.55 seconds and a range from 0.400 to 0.700 seconds. The experimental protocol comprised 80 trials, distributed equally among the four colors, with 20 trials per color, and the sequence of trials was randomized. This task aimed to identify brain regions responsible for motor control, particularly those governing finger movements, and to pinpoint electrodes selectively activated by specific motor responses, such as button presses.</p>
-<p><img alt="An illustration depicting a trial in which the participant is required to press the blue button" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/FingerLoc.png" />An illustration depicting a trial in which the participant is required to press the blue button</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/FingerLoc.png" alt="An illustration depicting a trial in which the participant is required to press the blue button" style="width:25%;">
+  <p>An illustration depicting a trial in which the participant is required to press the blue button</p>
+</div>
+
 <p><span style="background-color: red"><b>Please note:</b></span> <strong>Although participants completed this task concurrently with <a href="#experiment-1-conscious-perception">Experiment 1</a>, we did not utilize the data in the analysis, as it was primarily acquired for use in <a href="#experiment-2-video-game-engagement">Experiment 2</a>. Consequently, the data pertaining to the Finger Localizer task is not included in this version of our data release.</strong></p>
 <h4 id="task-tieeg">Task (tiEEG)</h4>
 <p>Participants proceeded to Experiment 1 either after or before completing the <a href="#finger-localizer-task">Finger Localizer task</a>. tiEEG consisted of 5 runs containing 4 blocks each, and 34-38 trials per block, 32 non-targets (8 of each category) and 2-6 targets, with each trial lasting 2.4 s approximately, for a total of 720 trials. Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli. Additional information about the task can be found <a href="#procedure">here</a>.</p>
@@ -761,7 +740,11 @@ An example of a photodiode</p>
 <li>Defacing of NIFTI: Defacing of the NIFTI images was performed using the PyDeface package (version: 2.0.2) (Gulban et al., 2022).</li>
 <li>Verification: This step involved checking the quality of the defaced NIFTI images using 2D/3D image plots to compare before and after the defacing stage.</li>
 </ol>
-<p><img alt="Alternative workflow for defacing 12 challenging MR/CT DICOM Images" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png" />Alternative workflow for defacing 12 challenging MR/CT DICOM Images</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png" alt="Alternative workflow for defacing 12 challenging MR/CT DICOM Images" style="width:25%;">
+  <p>Alternative workflow for defacing 12 challenging MR/CT DICOM Images</p>
+</div>
+
 <p><span style="background-color: red"><b>Miscellaneous:</b></span> <strong>In the MR data for subject CF103, one DICOM slice was inadvertently dropped during the conversion process from DICOM to NIFTI format. However, the resulting NIFTI file remains functional and usable.</strong></p>
               
             </div>
