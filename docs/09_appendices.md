@@ -89,4 +89,4 @@ This Form should be filled by the participant after the experiment and asks the 
 
 ## [Appendix 8. iEEG Standard Operating Procedure](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf)
 
-## Appendix 9. Documentation Changes
+## [Appendix 9. Documentation Changes](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/Documentation-Changes_2024-04-17_v1.0.pdf)
