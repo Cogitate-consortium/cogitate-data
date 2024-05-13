@@ -109,7 +109,7 @@ Behavioral data is available in CSV format and it provides below information:
 4. Stimulus and jitter duration
 5. Subject's responses
 
-#### **M-EEG data**
+#### **M-EEG Data**
 
 - **Unprocessed/Raw release format**
       - Filetype: FIF
@@ -128,7 +128,7 @@ FIF files contain various types of information related to neuroimaging data, inc
 5. Covariance matrices: Statistical information about the relationships between sensor measurements at different time points or frequencies.
 6. Anatomical MRI data: High-resolution structural images of the subject's brain, used for source localization and spatial alignment.
 
-#### **iEEG data**
+#### **iEEG/ECoG Data**
 
 - **Unprocessed/Raw release format**
       - Filetype: EDF
@@ -139,6 +139,18 @@ FIF files contain various types of information related to neuroimaging data, inc
 European Data Format files used for storing and exchanging time-series biological and physiological data
 
 EDF files are designed to accommodate data from multiple channels, allowing researchers to store and manage data collected simultaneously from different sensors or electrodes. The format supports both raw signal data and associated metadata, including information about sampling rates, units of measurement, patient demographics, and recording conditions.
+
+#### **MR/CT Data**
+
+- **Unprocessed/Raw release format**
+      - Filetype: DICOM/NIFTI
+
+- **BIDS Format**
+      - Filetype: DICOM/NIFTI
+
+DICOM is a standard format utilized for storing CT (Computed Tomography) scans and MRI (Magnetic Resonance Imaging) data. These files encompass not only the image data but also essential metadata, including imaging parameters.
+
+NIFTI serves as another format employed for a subset of subjects where our standard procedure encountered challenges. With the exception of the MR and CT scans for 12 subjects within the iEEG data, all other datasets of similar nature are stored in DICOM format. Further details regarding these 12 problematic datasets are available in [this section](#deviations-from-data-curation-procedure). NIFTI files encapsulate image data alongside metadata concerning spatial orientation, voxel dimensions, and additional imaging parameters.
 
 ## Data Acquisition
 
