@@ -27,15 +27,15 @@ PKU (Ling Liu, Huan Luo, Shujun Yang)
 iEEG
 NYU (Sasha Devore, Simon Henin, Stephanie Montenegro, Jay Jeschke, Alia Seedat)
 Harvard (Gabriel Krieman, Katarina Bendtz, David Mazumder, Marcelo Armendariz)
-WI (Urszula Gorska)
+WU (Urszula Gorska)
 ```
 
 **Data Quality Checks:**
 
 ```bash
 Rony Hirschhorn (Tel Aviv University)
-Urszula Gorska (WI)
-Csaba Kozma (WI)
+Urszula Gorska (WU)
+Csaba Kozma (WU)
 Liad Mudrik (Tel Aviv University)
 Michael Pitts (Reed College)
 ```
@@ -47,7 +47,7 @@ COGITATE’s Data Release Team:
 Niccolò Bonacchi, Tanya Brown, Kyle Kahraman, Lucia Melloni, Praveen Sripad, Fatemeh Taheriyan, Diptyajit Das
 
 Flywheel Cloud Services (XNAT):
-James Dickson, Angela Farrar, Dan Marcus,
+Mohana Ramaratnam, James Dickson, Angela Farrar, Dan Marcus, Blake Griggs
 ```
 
    </td>
