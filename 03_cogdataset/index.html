@@ -80,9 +80,11 @@
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#eye-tracking-behavioral-data">Eye Tracking &amp; Behavioral Data</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#m-eeg-data">M-EEG data</a>
+    <li class="toctree-l4"><a class="reference internal" href="#m-eeg-data">M-EEG Data</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#ieeg-data">iEEG data</a>
+    <li class="toctree-l4"><a class="reference internal" href="#ieegecog-data">iEEG/ECoG Data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mrct-data">MR/CT Data</a>
     </li>
         </ul>
     </li>
@@ -309,7 +311,7 @@
 <li>Stimulus and jitter duration</li>
 <li>Subject's responses</li>
 </ol>
-<h4 id="m-eeg-data"><strong>M-EEG data</strong></h4>
+<h4 id="m-eeg-data"><strong>M-EEG Data</strong></h4>
 <ul>
 <li>
 <p><strong>Unprocessed/Raw release format</strong></p>
@@ -334,7 +336,7 @@
 <li>Covariance matrices: Statistical information about the relationships between sensor measurements at different time points or frequencies.</li>
 <li>Anatomical MRI data: High-resolution structural images of the subject's brain, used for source localization and spatial alignment.</li>
 </ol>
-<h4 id="ieeg-data"><strong>iEEG data</strong></h4>
+<h4 id="ieegecog-data"><strong>iEEG/ECoG Data</strong></h4>
 <ul>
 <li>
 <p><strong>Unprocessed/Raw release format</strong></p>
@@ -351,6 +353,23 @@
 </ul>
 <p>European Data Format files used for storing and exchanging time-series biological and physiological data</p>
 <p>EDF files are designed to accommodate data from multiple channels, allowing researchers to store and manage data collected simultaneously from different sensors or electrodes. The format supports both raw signal data and associated metadata, including information about sampling rates, units of measurement, patient demographics, and recording conditions.</p>
+<h4 id="mrct-data"><strong>MR/CT Data</strong></h4>
+<ul>
+<li>
+<p><strong>Unprocessed/Raw release format</strong></p>
+<ul>
+<li>Filetype: DICOM/NIFTI</li>
+</ul>
+</li>
+<li>
+<p><strong>BIDS Format</strong></p>
+<ul>
+<li>Filetype: DICOM/NIFTI</li>
+</ul>
+</li>
+</ul>
+<p>DICOM is a standard format utilized for storing CT (Computed Tomography) scans and MRI (Magnetic Resonance Imaging) data. These files encompass not only the image data but also essential metadata, including imaging parameters.</p>
+<p>NIFTI serves as another format employed for a subset of subjects where our standard procedure encountered challenges. With the exception of the MR and CT scans for 12 subjects within the iEEG data, all other datasets of similar nature are stored in DICOM format. Further details regarding these 12 problematic datasets are available in <a href="#deviations-from-data-curation-procedure">this section</a>. NIFTI files encapsulate image data alongside metadata concerning spatial orientation, voxel dimensions, and additional imaging parameters.</p>
 <h2 id="data-acquisition">Data Acquisition</h2>
 <p>The Cogitate dataset encompasses three distinct neuroimaging modalities, along with synchronized eye-tracking and behavioral data linked to each of these modalities. Here we detail the acquisition protocol for each modality in the corresponding data release: M-EEG, iEEG</p>
 <h3 id="stimuli">Stimuli</h3>
