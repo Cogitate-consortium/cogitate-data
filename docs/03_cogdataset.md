@@ -51,7 +51,7 @@ Electrode scheme (the scheme used for implanting the electrodes, Stereo, Subdura
 
 #### Quality Check
 
-Data from all modalities were checked at three levels. The first level checks tested whether the datasets  contained  all  expected  files  keeping  their  naming  conventions,  and  that  all  personal information had been removed. The second level checks tested subjects’ performance with respect to behavior. For [Experiment 1](02_overview.md#experiment-1-conscious-perception), subjects were excluded if their hit rate was lower than 80% or (False Alarm) FAs higher than 20% for M-EEG and fMRI, and for iEEG, a more relaxed criteria of 70% Hits and 30% FAs was used. Two M-EEG subjects were excluded due to low hit rates and one iEEG patient was excluded due to high FAs. The  third  level  checks  assessed  the  quality  of  the  neural  data.
+Data from all modalities were checked at three levels. The first level checks tested whether the datasets  contained  all  expected  files  keeping  their  naming  conventions,  and  that  all  personal information had been removed. The second level checks tested subjects’ performance with respect to behavior. For [Experiment 1](02_overview.md#experiment-1-conscious-perception), subjects were excluded if their hit rate (Hit) was lower than 80% or false alarm (FA) was higher than 20% for M-EEG and fMRI, and for iEEG, a more relaxed criteria of 70% Hits and 30% FAs was used. Two M-EEG subjects were excluded due to low hit rates and one iEEG patient was excluded due to high FAs. The  third  level  checks  assessed  the  quality  of  the  neural  data.
 
 #### Exclusion Criteria
 
