@@ -1,4 +1,4 @@
-# Data curation procedurs
+# Data Curation Procedures
 
 A detailed explanation about the multiple steps that were taken to prepare the data to be released in public will be available in Appendix 7.
 
