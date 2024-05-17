@@ -200,7 +200,7 @@ For each subject, a high resolution T1-weighted MRI volume (3T Siemens MRI Prism
 
 #### Behavioral Data Acquisition
 
-The task was executed using Matlab (PKU: R2018b; UB: R2019b) with Psychtoolbox v.3 (Pelli, 1997) on a custom PC at UB and a Dell XPS desktop PC at PKU. Visual stimuli were presented on a screen placed in front of the subjects with a PROPixx DLP LED projector (VPixx Technologies Inc.) at a resolution of 1920 x 1080 pixels and a refresh rate of 120 Hz. The distance between the subject’s eyes and the screen was different at each site (CHBH: 119 cm, PKU: 85 cm) to achieve the same FOV of 36.6 x 21.2 degrees. Subjects responded with an 8-button response box (Millikey LH-8).
+The task was executed using Matlab (CHBH: R2019b, PKU: R2018b) with Psychtoolbox v.3 (Pelli, 1997) on a custom PC at CHBH and a Dell XPS desktop PC at PKU. Visual stimuli were presented on a screen placed in front of the subjects with a PROPixx DLP LED projector (VPixx Technologies Inc.) at a resolution of 1920 x 1080 pixels and a refresh rate of 120 Hz. The distance between the subject’s eyes and the screen was different at each site (CHBH: 119 cm, PKU: 85 cm) to achieve the same FOV of 36.6 x 21.2 degrees. Participants responded with both hands using two 5-button response boxes (CHBH: NAtA, PKU: SINORAD).
 
 #### Eye Tracking Data Acquisition
 
