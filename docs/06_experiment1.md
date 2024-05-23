@@ -178,33 +178,56 @@ COG_MEEG_EXP1_BIDS_RELEASE/
 
 ```bash
 COG_ECOG_EXP1_BIDS_RELEASE/
-|-- dataset_description.json					              # General information about BIDS version, type of dataset, Authors, Acknowledgments, Funding, Ethics Approvals, and the link of COGITATE website
-|-- derivatives							                      # Directory containing derived data
-|   |-- fs							                          # Outputs of FreeSurfer processing
-|   |   `-- sub-CF102						                  # Subject folder
-|   |       |-- label						                  # Contains files representing segmented brain regions
-|   |       |-- mri						                      # Contains various outputs of the FreeSurfer MRI processing pipeline, such as brain masks, tissue segmentations, and cortical surface reconstructions
-|   |       |-- scripts						                  # Contains relevant information related to the execution and status tracking of the FreeSurfer's recon-all pipeline for MRI data processing, including build and status stamps, logs, and environment settings
-|   |       |-- stats						                  # statistical data related to various anatomical and morphometric measurements derived from brain segmentation and parcellation processes
-|   |       |-- surf						                  # Contains various surface representations of the cerebral cortex, including vertex-wise measurements such as cortical area, curvature, thickness, sulcal depth, and surface normals, for both left and right hemispheres, derived from structural MRI data
-|   |       `-- touch						                  # Contains information about completion of various processing steps related to surface generation, segmentation, registration, normalization, and quality control for both left and right hemispheres
-|-- participants.json						                  # Demographic information about participants
-|-- participants.tsv						                  # Subjects’ demography in tsv format
-|-- README
-|-- sub-CF102							                      # Subject folder
-|   `-- ses-1							                      # Session 1/visit 1
-|       |-- ieeg						                      # Folder of iEEG data
-|       |   |-- sub-CF102_ses-1_laplace_mapping_ieeg.json	  # Contains electrode groups and their references for laplace mapping for session 1
-|       |   |-- sub-CF102_ses-1_space-ACPC_coordsystem.json	  # Contains information about the coordinate system during session 1
-|       |   |-- sub-CF102_ses-1_space-ACPC_electrodes.tsv	  # Contains spatial coordinates (x, y, z)/locations of electrodes on the subject's brain surface
-|       |   |-- sub-CF102_ses-1_task-Dur_channels.tsv		  # Contains information about the iEEG data channels during task and session 1 including their names, type, units, frequency cutoffs, description, sampling frequency, and status
-|       |   |-- sub-CF102_ses-1_task-Dur_events.json		  # Contains description for “sample”, “value”, and “trial_type” 
-|       |   |-- sub-CF102_ses-1_task-Dur_events.tsv		      # Contains event-related data during the task and session 1 including onset, duration, trial type, value and sample
-|       |   |-- sub-CF102_ses-1_task-Dur_ieeg.eeg		      # Contains iEEG data during task and session 1
-|       |   |-- sub-CF102_ses-1_task-Dur_ieeg.json		      # Contains metadata for iEEG recorded during the task and session 1
-|       |   |-- sub-CF102_ses-1_task-Dur_ieeg.vhdr		      # Contains metadata for iEEG recorded during the task and session 1
-|       |   `-- sub-CF102_ses-1_task-Dur_ieeg.vmrk		      # A marker file containing annotations or event markers corresponding to the events during the task and session 1
-|       `-- sub-CF102_ses-1_scans.tsv
+|-- dataset_description.json						                # General information about BIDS version, type of dataset, Authors, Acknowledgments, Funding, Ethics Approvals, and the link of COGITATE website
+|-- derivatives								                        # Directory containing derived data
+|   |-- additional_metadata						                    # Containing all of the metadata and CT scans
+|   |   |-- dataset_description.json					            # General information about BIDS version, type of dataset and list of metadata
+|   |   |-- METADATA							                    # Metadata folder
+|   |   |   |-- analysis.json						                # Analysis steps, the order of them and the link of analysis code repository
+|   |   |   |-- devices_ECOG.json					                # List of devices used for iEEG data acquisition
+|   |   |   |-- manifest.json						                # List of all MR and CT datasets
+|   |   |   |-- protocols.json						                # Link of COGITATE wiki
+|   |   |   |-- tasks_EXP1_ECOG.json					            # Description of behavioral task, stimuli and responses
+|   |   |   |-- tasks_FingerLoc_ECOG.json				            # Description of Finger Localizer task, stimuli and responses
+|   |   |   `-- wiring_ECOG.pdf						                # Wiring diagram of iEEG
+|   |   |-- README.md							                    # Containing an explanation about additional_metadata directory
+|   |   |-- sub-CF102							                    # Subject folder
+|   |   |   `-- METADATA						                    # Metadata folder
+|   |   |       |-- CF102_CRF.json					                # Case Report Form
+|   |   |       |-- CF102_demographics.json				            # Subject’s demography
+|   |   |       `-- CF102_EXQU.json					                # Exit Questionnaire
+|   `-- ct								                            # CT scans folder
+|       |-- dataset_description.json					            # General information about BIDS version and format of CT scans
+|       |-- README.md							                    # Containing an explanation about ct folder
+|       |-- sub-CF102							                    # Subject folder
+|       |   `-- ses-1							                    # Session 1/visit 1
+|       |       `-- anat						                    # Folder of CT data
+|       |           `-- sub-CF102_ses-1_ct.nii.gz			        # CT data
+|-- participants_epilepsy.json						                # Contains descriptions of additional metadata including electrode implantation, seizure classification, IQ scores, auditory capabilities, seizure frequency, surgical history, MRI findings, and family medical history
+|-- participants_epilepsy.tsv						                # Contains additional metadata including electrode implantation, seizure classification, IQ scores, auditory capabilities, seizure frequency, surgical history, MRI findings, and family medical history
+|-- participants.json							                    # Contains descriptions of metadata including biological sex, age, handedness, weight, height, primary and secondary languages, ethnicity, education level, colorblindness status, visual correction method, eye dominance, eye chart test results, and strength of visual correction in diopters
+|-- participants.tsv							                    # Contains metadata including biological sex, age, handedness, weight, height, primary and secondary languages, ethnicity, education level, colorblindness status, visual correction method, eye dominance, eye chart test results, and strength of visual correction in diopters.
+|-- README.md								                        # Overview of iEEG data, the BIDS format and description of the contents of the dataset
+|-- sub-CF102								                        # Subject folder
+|   `-- ses-1								                        # Session 1/visit 1
+|       |-- anat							                        # Folder of MR anatomical data
+|       |   `-- sub-CF102_ses-1_T1w.nii.gz				            # MR anatomical data
+|       |-- ieeg							                        # Folder of iEEG data
+|       |   |-- sub-CF102_ses-1_atlas-desikan_labels.json		    # Contains descriptions about _ses-1_atlas-desikan_labels.tsv file
+|       |   |-- sub-CF102_ses-1_atlas-desikan_labels.tsv		    # Contains electrode labels obtained from the Desikan atlas using mne.get_montage_volume_labels, along with the electrode coordinates in the subject's native T1 space
+|       |   |-- sub-CF102_ses-1_atlas-destrieux_labels.json		    # Contains descriptions about _ses-1_atlas-destrieux_labels.tsv file
+|       |   |-- sub-CF102_ses-1_atlas-destrieux_labels.tsv		    # Contains electrode labels obtained from the Destrieux atlas using mne.get_montage_volume_labels, along with the electrode coordinates in the subject's native T1 space
+|       |   |-- sub-CF102_ses-1_laplace_mapping_ieeg.json		    # Contains referencing scheme of the electrodes
+|       |   |-- sub-CF102_ses-1_space-fsaverage_coordsystem.json	# Contains the x y z coordinates of the channels
+|       |   |-- sub-CF102_ses-1_space-fsaverage_electrodes.tsv		# Contains electrodes’ coordinates in fsaverage space
+|       |   |-- sub-CF102_ses-1_task-Dur_channels.tsv		        # Contains information about the channel types (which channel is seeg, ecog...)
+|       |   |-- sub-CF102_ses-1_task-Dur_events.json
+|       |   |-- sub-CF102_ses-1_task-Dur_events.tsv			        # Contains the events timestamps, duration and descriptions aligned in the edf timeline. This file was generated by parsing the photodiode trigger and combining the photodiode time stamps with the log files information
+|       |   |-- sub-CF102_ses-1_task-Dur_ieeg.eeg			        # Raw EEG data file
+|       |   |-- sub-CF102_ses-1_task-Dur_ieeg.json
+|       |   |-- sub-CF102_ses-1_task-Dur_ieeg.vhdr			        # Header file - Contains recording parameters and further meta-information		
+|       |   `-- sub-CF102_ses-1_task-Dur_ieeg.vmrk			        # Marker file - Contains description of the event collected during the data recording
+|       `-- sub-CF102_ses-1_scans.tsv					            # Time of acquisition
 ```
 
    </td>
