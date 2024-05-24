@@ -164,9 +164,12 @@ Stimuli belonged to four categories that naturally fell into two groups that wer
 
 ### Procedure
 
-Stimuli were presented sequentially, all supra-threshold, with half being task-relevant and the other half task-irrelevant. Only one stimulus was shown on the screen at any given time. To define task relevance, subjects were instructed to detect two targets from different categories, regardless of their orientation. This online reporting enabled an explicit assessment of subjects’ performance, engaging report-related areas for later analysis. Each block began with notification of the two target stimuli, either pictorial (faces and objects) or symbolic (letters and false fonts), creating a clear distinction between relevant and irrelevant stimuli. At the start of each block, specific target stimuli were revealed with instructions such as “detect face A and object B” or "detect letter C and false-font D." Targets did not repeat across blocks. Each run included two blocks of the Face/Object task and two blocks of the Letter/False-font task, with the order counterbalanced across runs. Subjects were instructed to maintain central fixation throughout each trial. Gaze was monitored online through an eye tracker, with repeated calibrations ensuring good quality data.
+Stimuli were presented sequentially, all supra-threshold, with half being task-relevant and the other half task-irrelevant. Only one stimulus was shown on the screen at any given time. To define task relevance, subjects were instructed to detect (press a button; non-speeded response) two targets from different categories, regardless of their orientation. This online reporting enabled an explicit assessment of subjects’ performance, engaging report-related areas for later analysis. Each block began with notification of the two target stimuli, either pictorial (faces and objects) or symbolic (letters and false fonts), creating a clear distinction between relevant and irrelevant stimuli. At the start of each block, specific target stimuli were revealed with instructions such as “detect face A and object B” or "detect letter C and false-font D." Targets did not repeat across blocks. Each run included two blocks of the Face/Object task and two blocks of the Letter/False-font task, with the order counterbalanced across runs. Subjects were instructed to maintain central fixation throughout each trial. Gaze was monitored online through an eye tracker, with repeated calibrations ensuring good quality data.
 
-Each block comprised stimuli from all four categories, with each stimulus displayed for 500, 1000, or 1500 ms, followed by a blank interval, ensuring a consistent trial duration of 2000 ms. Within each block, three trial types were presented: i) Task Relevant Targets, consisting of the specific stimuli participants were tasked with detecting; ii) Task Relevant Non-Targets, encompassing stimuli from relevant categories that were not designated targets; and iii) Task Irrelevant Stimuli, comprising stimuli from the remaining categories.
+Each block comprised stimuli from all four categories, with each stimulus displayed for 500, 1000, or 1500 ms, followed by a blank interval, ensuring a consistent trial duration of 2000 ms. To  avoid  periodic  presentation  of  the  stimuli, random jitter was added to the end of each trial (mean inter-trial interval of 400 ms, jittered 200-2000 ms, with truncated  exponential  distribution). Within each block, three trial types were presented: i) Task Relevant Targets, consisting of the specific stimuli participants were tasked with detecting; ii) Task Relevant Non-Targets, encompassing stimuli from relevant categories that were not designated targets; and iii) Task Irrelevant Stimuli, comprising stimuli from the remaining categories.
+
+#### iEEG related modifications of the design
+Only half of the stimuli were used as targets for the iEEG experiments. The selection of target faces kept the balance of gender and ethnicity. Letters were chosen in equal amounts from the first and second parts of the alphabet, and the corresponding false-fonts were used. All stimuli were presented as relevant non-targets and irrelevant stimuli, matching the designs of the aforementioned procedure.
 
 ### M-EEG Data Acquisition
 
@@ -304,7 +307,7 @@ The resting-state data for each participant was also recorded for 5-minutes and 
 
 #### Task (tM-EEG)
 
-Following the empty room and rM-EEG recordings, subjects were asked to complete the task defined in the [Procedure](#procedure) section. tM-EEG consisted of 10 runs, with 4 blocks each. During each block, a ratio of 34-38 trials was presented, with 32 non-targets (8 of each category) and 2-6 targets (number chosen randomly). Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli.
+Following the empty room and rM-EEG recordings, subjects were asked to complete the task defined in the [Procedure](#procedure) section. tM-EEG consisted of 10 runs, with 4 blocks each. During each block, a ratio of 34-38 trials was presented, with 32 non-targets (8 of each category), 2-6 targets (number chosen randomly), and  each  trial  lasting  2.4 s approximately. Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli.
 
 |              |          |            |                 |                  |
 | ------------ | -------- | ---------- | --------------- | ---------------- |
@@ -599,22 +602,3 @@ A comprehensive quality assessment was conducted on the iEEG data. The data unde
 
 Subjects who were unable to complete a sufficient number of trials due to excessive muscular artifacts, movement, noisy recordings, or a decision by the subject to terminate the experiment were excluded. Subjects who exhibited a low performance in the attention task were also excluded – this translates to <70% Hits and >30% FAs. In addition, data was also excluded if it did not pass any of the pre-defined data quality checks.
 
-#### Deviations from Data Curation Procedure
-
-Our approach to defacing MR/CT DICOM images involved utilizing the built-in face masking tool from XNAT. However, for 12 iEEG subjects, we encountered difficulties in executing this step. This was primarily due to variations in the DICOM images, which could include cropped images, aliasing artifacts, broken headers, missing slices, non-equidistant slices within a series, and other issues. Below is the list of subjects where the execution of the XNAT facemasking tool failed:
-
-**Subject_ID:** CF103, CF104, CF112, CF113, CF116, CF117, CF120, CF121, CF122, CF124, CF125, CF126
-
-To address this issue, we implemented a slightly different workflow that allowed us to successfully deface MR/CT images of these 12 subjects. However, this new approach differed in its ability to regenerate the original DICOM images post-defacement (the original output from the XNAT facemasking tool). Instead, it generated defaced NIFTI images as the primary output. For our current version of data release, we have decided to share only the defaced NIFTI images for these subjects. Details about this workflow are provided below:
-
-1. Anonymization: MR/CT DICOM images underwent anonymization to remove the subject’s Protected Health Information (PHI).
-2. NIFTI Conversion: Anonymized DICOM images were then converted to the NIFTI image format using the dcm2niix package (version: 1.0.20220505) (Li et al., 2016).
-3. Defacing of NIFTI: Defacing of the NIFTI images was performed using the PyDeface package (version: 2.0.2) (Gulban et al., 2022).
-4. Verification: This step involved checking the quality of the defaced NIFTI images using 2D/3D image plots to compare before and after the defacing stage.
-
-<div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png" alt="Alternative workflow for defacing 12 challenging MR/CT DICOM Images">
-  <p>Alternative workflow for defacing 12 challenging MR/CT DICOM Images</p>
-</div>
-
-<span style="background-color: red"><b>Miscellaneous:</b></span> **In the MR data for subject CF103, one DICOM slice was inadvertently dropped during the conversion process from DICOM to NIFTI format. However, the resulting NIFTI file remains functional and usable.**
