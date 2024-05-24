@@ -152,7 +152,7 @@ The [BrainVision](https://www.brainproducts.com/support-resources/brainvision-co
 
 DICOM (.dcm file extension) is a standard format utilized for storing CT (Computed Tomography) scans and MRI (Magnetic Resonance Imaging) data. These files encompass not only the image data but also essential metadata, including imaging parameters.
 
-NIFTI (.nii.gz file extension) serves as another format employed for a subset of subjects where our standard procedure encountered challenges. With the exception of the MR and CT scans for 12 subjects within the iEEG data, all other datasets of similar nature are stored in DICOM format. Further details regarding these 12 problematic datasets are available in [this section](#deviations-from-data-curation-procedure). NIFTI files encapsulate image data alongside metadata concerning spatial orientation, voxel dimensions, and additional imaging parameters.
+NIFTI (.nii.gz file extension) serves as another format employed for a subset of subjects where our standard procedure encountered challenges. With the exception of the MR and CT scans for 12 subjects within the iEEG data, all other datasets of similar nature are stored in DICOM format. Further details regarding these 12 problematic datasets are available in [this section](04_data.md#deviations-from-data-curation-procedure). NIFTI files encapsulate image data alongside metadata concerning spatial orientation, voxel dimensions, and additional imaging parameters.
 
 ## Data Acquisition
 
