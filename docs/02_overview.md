@@ -61,13 +61,11 @@ The duration of each sequence was approximately 2 minutes. The next sequence sta
 ___
 For a comprehensive summary of more details about the experiments, please refer to the following supplementary resources:
 
-PLOS One Methods paper (COGITATE Main Scientific Paper 1 (MSP-1)):
-
-Melloni L, Mudrik L, Pitts M, Bendtz K, Ferrante O, et al. (2023) An adversarial collaboration protocol for testing contrasting predictions of global neuronal workspace and integrated information theory. PLOS ONE 18(2): e0268577. <https://doi.org/10.1371/journal.pone.0268577>
+[COGITATE Main Scientific Paper 1 (MSP-1)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0268577)
 
 [COGITATE Preregistration, v4](https://osf.io/gm3vd)
 
-[EXP 1 Demo video](https://www.youtube.com/watch?v=V93Agvo4G2Y)
+[EXP1 Demo Video](https://www.youtube.com/watch?v=V93Agvo4G2Y)
 ___
 
 ### Experiment 2: Video Game Engagement
