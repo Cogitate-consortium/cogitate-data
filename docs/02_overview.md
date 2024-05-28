@@ -43,8 +43,8 @@ This experiment followed a 3x3x4x2 factorial design, with the following items:
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | **Relevance of Stimulus to the Task (3)** | - Task-relevant target<br>    <br>- Task-relevant non-target<br>    <br>- Task-irrelevant stimulus |
 | **Stimulus Duration (3)**                 | - 500 ms<br>    <br>- 1000 ms<br>    <br>- 1500 ms                                                 |
-| **Stimulus Category (4)**                 | - Faces<br>    <br>- Objects<br>    <br>- Letters<br>    <br>- False-fonts (meaningless symbols)   |
-| **Stimulus Orientation (2)**              | - Side view (right or left view)<br>    <br>- Front view                                           |
+| **Stimulus Category (4)**                 | - Faces<br>    <br>- Objects<br>    <br>- Letters<br>    <br>- False-fonts (meaningless symbols)    <br><br>*20 identities for each category   |
+| **Stimulus Orientation (2)**              | - Side view (25% right and 25% left)<br>    <br>- Front view (50%)                                           |
 
 #### Sample Size
 
