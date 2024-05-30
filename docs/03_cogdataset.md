@@ -164,6 +164,16 @@ Stimuli belonged to four categories that naturally fell into two groups that wer
 
 ### Procedure
 
+|              |                |
+| ------------ | -------------- |
+| **Term**     | **Definition** |
+| Stimuli      | Visual items presented to the subjects during the experiment, with half being task-relevant and the other half task-irrelevant.|
+| Trial        | A single instance of presenting a stimulus to the subject and recording their response. <br><br>Each trial consisted of presenting a single stimulus for a specific duration.|
+| Runs         | The number of times a subject completed the full experimental session. <br><br>Each run consisted of a series of blocks separated by rest breaks.|
+| Block        | A segment within each run containing a set of trials with a specific experimental setup or condition. <br><br>Each block was composed of 4 mini blocks.|
+| Mini block   | A subsegment within each block. <br><br>In each mini block, a number of stimuli were presented to the subjects.|
+| Break        | Intervals between blocks that allowed subjects to rest and prepare for the next series of trials.|
+
 Stimuli were presented sequentially, all supra-threshold, with half being task-relevant and the other half task-irrelevant. Only one stimulus was shown on the screen at any given time. To define task relevance, subjects were instructed to detect (press a button; non-speeded response) two targets from different categories, regardless of their orientation. This online reporting enabled an explicit assessment of subjects’ performance, engaging report-related areas for later analysis. Each block began with notification of the two target stimuli, either pictorial (faces and objects) or symbolic (letters and false fonts), creating a clear distinction between relevant and irrelevant stimuli. At the start of each block, specific target stimuli were revealed with instructions such as “detect face A and object B” or "detect letter C and false-font D." Targets did not repeat across blocks. Each run included two blocks of the Face/Object task and two blocks of the Letter/False-font task, with the order counterbalanced across runs. Subjects were instructed to maintain central fixation throughout each trial. Gaze was monitored online through an eye tracker, with repeated calibrations ensuring good quality data.
 
 Each block comprised stimuli from all four categories, with each stimulus displayed for 500, 1000, or 1500 ms, followed by a blank interval, ensuring a consistent trial duration of 2000 ms. To  avoid  periodic  presentation  of  the  stimuli, random jitter was added to the end of each trial (mean inter-trial interval of 400 ms, jittered 200-2000 ms, with truncated  exponential  distribution). Within each block, three trial types were presented: i) Task Relevant Targets, consisting of the specific stimuli participants were tasked with detecting; ii) Task Relevant Non-Targets, encompassing stimuli from relevant categories that were not designated targets; and iii) Task Irrelevant Stimuli, comprising stimuli from the remaining categories.
@@ -209,7 +219,9 @@ The task was executed using Matlab (CHBH: R2019b, PKU: R2018b) with Psychtoolbox
 
 #### Eye Tracking Data Acquisition
 
-Eye movements were monitored and recorded from both eyes (binocular eye-tracking) using the MEG-compatible EyeLink 1000 Plus eye-tracker (SR Research Ltd., Ottawa, Canada). Nine-point calibration was performed at the beginning of the experiment, and recalibrated if necessary at the beginning of each block/word. Pupil size and corneal reflection data were collected at a sampling rate of 1000 Hz.
+Eye movements were monitored and recorded from both eyes (binocular eye-tracking) using the MEG-compatible EyeLink 1000 Plus eye-tracker (SR Research Ltd., Ottawa, Canada). Nine-point calibration was performed at the beginning of the experiment, and recalibrated if necessary at the beginning of each block. Pupil size and corneal reflection data were collected at a sampling rate of 1000 Hz.
+
+The channel name that contains the eye tracker data in the FIF file is as follows: MISC1 (X), MISC2 (Y), and MISC3 (pupil)
 
 #### Behavioral Data Code Scheme
 
@@ -221,18 +233,6 @@ Stimuli are coded as a 4-digit number.
 e.g., "1219" = 1 is face, 2 is left orientation and 19 is a female stimulus #19
 
 #### Eye Tracker and MEG Code Scheme
-
-The channel name that contains the eye tracker data in the FIF file is as follows: MISC1 (X), MISC2 (Y), and MISC3 (pupil)
-
-##### **Defining some terms**
-
-**Trial**: Stimulus presentation followed by a fixation (the two add up to 2 sec) followed by a jitter of 200 msec to 2000 ms.
-
-**Mini block**: presentation of 34 to 38 stimuli, in the beginning of which the target stimuli were presented.
-
-**Block**: composed of 4 mini blocks. At the end of each block, there was a break.
-
-**Break**: Pause between 2 blocks
 
 ##### **Successive trigger scheme**
 
