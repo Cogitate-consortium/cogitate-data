@@ -140,7 +140,7 @@ European Data Format files used for storing and exchanging time-series biologica
 
 EDF files are designed to accommodate data from multiple channels, allowing researchers to store and manage data collected simultaneously from different sensors or electrodes. The format supports both raw signal data and associated metadata, including information about sampling rates, units of measurement, patient demographics, and recording conditions.
 
-The [BrainVision](https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/) format, often shortened to BV, is a widely employed file format in neuroscience research, specifically designed for organizing neurophysiological data. It comprises several files, including the header file (.vhdr), marker file (.vmrk), and raw EEG data file (*.eeg), alongside possible auxiliary files. These components store essential details like recording parameters, event markers, and the raw EEG data.
+The [BrainVision](https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/) format, often shortened to BV, is a widely employed file format in neuroscience research, specifically designed for organizing neurophysiological data. It comprises three files, including the header file (.vhdr), marker file (.vmrk), and raw EEG data file (*.eeg), alongside possible auxiliary files. These components store essential details like recording parameters, event markers, and the raw EEG data.
 
 #### **MR/CT Data**
 
