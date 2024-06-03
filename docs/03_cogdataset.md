@@ -351,11 +351,11 @@ Brain activity was recorded with a combination of intracranially subdural platin
 
 #### Anatomical MRI Data Acquisition
 
-Before the participants underwent surgery and electrode implantation, T1-weighted MR data were acquired from them. At NYU, imaging was performed using the Siemens Biograph mMR scanner. At Harvard, the imaging sequence utilized was MPRAGE (magnetization-prepared rapid gradient-echo), with a Siemens Skyra 3T scanner. At WU, imaging was conducted using the GE MEDICAL SYSTEMS SIGNA Artist scanner. The rationale behind acquiring MR scans was the spatial resolution it offers for brain tissue visualization.
+Before the participants underwent surgery and electrode implantation, T1-weighted MR data were acquired from them. At NYU, imaging was performed using the Siemens Biograph mMR scanner. At Harvard, the imaging sequence utilized was MPRAGE (magnetization-prepared rapid gradient-echo), with a Siemens Skyra 3T scanner. At WU, imaging was conducted using different models of scanners from GE MEDICAL SYSTEMS. The rationale behind acquiring MR scans was the spatial resolution it offers for brain tissue visualization.
 
 #### CT Data Acquisition
 
-Following surgery, post-operative CT scans were obtained from the subjects to assist in localizing the electrodes on specific brain tissue. At NYU, scans were performed using a Siemens SOMATOM Force scanner. At Harvard, imaging was conducted using the Medtronic O-arm MVS O2, manufactured by Medtronic. At WU, scans were acquired utilizing the GE MEDICAL SYSTEMS Optima CT660 scanner.
+Following surgery, post-operative CT scans were obtained from the subjects to assist in localizing the electrodes on specific brain tissue. At NYU, scans were performed using a Siemens SOMATOM Force scanner. At Harvard, imaging was conducted using the Medtronic O-arm MVS O2, manufactured by Medtronic. At WU, scans were acquired using various scanners manufactured by GE MEDICAL SYSTEMS.
 
 <span style="background-color: red"><b>Please note:</b></span>
 **MR and CT data were collected for the subjects at Brigham and Women’s Hospital and Children’s Hospital Boston. However, due to the data protection policies, they are not included in the COGITATE Data Release.**
