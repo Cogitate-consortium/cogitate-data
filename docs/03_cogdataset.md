@@ -443,11 +443,6 @@ To ensure alignment of both signals, the discrete difference between the photodi
 
 Once the two signals were properly aligned, the log file events could be used as descriptors of the events marked at the timestamps from the photodiode.
 
-<div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Illustration%20of%20the%20alignment%20pipeline.png" alt="Illustration of the alignment pipeline">
-  <p>Illustration of the alignment pipeline</p>
-</div>
-
 The alignment procedure allowed the information from the log file to be utilized in generating well-described events in the iEEG data. The events were encoded as “/” separated strings and stored in an events.tsv table. An extensive description of each event type and their levels are as follows:
 
 **Task Name:** Dur
