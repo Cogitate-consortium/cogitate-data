@@ -621,11 +621,6 @@
 <p>To ensure alignment of both signals, the discrete difference between the photodiode and log file timestamps was computed, providing the interval between successive events for each signal. The resulting arrays were then plotted atop each other. Misalignment between the two sources of timing information could be easily detected, as they did not overlap. Perfect overlap between the two was necessary to consider the signals aligned. Additionally, the difference between the two signals was computed to ensure minimal deviation.</p>
 <p><strong>Integrating Information</strong></p>
 <p>Once the two signals were properly aligned, the log file events could be used as descriptors of the events marked at the timestamps from the photodiode.</p>
-<div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Illustration%20of%20the%20alignment%20pipeline.png" alt="Illustration of the alignment pipeline">
-  <p>Illustration of the alignment pipeline</p>
-</div>
-
 <p>The alignment procedure allowed the information from the log file to be utilized in generating well-described events in the iEEG data. The events were encoded as “/” separated strings and stored in an events.tsv table. An extensive description of each event type and their levels are as follows:</p>
 <p><strong>Task Name:</strong> Dur</p>
 <p><strong>Task Description:</strong> Description of the experimental factors and their level with the correct syntax to access them from the MNE epochs object. Note that factor and level names are case-sensitive. We describe the syntax for each condition separately. However, note that you can fetch a combination of factors from the epochs using a forward slash. For example, if you wish to fetch the face target trials, you can combine both conditions like so: epochs['face/Relevant target'] will fetch all face target trials. In addition, the epochs objects are equipped with metadata, where the name of the column is the name of the factor, and the level follows the same nomenclature as below. This can be used for more sophisticated trial filtering and retrieval.</p>
