@@ -4,6 +4,11 @@ This project and data are made possible through the support of a grant from [Tem
 
 The opinions expressed throughout our documentation and data are those of the authors and do not necessarily reflect the views of Templeton World Charity Foundation.
 
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/TWCF_Logo_LightBG_Vertical_CMYK.png" style="width:25%;">
+<p></p>
+</div>
+
 Members of the Cogitate Consortium contributed an incredible amount of time, effort and expertise to design the experiments, collect the data and subsequently curate the data and code for public release. We would like to acknowledge the significant contributions of the following team members:
 
 **Experimental design:**
