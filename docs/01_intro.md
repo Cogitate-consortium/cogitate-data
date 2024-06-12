@@ -4,7 +4,7 @@ This document provides guidance and detailed information on the datasets release
 
 ## Updates
 
-This is the <span style="color:red;">second version</span> (<span style="color:red;">V1.1</span>) of the COGITATE data release document. New updates or any changes to the previous versions will be announced here, and as a versioned document [here](https://github.com/Cogitate-consortium/cogitate-data/tree/main/assets/documentation_v1.1) as well.
+This is the <span style="color:red;">second version</span> (<span style="color:red;">V1.1</span>) of the COGITATE data release document. New updates or any changes to the previous versions will be announced here, and as a versioned document [here](https://github.com/Cogitate-consortium/cogitate-data/tree/main/assets/) as well.
 
 In <span style="color:red;">V1.1</span>, the raw/unprocessed and [BIDS](https://bids-specification.readthedocs.io/en/stable/) (Brain Imaging Data Structure) format of iEEG (intracranial electroencephalography) data, collected by the Cogitate Consortium for [Experiment 1](02_overview.md#experiment-1-conscious-perception), are released.
 
