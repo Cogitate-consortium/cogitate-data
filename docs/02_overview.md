@@ -61,11 +61,11 @@ The duration of each sequence was approximately 2 minutes. The next sequence sta
 ___
 For a comprehensive summary of more details about the experiments, please refer to the following supplementary resources:
 
-[COGITATE Main Scientific Paper 1 (MSP-1)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0268577)
+<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0268577" target="_blank">COGITATE Main Scientific Paper 1 (MSP-1)</a>
 
-[COGITATE Preregistration, v4](https://osf.io/gm3vd)
+<a href="https://osf.io/gm3vd" target="_blank">COGITATE Preregistration, v4</a>
 
-[EXP1 Demo Video](https://www.youtube.com/watch?v=V93Agvo4G2Y)
+<a href="https://www.youtube.com/watch?v=V93Agvo4G2Y" target="_blank">EXP1 Demo Video</a>
 ___
 
 ### Experiment 2: Video Game Engagement
@@ -74,4 +74,4 @@ Currently in preparation. It will be released soon!
 
 #### Task Code and Stimuli repositories
 
-The **task code** and **stimuli** used for EXP1 and for all modalities are available in the [cogitate-experiment-code](https://github.com/Cogitate-consortium/cogitate-experiment-code) repository.
+The **task code** and **stimuli** used for EXP1 and for all modalities are available in the <a href="https://github.com/Cogitate-consortium/cogitate-experiment-code" target="_blank">cogitate-experiment-code</a> repository.
