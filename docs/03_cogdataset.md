@@ -593,11 +593,6 @@ Participants proceeded to Experiment 1 either after or before completing the [Fi
 | **Task**     | **Runs** | **Blocks** | **Trials**      | **Total trials** |
 | Experiment 1 | 5       | 4          | 34-38 per block | 720             |
 
-<span style="background-color: red"><b>Attention:</b></span>
-**The iEEG data for the seven subjects listed below do not have the correct sampling rate in the original EDF files. The correct sampling rate for these subjects is 2048 Hz. The raw data has not been updated with the correct sampling rate to avoid alignment issues when constructing the events. However, the same measurements in the BIDS release, provided in the <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a> format, have the correct sampling rate as expected.**
-
-**Subject_ID:** CE106, CE107, CE108, CE112, CE115, CE118, CE120
-
 #### Full Structure of Session
 
 Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG Standard Operating Procedure</a>.
