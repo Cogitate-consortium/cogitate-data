@@ -8,8 +8,8 @@
 
 | Version | Author(s) |
 | --- | --- |
-| 1.1 | Taheriyan, F., Das, D., Kahraman, K., Sripad, P., Brown, T., Oh, H., Melloni, L, Bonacchi, N.|
+| 1.2 | Taheriyan, F., Das, D., Kahraman, K., Sripad, P., Brown, T., Oh, H., Melloni, L, Bonacchi, N.|
 
 | Date | Editor(s) |
 | --- | --- |
-| 13.05.2024 | Taheriyan, F., Das, D., Kahraman, K., Sripad, P., Brown, T., Oh, H., Melloni, L, Bonacchi, N. |
+| 10.06.2024 | Taheriyan, F., Das, D., Kahraman, K., Sripad, P., Brown, T., Melloni, L, Bonacchi, N.|
