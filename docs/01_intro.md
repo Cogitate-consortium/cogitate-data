@@ -26,8 +26,8 @@ Here is the list of previous COGITATE data release documents:
 
 | Version | Data Release Document | Description |
 | --- | --- | --- |
-| v1.0 | <a href="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/MEEG-DR-doc_2024-03-18_v1.0.pdf" target="_blank">MEEG-DR-doc_2024-03-18_v1.0</a> | MEEG (batch 1) data release document |
-| v1.1 | <a href="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/iEEG-DR-doc_2024-04-03_v1.1.pdf" target="_blank">iEEG-DR-doc_2024-04-03_v1.1</a> | iEEG data release document |
+| v1.0 | <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/MEEG-DR-doc_2024-03-18_v1.0.pdf" target="_blank">MEEG-DR-doc_2024-03-18_v1.0</a> | MEEG (batch 1) data release document |
+| v1.1 | <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/iEEG-DR-doc_2024-04-03_v1.1.pdf" target="_blank">iEEG-DR-doc_2024-04-03_v1.1</a> | iEEG data release document |
 
 ## Documentation Changes
 
