@@ -2,7 +2,7 @@
 
 There are two ways of accessing the COGITATE data:
 
-1. "Live" Database Release: [XNAT](https://wiki.xnat.org/documentation/) (eXtensible Neuroimaging Archive Toolkit)
+1. "Live" Database Release: <a href="https://wiki.xnat.org/documentation/" target="_blank">XNAT</a> (eXtensible Neuroimaging Archive Toolkit)
 2. Archival Format: Bundles
 
 <table>
@@ -17,7 +17,7 @@ There are two ways of accessing the COGITATE data:
             /></a>
         </td>
         <td>
-            <a href="https://www.arc-cogitate.com/data-bundles-active">
+            <a href="https://www.arc-cogitate.com/data-bundles-active" target="_blank">
                 <img
                     src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/bundles.png"
                     width=""
@@ -36,9 +36,9 @@ This database offers a web interface for navigating the data and an API (Applica
 
 ### **Step 1: Registration**
 
-If you are a new user and have not registered yet, you should visit [Cogitate_XNAT_registration](https://cogitate-data.ae.mpg.de/app/template/Register.vm#!). Once the registration is done, a verification step, the same as the “Creating an Account”, is needed.
+If you are a new user and have not registered yet, you should visit <a href="https://cogitate-data.ae.mpg.de/app/template/Register.vm#!" target="_blank">Cogitate_XNAT_registration</a>. Once the registration is done, a verification step, the same as the “Creating an Account”, is needed.
 
-If you have already registered, you can skip this step and login at [Cogitate_XNAT](https://cogitate-data.ae.mpg.de/app/template/Login.vm#!).
+If you have already registered, you can skip this step and login at <a href="https://cogitate-data.ae.mpg.de/app/template/Login.vm#!" target="_blank">Cogitate_XNAT</a>.
 
 ![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/xnat_user_login.png "XNAT User Login Page")
 
@@ -89,8 +89,8 @@ Here is a brief explanation about how to access the data bundles:
 ### Step 1: Create a Data User Account
 
 <p>
-    <a href="https://www.youtube.com/watch?v=FFqN5Pech0w"
-        ><img
+    <a href="https://www.youtube.com/watch?v=FFqN5Pech0w" target="_blank">
+    <img
             src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/youtube_logo.png"
             alt="alt_text"
             title="image_tooltip"
@@ -103,7 +103,7 @@ Here is a brief explanation about how to access the data bundles:
 Access to the data bundles requires a quick and easy registration process.
 
 1. Provide user information, including name and email address.
-2. Read and accept the [Terms of Use](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_ToU_v1.pdf) and [GDPR Requirements](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_GDPR_v1.pdf) ([General Data Protection Regulation](https://gdpr-info.eu/)).
+2. Read and accept the <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_ToU_v1.pdf" target="_blank">Terms of Use</a> and <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_GDPR_v1.pdf" target="_blank">GDPR Requirements</a> (<a href="https://gdpr-info.eu/" target="_blank">General Data Protection Regulation</a>).
 3. Once you register, you will receive four (4) emails to the email account you registered with. In some cases, checking your junk mail may be necessary.
     1. **_Welcome email_**: general information
     2. **_Data User Account Verification email:_** Within the verification email, you must click on the ‘verify my account’ option to finalize step 1 of creating a data user account in order to gain access to all current and future data releases.
@@ -115,8 +115,8 @@ Access to the data bundles requires a quick and easy registration process.
 ### Step 2: Login and logout of your Data User account
 
 <p>
-    <a href="https://www.youtube.com/watch?v=6BR3uYqiDiU"
-        ><img
+    <a href="https://www.youtube.com/watch?v=6BR3uYqiDiU" target="_blank">
+        <img
             src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/youtube_logo.png"
             alt="alt_text"
             title="image_tooltip"
@@ -132,8 +132,8 @@ Access to the data bundles requires a quick and easy registration process.
 <span style="background-color: #ffc7c7"><strong>Tip:</strong> The Login button will remain as 'Login' even after signing in to your account. The only way of knowing whether you are logged in or out, is by clicking on Data User Account, under the Data heading or being able to download data (i.e. indicating you are in fact, logged in)</span>
 
 <p>
-    <a href="https://youtu.be/KraiX4ttE2o"
-        ><img
+    <a href="https://youtu.be/KraiX4ttE2o" target="_blank">
+        <img
             src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/youtube_logo.png"
             alt="alt_text"
             title="image_tooltip"
