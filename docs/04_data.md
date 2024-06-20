@@ -28,4 +28,4 @@ To address this issue, we implemented a slightly different workflow that allowed
 
 ## Metadata Curation Procedure
 
-Comprehensive guidance on extracting and managing metadata relevant to the COGITATE project is available in Appendix 8.
+Comprehensive guidance on extracting and managing metadata relevant to the COGITATE project is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/metadata-curation-doc_2024-05-14_v1.0.pdf" target="_blank">Appendix 8</a>.
