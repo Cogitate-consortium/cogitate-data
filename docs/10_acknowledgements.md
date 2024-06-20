@@ -1,12 +1,12 @@
 # Acknowledgements
 
-This project and data are made possible through the support of a grant from [Templeton World Charity Foundation](https://doi.org/10.54224/20389).
-
-The opinions expressed throughout our documentation and data are those of the authors and do not necessarily reflect the views of Templeton World Charity Foundation.
-
-<div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/TWCF_Logo_LightBG_Vertical_CMYK.png" style="width:15%;">
-<p></p>
+<div style="display: flex; align-items: center;">
+    <div style="flex: 1;">
+        This project and data are made possible through the support of a grant from <a href="https://doi.org/10.54224/20389" target="_blank">Templeton World Charity Foundation</a>. The opinions expressed throughout our documentation and data are those of the authors and do not necessarily reflect the views of Templeton World Charity Foundation.
+    </div>
+    <div style="flex-shrink: 0; margin-left: 20px;">
+        <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/TWCF_Logo_LightBG_Vertical_CMYK.png" alt="Logo" width="130">
+    </div>
 </div>
 
 Members of the Cogitate Consortium contributed an incredible amount of time, effort and expertise to design the experiments, collect the data and subsequently curate the data and code for public release. We would like to acknowledge the significant contributions of the following team members:
