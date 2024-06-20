@@ -27,13 +27,13 @@ In contrast, the iEEG modality involved a more specialized cohort of 38 patients
 
 ## Demography of Subjects
 
-You can find the profile of participants for all modalities at [subjects_demography](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx). Here is a brief explanation about the information collected from the subjects.
+You can find the profile of participants for all modalities at <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx" target="_blank">subjects_demography</a>. Here is a brief explanation about the information collected from the subjects.
 
 ### **Demographic Information for M-EEG**
 
 The below items are included in the subjects’ demography for M-EEG modality:
 
-Participant_ID (participant identifier), sex (biological sex of participant), age (age of participant at the time of testing), handedness (right, left or ambidextrous), included in [MSP](https://doi.org/10.1371/journal.pone.0268577) (whether the data was used for the experiments or not), phase\* (determining in which stage the data is, phase 2/phaseII (optimization) or phase 3/phaseIII (replication)), QC\** status (passed/not), if Not (in QC status) QC rejection reason, weight (weight of participant at the time of study in pounds), height (height of participant at the time of study in inches), primary and secondary language, race (ethnicity of the participant), education, compensation (whether the subject was paid or not), colorblind (determining whether the subject can distinguish the colors and perceiving them correctly or not), visual correction (none or using any glasses or contact lenses), eye dominance (which eye is dominant), eye chart results (the outcome of a visual acuity test performed using the eye chart) and dioptry (visual acuity of the participant in Diopters).
+Participant_ID (participant identifier), sex (biological sex of participant), age (age of participant at the time of testing), handedness (right, left or ambidextrous), included in <a href="https://doi.org/10.1371/journal.pone.0268577" target="_blank">MSP</a> (whether the data was used for the experiments or not), phase\* (determining in which stage the data is, phase 2/phaseII (optimization) or phase 3/phaseIII (replication)), QC\** status (passed/not), if Not (in QC status) QC rejection reason, weight (weight of participant at the time of study in pounds), height (height of participant at the time of study in inches), primary and secondary language, race (ethnicity of the participant), education, compensation (whether the subject was paid or not), colorblind (determining whether the subject can distinguish the colors and perceiving them correctly or not), visual correction (none or using any glasses or contact lenses), eye dominance (which eye is dominant), eye chart results (the outcome of a visual acuity test performed using the eye chart) and dioptry (visual acuity of the participant in Diopters).
 
 \***Phase:** COGITATE project has three phases. In **phase 1**, all data were acquired by theory neutral teams. To ensure replicability of the results, the entire dataset was split into two halves, each with an equal mixture of data from each of the labs for each modality. In **phase 2**, after evaluating data quality, the first half of the data were used for developing analysis tools (optimization of methods). The purpose of **phase 2** was to define the best analysis practices and to agree upon, in consultation with expert advisors. In **phase 3**, the replication phase, the second half of the data were analyzed using the concurred procedure, agreed upon protocols, thereby allowing an in-house replication of the results obtained in phase 2.
 
@@ -68,11 +68,11 @@ We have made available two primary formats for the data acquired during the expe
 
 ### **1. Unprocessed/Raw Data**
 
-The unprocessed data format closely resembles the original acquired data, having undergone minimal processing to ensure compliance with [GDPR](https://gdpr-info.eu) (General Data Protection Regulation)/[HIPAA](https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html) (Health Insurance Portability & Accountability Act) anonymity standards.
+The unprocessed data format closely resembles the original acquired data, having undergone minimal processing to ensure compliance with <a href="https://gdpr-info.eu" target="_blank">GDPR</a> (General Data Protection Regulation)/<a href="https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html" target="_blank">HIPAA</a> (Health Insurance Portability & Accountability Act) anonymity standards.
 
 ### **2. BIDS Format**
 
-BIDS format, widely adopted in cognitive neuroscience, enhances data reusability. To facilitate others in leveraging our data, we have released it in [BIDS](https://bids-specification.readthedocs.io/en/stable/) format.
+BIDS format, widely adopted in cognitive neuroscience, enhances data reusability. To facilitate others in leveraging our data, we have released it in <a href="https://bids-specification.readthedocs.io/en/stable/" target="_blank">BIDS</a> format.
 
 ### **File Type Glossary**
 
@@ -135,13 +135,13 @@ FIF files contain various types of information related to neuroimaging data, inc
       - Filetype: EDF
 
 - **BIDS Format**
-      - Filetype: [BrainVision](https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/)
+      - Filetype: <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a>
 
 European Data Format files used for storing and exchanging time-series biological and physiological data
 
 EDF files are designed to accommodate data from multiple channels, allowing researchers to store and manage data collected simultaneously from different sensors or electrodes. The format supports both raw signal data and associated metadata, including information about sampling rates, units of measurement, patient demographics, and recording conditions.
 
-The [BrainVision](https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/) format, often shortened to BV, is a widely employed file format in neuroscience research, specifically designed for organizing neurophysiological data. It comprises three files, including the header file (.vhdr), marker file (.vmrk), and raw EEG data file (*.eeg), alongside possible auxiliary files. These components store essential details like recording parameters, event markers, and the raw EEG data.
+The <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a> format, often shortened to BV, is a widely employed file format in neuroscience research, specifically designed for organizing neurophysiological data. It comprises three files, including the header file (.vhdr), marker file (.vmrk), and raw EEG data file (*.eeg), alongside possible auxiliary files. These components store essential details like recording parameters, event markers, and the raw EEG data.
 
 #### **MR/CT Data**
 
@@ -170,16 +170,14 @@ Stimuli belonged to four categories that naturally fell into two groups that wer
 | **Term**     | **Definition** |
 | Stimuli      | Visual items presented to the subjects during the experiment, with half being task-relevant and the other half task-irrelevant.|
 | Trial        | A single instance of presenting a stimulus to the subject and recording their response. <br><br>Each trial consisted of presenting a single stimulus for a specific duration.|
-| Runs         | The number of times a subject completed the full experimental session. <br><br>Each run consisted of a series of blocks separated by rest breaks.|
-| Block        | A segment within each run containing a set of trials with a specific experimental setup or condition. <br><br>Each block was composed of 4 mini blocks.|
-| Mini block   | A subsegment within each block. <br><br>In each mini block, a number of stimuli were presented to the subjects.|
+| Block        | A segment within each run containing a set of trials with a specific experimental setup or condition.|
 | Break        | Intervals between blocks that allowed subjects to rest and prepare for the next series of trials.|
 
 Stimuli were presented sequentially, all supra-threshold, with half being task-relevant and the other half task-irrelevant. Only one stimulus was shown on the screen at any given time. To define task relevance, subjects were instructed to detect (press a button; non-speeded response) two targets from different categories, regardless of their orientation. This online reporting enabled an explicit assessment of subjects’ performance, engaging report-related areas for later analysis. Each block began with notification of the two target stimuli, either pictorial (faces and objects) or symbolic (letters and false fonts), creating a clear distinction between relevant and irrelevant stimuli. At the start of each block, specific target stimuli were revealed with instructions such as “detect face A and object B” or "detect letter C and false-font D." Targets did not repeat across blocks. Each run included two blocks of the Face/Object task and two blocks of the Letter/False-font task, with the order counterbalanced across runs. Subjects were instructed to maintain central fixation throughout each trial. Gaze was monitored online through an eye tracker, with repeated calibrations ensuring good quality data.
 
 Each block comprised stimuli from all four categories, with each stimulus displayed for 500, 1000, or 1500 ms, followed by a blank interval, ensuring a consistent trial duration of 2000 ms. To  avoid  periodic  presentation  of  the  stimuli, random jitter was added to the end of each trial (mean inter-trial interval of 400 ms, jittered 200-2000 ms, with truncated  exponential  distribution). Within each block, three trial types were presented: i) Task Relevant Targets, consisting of the specific stimuli participants were tasked with detecting; ii) Task Relevant Non-Targets, encompassing stimuli from relevant categories that were not designated targets; and iii) Task Irrelevant Stimuli, comprising stimuli from the remaining categories.
 
-Trial division was pseudorandomized with respect to two factors: the assignment of non-target stimuli to a miniblock, and the number of trials with specific durations within each task-relevance level. The assignment of non-targets was restricted by two constraints: i) Each stimulus was presented an equal number of times as a non-target stimulus (and as an irrelevant one) throughout the experiment. ii) Non-targets were, by definition, different from the targets in that specific miniblock. To meet these constraints, two pseudorandomized versions were made where the targets and non-target stimuli of each miniblock were determined. Three additional versions were prepared for each target/non-target division to balance the duration division between categories and orientation. In each version, slight imbalances (maximum difference of four trials) existed between the different durations for each condition (targets, non-targets, irrelevant). This imbalance was a necessary consequence of keeping the balance in duration and category across orientation and across categories as the numbers were not evenly divisible by three. The imbalances canceled out over the entire experiment so there was a perfect duration balance across the experiment: an equal amount of stimuli were presented for 500, 1000 and 1500 ms durations. The imbalances between durations within each relevant condition were balanced across the three versions. In total, six different versions were assigned to the subjects in consecutive order, repeating every six subjects. To get more details, please see the “Trial counts” section in [COGITATE Preregistration, v4](https://osf.io/gm3vd).
+Trial division was pseudorandomized with respect to two factors: the assignment of non-target stimuli to a miniblock, and the number of trials with specific durations within each task-relevance level. The assignment of non-targets was restricted by two constraints: i) Each stimulus was presented an equal number of times as a non-target stimulus (and as an irrelevant one) throughout the experiment. ii) Non-targets were, by definition, different from the targets in that specific miniblock. To meet these constraints, two pseudorandomized versions were made where the targets and non-target stimuli of each miniblock were determined. Three additional versions were prepared for each target/non-target division to balance the duration division between categories and orientation. In each version, slight imbalances (maximum difference of four trials) existed between the different durations for each condition (targets, non-targets, irrelevant). This imbalance was a necessary consequence of keeping the balance in duration and category across orientation and across categories as the numbers were not evenly divisible by three. The imbalances canceled out over the entire experiment so there was a perfect duration balance across the experiment: an equal amount of stimuli were presented for 500, 1000 and 1500 ms durations. The imbalances between durations within each relevant condition were balanced across the three versions. In total, six different versions were assigned to the subjects in consecutive order, repeating every six subjects. To get more details, please see the “Trial counts” section in <a href="https://osf.io/gm3vd" target="_blank">COGITATE Preregistration, v4</a>.
 
 #### iEEG Related Modifications of the Design
 Only half of the stimuli were used as targets for the iEEG experiments. The selection of target faces kept the balance of gender and ethnicity. Letters were chosen in equal amounts from the first and second parts of the alphabet, and the corresponding false-fonts were used. All stimuli were presented as relevant non-targets and irrelevant stimuli, matching the designs of the aforementioned procedure.
@@ -212,7 +210,7 @@ The participant’s head position inside the MEG system was measured at the begi
 
 #### Anatomical MRI Data Acquisition
 
-For each subject, a high resolution T1-weighted MRI volume (3T Siemens MRI Prisma scanner) was acquired. At CHBH, a 32-channel coil with a resolution of 1 x 1 x 1 mm, TR/TE = 2000/2.03ms; TI = 880 ms; 8° flip angle, 208 sagittal slices and field of view (FOV): 256 x 256 matrix was acquired for source localization with individual realistic head modeling. At PKU, a 64-channel coil with a resolution of 0.5 x 0.5 x 1 mm, TR/TE = 2530/2.98ms; TI = 1100 ms; 7° flip angle, 192 sagittal slices; FOV: 448 × 512 matrix was used. To avoid possible interference of body magnetization on the MEG recording, all MRI scans were acquired at least one week before the MEG session, or at any time afterwards. The FreeSurfer standard template was used (fsaverage) for participants lacking an anatomical scan.
+For each subject, a high resolution T1-weighted MRI volume (3T Siemens MRI Prisma scanner) was acquired. At CHBH, a 32-channel coil with a resolution of 1 x 1 x 1 mm, TR/TE = 2000/2.03ms; TI = 880 ms; 8° flip angle, 208 sagittal slices and field of view (FOV): 256 x 256 matrix was acquired for source localization with individual realistic head modeling. At PKU, a 64-channel coil with a resolution of 0.5 x 0.5 x 1 mm, TR/TE = 2530/2.98ms; TI = 1100 ms; 7° flip angle, 192 sagittal slices; FOV: 448 × 512 matrix was used. To avoid possible interference of body magnetization on the MEG recording, all MRI scans were acquired at least one week before the MEG session, or at any time afterwards.
 
 #### Behavioral Data Acquisition
 
@@ -319,7 +317,7 @@ Following the empty room and rM-EEG recordings, subjects were asked to complete 
 
 #### Full Structure of Session
 
-Complete standard procedure of an M-EEG session is available in [MEG Standard Operating Procedure](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf).
+Complete standard procedure of an M-EEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf" target="_blank">MEG Standard Operating Procedure</a>.
 
 #### Inclusion Criteria
 
@@ -341,6 +339,18 @@ The items below were assessed for the subjects before the data was acquired:
 
 For M-EEG, the first stage of the third-level checks focused on system-related and external noise generators. It was tested using the signal spectra in the empty room recording, the resting state session, and the experiment itself for all sensors. Any sensor and/or specific frequency revealing extensive noise using visual inspection, was flagged to document potential problems. Ultimately, this did not lead to any exclusions. Next, all experimental data blocks were visually inspected for abnormalities in spectra (peaks not explainable by physiology), and in ICA components, and checked for extremely noisy (based on the score of differences between the original and Maxwell-filtered data > 7) and flat sensors. The latter step was performed in a collaboration between the data monitoring team and members of the centers where data was acquired to check whether any potential changes in preprocessing for particular subjects were needed. Finally, we tested if all experimental cells (i.e. task-relevant non-targets and task-irrelevant stimuli for each one of the four categories) have enough trials.
 
+#### Deviations and Missing Data
+
+<span style="background-color: red"><b>Attention 1:</b></span>
+**For the subjects listed below, the anatomical MRI scans are missing. Consequently, there is no folder containing the “sub-CX???_ses-1_trans.fif” file under /derivatives/coreg for these subjects. Instead, the FreeSurfer standard template (fsaverage) was used.**
+
+**Subject_ID:** CA101, CA102, CA104, CA110, CA111, CA152
+
+<span style="background-color: red"><b>Attention 2:</b></span>
+**The following subjects are missing “Exit Questionnaires”:**
+
+**Subject_ID:** CB003, CB035
+
 ### iEEG Data Acquisition
 
 iEEG recordings were obtained from patients with pharmacologically resistant epilepsy undergoing invasive electrophysiological monitoring at the Comprehensive Epilepsy Center at New York University (NYU) Langone Health Center, Brigham and Women’s Hospital, Children’s Hospital Boston (Harvard Medical School), and University of Wisconsin School of Medicine and Public Health (WU).
@@ -356,9 +366,6 @@ Before the participants underwent surgery and electrode implantation, T1-weighte
 #### CT Data Acquisition
 
 Following surgery, post-operative CT scans were obtained from the subjects to assist in localizing the electrodes on specific brain tissue. At NYU, scans were performed using a Siemens SOMATOM Force scanner. At Harvard, imaging was conducted using the Medtronic O-arm MVS O2, manufactured by Medtronic. At WU, scans were acquired using various scanners manufactured by GE MEDICAL SYSTEMS.
-
-<span style="background-color: red"><b>Please note:</b></span>
-**MR and CT data were collected for the subjects at Brigham and Women’s Hospital and Children’s Hospital Boston. However, due to the data protection policies, they are not included in the COGITATE Data Release.**
 
 #### Behavioral Data Acquisition
 
@@ -562,7 +569,7 @@ The alignment procedure allowed the information from the log file to be utilized
 
 #### Surface Reconstruction and Electrode Localization
 
-Subject-specific pial surfaces were automatically reconstructed based on a pre-implant T1 weighted MR image using the [Freesurfer](http://surfer.nmr.mgh.harvard.edu) image analysis suite (‘recon-all’, Dale et al., 1999). Post-implant CT images were co-registered with the pre-implant MR images using FLIRT (Jenkinson and Smith, 2001), as implemented in [FSL](http://fsl.fmrib.ox.ac.uk/fsl/) (Smith et al., 2004). For NYU patients, we used a semi-automatic approach to generating electrode labels. For manual cases, co-registered MR and CT slices were examined using FSLView (Smith et al., 2004). For grids, we localized three corner electrodes and the remaining electrodes coordinates were then automatically interpolated along the shared plane using the known inter-electrode distances. Strip and depth electrodes were localized manually when they did not follow straight trajectories. When depth electrodes were in a straight line, the first and last electrodes were localized manually, and electrodes in between were automatically interpolated and labeled based on known inter-electrode distances and serial labeling convention. For WU patients, electrodes were localized manually using the [SubNuclear](https://github.com/ckovach/SubNuclear/tree/master) toolbox. Electrode locations were further refined within the space of the pre-operative MRI using three-dimensional non-linear thin-plate spline warping (Rohr et al., 2001), which corrected for post-operative shift and distortion. The warping was constrained with manually selected points through the brain, which was visually aligned with landmarks in pre-implantation MRI and post-implantation CT. For Harvard subjects, individual contacts from depth electrodes were labeled manually from the CT image using the [BioImageSuite](https://bioimagesuiteweb.github.io/webapp/)’s  Electrode Editor tool (legacy version 3.5; Joshi, et al., 2011). The coordinates in CT image-space were converted to coordinates within the patient’s segmented MRI brain-space using the [iELVis](https://github.com/iELVis/iELVis) toolbox (yangWangElecPjct; Yang, Wang, et al., 2012; Groppe et al., 2017). For all sites, the electrode spatial coordinates were transformed from the individual patient space into the standard space of the Montreal Neurological Institute (MNI-152) template for plotting purposes. At NYU, this transformation was performed using the DARTEL algorithm (Ashburner, 2007) implemented in SPM8 (Wellcome Department of Imaging Neuroscience, London, United Kingdom). At Harvard, this transformation was performed using the [iELVis](https://github.com/iELVis/iELVis) toolkit. At WU the transformation was performed with the [SubNuclear](https://github.com/ckovach/SubNuclear/tree/master) toolbox using img2imgcoord utility.
+Subject-specific pial surfaces were automatically reconstructed based on a pre-implant T1 weighted MR image using the <a href="http://surfer.nmr.mgh.harvard.edu" target="_blank">Freesurfer</a> image analysis suite (‘recon-all’, Dale et al., 1999). Post-implant CT images were co-registered with the pre-implant MR images using FLIRT (Jenkinson and Smith, 2001), as implemented in <a href="http://fsl.fmrib.ox.ac.uk/fsl/" target="_blank">FSL</a> (Smith et al., 2004). For NYU patients, we used a semi-automatic approach to generating electrode labels. For manual cases, co-registered MR and CT slices were examined using FSLView (Smith et al., 2004). For grids, we localized three corner electrodes and the remaining electrodes coordinates were then automatically interpolated along the shared plane using the known inter-electrode distances. Strip and depth electrodes were localized manually when they did not follow straight trajectories. When depth electrodes were in a straight line, the first and last electrodes were localized manually, and electrodes in between were automatically interpolated and labeled based on known inter-electrode distances and serial labeling convention. For WU patients, electrodes were localized manually using the <a href="https://github.com/ckovach/SubNuclear/tree/master" target="_blank">SubNuclear</a> toolbox. Electrode locations were further refined within the space of the pre-operative MRI using three-dimensional non-linear thin-plate spline warping (Rohr et al., 2001), which corrected for post-operative shift and distortion. The warping was constrained with manually selected points through the brain, which was visually aligned with landmarks in pre-implantation MRI and post-implantation CT. For Harvard subjects, individual contacts from depth electrodes were labeled manually from the CT image using the <a href="https://bioimagesuiteweb.github.io/webapp/" target="_blank">BioImageSuite</a>’s  Electrode Editor tool (legacy version 3.5; Joshi, et al., 2011). The coordinates in CT image-space were converted to coordinates within the patient’s segmented MRI brain-space using the <a href="https://github.com/iELVis/iELVis" target="_blank">iELVis</a> toolbox (yangWangElecPjct; Yang, Wang, et al., 2012; Groppe et al., 2017). For all sites, the electrode spatial coordinates were transformed from the individual patient space into the standard space of the Montreal Neurological Institute (MNI-152) template for plotting purposes. At NYU, this transformation was performed using the DARTEL algorithm (Ashburner, 2007) implemented in SPM8 (Wellcome Department of Imaging Neuroscience, London, United Kingdom). At Harvard, this transformation was performed using the <a href="https://github.com/iELVis/iELVis" target="_blank">iELVis</a> toolkit. At WU the transformation was performed with the <a href="https://github.com/ckovach/SubNuclear/tree/master" target="_blank">SubNuclear</a> toolbox using img2imgcoord utility.
 
 Each electrode was labeled using the Desikan and Destrieux atlases with the MNE function “mne.get_montage_volume_labels”.
 
@@ -587,13 +594,13 @@ Participants proceeded to Experiment 1 either after or before completing the [Fi
 | Experiment 1 | 5       | 4          | 34-38 per block | 720             |
 
 <span style="background-color: red"><b>Attention:</b></span>
-**The iEEG data for the seven subjects listed below do not have the correct sampling rate in the original EDF files. The correct sampling rate for these subjects is 2048 Hz. The raw data has not been updated with the correct sampling rate to avoid alignment issues when constructing the events. However, the same measurements in the BIDS release, provided in the [BrainVision](https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/) format, have the correct sampling rate as expected.**
+**The iEEG data for the seven subjects listed below do not have the correct sampling rate in the original EDF files. The correct sampling rate for these subjects is 2048 Hz. The raw data has not been updated with the correct sampling rate to avoid alignment issues when constructing the events. However, the same measurements in the BIDS release, provided in the <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a> format, have the correct sampling rate as expected.**
 
 **Subject_ID:** CE106, CE107, CE108, CE112, CE115, CE118, CE120
 
 #### Full Structure of Session
 
-Complete standard procedure of an iEEG session is available in [iEEG Standard Operating Procedure](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf).
+Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG Standard Operating Procedure</a>.
 
 #### Inclusion Criteria
 
@@ -607,3 +614,20 @@ A comprehensive quality assessment was conducted on the iEEG data. The data unde
 
 Subjects who were unable to complete a sufficient number of trials due to excessive muscular artifacts, movement, noisy recordings, or a decision by the subject to terminate the experiment were excluded. In addition, data was also excluded if it did not pass any of the pre-defined data quality checks.
 
+#### Deviations and Missing Data
+
+<span style="background-color: red"><b>Attention 1:</b></span>
+**The iEEG data for the seven subjects listed below do not have the correct sampling rate in the original EDF files. The correct sampling rate for these subjects is 2048 Hz. The raw data has not been updated with the correct sampling rate to avoid alignment issues when constructing the events. However, the same measurements in the BIDS release, provided in the <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a> format, have the correct sampling rate as expected.**
+
+**Subject_ID:** CE106, CE107, CE108, CE112, CE115, CE118, CE120
+
+<span style="background-color: red"><b>Attention 2:</b></span>
+**Subject “CG102” is missing the first “Run” and contains only DurR2, DurR3, DurR4, DurR5.**
+
+<span style="background-color: red"><b>Attention 3:</b></span>
+**The following subjects are missing “Exit Questionnaires”:**
+
+**Subject_ID:** CF103, CF105, CF106, CF110, CF112, CF113, CF116, CF117, CF119, CF120, CF121, CF122, CF124, CF125, CF126
+
+<span style="background-color: red"><b>Please note:</b></span>
+**MR and CT data were collected for the subjects at Brigham and Women’s Hospital and Children’s Hospital Boston. However, due to the data protection policies, they are not included in the COGITATE Data Release.**
