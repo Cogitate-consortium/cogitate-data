@@ -79,16 +79,14 @@ This Form should be filled by the participant after the experiment and asks the 
 * Would the task have been easier if the stimulus duration didn't vary so much?
 * Do you have any additional comments to share?
 
-## [Appendix 4. MEG Standard Operating Procedure](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf)
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf" target="_blank">Appendix 4. MEG Standard Operating Procedure</a>
 
-## [Appendix 5. GDPR Requirements](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_GDPR_v1.pdf)
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_GDPR_v1.pdf" target="_blank">Appendix 5. GDPR Requirements</a>
 
-## [Appendix 6. Terms of Use](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_ToU_v1.pdf)
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_ToU_v1.pdf" target="_blank">Appendix 6. Terms of Use</a>
 
 ## Appendix 7. Data Curation Standard Operating Procedure
 
-## Appendix 8. Metadata Curation Standard Operating Procedure
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/metadata-curation-doc_2024-05-14_v1.0.pdf" target="_blank">Appendix 8. Metadata Curation Standard Operating Procedure</a>
 
-## [Appendix 9. iEEG Standard Operating Procedure](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf)
-
-## [Appendix 10. Documentation Changes](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/linked_files_v1.1/Documentation-Changes_2024-04-17_v1.0.pdf)
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf" target="_blank">Appendix 9. iEEG Standard Operating Procedure</a>
