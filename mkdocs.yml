@@ -1,6 +1,7 @@
 site_name: Cogitate Data Release
 
 theme:
+    logo: assets/documentation_v1.0/graphics_v1.0/cogitate_logo.png
     name: readthedocs
 
     palette:
