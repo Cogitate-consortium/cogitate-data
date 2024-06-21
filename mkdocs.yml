@@ -1,9 +1,8 @@
 site_name: Cogitate Data Release
 
 theme:
-    logo: assets/documentation_v1.0/graphics_v1.0/cogitate_logo.png
     name: readthedocs
-
+    logo: https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/cogitate_logo.png
     palette:
         # Palette toggle for dark mode
         - scheme: slate
@@ -15,5 +14,7 @@ theme:
           toggle:
               icon: material/brightness-7
               name: Switch to dark mode
+    extra_css:
+        - css/extra.css
     extra:
         generator: false
