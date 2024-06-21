@@ -108,6 +108,18 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cogitate-ieeg-bids-faqs">Cogitate iEEG BIDS FAQs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-coordinates-describing-the-electrodes-in-electrodestsv-files">What are the coordinates describing the electrodes in electrodes.tsv files?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-do-the-label-files-contain">What do the label files contain?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-can-we-get-started-with-using-and-understanding-the-ieeg-data">How can we get started with using and understanding the IEEG data?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-does-the-derivativesadditional_metadata-directory-contain">What does the “derivatives/additional_metadata” directory contain?</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -157,6 +169,15 @@ raw.rename_channels({'BIO002': 'EOG002'})
 </code></pre>
 <h3 id="what-do-the-channels-misc1-misc2-and-misc3-contain">What do the channels MISC1, MISC2 and MISC3 contain?</h3>
 <p>These channels contain the eye tracker data with MISC1 (X), MISC2 (Y), and MISC3 (pupil) channels containing the X, Y (gaze) and the Pupil information respectively. This information is however also shared separately in the eye tracking data release.</p>
+<h2 id="cogitate-ieeg-bids-faqs">Cogitate iEEG BIDS FAQs</h2>
+<h3 id="what-are-the-coordinates-describing-the-electrodes-in-electrodestsv-files">What are the coordinates describing the electrodes in electrodes.tsv files?</h3>
+<p>The electrodes.tsv files contain the coordinates in MNI space.</p>
+<h3 id="what-do-the-label-files-contain">What do the label files contain?</h3>
+<p>The label files contain the labels that match the electrode location for the “desikan” or “destrieux” atlas obtained using the mne.get_montage_volume_labels with the electrodes coordinates in subject native T1 space.</p>
+<h3 id="how-can-we-get-started-with-using-and-understanding-the-ieeg-data">How can we get started with using and understanding the IEEG data?</h3>
+<p>The data may be best understood using the example pipelines provided via Jupyter notebooks at this repository - <a href="https://github.com/Cogitate-consortium/iEEG-data-release" target="_blank">https://github.com/Cogitate-consortium/iEEG-data-release</a>.</p>
+<h3 id="what-does-the-derivativesadditional_metadata-directory-contain">What does the “derivatives/additional_metadata” directory contain?</h3>
+<p>The additional_metadata directories contain the Case Report forms and Exit Questionnaire information obtained during measurement time. These files are made available for the individual subjects in JSON format. The directory also contains various <a href="https://genemede.github.io" target="_blank">GENEMEDE</a> style files describing the protocols, analysis, devices and wiring diagrams used during the IEEG data collection.</p>
               
             </div>
           </div><footer>
