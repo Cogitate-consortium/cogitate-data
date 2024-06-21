@@ -35,3 +35,21 @@ raw.rename_channels({'BIO002': 'EOG002'})
 ### What do the channels MISC1, MISC2 and MISC3 contain?
 
 These channels contain the eye tracker data with MISC1 (X), MISC2 (Y), and MISC3 (pupil) channels containing the X, Y (gaze) and the Pupil information respectively. This information is however also shared separately in the eye tracking data release.
+
+## Cogitate iEEG BIDS FAQs
+
+### What are the coordinates describing the electrodes in electrodes.tsv files?
+
+The electrodes.tsv files contain the coordinates in MNI space.
+
+### What do the label files contain?
+
+The label files contain the labels that match the electrode location for the “desikan” or “destrieux” atlas obtained using the mne.get_montage_volume_labels with the electrodes coordinates in subject native T1 space.
+
+### How can we get started with using and understanding the IEEG data?
+
+The data may be best understood using the example pipelines provided via Jupyter notebooks at this repository - <a href="https://github.com/Cogitate-consortium/iEEG-data-release" target="_blank">https://github.com/Cogitate-consortium/iEEG-data-release</a>.
+
+### What does the “derivatives/additional_metadata” directory contain?
+
+The additional_metadata directories contain the Case Report forms and Exit Questionnaire information obtained during measurement time. These files are made available for the individual subjects in JSON format. The directory also contains various <a href="https://genemede.github.io" target="_blank">GENEMEDE</a> style files describing the protocols, analysis, devices and wiring diagrams used during the IEEG data collection.
