@@ -149,7 +149,7 @@ The <a href="https://www.brainproducts.com/support-resources/brainvision-core-da
       - Filetype: DICOM/NIFTI
 
 - **BIDS Format**
-      - Filetype: DICOM/NIFTI
+      - Filetype: NIFTI
 
 DICOM (.dcm file extension) is a standard format utilized for storing CT (Computed Tomography) scans and MRI (Magnetic Resonance Imaging) data. These files encompass not only the image data but also essential metadata, including imaging parameters.
 
