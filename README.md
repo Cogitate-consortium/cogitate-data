@@ -1,5 +1,6 @@
 # cogitate-data
-Documentation repo for Cogitate data Release
+Documentation repo for Cogitate data Release  
+https://cogitate-consortium.github.io/cogitate-data/
 - Clone repo
 - Install dependencies
 ```shell
