@@ -4,7 +4,6 @@
 <a href="https://doi.org/10.1371/journal.pone.0268577" target="_blank">**COGITATE Main Scientific Paper**</a>  
 <a href="https://osf.io/gm3vd" target="_blank">**COGITATE Preregistration v4 - December 2022**</a>  
 <a href="https://github.com/Cogitate-consortium" target="_blank">**COGITATE GitHub Repositories**</a>  
-<a href="https://cogitate-consortium.github.io/cogitate-data/" target="_blank">**COGITATE Wiki**</a>  
 <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx" target="_blank">**Subjects Demography**</a>  
 <a href="https://www.youtube.com/@ARC-COGITATE" target="_blank">**YouTube Channel**</a> videos:  
 &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://www.youtube.com/watch?v=V93Agvo4G2Y" target="_blank">COGITATE Experiment 1</a>  
