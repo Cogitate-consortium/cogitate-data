@@ -4,7 +4,7 @@ This document provides guidance and detailed information on the datasets release
 
 ## Updates
 
-This is the <span style="color:red;">third version</span> (<span style="color:red;">V1.2</span>) of the COGITATE data release document. New updates or any changes to the previous versions will be announced here, and as a versioned document [here](https://github.com/Cogitate-consortium/cogitate-data/tree/main/assets/) as well.
+This is the <span style="color:red;">third version</span> (<span style="color:red;">V1.2</span>) of the COGITATE data release document. New updates or any changes to the previous versions will be announced here, and as a versioned document <a href="https://github.com/Cogitate-consortium/cogitate-data/tree/main/assets/" target="_blank">here</a> as well.
 
 In <span style="color:red;">V1.2</span>, we released the second subset of magnetoencephalography (MEG) data (batch 2) in the Brain Imaging Data Structure (<a href="https://bids-specification.readthedocs.io/en/stable/" target="_blank">BIDS</a>) format, along with eye tracking data (ET) in RAW format. This subset includes data from 52 subjects who participated in [Experiment 1](02_overview.md#experiment-1-conscious-perception), are released, packaged in a Bundle format.
 
