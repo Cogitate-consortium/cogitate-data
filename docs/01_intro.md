@@ -26,8 +26,8 @@ Here is the list of previous COGITATE data release documents:
 
 | Version | Data Release Document | Description |
 | --- | --- | --- |
-| v1.0 | <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/MEEG-DR-doc_2024-03-18_v1.0.pdf" target="_blank">MEEG-DR-doc_2024-03-18_v1.0</a> | MEEG (batch 1) data release document |
-| v1.1 | <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/iEEG-DR-doc_2024-04-03_v1.1.pdf" target="_blank">iEEG-DR-doc_2024-04-03_v1.1</a> | iEEG data release document |
+| v1.0 | <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/MEEG-DR-doc_2024-03-18_v1.0.pdf" target="_blank">MEEG-DR-doc_2024-03-18_v1.0</a> | MEEG (batch 1) data release document |
+| v1.1 | <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/iEEG-DR-doc_2024-04-03_v1.1.pdf" target="_blank">iEEG-DR-doc_2024-04-03_v1.1</a> | iEEG data release document |
 
 ## Documentation Changes
 
@@ -35,8 +35,8 @@ In each new version of the COGITATE data release document, relevant content for 
 
 | Version | Data Release Documentation Changes | Description |
 | --- | --- | --- |
-| v1.0 | <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/Documentation-Changes_2024-04-17_v1.0.pdf" target="_blank">Documentation-Changes_2024-04-17_v1.0</a> | Changes from MEEG (batch 1) data release document (v1.0) to iEEG data release document (v1.1) |
-| v1.1 | <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.2/Documentation-Changes_2024-06-11_v1.1.pdf" target="_blank">Documentation-Changes_2024-06-11_v1.1</a> | Changes from iEEG data release document (v1.1) to MEEG (batch 2) data release document (v1.2) |
+| v1.0 | <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/Documentation-Changes_2024-04-17_v1.0.pdf" target="_blank">Documentation-Changes_2024-04-17_v1.0</a> | Changes from MEEG (batch 1) data release document (v1.0) to iEEG data release document (v1.1) |
+| v1.1 | <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/Documentation-Changes_2024-06-11_v1.1.pdf" target="_blank">Documentation-Changes_2024-06-11_v1.1</a> | Changes from iEEG data release document (v1.1) to MEEG (batch 2) data release document (v1.2) |
 
 <span style="background-color: red"><b>Attention:</b></span>
 **M-EEG, MEEG, M/EEG, MEG/EEG or MEG might be used interchangeably throughout this document or the name of data folders, but all of them pertain to a singular data. This also applies to iEEG and ECoG (Electrocorticography).**

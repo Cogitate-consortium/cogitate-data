@@ -35,29 +35,29 @@ For M-EEG modality, the below items were asked for different sections of the dat
 
 The iEEG case report form contained essential details such as the subject's ID, task name, and the distance from the stimulus interface to the subject in centimeters. It also included comprehensive information about the eye-tracking setup, specifying which eye was tracked, the sampling rate, calibration method, pupil shape, and camera lens used. Additionally, trigger information, including the trigger channels utilized and other relevant parameters, was documented. Furthermore, some fields were provided for notes and miscellaneous information. Here are the specific fields listed in the iEEG case report form:
 
-- Subject ID
-- Task Name
-- Stimulus Interface Computer Name
-- Distance (cm)
-- Practice Run
-- Pre-Task Equipment Disinfected
-- Post-Task Equipment Disinfected
-- Other
-- Notes
-- Screen Brightness
-- Eye Tracking Sticker
-- Glasses or Lenses
-- Trigger Information:
-    - Trigger Channel
-    - Trigger Reference Channel
-    - Trigger Channel Gain
-    - Audio Channels
-- Eye Tracker Setup:
-    - Eye Tracked
-    - Sampling Rate
-    - Calibration Type
-    - Pupil
-    - Camera Lens
+* Subject ID
+* Task Name
+* Stimulus Interface Computer Name
+* Distance (cm)
+* Practice Run
+* Pre-Task Equipment Disinfected
+* Post-Task Equipment Disinfected
+* Other
+* Notes
+* Screen Brightness
+* Eye Tracking Sticker
+* Glasses or Lenses
+* Trigger Information:
+  * Trigger Channel
+  * Trigger Reference Channel
+  * Trigger Channel Gain
+  * Audio Channels
+* Eye Tracker Setup:
+  * Eye Tracked
+  * Sampling Rate
+  * Calibration Type
+  * Pupil
+  * Camera Lens
 
 ## Appendix 3. Exit Questionnaire
 
@@ -79,14 +79,14 @@ This Form should be filled by the participant after the experiment and asks the 
 * Would the task have been easier if the stimulus duration didn't vary so much?
 * Do you have any additional comments to share?
 
-## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf" target="_blank">Appendix 4. MEG Standard Operating Procedure</a>
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/MEG%20SOP_v1.0.pdf" target="_blank">Appendix 4. MEG Standard Operating Procedure</a>
 
-## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_GDPR_v1.pdf" target="_blank">Appendix 5. GDPR Requirements</a>
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/Cogitate_GDPR_v1.pdf" target="_blank">Appendix 5. GDPR Requirements</a>
 
-## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/Cogitate_ToU_v1.pdf" target="_blank">Appendix 6. Terms of Use</a>
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/Cogitate_ToU_v1.pdf" target="_blank">Appendix 6. Terms of Use</a>
 
 ## Appendix 7. Data Curation Standard Operating Procedure
 
-## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/metadata-curation-doc_2024-05-14_v1.0.pdf" target="_blank">Appendix 8. Metadata Curation Standard Operating Procedure</a>
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/metadata-curation-doc_2024-05-14_v1.0.pdf" target="_blank">Appendix 8. Metadata Curation Standard Operating Procedure</a>
 
-## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf" target="_blank">Appendix 9. iEEG Standard Operating Procedure</a>
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/SOP%20iEEG%20General_v2.pdf" target="_blank">Appendix 9. iEEG Standard Operating Procedure</a>

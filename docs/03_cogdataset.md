@@ -2,7 +2,7 @@
 
 The COGITATE dataset is a comprehensive collection of multimodal neuroimaging data, encompassing a total of 262 subjects. COGITATE employs three distinct neuroimaging techniques: fMRI, M-EEG, and iEEG/ECoG.
 
-![Cogitate overview map](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/overview_map.png)
+![Cogitate overview map](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/overview_map.png)
 
 The MEG modality comprised 102 healthy subjects, also above the age of 18, with no known psychiatric or neurological issues. These participants were sourced from the Centre for Human Brain Health at the University of Birmingham (Birmingham, United Kingdom) and the Center for MRI Research of Peking University (Beijing, China).
 
@@ -11,23 +11,23 @@ Similarly, the fMRI modality included 122 healthy volunteers, all of whom were a
 In contrast, the iEEG modality involved a more specialized cohort of 38 patients diagnosed with pharmaco-resistant focal epilepsy. These participants ranged in age from 10 to 65 years, had an IQ above 70, and met specific health criteria. They were recruited from multiple medical centers specializing in epilepsy treatment, including the Comprehensive Epilepsy Center at New York University (New York, NY, United States), Brigham and Women’s Hospital, Boston Children’s Hospital (Boston, MA, United States), and the University of Wisconsin School of Medicine and Public Health (Madison, WI, United States).
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/age%20histograms%20across%20modalities_2024-04-26_v1.1.png" alt="Age histograms across modalities">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/age%20histograms%20across%20modalities_2024-04-26_v1.1.png" alt="Age histograms across modalities">
   <p>Age histograms across modalities</p>
 </div>
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/sex%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Sex proportions across modalities">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/sex%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Sex proportions across modalities">
   <p>Sex proportions across modalities</p>
 </div>
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/handedness%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Handedness proportions across modalities">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/handedness%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Handedness proportions across modalities">
   <p>Handedness proportions across modalities</p>
 </div>
 
 ## Demography of Subjects
 
-You can find the profile of participants for all modalities at <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx" target="_blank">subjects_demography</a>. Here is a brief explanation about the information collected from the subjects.
+You can find the profile of participants for all modalities at <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx" target="_blank">subjects_demography</a>. Here is a brief explanation about the information collected from the subjects.
 
 ### **Demographic Information for M-EEG**
 
@@ -180,6 +180,7 @@ Each block comprised stimuli from all four categories, with each stimulus displa
 Trial division was pseudorandomized with respect to two factors: the assignment of non-target stimuli to a miniblock, and the number of trials with specific durations within each task-relevance level. The assignment of non-targets was restricted by two constraints: i) Each stimulus was presented an equal number of times as a non-target stimulus (and as an irrelevant one) throughout the experiment. ii) Non-targets were, by definition, different from the targets in that specific miniblock. To meet these constraints, two pseudorandomized versions were made where the targets and non-target stimuli of each miniblock were determined. Three additional versions were prepared for each target/non-target division to balance the duration division between categories and orientation. In each version, slight imbalances (maximum difference of four trials) existed between the different durations for each condition (targets, non-targets, irrelevant). This imbalance was a necessary consequence of keeping the balance in duration and category across orientation and across categories as the numbers were not evenly divisible by three. The imbalances canceled out over the entire experiment so there was a perfect duration balance across the experiment: an equal amount of stimuli were presented for 500, 1000 and 1500 ms durations. The imbalances between durations within each relevant condition were balanced across the three versions. In total, six different versions were assigned to the subjects in consecutive order, repeating every six subjects. To get more details, please see the “Trial counts” section in <a href="https://osf.io/gm3vd" target="_blank">COGITATE Preregistration, v4</a>.
 
 #### iEEG Related Modifications of the Design
+
 Only half of the stimuli were used as targets for the iEEG experiments. The selection of target faces kept the balance of gender and ethnicity. Letters were chosen in equal amounts from the first and second parts of the alphabet, and the corresponding false-fonts were used. All stimuli were presented as relevant non-targets and irrelevant stimuli, matching the designs of the aforementioned procedure.
 
 ### M-EEG Data Acquisition
@@ -195,7 +196,7 @@ Both centers had a 306-channel, whole-head TRIUX MEG system from MEGIN (York Ins
 The location of the fiducials, the positions of the 64 EEG electrodes and the participant’s head shape were recorded using a 3-D digitizer system (Polhemus Isotrak). A set of bipolar electrodes were placed on the subject’s chest (upper left and upper right chest position) to record the cardiac signal (ECG). Two sets of bipolar electrodes were placed around the eyes (two located at the outer canthi of the right and left eyes and two above and below the center of the right eye) to record eye movements and blinks (EOG). Ground and reference electrodes were placed on the back of the neck and on the right cheek, respectively. The impedance of all of the electrodes was checked to be below 10 kOhm.
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/eog_ecg_electrodes_meg.png" alt="Standard Locations of EOG and ECG electrodes">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/eog_ecg_electrodes_meg.png" alt="Standard Locations of EOG and ECG electrodes">
   <p>Standard Locations of EOG and ECG electrodes</p>
 </div>
 
@@ -204,7 +205,7 @@ The location of the fiducials, the positions of the 64 EEG electrodes and the pa
 The participant’s head position inside the MEG system was measured at the beginning and at the end of each run using four head position indicator (HPI) coils placed on the EEG cap. Specifically, the HPI coils were placed next to the left and right mastoids and on the left and right forehead. Their location relative to anatomical landmarks was digitized with a Polhemus Isotrak System. During the measurement, high frequency (>200 Hz) signals were produced by those coils and the localization of these signals was used to estimate the head position in the sensor space. To avoid the potential artifacts produced by the non-linear interaction between the signals generated by these coils, head position measurement was performed only during resting periods (as opposed to continuously).
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/hpi_coils_meg.png">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/hpi_coils_meg.png">
   <p>Standard locations of HPI coils. Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
 </div>
 
@@ -317,7 +318,7 @@ Following the empty room and rM-EEG recordings, subjects were asked to complete 
 
 #### Full Structure of Session
 
-Complete standard procedure of an M-EEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/linked_files_v1.0/MEG%20SOP_v1.0.pdf" target="_blank">MEG Standard Operating Procedure</a>.
+Complete standard procedure of an M-EEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/MEG%20SOP_v1.0.pdf" target="_blank">MEG Standard Operating Procedure</a>.
 
 #### Inclusion Criteria
 
@@ -331,9 +332,9 @@ The items below were assessed for the subjects before the data was acquired:
 - No MRI in the last week
 - MRI compatible: no metal, medical implants, etc. No claustrophobia. Note: dental implants are allowed (particularly for non-magnetic materials) unless it generates big impacts on MEG signals, and this will be checked prior to MEG recording.
 - No known history of psychiatric or neurological disorders, e.g.,
-    - Not have been formally diagnosed with attention deficit (hyperactivity) disorder (AD(H)D).
-    - Not have been formally diagnosed with autism spectrum disorder (ASD)
-    - Not suffer from epilepsy
+  - Not have been formally diagnosed with attention deficit (hyperactivity) disorder (AD(H)D).
+  - Not have been formally diagnosed with autism spectrum disorder (ASD)
+  - Not suffer from epilepsy
 
 #### Quality Check and Exclusion Criteria
 
@@ -379,17 +380,18 @@ At Harvard and Wisconsin, EyeLink 1000 Plus Camera was used to collect eye-track
 
 The behavioral code scheme is similar to the M-EEG modality which is explained in [this section](#behavioral-data-code-scheme).
 
-#### Eye Tracker Data Code 
+#### Eye Tracker Data Code
 
 The eye tracker code scheme for the iEEG modality follows a similar structure to that described for M-EEG data. You can find detailed explanations [here](#eye-tracker-and-meg-code-scheme).
 
 #### iEEG Code Scheme
+
 ##### Photodiode Trigger Scheme
 
 For ECOG patients, the type of port utilized by the M-EEG team (LPT) was incompatible with our recording system. Consequently, a photodiode was employed. A photodiode is an electronic device that records changes in luminance and converts them into voltage.
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/photodiode.png" alt="An example of a photodiode" style="width:50%;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/photodiode.png" alt="An example of a photodiode" style="width:50%;">
   <p>An example of a photodiode</p>
 </div>
 
@@ -422,7 +424,7 @@ The beginning and end of the experiment were marked by sending 3 consecutive pul
 <a name="schematic-representation-of-the-photodiode-channel"></a>
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/Schematic%20representation%20of%20the%20photodiode%20channel.png" alt="Schematic representation of the photodiode channel">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/Schematic%20representation%20of%20the%20photodiode%20channel.png" alt="Schematic representation of the photodiode channel">
   <p>Schematic representation of the photodiode channel</p>
 </div>
 
@@ -459,113 +461,113 @@ The alignment procedure allowed the information from the log file to be utilized
 **Experimental Design:**
 
 - Event Type:
-    - Marks the different events occurring within a trial.
-    - Factor Type: Categorical
-    - Factor 1:
-        - Name: stimulus onset
-        - Description: Marks the onset of the visual stimuli. With epochs['stimulus onset'], extract all epochs time-locked to the visual stimulus onset.
-    - Factor 2:
-        - Name: stimulus offset
-        - Description: Marks the offset of the visual stimuli. With epochs['stimulus offset'], extract all epochs time-locked to the offset of the visual stimulus.
-    - Factor 3:
-        - Name: jitter onset
-        - Description: Marks the beginning of the inter-trial jitter. All trials lasted 2 sec., with an added jitter of 400ms on average. With epochs['jitter onset'], extract all epochs time-locked to the beginning of the jitter period (2 sec. after stimulus onset).
+  - Marks the different events occurring within a trial.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: stimulus onset
+    - Description: Marks the onset of the visual stimuli. With epochs['stimulus onset'], extract all epochs time-locked to the visual stimulus onset.
+  - Factor 2:
+    - Name: stimulus offset
+    - Description: Marks the offset of the visual stimuli. With epochs['stimulus offset'], extract all epochs time-locked to the offset of the visual stimulus.
+  - Factor 3:
+    - Name: jitter onset
+    - Description: Marks the beginning of the inter-trial jitter. All trials lasted 2 sec., with an added jitter of 400ms on average. With epochs['jitter onset'], extract all epochs time-locked to the beginning of the jitter period (2 sec. after stimulus onset).
 - Block:
-    - Marks the experimental blocks.
-    - Factor Type: Discrete
-    - Factor 1:
-        - Name: block_*
-        - Description: Experimental blocks. Our experiment consisted of 5 blocks, in between which participants were allowed to take a break. With epochs['block_1'], extract all epochs of the first experimental block.
+  - Marks the experimental blocks.
+  - Factor Type: Discrete
+  - Factor 1:
+    - Name: block_*
+    - Description: Experimental blocks. Our experiment consisted of 5 blocks, in between which participants were allowed to take a break. With epochs['block_1'], extract all epochs of the first experimental block.
 - Miniblock:
-    - Marks the experimental miniblocks.
-    - Factor Type: Discrete
-    - Factor 1:
-        - Name: miniblock_*
-        - Description: Experimental miniblocks. Each experimental block consisted of 4 miniblocks. At the beginning of each miniblock, the two target stimuli were presented to the participant, which the participant had to remember to be able to detect in the stream of stimuli. With epochs['miniblock_1'], extract all epochs of the first experimental miniblock.
+  - Marks the experimental miniblocks.
+  - Factor Type: Discrete
+  - Factor 1:
+    - Name: miniblock_*
+    - Description: Experimental miniblocks. Each experimental block consisted of 4 miniblocks. At the beginning of each miniblock, the two target stimuli were presented to the participant, which the participant had to remember to be able to detect in the stream of stimuli. With epochs['miniblock_1'], extract all epochs of the first experimental miniblock.
 - Category:
-    - Category of the visual stimuli.
-    - Factor Type: Categorical
-    - Factor 1:
-        - Name: face
-        - Description: Identifies face trials. With epochs['face'], extract all epochs in which a face was presented.
-    - Factor 2:
-        - Name: object
-        - Description: Identifies object trials. With epochs['object'], extract all epochs in which an object was presented.
-    - Factor 3:
-        - Name: letter
-        - Description: Identifies letter trials. With epochs['letter'], extract all epochs in which a letter was presented.
-    - Factor 4:
-        - Name: false
-        - Description: Identifies false font trials (i.e., symbols). With epochs['false'], extract all epochs in which a false font was presented.
+  - Category of the visual stimuli.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: face
+    - Description: Identifies face trials. With epochs['face'], extract all epochs in which a face was presented.
+  - Factor 2:
+    - Name: object
+    - Description: Identifies object trials. With epochs['object'], extract all epochs in which an object was presented.
+  - Factor 3:
+    - Name: letter
+    - Description: Identifies letter trials. With epochs['letter'], extract all epochs in which a letter was presented.
+  - Factor 4:
+    - Name: false
+    - Description: Identifies false font trials (i.e., symbols). With epochs['false'], extract all epochs in which a false font was presented.
 - Identity:
-    - Identity of the visual stimuli.
-    - Factor Type: Categorical
-    - Factor 1:
-        - Name: face_*
-        - Description: Identifies the identity of face trials. With epochs['face_*'], extract all epochs in which that specific face was presented. From 1-9, leading 0.
-    - Factor 2:
-        - Name: object_*
-        - Description: Identifies the identity of object trials. With epochs['object_*'], extract all epochs in which that specific object was presented. From 1-9, leading 0.
-    - Factor 3:
-        - Name: letter_*
-        - Description: Identifies the identity of letter trials. With epochs['letter_*'], extract all epochs in which that specific letter was presented. From 1-9, leading 0.
-    - Factor 4:
-        - Name: false_*
-        - Description: Identifies the identity of false font trials (i.e., symbols). With epochs['false__*'], extract all epochs in which that specific false font was presented. From 1-9, leading 0.
+  - Identity of the visual stimuli.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: face_*
+    - Description: Identifies the identity of face trials. With epochs['face_*'], extract all epochs in which that specific face was presented. From 1-9, leading 0.
+  - Factor 2:
+    - Name: object_*
+    - Description: Identifies the identity of object trials. With epochs['object_*'], extract all epochs in which that specific object was presented. From 1-9, leading 0.
+  - Factor 3:
+    - Name: letter_*
+    - Description: Identifies the identity of letter trials. With epochs['letter_*'], extract all epochs in which that specific letter was presented. From 1-9, leading 0.
+  - Factor 4:
+    - Name: false_*
+    - Description: Identifies the identity of false font trials (i.e., symbols). With epochs['false__*'], extract all epochs in which that specific false font was presented. From 1-9, leading 0.
 - Orientation:
-    - Orientation of the displayed stimuli.
-    - Factor Type: Categorical
-    - Factor 1:
-        - Name: Center
-        - Description: Identifies stimuli presented in the center orientation. With epochs['Center'], extract all epochs in which a stimulus was presented in the center orientation.
-    - Factor 2:
-        - Name: Left
-        - Description: Identifies stimuli presented in the Left orientation. With epochs['Left'], extract all epochs in which a stimulus was presented in the Left orientation.
-    - Factor 3:
-        - Name: Right
-        - Description: Identifies stimuli presented in the Right orientation. With epochs['Right'], extract all epochs in which a stimulus was presented in the Right orientation.
+  - Orientation of the displayed stimuli.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: Center
+    - Description: Identifies stimuli presented in the center orientation. With epochs['Center'], extract all epochs in which a stimulus was presented in the center orientation.
+  - Factor 2:
+    - Name: Left
+    - Description: Identifies stimuli presented in the Left orientation. With epochs['Left'], extract all epochs in which a stimulus was presented in the Left orientation.
+  - Factor 3:
+    - Name: Right
+    - Description: Identifies stimuli presented in the Right orientation. With epochs['Right'], extract all epochs in which a stimulus was presented in the Right orientation.
 - Duration:
-    - Duration a visual stimulus was presented for.
-    - Factor Type: Categorical
-    - Factor 1:
-        - Name: 500ms
-        - Description: Identifies stimuli presented for 500ms. With epochs['500ms'], extract all epochs in which the stimulus was displayed for 500ms.
-    - Factor 2:
-        - Name: 1000ms
-        - Description: Identifies stimuli presented for 1000ms. With epochs['1000ms'], extract all epochs in which the stimulus was displayed for 1000ms.
-    - Factor 3:
-        - Name: 1500ms
-        - Description: Identifies stimuli presented for 1500ms. With epochs['1500ms'], extract all epochs in which the stimulus was displayed for 1500ms.
+  - Duration a visual stimulus was presented for.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: 500ms
+    - Description: Identifies stimuli presented for 500ms. With epochs['500ms'], extract all epochs in which the stimulus was displayed for 500ms.
+  - Factor 2:
+    - Name: 1000ms
+    - Description: Identifies stimuli presented for 1000ms. With epochs['1000ms'], extract all epochs in which the stimulus was displayed for 1000ms.
+  - Factor 3:
+    - Name: 1500ms
+    - Description: Identifies stimuli presented for 1500ms. With epochs['1500ms'], extract all epochs in which the stimulus was displayed for 1500ms.
 - Task Relevance:
-    - Task relevance of a given trial.
-    - Factor Type: Categorical
-    - Factor 1:
-        - Name: Relevant target
-        - Description: Identifies target stimuli. Target stimuli are presented at the beginning of each miniblock, and participants must detect them among the sequence of presented stimuli by pressing a button. With epochs['Relevant target'], extract all target trials.
-    - Factor 2:
-        - Name: Relevant non-target
-        - Description: Identifies task-relevant non-target stimuli. We considered task-relevant stimuli that were of the same category as the target but of a different identity. With epochs['Relevant non-target'], extract all task-relevant non-target trials.
-    - Factor 3:
-        - Name: Irrelevant
-        - Description: Identifies task-irrelevant non-target stimuli. We considered task-irrelevant stimuli that were of a different category than the target. With epochs['Irrelevant'], extract all task-irrelevant non-target trials.
+  - Task relevance of a given trial.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: Relevant target
+    - Description: Identifies target stimuli. Target stimuli are presented at the beginning of each miniblock, and participants must detect them among the sequence of presented stimuli by pressing a button. With epochs['Relevant target'], extract all target trials.
+  - Factor 2:
+    - Name: Relevant non-target
+    - Description: Identifies task-relevant non-target stimuli. We considered task-relevant stimuli that were of the same category as the target but of a different identity. With epochs['Relevant non-target'], extract all task-relevant non-target trials.
+  - Factor 3:
+    - Name: Irrelevant
+    - Description: Identifies task-irrelevant non-target stimuli. We considered task-irrelevant stimuli that were of a different category than the target. With epochs['Irrelevant'], extract all task-irrelevant non-target trials.
 - Response:
-    - Rated response of the participants.
-    - Factor Type: Categorical
-    - Factor 1:
-        - Name: Hit
-        - Description: Participants correctly identified a target by pressing a button. With epochs['Hit'], extract all target trials for which the participants pressed a key.
-    - Factor 2:
-        - Name: CorrRej
-        - Description: Participants correctly rejected a non-target stimulus and did not press any button. With epochs['CorrRej'], extract all non-target trials for which the participants did not press a key.
-    - Factor 3:
-        - Name: Miss
-        - Description: Participants failed to press a button when a target stimulus was presented. With epochs['Miss'], extract all target trials in which participants failed to press a button.
-    - Factor 4:
-        - Name: FA
-        - Description: Participants mistakenly pressed a button when a non-target stimulus was presented. With epochs['FA'], extract all non-target trials in which participants pressed a button.
-    - Factor 5:
-        - Name: n.a.
-        - Description: For the events stimulus offset and jitter onset, the response is set to n.a. as the response relates to the visual stimulus, not to the other events. This should not be used to access the data.
+  - Rated response of the participants.
+  - Factor Type: Categorical
+  - Factor 1:
+    - Name: Hit
+    - Description: Participants correctly identified a target by pressing a button. With epochs['Hit'], extract all target trials for which the participants pressed a key.
+  - Factor 2:
+    - Name: CorrRej
+    - Description: Participants correctly rejected a non-target stimulus and did not press any button. With epochs['CorrRej'], extract all non-target trials for which the participants did not press a key.
+  - Factor 3:
+    - Name: Miss
+    - Description: Participants failed to press a button when a target stimulus was presented. With epochs['Miss'], extract all target trials in which participants failed to press a button.
+  - Factor 4:
+    - Name: FA
+    - Description: Participants mistakenly pressed a button when a non-target stimulus was presented. With epochs['FA'], extract all non-target trials in which participants pressed a button.
+  - Factor 5:
+    - Name: n.a.
+    - Description: For the events stimulus offset and jitter onset, the response is set to n.a. as the response relates to the visual stimulus, not to the other events. This should not be used to access the data.
 
 #### Surface Reconstruction and Electrode Localization
 
@@ -578,7 +580,7 @@ Each electrode was labeled using the Desikan and Destrieux atlases with the MNE 
 In the Finger Localizer task, participants were presented with four circles, one of which was filled with a specific color, serving as a cue for participants to press the corresponding colored button on the response box. The filled state of the circle persisted for the duration of the response time, followed by an additional delay of 200 milliseconds. The Inter-Trial Intervals (ITIs) were uniformly distributed, with a mean of 0.55 seconds and a range from 0.400 to 0.700 seconds. The experimental protocol comprised 80 trials, distributed equally among the four colors, with 20 trials per color, and the sequence of trials was randomized. This task aimed to identify brain regions responsible for motor control, particularly those governing finger movements, and to pinpoint electrodes selectively activated by specific motor responses, such as button presses.
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.1/graphics_v1.1/FingerLoc.png" alt="An illustration depicting a trial in which the participant is required to press the blue button" style="width:50%;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/FingerLoc.png" alt="An illustration depicting a trial in which the participant is required to press the blue button" style="width:50%;">
   <p>An illustration depicting a trial in which the participant is required to press the blue button</p>
 </div>
 
@@ -595,7 +597,7 @@ Participants proceeded to Experiment 1 either after or before completing the [Fi
 
 #### Full Structure of Session
 
-Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG Standard Operating Procedure</a>.
+Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG Standard Operating Procedure</a>.
 
 #### Inclusion Criteria
 
