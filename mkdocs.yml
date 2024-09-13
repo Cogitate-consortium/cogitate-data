@@ -15,6 +15,6 @@ theme:
               icon: material/brightness-7
               name: Switch to dark mode
     extra_css:
-        - css/extra.css
+        - site/css/theme_extra.css
     extra:
         generator: false
