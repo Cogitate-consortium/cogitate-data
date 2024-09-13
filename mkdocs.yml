@@ -2,7 +2,8 @@ site_name: Cogitate Data Release
 
 theme:
     name: readthedocs
-    logo: https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation_v1.0/graphics_v1.0/cogitate_logo.png
+    logo: https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.0/graphics_v1.0/cogitate_logo.png
+    custom_dir: site
     palette:
         # Palette toggle for dark mode
         - scheme: slate
