@@ -10,7 +10,7 @@ There are two ways of accessing the COGITATE data:
         <td>
             <a href="">
                 <img
-                    src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat.png"
+                    src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/xnat.png"
                     width=""
                     alt="alt_text"
                     title="XNAT login page"
@@ -19,7 +19,7 @@ There are two ways of accessing the COGITATE data:
         <td>
             <a href="https://www.arc-cogitate.com/data-bundles-active" target="_blank">
                 <img
-                    src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/bundles.png"
+                    src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/bundles.png"
                     width=""
                     alt="alt_text"
                     title="Data bundles login"
@@ -40,37 +40,37 @@ If you are a new user and have not registered yet, you should visit <a href="htt
 
 If you have already registered, you can skip this step and login at <a href="https://cogitate-data.ae.mpg.de/app/template/Login.vm#!" target="_blank">Cogitate_XNAT</a>.
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_user_login.png "XNAT User Login Page")
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/xnat_user_login.png "XNAT User Login Page")
 
 ### **Step 2: Navigating at XNAT**
 
 After completing the registration step, you can log in with your User and Password. You can see the list of available datasets under the “Projects” tab.
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_projects.png "XNAT Projects page")
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/xnat_projects.png "XNAT Projects page")
 
 Once you click the project’s name, you will see the list of subjects in the farthest left column.
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_subjects.png "XNAT Subjects page")
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/xnat_meg_subjects.png "XNAT Subjects page")
 
 In each subject’s folder, the demographic information of that subject and the various sets of data acquired for Experiment 1 are provided. As an example, for a subject with the ID of CA103, the MR session, Eye tracker and MEEG datasets are listed as the below figure.
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_subject_folder.png "XNAT Subject folder")
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/xnat_meg_subject_folder.png "XNAT Subject folder")
 
 In the MR session folder, you can view and access the MR scan of the subject along with the related imaging parameters.
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_MR-anat.png "XNAT MR Anatomical Scan Folder")
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/xnat_meg_MR-anat.png "XNAT MR Anatomical Scan Folder")
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_MR-scan-pic.png "XNAT MR Example")
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/xnat_meg_MR-scan-pic.png "XNAT MR Example")
 
 In the Eye tracker folder, the eye tracking data of different runs and some details related to them, including the recorded eye, sampling frequency, distance to screen and screen size are available.
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_eyetracker-scan-DurR1.png)
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/xnat_meg_eyetracker-scan-DurR1.png)
 
 Under the folder of MEEG, there are some tabs on the top where you can find information regarding the Case Report Form, Exit Questionnaire, experiment checklist form, data details within the BIDS framework, and at the bottom, you can download different runs of MEG data.
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_upload_form.png)
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/xnat_meg_upload_form.png)
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_meg-data.png)
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/xnat_meg_meg-data.png)
 
 ### Naming Convention on XNAT
 
@@ -80,9 +80,9 @@ The data on XNAT is organized into subjects and sessions under a given project. 
 
 This approach involves providing a collection of links to the prepared bundles of the data and accompanying metadata, which are available in zip format. These links grant users the ability to download specific modalities, example datasets, or the complete dataset.
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/bundles_sample_datasets.png "Bundles Sample Datasets")
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/bundles_sample_datasets.png "Bundles Sample Datasets")
 
-![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/bundles_full_datasets.png "Bundles Full Datasets")
+![alt_text](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/bundles_full_datasets.png "Bundles Full Datasets")
 
 Here is a brief explanation about how to access the data bundles:
 
@@ -91,7 +91,7 @@ Here is a brief explanation about how to access the data bundles:
 <p>
     <a href="https://www.youtube.com/watch?v=FFqN5Pech0w" target="_blank">
     <img
-            src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/youtube_logo.png"
+            src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/youtube_logo.png"
             alt="alt_text"
             title="image_tooltip"
             width="20"
@@ -103,7 +103,7 @@ Here is a brief explanation about how to access the data bundles:
 Access to the data bundles requires a quick and easy registration process.
 
 1. Provide user information, including name and email address.
-2. Read and accept the <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/Cogitate_ToU_v1.pdf" target="_blank">Terms of Use</a> and <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/Cogitate_GDPR_v1.pdf" target="_blank">GDPR Requirements</a> (<a href="https://gdpr-info.eu/" target="_blank">General Data Protection Regulation</a>).
+2. Read and accept the <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/Cogitate_ToU_v1.pdf" target="_blank">Terms of Use</a> and <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/Cogitate_GDPR_v1.pdf" target="_blank">GDPR Requirements</a> (<a href="https://gdpr-info.eu/" target="_blank">General Data Protection Regulation</a>).
 3. Once you register, you will receive four (4) emails to the email account you registered with. In some cases, checking your junk mail may be necessary.
     1. **_Welcome email_**: general information
     2. **_Data User Account Verification email:_** Within the verification email, you must click on the ‘verify my account’ option to finalize step 1 of creating a data user account in order to gain access to all current and future data releases.
@@ -117,7 +117,7 @@ Access to the data bundles requires a quick and easy registration process.
 <p>
     <a href="https://www.youtube.com/watch?v=6BR3uYqiDiU" target="_blank">
         <img
-            src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/youtube_logo.png"
+            src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/youtube_logo.png"
             alt="alt_text"
             title="image_tooltip"
             width="20"
@@ -134,7 +134,7 @@ Access to the data bundles requires a quick and easy registration process.
 <p>
     <a href="https://youtu.be/KraiX4ttE2o" target="_blank">
         <img
-            src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/youtube_logo.png"
+            src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/youtube_logo.png"
             alt="alt_text"
             title="image_tooltip"
             width="20"

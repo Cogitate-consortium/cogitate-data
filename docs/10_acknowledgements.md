@@ -5,7 +5,7 @@
         This project and data are made possible through the support of a grant from <a href="https://doi.org/10.54224/20389" target="_blank">Templeton World Charity Foundation</a>. The opinions expressed throughout our documentation and data are those of the authors and do not necessarily reflect the views of Templeton World Charity Foundation.
     </div>
     <div style="flex-shrink: 0; margin-left: 20px;">
-        <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/TWCF_Logo_LightBG_Vertical_CMYK.png" alt="Logo" width="130">
+        <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/TWCF_Logo_LightBG_Vertical_CMYK.png" alt="Logo" width="130">
     </div>
 </div>
 

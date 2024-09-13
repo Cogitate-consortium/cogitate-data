@@ -10,13 +10,13 @@ For reporting issues or bugs:
     - Don’t have a GitHub account? Create one <a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home" target="_blank">here</a>.
 
 2. Click on **Issues**
-![Click issue img](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/Support_git_click_issue.png)
+![Click issue img](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/Support_git_click_issue.png)
 
 3. Create **New Issue**
     - Please provide maximal details possible
-![Create new issue img](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/Support_git_create_new_issue.png)
+![Create new issue img](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/Support_git_create_new_issue.png)
 
 4. Click Submit new issue.
-![Submit img](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/Support_git_submit_new_issue.png)
+![Submit img](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/Support_git_submit_new_issue.png)
 
 5. Your issue will be logged with our Data Release team and dealt with in a timely manner.
