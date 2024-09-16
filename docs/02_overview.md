@@ -57,7 +57,7 @@ This experiment followed a 3x3x4x2 factorial design, with the following items:
 
 #### Sample Size
 
-The sample sizes were determined based on common practices in the literature, resulting in a total of 122 subjects for fMRI, 102 for M-EEG, and 38 for iEEG. All subjects met specific criteria, including age and health conditions, to ensure data quality.
+The sample sizes were determined based on common practices in the literature, resulting in a total of 118 subjects for fMRI, 100 for M-EEG, and 38 for iEEG. All subjects met specific criteria, including age and health conditions, to ensure data quality.
 
 #### Task Description
 
@@ -81,6 +81,11 @@ ___
 
 Currently in preparation. It will be released soon!
 
-#### Task Code and Stimuli repositories
+#### Task Code, Stimuli, and Analysis Code Repositories
 
-The **task code** and **stimuli** used for EXP1 and for all modalities are available in the <a href="https://github.com/Cogitate-consortium/cogitate-experiment-code" target="_blank">cogitate-experiment-code</a> repository.
+The task code, stimuli, and analysis codes used for EXP1 and all modalities are available in the following repositories on GitHub:
+
+- **Task Code and Stimuli:** These can be found in the <a href="https://github.com/Cogitate-consortium/cogitate-experiment-code" target="_blank">cogitate-experiment-code</a> repository.
+- **Analysis Codes:** These are available in the <a href="https://github.com/Cogitate-consortium/cogitate-msp1" target="_blank">cogitate-msp1</a> repository.
+
+**Note:** Please check each repository for specific instructions on how to use the code and stimuli. Each repository contains detailed documentation to assist you in understanding and utilizing the resources provided.
