@@ -81,9 +81,10 @@ Here are the various file formats used for each modality of the COGITATE dataset
 #### **Eye Tracking & Behavioral Data**
 
 - **Unprocessed/Raw release format**
-        - Filetype: ASC/CSV
+      - Filetype: ASC/CSV
+
 - **BIDS Format**
-        - Filetype: ASC/CSV
+      - Filetype: ASC/CSV
 
 The two eye trackers used within COGITATE are:
 <br>1. EyeLink eye tracker
@@ -155,9 +156,21 @@ DICOM (.dcm file extension) is a standard format utilized for storing CT (Comput
 
 NIFTI (.nii.gz file extension) serves as another format employed for a subset of subjects where our standard procedure encountered challenges. With the exception of the MR and CT scans for 12 subjects within the iEEG data, all other datasets of similar nature are stored in DICOM format. Further details regarding these 12 problematic datasets are available in [this section](04_data.md#deviations-from-data-curation-procedure). NIFTI files encapsulate image data alongside metadata concerning spatial orientation, voxel dimensions, and additional imaging parameters.
 
+#### **fMRI Data**
+
+- **Unprocessed/Raw release format**
+      - Filetype: DICOM
+
+- **BIDS Format**
+      - Filetype: NIFTI
+
+DICOM (Digital Imaging and Communications in Medicine), with the file extension .dcm, is a standard format for storing anatomical and functional MRI (Magnetic Resonance Imaging) scans. These files contain both image data and crucial metadata, including imaging parameters.
+
+The BIDS format includes anatomical and functional images stored in NIFTI (Neuroimaging Informatics Technology Initiative) format with the .nii.gz file extension. These NIFTI files encompass image data, spatial orientation, voxel dimensions, and imaging parameters such as sequence details, field of view, repetition time (TR), echo time (TE), acquisition timing, and more.
+
 ## Data Acquisition
 
-The Cogitate dataset encompasses three distinct neuroimaging modalities, along with synchronized eye-tracking and behavioral data linked to each of these modalities. Here we detail the acquisition protocol for each modality in the corresponding data release: M-EEG, iEEG
+The Cogitate dataset encompasses three distinct neuroimaging modalities, along with synchronized eye-tracking and behavioral data linked to each of these modalities. Here we detail the acquisition protocol for each modality in the corresponding data release: M-EEG, iEEG, and fMRI.
 
 ### Stimuli
 
@@ -181,6 +194,9 @@ Trial division was pseudorandomized with respect to two factors: the assignment 
 
 #### iEEG Related Modifications of the Design
 Only half of the stimuli were used as targets for the iEEG experiments. The selection of target faces kept the balance of gender and ethnicity. Letters were chosen in equal amounts from the first and second parts of the alphabet, and the corresponding false-fonts were used. All stimuli were presented as relevant non-targets and irrelevant stimuli, matching the designs of the aforementioned procedure.
+
+#### fMRI Related Modifications of the Design
+For the fMRI experiment, timing was adjusted as follows: the random jitter between trials was increased (mean inter-trial interval of 3 s, jittered 2.5-10 s, with truncated exponential distribution), with each trial lasting approximately 5.5 s. This modification served to improve decoding and fitting of GLMs to the fMRI data (Glover, 1999). Second, to increase detection efficacy for amplitude-based analyses, three additional baseline periods (blank screen) of 12 s each were included per run (total = 24). The identity of the stimuli was randomized with the constraint that they appeared equally across durations and tasks conditions.
 
 ### M-EEG Data Acquisition
 
@@ -347,9 +363,15 @@ For M-EEG, the first stage of the third-level checks focused on system-related a
 **Subject_ID:** CA101, CA102, CA104, CA110, CA111, CA152
 
 <span style="background-color: red"><b>Attention 2:</b></span>
-**The following subjects are missing “Exit Questionnaires”:**
+**The “Exit Questionnaire” is not available for CB003.**
 
-**Subject_ID:** CB003, CB035
+<span style="background-color: red"><b>Attention 3:</b></span>
+**The “RestinEO” file is missing for the ET data of the below subjects:**
+
+**Subject_ID:** CA172, CA176, CB999
+
+<span style="background-color: red"><b>Attention 4:</b></span>
+**The ET data is missing for CA151.**
 
 ### iEEG Data Acquisition
 
@@ -596,6 +618,155 @@ Participants proceeded to Experiment 1 either after or before completing the [Fi
 #### Full Structure of Session
 
 Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.1/linked_files_v1.1/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG Standard Operating Procedure</a>.
+
+#### Inclusion Criteria
+
+For the iEEG studies, subjects were 10-65 years old, able to provide informed consent, had IQ > 70, fluent in English, with self-reported normal hearing, normal or corrected-to-normal vision, and cognitive and language abilities within or above the normal range in formal neuropsychological testing performed before surgery. They must not have had an electrographic seizure within 3-hours prior to testing.
+
+#### Quality Check
+
+A comprehensive quality assessment was conducted on the iEEG data. The data underwent manual annotation by epileptologists, excluding channels within the epileptic onset zone, as well as those exhibiting artifacts or showing complete flatness due to electrode contact issues. Channel rejection was independently performed by both the data monitoring and iEEG teams, with results compared to ensure consistency. Additionally, electrode reconstruction was verified to align with subjects' CT scans. Finally, we inspected for significant disturbances in the spectra.
+
+#### Exclusion Criteria
+
+Subjects who were unable to complete a sufficient number of trials due to excessive muscular artifacts, movement, noisy recordings, or a decision by the subject to terminate the experiment were excluded. In addition, data was also excluded if it did not pass any of the pre-defined data quality checks.
+
+#### Deviations and Missing Data
+
+<span style="background-color: red"><b>Attention 1:</b></span>
+**The iEEG data for the seven subjects listed below do not have the correct sampling rate in the original EDF files. The correct sampling rate for these subjects is 2048 Hz. The raw data has not been updated with the correct sampling rate to avoid alignment issues when constructing the events. However, the same measurements in the BIDS release, provided in the <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a> format, have the correct sampling rate as expected.**
+
+**Subject_ID:** CE106, CE107, CE108, CE112, CE115, CE118, CE120
+
+<span style="background-color: red"><b>Attention 2:</b></span>
+**For the subjects listed below, some scans are missing. The subject IDs and the names of the missing scans are as follows:**
+
+<table style="width: 100%; margin: 0 auto; text-align: center; border-collapse: collapse;">
+  <tr style="background-color: #d3d3d3; color: #000000;">
+    <th style="width: 25%; padding: 10px;">Subject_ID</th>
+    <th style="width: 25%; padding: 10px;">Missing Scan</th>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CE118</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR5</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CG102</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR1</td>
+  </tr>
+</table>
+
+<span style="background-color: red"><b>Attention 3:</b></span>
+**The following subjects are missing “Exit Questionnaires”:**
+
+**Subject_ID:** CF103, CF104, CF105, CF106, CF110, CF112, CF113, CF116, CF117, CF119, CF120, CF121, CF122, CF124, CF125, CF126
+
+<span style="background-color: red"><b>Attention 4:</b></span>
+**The following subjects are missing “FingerLoc” scan:**
+
+**Subject_ID:** CE106, CE107, CE110, CE118, CE119, CE120, CE121, CF117, CG101, CG102, CG103, CG104, CG105, CG106
+
+<span style="background-color: red"><b>Attention 5:</b></span>
+**Eye tracking (ET) data is missing for the subjects listed below. The subject IDs and the names of the missing data are as follows:**
+
+<table style="width: 100%; margin: 0 auto; text-align: center; border-collapse: collapse;">
+  <tr style="background-color: #d3d3d3; color: #000000;">
+    <th style="width: 25%; padding: 10px;">Subject_ID</th>
+    <th style="width: 25%; padding: 10px;">Missing Data</th>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CE109</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">Not having “ET” data</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CE121</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">Not having “ET” data</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CF103</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR2_ABORTED</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CG103</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">Not having “ET” data</td>
+  </tr>
+</table>
+
+<span style="background-color: red"><b>Please note:</b></span>
+**MR and CT data were collected for the subjects at Brigham and Women’s Hospital and Children’s Hospital Boston. However, due to the data protection policies, they are not included in the COGITATE Data Release.**
+
+------------------------------------
+
+### fMRI Data Acquisition
+
+Imaging was conducted at the Yale Magnetic Resonance Research Center (MRRC) in New Haven and at the Donders Centre for Cognitive Neuroimaging (DCCN), of Radboud University Nijmegen in the Netherlands.
+
+#### Hardware
+
+Both centers have a Siemens 3T Prisma research scanner (Siemens, Erlangen, Germany) with high-performance gradients (max. gradient strength 80 mT/m, 200 mT/m/s rise time, 100% duty cycle), 32-channel parallel imaging, and a 32-channel head coil.
+
+#### Anatomical MRI Data Acquisition
+
+Anatomical images were acquired on a 3T Prisma scanner using a 32-channel head coil. The images were captured using a T1-weighted magnetization prepared rapid gradient echo sequence (MP-RAGE) with a GRAPPA acceleration factor of 2, TR/TE of 2300/3.03 ms, a voxel size of 1 mm isotropic, a field of view (FOV) of 256 x 256 x 192 mm (192 slices), and a 8° flip angle.
+
+#### Functional MRI Data Acquisition
+
+Functional images were acquired on the same scanner using a whole-brain T2*-weighted multiband-4 sequence with TR/TE of 1500/39.6 ms, a voxel size of 2.019 x 2.019 x 2 mm, a 75° flip angle, an A/P phase encoding direction, a FOV of 210 x 210 x 136 mm (68 slices), a bandwidth (BW) of 2090 Hz/Px and different number of volumes. A single-band reference (SBRef) image was acquired before each run. The first three volumes of each run were discarded to allow for signal stabilization. Additionally, to correct for susceptibility distortions, extra scans using the same T2*-weighted sequence with inverted phase encoding direction (inverted RO/PE polarity) were collected while the subject was at rest at multiple points throughout the experiments.
+
+#### Behavioral Data Acquisition
+
+The task was run on Matlab (DCCN and Yale: R2019b) using Psychtoolbox v.3 (Pelli, 1997). The fMRI version was executed on an MSI laptop at Yale and a Dell Desktop PC at DCCN. Both centers were equipped with behavioral testing apparatus, including a visual display projected onto a mirror fixed to the head coil, a button response system, and software for displaying and recording behavioral tasks synchronized with MRI data acquisition. At DCCN, stimuli were presented on an MRI-compatible Cambridge Research Systems BOLDscreen 32” IPS LCD monitor (1920 x 1080 pixels, 60 Hz; viewing distance ~134 cm). At Yale, stimuli were projected using a Psychology Software Tools Hyperion projection system (1920 x 1080 pixels, 60 Hz; viewing distance ~113 cm). Subjects responded with their right hand using a 2x2 Current Designs response box at Yale and a 1x4 Current Designs response box at DCCN.
+
+#### Eye Tracking Data Acquisition
+
+The fMRI labs used the MR-compatible EyeLink 1000 Plus eye-tracker system (SR Research Ltd., Ottawa, Canada) to collect data at 1000 Hz. Eye position was monitored monocularly, with data acquired from the left eye at DCCN and the right eye at Yale. Pupil and corneal reflection were sampled at 1000 Hz. A nine-point calibration was performed at the beginning of each experiment session and recalibrated as needed at the beginning of each block/run.
+
+#### Behavioral Data Code Scheme
+
+The behavioral code scheme aligns closely with the M-EEG modality, as detailed in [this section](#behavioral-data-code-scheme).
+
+#### Eye Tracker Data Code 
+
+The eye tracker code scheme used in fMRI follows a structure akin to the one outlined for M-EEG data. More detailed explanations can be found [here](#eye-tracker-and-meg-code-scheme).
+
+#### Task (tfMRI)
+
+For the fMRI protocol, there were 8 runs, each containing 4 blocks with 17-19 trials per block. Each trial lasted approximately 5.5 seconds, with 16 non-targets (4 per category) and 1-3 targets, totaling 576 trials. The timing was adjusted by increasing the random jitter between trials (mean inter-trial interval of 3 seconds, jittered 2.5-10 seconds with a truncated exponential distribution). Breaks and pauses were included between runs and blocks, with runs separated by short breaks. This process involved stopping and restarting the EPI acquisition sequences.
+
+|              |          |            |                 |                  |
+| ------------ | -------- | ---------- | --------------- | ---------------- |
+| **Task**     | **Runs** | **Blocks** | **Trials**      | **Total trials** |
+| Experiment 1 | 8       | 4          | 17-19 per block | 576             |
+
+#### Full Structure of Session
+
+The complete session structure includes:
+
+**Anatomical scan:** Taken when subjects are at rest and not engaged in the experiment.
+**Single-band reference scan for distortion correction (DC1_SBRef):** Conducted when subjects are at rest.
+Distortion correction scans (DC1): Performed when subjects are at rest.
+Single-band reference scan for functional scans (DurR1_SBRef): Administered at the start of the experiment.
+Functional scans (DurR1)
+Single-band reference scan for functional scans (DurR2_SBRef): Done while the subjects are at rest.
+Functional scans (DurR2)
+Single-band reference scan for functional scans (DurR3_SBRef)
+Functional scans (DurR3)
+Single-band reference scan for functional scans (DurR4_SBRef)
+Functional scans (DurR4)
+Single-band reference scan for distortion correction (DC2_SBRef): Conducted when subjects are at rest.
+Distortion correction scans (DC2): Done when subjects are at rest.
+Single-band reference scan for functional scans (DurR5_SBRef): Performed during the experiment.
+Functional scans (DurR5)
+Single-band reference scan for functional scans (DurR6_SBRef): Conducted during the experiment.
+Functional scans (DurR6)
+Single-band reference scan for functional scans (DurR7_SBRef)
+Functional scans (DurR7)
+Single-band reference scan for functional scans (DurR8_SBRef)
+Functional scans (DurR8)
+Single-band reference scan for distortion correction (DC3_SBRef): Conducted when subjects are at rest.
+Distortion correction scans (DC3): Performed when subjects are at rest.
+
+For a comprehensive understanding of the fMRI session protocol, please refer to the <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.3/linked_files_v1.3/fMRI%20SOP_v1.0.pdf" target="_blank">fMRI Standard Operating Procedure</a> document.
 
 #### Inclusion Criteria
 
