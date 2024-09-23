@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>FAQ - Cogitate Data Release</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "FAQ";
+        var mkdocs_page_input_path = "13_faq.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/cogitate_logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Cogitate Data Release Documentation</p></a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_overview/">Overview of COGITATE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_cogdataset/">COGITATE Dataset</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_data/">Curation Procedures</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_access/">Access to COGITATE Data</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_experiment1/">Experiment 1: Directory Structure of Data Bundles</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_bug-reports/">Support and Report Bugs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_links/">Links and Reference Materials</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09_appendices/">Appendices</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_acknowledgements/">Acknowledgements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_references/">References</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">FAQ</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#cogitate-m-eeg-bids-faqs">Cogitate M-EEG BIDS FAQs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#where-are-the-trans-files">Where are the trans files?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-under-derivativesadditional_metadata">What is under derivatives/additional_metadata?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-does-batch1-mean">What does BATCH1 mean?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#i-cannot-find-the-eog-channel-in-the-data">I cannot find the EOG channel in the data?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-do-the-channels-misc1-misc2-and-misc3-contain">What do the channels MISC1, MISC2 and MISC3 contain?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cogitate-ieeg-bids-faqs">Cogitate iEEG BIDS FAQs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-coordinates-describing-the-electrodes-in-electrodestsv-files">What are the coordinates describing the electrodes in electrodes.tsv files?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-do-the-label-files-contain">What do the label files contain?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-can-we-get-started-with-using-and-understanding-the-ieeg-data">How can we get started with using and understanding the IEEG data?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-does-the-derivativesadditional_metadata-directory-contain">What does the “derivatives/additional_metadata” directory contain?</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Cogitate Data Release</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">FAQ</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="faq">FAQ</h1>
+<h2 id="cogitate-m-eeg-bids-faqs">Cogitate M-EEG BIDS FAQs</h2>
+<h3 id="where-are-the-trans-files">Where are the trans files?</h3>
+<p>The trans.fif files are provided under /derivatives/coreg. They are the results of the coregistration. This information is also included as landmarks in sidecar json of the NIFTI file.</p>
+<h3 id="what-is-under-derivativesadditional_metadata">What is under derivatives/additional_metadata?</h3>
+<p>This directory contains some additional metadata collected along with the data. The top level METADATA directory contains some files common to all subjects: They are analysis.json, devices_MEEG.json, protocols.json, tasks_EXP1_MEEG.json, tasks_RestinEO_MEEG.json, tasks_Rnoise_MEEG.json, wiring_MEEG.pdf.</p>
+<p>Subject level directories contain three files: CXXXX_CRF.json, CXXXX_demographics.json, CXXXX_EXQU.json which are respectively subject specific demographics, case report form and the exit questionnaire. The demographics information is redundant with the information in the participants.tsv files.</p>
+<h3 id="what-does-batch1-mean">What does BATCH1 mean?</h3>
+<p>The M-EEG datasets for COGITATE are being released in two batches in order to facilitate the BIOMAG Connectivity Challenge 2024. This means that one half of the data is initially made available to the participants of the challenge followed by the second half a few months later. This is where BATCH1 and BATCH2 come in.</p>
+<h3 id="i-cannot-find-the-eog-channel-in-the-data">I cannot find the EOG channel in the data?</h3>
+<p>The EOG channel for site A can be found in <code>EOG004</code> and the EOG channels for site B can be found in <code>BIO002</code>. Typically in our code, we prefer to rename the channels as below.</p>
+<pre><code># Fix EOG001 channel name (required for CA only)
+if 'EOG004' in raw.ch_names:
+raw. rename_channels ({ 'EOG004': 'EOG001'})
+
+# Fix EOG001 channel name(required for CB only)
+eog_ch = raw.copy().pick_types(meg=False, eeg=False, eog=True)
+if len(eog_ch. ch_names) &lt; 2:
+raw.set_channel_types({'BIO002': 'eog'})
+raw.rename_channels({'BIO002': 'EOG002'})
+</code></pre>
+<h3 id="what-do-the-channels-misc1-misc2-and-misc3-contain">What do the channels MISC1, MISC2 and MISC3 contain?</h3>
+<p>These channels contain the eye tracker data with MISC1 (X), MISC2 (Y), and MISC3 (pupil) channels containing the X, Y (gaze) and the Pupil information respectively. This information is however also shared separately in the eye tracking data release.</p>
+<h2 id="cogitate-ieeg-bids-faqs">Cogitate iEEG BIDS FAQs</h2>
+<h3 id="what-are-the-coordinates-describing-the-electrodes-in-electrodestsv-files">What are the coordinates describing the electrodes in electrodes.tsv files?</h3>
+<p>The electrodes.tsv files contain the coordinates in MNI space.</p>
+<h3 id="what-do-the-label-files-contain">What do the label files contain?</h3>
+<p>The label files contain the labels that match the electrode location for the “desikan” or “destrieux” atlas obtained using the mne.get_montage_volume_labels with the electrodes coordinates in subject native T1 space.</p>
+<h3 id="how-can-we-get-started-with-using-and-understanding-the-ieeg-data">How can we get started with using and understanding the IEEG data?</h3>
+<p>The data may be best understood using the example pipelines provided via Jupyter notebooks at this repository - <a href="https://github.com/Cogitate-consortium/iEEG-data-release" target="_blank">https://github.com/Cogitate-consortium/iEEG-data-release</a>.</p>
+<h3 id="what-does-the-derivativesadditional_metadata-directory-contain">What does the “derivatives/additional_metadata” directory contain?</h3>
+<p>The additional_metadata directories contain the Case Report forms and Exit Questionnaire information obtained during measurement time. These files are made available for the individual subjects in JSON format. The directory also contains various <a href="https://genemede.github.io" target="_blank">GENEMEDE</a> style files describing the protocols, analysis, devices and wiring diagrams used during the IEEG data collection.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../12_references/" class="btn btn-neutral float-left" title="References"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../12_references/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

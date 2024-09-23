@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Access to COGITATE Data - Cogitate Data Release</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Access to COGITATE Data";
+        var mkdocs_page_input_path = "05_access.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/cogitate_logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Cogitate Data Release Documentation</p></a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_overview/">Overview of COGITATE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_cogdataset/">COGITATE Dataset</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_data/">Curation Procedures</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Access to COGITATE Data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-xnat">1. XNAT</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-registration">Step 1: Registration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-navigating-at-xnat">Step 2: Navigating at XNAT</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#naming-convention-on-xnat">Naming Convention on XNAT</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-bundles">2. Bundles</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-create-a-data-user-account">Step 1: Create a Data User Account</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-login-and-logout-of-your-data-user-account">Step 2: Login and logout of your Data User account</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#naming-convention-for-bundles">Naming Convention for Bundles</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_experiment1/">Experiment 1: Directory Structure of Data Bundles</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_bug-reports/">Support and Report Bugs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_links/">Links and Reference Materials</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09_appendices/">Appendices</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_acknowledgements/">Acknowledgements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_references/">References</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_faq/">FAQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Cogitate Data Release</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">Access to COGITATE Data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="access-to-cogitate-data">Access to COGITATE Data</h1>
+<p>There are two ways of accessing the COGITATE data:</p>
+<ol>
+<li>"Live" Database Release: <a href="https://wiki.xnat.org/documentation/" target="_blank">XNAT</a> (eXtensible Neuroimaging Archive Toolkit)</li>
+<li>Archival Format: Bundles</li>
+</ol>
+<table>
+    <tr>
+        <td>
+            <a href="">
+                <img
+                    src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat.png"
+                    width=""
+                    alt="alt_text"
+                    title="XNAT login page"
+            /></a>
+        </td>
+        <td>
+            <a href="https://www.arc-cogitate.com/data-bundles-active" target="_blank">
+                <img
+                    src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/bundles.png"
+                    width=""
+                    alt="alt_text"
+                    title="Data bundles login"
+            /></a>
+        </td>
+    </tr>
+</table>
+
+<p><span style="background-color: #ffc7c7"><strong>NOTE: XNAT release not available yet!</strong></span></p>
+<h2 id="1-xnat">1. XNAT</h2>
+<p>This database offers a web interface for navigating the data and an API (Application Programming Interface) for programmatically retrieving specific databases based on user interests. Comprehensive instructions on how to register, access, and query our database are provided below.</p>
+<h3 id="step-1-registration"><strong>Step 1: Registration</strong></h3>
+<p>If you are a new user and have not registered yet, you should visit <a href="https://cogitate-data.ae.mpg.de/app/template/Register.vm#!" target="_blank">Cogitate_XNAT_registration</a>. Once the registration is done, a verification step, the same as the “Creating an Account”, is needed.</p>
+<p>If you have already registered, you can skip this step and login at <a href="https://cogitate-data.ae.mpg.de/app/template/Login.vm#!" target="_blank">Cogitate_XNAT</a>.</p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_user_login.png" title="XNAT User Login Page" /></p>
+<h3 id="step-2-navigating-at-xnat"><strong>Step 2: Navigating at XNAT</strong></h3>
+<p>After completing the registration step, you can log in with your User and Password. You can see the list of available datasets under the “Projects” tab.</p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_projects.png" title="XNAT Projects page" /></p>
+<p>Once you click the project’s name, you will see the list of subjects in the farthest left column.</p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_subjects.png" title="XNAT Subjects page" /></p>
+<p>In each subject’s folder, the demographic information of that subject and the various sets of data acquired for Experiment 1 are provided. As an example, for a subject with the ID of CA103, the MR session, Eye tracker and MEEG datasets are listed as the below figure.</p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_subject_folder.png" title="XNAT Subject folder" /></p>
+<p>In the MR session folder, you can view and access the MR scan of the subject along with the related imaging parameters.</p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_MR-anat.png" title="XNAT MR Anatomical Scan Folder" /></p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_MR-scan-pic.png" title="XNAT MR Example" /></p>
+<p>In the Eye tracker folder, the eye tracking data of different runs and some details related to them, including the recorded eye, sampling frequency, distance to screen and screen size are available.</p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_eyetracker-scan-DurR1.png" /></p>
+<p>Under the folder of MEEG, there are some tabs on the top where you can find information regarding the Case Report Form, Exit Questionnaire, experiment checklist form, data details within the BIDS framework, and at the bottom, you can download different runs of MEG data.</p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_upload_form.png" /></p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat_meg_meg-data.png" /></p>
+<h3 id="naming-convention-on-xnat">Naming Convention on XNAT</h3>
+<p>The data on XNAT is organized into subjects and sessions under a given project. The subjects are identified using the format “CX???” and the sessions follow the format CX???_MODALITY_VISIT_PARADIGMRUN e.g. CA103_MEEG_1_DurR1 indicated MEEG measurement for subject ID CA103 during the first visit with Dur experimental paradigm run 1 (R1).</p>
+<h2 id="2-bundles"><strong>2. Bundles</strong></h2>
+<p>This approach involves providing a collection of links to the prepared bundles of the data and accompanying metadata, which are available in zip format. These links grant users the ability to download specific modalities, example datasets, or the complete dataset.</p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/bundles_sample_datasets.png" title="Bundles Sample Datasets" /></p>
+<p><img alt="alt_text" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/bundles_full_datasets.png" title="Bundles Full Datasets" /></p>
+<p>Here is a brief explanation about how to access the data bundles:</p>
+<h3 id="step-1-create-a-data-user-account">Step 1: Create a Data User Account</h3>
+<p>
+    <a href="https://www.youtube.com/watch?v=FFqN5Pech0w" target="_blank">
+    <img
+            src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/youtube_logo.png"
+            alt="alt_text"
+            title="image_tooltip"
+            width="20"
+            height="15"
+    />
+    <strong>Step 1: Create a Data User Account</strong>
+</p>
+<p></a></p>
+<p>Access to the data bundles requires a quick and easy registration process.</p>
+<ol>
+<li>Provide user information, including name and email address.</li>
+<li>Read and accept the <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/Cogitate_ToU_v1.pdf" target="_blank">Terms of Use</a> and <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/Cogitate_GDPR_v1.pdf" target="_blank">GDPR Requirements</a> (<a href="https://gdpr-info.eu/" target="_blank">General Data Protection Regulation</a>).</li>
+<li>Once you register, you will receive four (4) emails to the email account you registered with. In some cases, checking your junk mail may be necessary.<ol>
+<li><strong><em>Welcome email</em></strong>: general information</li>
+<li><strong><em>Data User Account Verification email:</em></strong> Within the verification email, you must click on the ‘verify my account’ option to finalize step 1 of creating a data user account in order to gain access to all current and future data releases.</li>
+<li><strong><em>Resource Material</em></strong>: A handy email that contains all the important links that serve as reference materials to Cogitate data.</li>
+<li><strong><em>Mailing List Subscription:</em></strong> In order to stay up-to-date and informed about news related to COGITATE data releases, you must activate your email subscription (this is in compliance with GDPR requirements).</li>
+</ol>
+</li>
+</ol>
+<p><span style="background-color: #ffc7c7"><strong>Tip:</strong> The registration procedure needed for accessing the data bundles is a separate step than what is required to access XNAT.</span></p>
+<h3 id="step-2-login-and-logout-of-your-data-user-account">Step 2: Login and logout of your Data User account</h3>
+<p>
+    <a href="https://www.youtube.com/watch?v=6BR3uYqiDiU" target="_blank">
+        <img
+            src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/youtube_logo.png"
+            alt="alt_text"
+            title="image_tooltip"
+            width="20"
+            height="15"
+    />
+        <strong>Step 2: Login and logout of your Data User account</strong>
+</p>
+<p></a></p>
+<ol>
+<li>To <strong><span style="text-decoration:underline;">login</span></strong> to your account, go to the Login button on the top right of the page. Enter your email and password used when registering. You should now have access to the Cogitate Data User main page and Data Bundles.</li>
+<li>To <strong><span style="text-decoration:underline;">log out</span></strong> of your account, go to the top navigation bar and hover of Data. In the dropdown menu, click on Data User Account. A panel will open on the right side of the screen - click on Account Settings in the bottom of that panel. Then the option to Sign out will appear under your username. Click on Sign out.</li>
+</ol>
+<p><span style="background-color: #ffc7c7"><strong>Tip:</strong> The Login button will remain as 'Login' even after signing in to your account. The only way of knowing whether you are logged in or out, is by clicking on Data User Account, under the Data heading or being able to download data (i.e. indicating you are in fact, logged in)</span></p>
+<p>
+    <a href="https://youtu.be/KraiX4ttE2o" target="_blank">
+        <img
+            src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/youtube_logo.png"
+            alt="alt_text"
+            title="image_tooltip"
+            width="20"
+            height="15"
+    />
+        <strong>Step 3: How To Download the Data</strong>
+</p>
+<p></a></p>
+<ol>
+<li>Login to your account</li>
+<li>Scroll down and click on the “Access Data Bundles”</li>
+<li>Click on the download button next to each dataset</li>
+</ol>
+<h3 id="naming-convention-for-bundles">Naming Convention for Bundles</h3>
+<p>Raw data bundles follow the below naming convention. The project root directory consists of subdirectories named after the subject's ID which is of the format “CX???”. The subject directories consist of various sub directories as described below. Except for the metadata directory the sessions follow the pattern subject-ID_PARADIGM_MODALITY. If the modality data is paradigm agnostic, e.g. MR, CT then the paradigm is left blank.</p>
+<p>We currently have two paradigms in the data EXP1 indicating the experiment described and FingerLoc for the finger localiser. The session directories further contains individual scans following the format CX???_MODALITY_1_DurR1.EDF.</p>
+<p>The metadata subdirectory further consists of various assessments and questionnaires that provide valuable information.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../04_data/" class="btn btn-neutral float-left" title="Curation Procedures"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../06_experiment1/" class="btn btn-neutral float-right" title="Experiment 1: Directory Structure of Data Bundles">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../04_data/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../06_experiment1/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

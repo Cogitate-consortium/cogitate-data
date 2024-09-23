@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Curation Procedures - Cogitate Data Release</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Curation Procedures";
+        var mkdocs_page_input_path = "04_data.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/cogitate_logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Cogitate Data Release Documentation</p></a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_overview/">Overview of COGITATE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_cogdataset/">COGITATE Dataset</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Curation Procedures</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#data-curation-procedure">Data Curation Procedure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#deviations-from-data-curation-procedure">Deviations from Data Curation Procedure</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ieeg">iEEG</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metadata-curation-procedure">Metadata Curation Procedure</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_access/">Access to COGITATE Data</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_experiment1/">Experiment 1: Directory Structure of Data Bundles</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_bug-reports/">Support and Report Bugs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_links/">Links and Reference Materials</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09_appendices/">Appendices</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_acknowledgements/">Acknowledgements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_references/">References</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_faq/">FAQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Cogitate Data Release</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">Curation Procedures</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="curation-procedures">Curation Procedures</h1>
+<h2 id="data-curation-procedure">Data Curation Procedure</h2>
+<p>A detailed explanation about the multiple steps that were taken to prepare the data to be released in public will be available in Appendix 7.</p>
+<h3 id="deviations-from-data-curation-procedure">Deviations from Data Curation Procedure</h3>
+<h4 id="ieeg">iEEG</h4>
+<p>Our approach to defacing MR/CT DICOM images involved utilizing the built-in face masking tool from XNAT. However, for 12 iEEG subjects, we encountered difficulties in executing this step. This was primarily due to variations in the DICOM images, which could include cropped images, aliasing artifacts, broken headers, missing slices, non-equidistant slices within a series, and other issues. Below is the list of subjects where the execution of the XNAT facemasking tool failed:</p>
+<p><strong>Subject_ID:</strong> CF103, CF104, CF112, CF113, CF116, CF117, CF120, CF121, CF122, CF124, CF125, CF126</p>
+<p>To address this issue, we implemented a slightly different workflow that allowed us to successfully deface MR/CT images of these 12 subjects. However, this new approach differed in its ability to regenerate the original DICOM images post-defacement (the original output from the XNAT facemasking tool). Instead, it generated defaced NIFTI images as the primary output. For our current version of data release, we have decided to share only the defaced NIFTI images for these subjects. Details about this workflow are provided below:</p>
+<ol>
+<li>Anonymization: MR/CT DICOM images underwent anonymization to remove the subject’s Protected Health Information (PHI).</li>
+<li>NIFTI Conversion: Anonymized DICOM images were then converted to the NIFTI image format using the dcm2niix package (version: 1.0.20220505) (Li et al., 2016).</li>
+<li>Defacing of NIFTI: Defacing of the NIFTI images was performed using the PyDeface package (version: 2.0.2) (Gulban et al., 2022).</li>
+<li>Verification: This step involved checking the quality of the defaced NIFTI images using 2D/3D image plots to compare before and after the defacing stage.</li>
+</ol>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png" alt="Alternative workflow for defacing 12 challenging MR/CT DICOM Images">
+  <p>Alternative workflow for defacing 12 challenging MR/CT DICOM Images</p>
+</div>
+
+<p><span style="background-color: red"><b>Miscellaneous:</b></span> <strong>In the MR data for subject CF103, one DICOM slice was inadvertently dropped during the conversion process from DICOM to NIFTI format. However, the resulting NIFTI file remains functional and usable.</strong></p>
+<h2 id="metadata-curation-procedure">Metadata Curation Procedure</h2>
+<p>Comprehensive guidance on extracting and managing metadata relevant to the COGITATE project is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/metadata-curation-doc_2024-05-14_v1.0.pdf" target="_blank">Appendix 8</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../03_cogdataset/" class="btn btn-neutral float-left" title="COGITATE Dataset"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../05_access/" class="btn btn-neutral float-right" title="Access to COGITATE Data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../03_cogdataset/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../05_access/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

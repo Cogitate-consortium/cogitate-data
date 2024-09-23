@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>COGITATE Dataset - Cogitate Data Release</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "COGITATE Dataset";
+        var mkdocs_page_input_path = "03_cogdataset.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/cogitate_logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Cogitate Data Release Documentation</p></a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_overview/">Overview of COGITATE</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">COGITATE Dataset</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#demography-of-subjects">Demography of Subjects</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#demographic-information-for-m-eeg">Demographic Information for M-EEG</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#demographic-information-for-fmri">Demographic Information for fMRI</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#demographic-information-for-ieeg">Demographic Information for iEEG</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#quality-check">Quality Check</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exclusion-criteria">Exclusion Criteria</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#description-of-cogitate-data">Description of COGITATE Data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-unprocessedraw-data">1. Unprocessed/Raw Data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-bids-format">2. BIDS Format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-type-glossary">File Type Glossary</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#eye-tracking-behavioral-data">Eye Tracking &amp; Behavioral Data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#m-eeg-data">M-EEG Data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ieegecog-data">iEEG/ECoG Data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mrct-data">MR/CT Data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fmri-data">fMRI Data</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-acquisition">Data Acquisition</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#stimuli">Stimuli</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#procedure">Procedure</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ieeg-related-modifications-of-the-design">iEEG Related Modifications of the Design</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fmri-related-modifications-of-the-design">fMRI Related Modifications of the Design</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#m-eeg-data-acquisition">M-EEG Data Acquisition</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#hardware">Hardware</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#location-of-electrodes-and-ecgeog-measurements">Location of Electrodes and ECG/EOG Measurements</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#head-position-indicator-hpi-coils">Head Position Indicator (HPI) Coils</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#anatomical-mri-data-acquisition">Anatomical MRI Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#behavioral-data-acquisition">Behavioral Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eye-tracking-data-acquisition">Eye Tracking Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#behavioral-data-code-scheme">Behavioral Data Code Scheme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eye-tracker-and-meg-code-scheme">Eye Tracker and MEG Code Scheme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#empty-room-recording">Empty Room Recording</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#resting-state-rm-eeg">Resting-State (rM-EEG)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#task-tm-eeg">Task (tM-EEG)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#full-structure-of-session">Full Structure of Session</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inclusion-criteria">Inclusion Criteria</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#quality-check-and-exclusion-criteria">Quality Check and Exclusion Criteria</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#deviations-and-missing-data">Deviations and Missing Data</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ieeg-data-acquisition">iEEG Data Acquisition</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#hardware_1">Hardware</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#anatomical-mri-data-acquisition_1">Anatomical MRI Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ct-data-acquisition">CT Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#behavioral-data-acquisition_1">Behavioral Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eye-tracking-data-acquisition_1">Eye Tracking Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#behavioral-data-code-scheme_1">Behavioral Data Code Scheme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eye-tracker-data-code">Eye Tracker Data Code</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ieeg-code-scheme">iEEG Code Scheme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#surface-reconstruction-and-electrode-localization">Surface Reconstruction and Electrode Localization</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#finger-localizer-task">Finger Localizer Task</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#task-tieeg">Task (tiEEG)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#full-structure-of-session_1">Full Structure of Session</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inclusion-criteria_1">Inclusion Criteria</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#quality-check_1">Quality Check</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exclusion-criteria_1">Exclusion Criteria</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#deviations-and-missing-data_1">Deviations and Missing Data</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fmri-data-acquisition">fMRI Data Acquisition</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#hardware_2">Hardware</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#anatomical-mri-data-acquisition_2">Anatomical MRI Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#functional-mri-data-acquisition">Functional MRI Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#behavioral-data-acquisition_2">Behavioral Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eye-tracking-data-acquisition_2">Eye Tracking Data Acquisition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#behavioral-data-code-scheme_2">Behavioral Data Code Scheme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eye-tracker-data-code_1">Eye Tracker Data Code</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#task-tfmri">Task (tfMRI)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#full-structure-of-session_2">Full Structure of Session</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inclusion-criteria_2">Inclusion Criteria</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#quality-check_2">Quality Check</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exclusion-criteria_2">Exclusion Criteria</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#deviations-and-missing-data_2">Deviations and Missing Data</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_data/">Curation Procedures</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_access/">Access to COGITATE Data</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_experiment1/">Experiment 1: Directory Structure of Data Bundles</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_bug-reports/">Support and Report Bugs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_links/">Links and Reference Materials</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09_appendices/">Appendices</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_acknowledgements/">Acknowledgements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_glossary/">Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_references/">References</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13_faq/">FAQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Cogitate Data Release</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">COGITATE Dataset</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="cogitate-dataset">COGITATE Dataset</h1>
+<p>The COGITATE dataset is a comprehensive collection of multimodal neuroimaging data, encompassing a total of 256 subjects. COGITATE employs three distinct neuroimaging techniques: fMRI, M-EEG, and iEEG/ECoG.</p>
+<p><img alt="Cogitate overview map" src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/overview_map.png" /></p>
+<p>The MEG modality comprised 100 healthy subjects, also above the age of 18, with no known psychiatric or neurological issues. These participants were sourced from the Centre for Human Brain Health at the University of Birmingham (Birmingham, United Kingdom) and the Center for MRI Research of Peking University (Beijing, China).</p>
+<p>Similarly, the fMRI modality included 118 healthy volunteers, all of whom were above the age of 18 and predominantly right-handed. These participants had no known history of psychiatric or neurological disorders and were recruited from the Yale Magnetic Resonance Research Center (New Haven, CT, United States) and the Donders Centre for Cognitive Neuroimaging (Nijmegen, Netherlands).</p>
+<p>In contrast, the iEEG modality involved a more specialized cohort of 38 patients diagnosed with pharmaco-resistant focal epilepsy. These participants ranged in age from 10 to 65 years, had an IQ above 70, and met specific health criteria. They were recruited from multiple medical centers specializing in epilepsy treatment, including the Comprehensive Epilepsy Center at New York University (New York, NY, United States), Brigham and Women’s Hospital, Boston Children’s Hospital (Boston, MA, United States), and the University of Wisconsin School of Medicine and Public Health (Madison, WI, United States).</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/age%20histograms%20across%20modalities_2024-04-26_v1.1.png" alt="Age histograms across modalities">
+  <p>Age histograms across modalities</p>
+</div>
+
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/sex%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Sex proportions across modalities">
+  <p>Sex proportions across modalities</p>
+</div>
+
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/handedness%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Handedness proportions across modalities">
+  <p>Handedness proportions across modalities</p>
+</div>
+
+<h2 id="demography-of-subjects">Demography of Subjects</h2>
+<p>You can find the profile of participants for all modalities at <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx" target="_blank">subjects_demography</a>. Here is a brief explanation about the information collected from the subjects.</p>
+<h3 id="demographic-information-for-m-eeg"><strong>Demographic Information for M-EEG</strong></h3>
+<p>The below items are included in the subjects’ demography for M-EEG modality:</p>
+<p>Participant_ID (participant identifier), sex (biological sex of participant), age (age of participant at the time of testing), handedness (right, left or ambidextrous), included in <a href="https://doi.org/10.1371/journal.pone.0268577" target="_blank">MSP</a> (whether the data was used for the experiments or not), phase* (determining in which stage the data is, phase 2/phaseII (optimization) or phase 3/phaseIII (replication)), QC** status (passed/not), if Not (in QC status) QC rejection reason, weight (weight of participant at the time of study in pounds), height (height of participant at the time of study in inches), primary and secondary language, race (ethnicity of the participant), education, compensation (whether the subject was paid or not), colorblind (determining whether the subject can distinguish the colors and perceiving them correctly or not), visual correction (none or using any glasses or contact lenses), eye dominance (which eye is dominant), eye chart results (the outcome of a visual acuity test performed using the eye chart) and dioptry (visual acuity of the participant in Diopters).</p>
+<p>*<strong>Phase:</strong> COGITATE project has three phases. In <strong>phase 1</strong>, all data were acquired by theory neutral teams. To ensure replicability of the results, the entire dataset was split into two halves, each with an equal mixture of data from each of the labs for each modality. In <strong>phase 2</strong>, after evaluating data quality, the first half of the data were used for developing analysis tools (optimization of methods). The purpose of <strong>phase 2</strong> was to define the best analysis practices and to agree upon, in consultation with expert advisors. In <strong>phase 3</strong>, the replication phase, the second half of the data were analyzed using the concurred procedure, agreed upon protocols, thereby allowing an in-house replication of the results obtained in phase 2.</p>
+<p>*<strong>*QC (quality control):</strong> A number of items were checked for all the data of each modality which are elaborated in the section of <a href="#quality-check">Quality Check</a> and <a href="#exclusion-criteria">Exclusion Criteria</a>.</p>
+<h3 id="demographic-information-for-fmri"><strong>Demographic Information for fMRI</strong></h3>
+<p>All of the items are similar to the M-EEG modality.</p>
+<h3 id="demographic-information-for-ieeg"><strong>Demographic Information for iEEG</strong></h3>
+<p>In addition to the properties mentioned for M-EEG modality, the below parameters were also provided for this modality:</p>
+<p>Electrode scheme (the scheme used for implanting the electrodes, Stereo, Subdural grid &amp; Strips), number of implanted electrodes, implant hemisphere (brain hemisphere where the electrodes implanted, right, left, both or bilateral), IQ (score and name of the test used for assessment (FSIQ, WISC, VCI, POI, WMI, PSI, AMI, VMI), WADA (intracarotid sodium amobarbital, a test that determines which side of the subject’s brain controls language and memory functions), seizure type (classification of seizure type), age of onset (age at which the first symptoms of seizure appeared), auditory normal hearing (indicator of whether the participant had normal hearing capabilities, yes or no), epilepsy seizure classification (categorization of epilepsy as per standard seizure classification), epilepsy seizure aura (description of any sensory or perceptual symptoms before a seizure occured), epilepsy seizure semiology (signs and symptoms exhibited during epileptic seizures), epilepsy seizure frequency (frequency of seizures experienced by participant), epilepsy post ictal semiology (symptoms and signs after an epileptic seizure), epilepsy trigger (identified factors or circumstances that increased the likelihood of experiencing a seizure), epilepsy duration uncontrolled (the duration that seizures had not been successfully managed or medically controlled), epilepsy seizure onset zone (brain region identified as the initial site of seizure activity), epilepsy resection (details of any surgical resection performed for seizure control), epilepsy language lateralization (determination of the dominant hemisphere for language function), epilepsy past surgical history (record of any previous surgeries related to the treatment of epilepsy), epilepsy past medical history (medical history relevant to epilepsy diagnosis and treatment), epilepsy family history (presence of seizure or epilepsy disorders in family members), other neurological disorders (any other diagnosed neurological disorders besides epilepsy), epilepsy MRI findings (summary of MRI findings relevant to epilepsy diagnosis), epilepsy pathology findings (pathological findings from tissue analysis post-surgery or biopsy).</p>
+<h4 id="quality-check">Quality Check</h4>
+<p>Data from all modalities were checked at three levels. The first level checks tested whether the datasets  contained  all  expected  files  keeping  their  naming  conventions,  and  that  all  personal information had been removed. The second level checks tested subjects’ performance with respect to behavior. For <a href="../02_overview/#experiment-1-conscious-perception">Experiment 1</a>, subjects were excluded if their hit rate (Hit) was lower than 80% or false alarm (FA) was higher than 20% for M-EEG and fMRI. The  third  level  checks  assessed  the  quality  of  the  neural  data.</p>
+<h4 id="exclusion-criteria">Exclusion Criteria</h4>
+<p>The generic exclusion criteria used across <a href="../02_overview/#experiment-1-conscious-perception">Experiment 1</a> and <a href="../02_overview/#experiment-2-video-game-engagement">Experiment 2</a> included: (a) insufficient number of trials in each of the experimental conditions (&lt;30 for M-EEG or &lt;20 for fMRI), due to excessive muscular artifacts, movement, noisy recording, or subjects deciding to stop the experiments. If a given  analysis  showed  that  a  good  enough  signal  could  be  obtained  with  fewer  trials,  these numbers were amended; and (b) low performance in the attention tasks. In <a href="../02_overview/#experiment-1-conscious-perception">Experiment 1</a>, this translates into: &lt;80% Hits, &gt;20% FAs for fMRI and M-EEG subjects. In addition, data was excluded from analysis if it did not pass any of the predefined data quality checks.</p>
+<h2 id="description-of-cogitate-data">Description of COGITATE Data</h2>
+<p>Although our data collection had a specific purpose, the data we gathered holds potential value for a range of diverse inquiries. Consequently, the COGITATE consortium has chosen to openly share all raw data collected (including the data that did not pass the quality criteria), to facilitate its utilization for various research endeavors and promote data reusability.</p>
+<p>We have made available two primary formats for the data acquired during the experimental phase of the COGITATE project, specifically <a href="../02_overview/#experiment-1-conscious-perception">Experiment 1</a>:</p>
+<ol>
+<li>Unprocessed/Raw Data</li>
+<li>BIDS Format</li>
+</ol>
+<h3 id="1-unprocessedraw-data"><strong>1. Unprocessed/Raw Data</strong></h3>
+<p>The unprocessed data format closely resembles the original acquired data, having undergone minimal processing to ensure compliance with <a href="https://gdpr-info.eu" target="_blank">GDPR</a> (General Data Protection Regulation)/<a href="https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html" target="_blank">HIPAA</a> (Health Insurance Portability &amp; Accountability Act) anonymity standards.</p>
+<h3 id="2-bids-format"><strong>2. BIDS Format</strong></h3>
+<p>BIDS format, widely adopted in cognitive neuroscience, enhances data reusability. To facilitate others in leveraging our data, we have released it in <a href="https://bids-specification.readthedocs.io/en/stable/" target="_blank">BIDS</a> format.</p>
+<h3 id="file-type-glossary"><strong>File Type Glossary</strong></h3>
+<p>Here are the various file formats used for each modality of the COGITATE dataset along with a short description of them.</p>
+<h4 id="eye-tracking-behavioral-data"><strong>Eye Tracking &amp; Behavioral Data</strong></h4>
+<ul>
+<li>
+<p><strong>Unprocessed/Raw release format</strong></p>
+<ul>
+<li>Filetype: ASC/CSV</li>
+</ul>
+</li>
+<li>
+<p><strong>BIDS Format</strong></p>
+<ul>
+<li>Filetype: ASC/CSV</li>
+</ul>
+</li>
+</ul>
+<p>The two eye trackers used within COGITATE are:
+<br>1. EyeLink eye tracker
+<br>2. Tobii eye tracker</p>
+<p><strong>1) EyeLink eye tracker</strong>: Most of the sites used this eye tracker which produces data in the EDF format, EyeLink Data Format. This data was immediately converted to ASCII text files using the converter provided by Eyelink. This is the ASC files that we used in our data analysis.</p>
+<p><strong>2) Tobii eye tracker</strong>: The other eye tracker was the Tobii eye tracker used by New York University Langone for ECOG data. This eye tracker produces data in the form of CSV files.
+<br>The files generated by eye tracking systems, containing information about eye movement and gaze behavior which typically store a time-stamped sequence of gaze data points and include information such as:</p>
+<ol>
+<li>Timestamps: The exact time at which each gaze data point was recorded.</li>
+<li>Gaze Coordinates: The x and y coordinates on the screen where the person's gaze is directed.</li>
+<li>Pupil Diameter: The size of the person's pupil, which can provide insights into changes in visual processing or cognitive load.</li>
+<li>[EyeLink eye tracker] Fixations: Periods of stable gaze where the person is looking at a specific point without significant movement.</li>
+<li>[EyeLink eye tracker] Saccades: Rapid eye movements between fixations, indicating shifts in attention.</li>
+<li>[EyeLink eye tracker] Blinks: Instances when the person's eyes are closed, which can be important for data cleaning and analysis.</li>
+<li>Triggers: Description of experimental events paired with their corresponding timestamps indicating when each event occurred.</li>
+</ol>
+<p>Behavioral data is available in CSV format and it provides below information:</p>
+<ol>
+<li>Blocks</li>
+<li>Events</li>
+<li>Trials</li>
+<li>Stimulus and jitter duration</li>
+<li>Subject's responses</li>
+</ol>
+<h4 id="m-eeg-data"><strong>M-EEG Data</strong></h4>
+<ul>
+<li>
+<p><strong>Unprocessed/Raw release format</strong></p>
+<ul>
+<li>Filetype: FIF</li>
+</ul>
+</li>
+<li>
+<p><strong>BIDS Format</strong></p>
+<ul>
+<li>Filetype: FIF</li>
+</ul>
+</li>
+</ul>
+<p>File Format for the Input and Output of MEG and EEG data</p>
+<p>FIF files contain various types of information related to neuroimaging data, including:</p>
+<ol>
+<li>Raw sensor data: MEG and EEG measurements recorded from sensors placed on the scalp or near the head.</li>
+<li>Event information: Time-stamped triggers or markers indicating the timing of events, such as stimulus presentations or subject responses.</li>
+<li>Sensor locations and orientations: Information about the physical positions and orientations of sensors used in the measurements.</li>
+<li>Head geometry: Information about the shape and structure of the subject's head, which is crucial for accurate source localization.</li>
+<li>Covariance matrices: Statistical information about the relationships between sensor measurements at different time points or frequencies.</li>
+<li>Anatomical MRI data: High-resolution structural images of the subject's brain, used for source localization and spatial alignment.</li>
+</ol>
+<h4 id="ieegecog-data"><strong>iEEG/ECoG Data</strong></h4>
+<ul>
+<li>
+<p><strong>Unprocessed/Raw release format</strong></p>
+<ul>
+<li>Filetype: EDF</li>
+</ul>
+</li>
+<li>
+<p><strong>BIDS Format</strong></p>
+<ul>
+<li>Filetype: <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a></li>
+</ul>
+</li>
+</ul>
+<p>European Data Format files used for storing and exchanging time-series biological and physiological data</p>
+<p>EDF files are designed to accommodate data from multiple channels, allowing researchers to store and manage data collected simultaneously from different sensors or electrodes. The format supports both raw signal data and associated metadata, including information about sampling rates, units of measurement, patient demographics, and recording conditions.</p>
+<p>The <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a> format, often shortened to BV, is a widely employed file format in neuroscience research, specifically designed for organizing neurophysiological data. It comprises three files, including the header file (.vhdr), marker file (.vmrk), and raw EEG data file (*.eeg), alongside possible auxiliary files. These components store essential details like recording parameters, event markers, and the raw EEG data.</p>
+<h4 id="mrct-data"><strong>MR/CT Data</strong></h4>
+<ul>
+<li>
+<p><strong>Unprocessed/Raw release format</strong></p>
+<ul>
+<li>Filetype: DICOM/NIFTI</li>
+</ul>
+</li>
+<li>
+<p><strong>BIDS Format</strong></p>
+<ul>
+<li>Filetype: NIFTI</li>
+</ul>
+</li>
+</ul>
+<p>DICOM (.dcm file extension) is a standard format utilized for storing CT (Computed Tomography) scans and MRI (Magnetic Resonance Imaging) data. These files encompass not only the image data but also essential metadata, including imaging parameters.</p>
+<p>NIFTI (.nii.gz file extension) serves as another format employed for a subset of subjects where our standard procedure encountered challenges. With the exception of the MR and CT scans for 12 subjects within the iEEG data, all other datasets of similar nature are stored in DICOM format. Further details regarding these 12 problematic datasets are available in <a href="../04_data/#deviations-from-data-curation-procedure">this section</a>. NIFTI files encapsulate image data alongside metadata concerning spatial orientation, voxel dimensions, and additional imaging parameters.</p>
+<h4 id="fmri-data"><strong>fMRI Data</strong></h4>
+<ul>
+<li>
+<p><strong>Unprocessed/Raw release format</strong></p>
+<ul>
+<li>Filetype: DICOM</li>
+</ul>
+</li>
+<li>
+<p><strong>BIDS Format</strong></p>
+<ul>
+<li>Filetype: NIFTI</li>
+</ul>
+</li>
+</ul>
+<p>DICOM (Digital Imaging and Communications in Medicine), with the file extension .dcm, is a standard format for storing anatomical and functional MRI (Magnetic Resonance Imaging) scans. These files contain both image data and crucial metadata, including imaging parameters.</p>
+<p>The BIDS format includes anatomical and functional images stored in NIFTI (Neuroimaging Informatics Technology Initiative) format with the .nii.gz file extension. These NIFTI files encompass image data, spatial orientation, voxel dimensions, and imaging parameters such as sequence details, field of view, repetition time (TR), echo time (TE), acquisition timing, and more.</p>
+<h2 id="data-acquisition">Data Acquisition</h2>
+<p>The Cogitate dataset encompasses three distinct neuroimaging modalities, along with synchronized eye-tracking and behavioral data linked to each of these modalities. Here we detail the acquisition protocol for each modality in the corresponding data release: M-EEG, iEEG, and fMRI.</p>
+<h3 id="stimuli">Stimuli</h3>
+<p>Stimuli belonged to four categories that naturally fell into two groups that were clearly distinct from each other: pictures (20 faces and 20 objects) and symbols (20 letters and 20 false-fonts). Face stimuli were created using the FaceGen Modeler 3.1 program and object stimuli were taken from the Object Databank (Tarr, 1996). Faces and objects were grey-scaled (RGB: 125, 125, 125), and manipulated to have similar size and equal luminance using the SHINE toolbox (Willenbockel et al., 2010). Equal proportions of male and female faces were presented. They all had hair and belonged to different ethnicities (e.g., Caucasian, Asian, African, American) to facilitate face individuation. The orientation of the stimuli was manipulated, such that half of the stimuli from each category had a side view (30° and -30°) and the other half a front view (0°). All letter stimuli and false fonts were generated with MAXON CINEMA 4D Studio (RC-R20) 20.059 on macOS 10.14, appearing in gray (RGB: 125, 125, 125). Three views were rendered for each font set (real font, false/pseudo font) at 0°, 30° and -30° horizontal viewing angle with the following settings: Extrusion depth 9.79% of character height, camera distance 5.65 times character height and 18° above the center of the letter (High Angle), with a simulated focal length of 135 mm (35 mm equiv.). All stimuli were presented on a rectangular aperture at an average visual angle of 6 ̊ by 6 ̊.</p>
+<h3 id="procedure">Procedure</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Term</strong></td>
+<td><strong>Definition</strong></td>
+</tr>
+<tr>
+<td>Stimuli</td>
+<td>Visual items presented to the subjects during the experiment, with half being task-relevant and the other half task-irrelevant.</td>
+</tr>
+<tr>
+<td>Trial</td>
+<td>A single instance of presenting a stimulus to the subject and recording their response. <br><br>Each trial consisted of presenting a single stimulus for a specific duration.</td>
+</tr>
+<tr>
+<td>Block</td>
+<td>A segment within each run containing a set of trials with a specific experimental setup or condition.</td>
+</tr>
+<tr>
+<td>Break</td>
+<td>Intervals between blocks that allowed subjects to rest and prepare for the next series of trials.</td>
+</tr>
+</tbody>
+</table>
+<p>Stimuli were presented sequentially, all supra-threshold, with half being task-relevant and the other half task-irrelevant. Only one stimulus was shown on the screen at any given time. To define task relevance, subjects were instructed to detect (press a button; non-speeded response) two targets from different categories, regardless of their orientation. This online reporting enabled an explicit assessment of subjects’ performance, engaging report-related areas for later analysis. Each block began with notification of the two target stimuli, either pictorial (faces and objects) or symbolic (letters and false fonts), creating a clear distinction between relevant and irrelevant stimuli. At the start of each block, specific target stimuli were revealed with instructions such as “detect face A and object B” or "detect letter C and false-font D." Targets did not repeat across blocks. Each run included two blocks of the Face/Object task and two blocks of the Letter/False-font task, with the order counterbalanced across runs. Subjects were instructed to maintain central fixation throughout each trial. Gaze was monitored online through an eye tracker, with repeated calibrations ensuring good quality data.</p>
+<p>Each block comprised stimuli from all four categories, with each stimulus displayed for 500, 1000, or 1500 ms, followed by a blank interval, ensuring a consistent trial duration of 2000 ms. To  avoid  periodic  presentation  of  the  stimuli, random jitter was added to the end of each trial (mean inter-trial interval of 400 ms, jittered 200-2000 ms, with truncated  exponential  distribution). Within each block, three trial types were presented: i) Task Relevant Targets, consisting of the specific stimuli participants were tasked with detecting; ii) Task Relevant Non-Targets, encompassing stimuli from relevant categories that were not designated targets; and iii) Task Irrelevant Stimuli, comprising stimuli from the remaining categories.</p>
+<p>Trial division was pseudorandomized with respect to two factors: the assignment of non-target stimuli to a miniblock, and the number of trials with specific durations within each task-relevance level. The assignment of non-targets was restricted by two constraints: i) Each stimulus was presented an equal number of times as a non-target stimulus (and as an irrelevant one) throughout the experiment. ii) Non-targets were, by definition, different from the targets in that specific miniblock. To meet these constraints, two pseudorandomized versions were made where the targets and non-target stimuli of each miniblock were determined. Three additional versions were prepared for each target/non-target division to balance the duration division between categories and orientation. In each version, slight imbalances (maximum difference of four trials) existed between the different durations for each condition (targets, non-targets, irrelevant). This imbalance was a necessary consequence of keeping the balance in duration and category across orientation and across categories as the numbers were not evenly divisible by three. The imbalances canceled out over the entire experiment so there was a perfect duration balance across the experiment: an equal amount of stimuli were presented for 500, 1000 and 1500 ms durations. The imbalances between durations within each relevant condition were balanced across the three versions. In total, six different versions were assigned to the subjects in consecutive order, repeating every six subjects. To get more details, please see the “Trial counts” section in <a href="https://osf.io/gm3vd" target="_blank">COGITATE Preregistration, v4</a>.</p>
+<h4 id="ieeg-related-modifications-of-the-design">iEEG Related Modifications of the Design</h4>
+<p>Only half of the stimuli were used as targets for the iEEG experiments. The selection of target faces kept the balance of gender and ethnicity. Letters were chosen in equal amounts from the first and second parts of the alphabet, and the corresponding false-fonts were used. All stimuli were presented as relevant non-targets and irrelevant stimuli, matching the designs of the aforementioned procedure.</p>
+<h4 id="fmri-related-modifications-of-the-design">fMRI Related Modifications of the Design</h4>
+<p>For the fMRI experiment, timing was adjusted as follows: the random jitter between trials was increased (mean inter-trial interval of 3 s, jittered 2.5-10 s, with truncated exponential distribution), with each trial lasting approximately 5.5 s. This modification served to improve decoding and fitting of GLMs to the fMRI data (Glover, 1999). Second, to increase detection efficacy for amplitude-based analyses, three additional baseline periods (blank screen) of 12 s each were included per run (total = 24). The identity of the stimuli was randomized with the constraint that they appeared equally across durations and tasks conditions.</p>
+<h3 id="m-eeg-data-acquisition">M-EEG Data Acquisition</h3>
+<p>M-EEG recordings were acquired at the Centre for Human Brain Health (CHBH) of University of Birmingham in the United Kingdom, and at the Center for MRI Research of Peking University (PKU) in China.</p>
+<h4 id="hardware">Hardware</h4>
+<p>Both centers had a 306-channel, whole-head TRIUX MEG system from MEGIN (York Instruments; formerly Elekta). The MEG system comprised 204 planar gradiometers and 102 magnetometers in a helmet-shaped array. Simultaneous EEG was recorded using an integrated EEG system and a 64-channel electrode cap. The MEG system was equipped with a zero boil-off Helium recycling system and the noise-resilient ARMOR sensors and placed in a shielded room (2 layers of mu-metal and 1 layer of aluminum). To reduce environmental noise, the integrated active shielding system was used at PKU. In order to cover the brain more homogeneously, the MEG gantry was positioned at 68 degrees.</p>
+<h4 id="location-of-electrodes-and-ecgeog-measurements">Location of Electrodes and ECG/EOG Measurements</h4>
+<p>The location of the fiducials, the positions of the 64 EEG electrodes and the participant’s head shape were recorded using a 3-D digitizer system (Polhemus Isotrak). A set of bipolar electrodes were placed on the subject’s chest (upper left and upper right chest position) to record the cardiac signal (ECG). Two sets of bipolar electrodes were placed around the eyes (two located at the outer canthi of the right and left eyes and two above and below the center of the right eye) to record eye movements and blinks (EOG). Ground and reference electrodes were placed on the back of the neck and on the right cheek, respectively. The impedance of all of the electrodes was checked to be below 10 kOhm.</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/eog_ecg_electrodes_meg.png" alt="Standard Locations of EOG and ECG electrodes">
+  <p>Standard Locations of EOG and ECG electrodes</p>
+</div>
+
+<h4 id="head-position-indicator-hpi-coils">Head Position Indicator (HPI) Coils</h4>
+<p>The participant’s head position inside the MEG system was measured at the beginning and at the end of each run using four head position indicator (HPI) coils placed on the EEG cap. Specifically, the HPI coils were placed next to the left and right mastoids and on the left and right forehead. Their location relative to anatomical landmarks was digitized with a Polhemus Isotrak System. During the measurement, high frequency (&gt;200 Hz) signals were produced by those coils and the localization of these signals was used to estimate the head position in the sensor space. To avoid the potential artifacts produced by the non-linear interaction between the signals generated by these coils, head position measurement was performed only during resting periods (as opposed to continuously).</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/hpi_coils_meg.png">
+  <p>Standard locations of HPI coils. Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
+</div>
+
+<h4 id="anatomical-mri-data-acquisition">Anatomical MRI Data Acquisition</h4>
+<p>For each subject, a high resolution T1-weighted MRI volume (3T Siemens MRI Prisma scanner) was acquired. At CHBH, a 32-channel coil with a resolution of 1 x 1 x 1 mm, TR/TE = 2000/2.03ms; TI = 880 ms; 8° flip angle, 208 sagittal slices and field of view (FOV): 256 x 256 matrix was acquired for source localization with individual realistic head modeling. At PKU, a 64-channel coil with a resolution of 0.5 x 0.5 x 1 mm, TR/TE = 2530/2.98ms; TI = 1100 ms; 7° flip angle, 192 sagittal slices; FOV: 448 × 512 matrix was used. To avoid possible interference of body magnetization on the MEG recording, all MRI scans were acquired at least one week before the MEG session, or at any time afterwards.</p>
+<h4 id="behavioral-data-acquisition">Behavioral Data Acquisition</h4>
+<p>The task was executed using Matlab (CHBH: R2019b, PKU: R2018b) with Psychtoolbox v.3 (Pelli, 1997) on a custom PC at CHBH and a Dell XPS desktop PC at PKU. Visual stimuli were presented on a screen placed in front of the subjects with a PROPixx DLP LED projector (VPixx Technologies Inc.) at a resolution of 1920 x 1080 pixels and a refresh rate of 120 Hz. The distance between the subject’s eyes and the screen was different at each site (CHBH: 119 cm, PKU: 85 cm) to achieve the same FOV of 36.6 x 21.2 degrees. Participants responded with both hands using two 5-button response boxes (CHBH: NAtA, PKU: SINORAD).</p>
+<h4 id="eye-tracking-data-acquisition">Eye Tracking Data Acquisition</h4>
+<p>Eye movements were monitored and recorded from both eyes (binocular eye-tracking) using the MEG-compatible EyeLink 1000 Plus eye-tracker (SR Research Ltd., Ottawa, Canada). Nine-point calibration was performed at the beginning of the experiment, and recalibrated if necessary at the beginning of each block. Pupil size and corneal reflection data were collected at a sampling rate of 1000 Hz.</p>
+<p>The channel name that contains the eye tracker data in the FIF file is as follows: MISC1 (X), MISC2 (Y), and MISC3 (pupil)</p>
+<h4 id="behavioral-data-code-scheme">Behavioral Data Code Scheme</h4>
+<p>Stimuli are coded as a 4-digit number.<br />
+1st digit = stimulus type (1 = face; 2 = object; 3 = letter; 4 = false font)<br />
+2nd digit = stimulus orientation (1 = center; 2 = left; 3 = right)<br />
+3rd &amp; 4th digits = stimulus id (1...20; for faces 1...10 is male, 11...20 is female)  </p>
+<p>e.g., "1219" = 1 is face, 2 is left orientation and 19 is a female stimulus #19</p>
+<h4 id="eye-tracker-and-meg-code-scheme">Eye Tracker and MEG Code Scheme</h4>
+<h5 id="successive-trigger-scheme"><strong>Successive trigger scheme</strong></h5>
+<p>The triggers were sent successively. The first trigger represented the stimulus type, followed by orientation, stimulus duration, and task relevance, all interspaced by 50 ms. Additionally, a trigger was sent upon key press.</p>
+<h5 id="1st-trigger-on-stimulus-onset-stimulus-type"><strong>1st Trigger (on Stimulus Onset): Stimulus Type</strong></h5>
+<ul>
+<li>1 to 20: faces
+        - 1 to 10 males,
+        - 11 to 20 females</li>
+<li>21 to 40: objects</li>
+<li>41 to 60: letters</li>
+<li>61 to 80: falses</li>
+</ul>
+<h5 id="2nd-trigger-2-frames-after-stimulus-onset-stimulus-orientation"><strong>2nd Trigger (2 Frames after Stimulus Onset): Stimulus Orientation</strong></h5>
+<ul>
+<li>101: Center</li>
+<li>102: Left</li>
+<li>103: Right</li>
+</ul>
+<h5 id="3rd-trigger-4-frames-after-stimulus-onset-stimulus-duration"><strong>3rd Trigger (4 Frames after Stimulus Onset): Stimulus Duration</strong></h5>
+<ul>
+<li>151: 500 msec</li>
+<li>152: 1000 msec</li>
+<li>153: 1500 msec</li>
+</ul>
+<h5 id="4th-trigger-6-frames-after-stimulus-onset-stimulus-task-relevance"><strong>4th Trigger (6 Frames after Stimulus Onset): Stimulus Task Relevance</strong></h5>
+<ul>
+<li>201: Task relevant target</li>
+<li>202: Task relevant non target</li>
+<li>203: Task irrelevant</li>
+</ul>
+<h5 id="5th-trigger-8-frames-after-stimulus-onset-trial-id-triggers"><strong>5th Trigger (8 Frames after Stimulus Onset): Trial ID Triggers</strong></h5>
+<ul>
+<li>111-148: Trial number</li>
+</ul>
+<h5 id="response-trigger"><strong>Response Trigger</strong></h5>
+<ul>
+<li>255: Following button press.</li>
+</ul>
+<h5 id="stimulus-presentation-end"><strong>Stimulus Presentation End</strong></h5>
+<ul>
+<li>96: Offset of stimulus presentation (onset of blank)</li>
+<li>97: Offset of blank (onset of jitter period)<ul>
+<li>Note that both these are fixations, they are just divided into blank and jitter.</li>
+</ul>
+</li>
+</ul>
+<h5 id="general-triggers-to-mark-experiment-progression"><strong>General Triggers to Mark Experiment Progression</strong></h5>
+<p>86: Onset of experiment<br />
+81: Onset of recording<br />
+83: Offset of recording</p>
+<h5 id="miniblock-id-triggers"><strong>Miniblock ID Triggers</strong></h5>
+<p>161-200: Miniblock ID trigger</p>
+<h5 id="zeroes"><strong>Zeroes</strong></h5>
+<p>0: Zeros were sent between the successive triggers to reset the LPT, see below. These were also sent to the eye tracker but did not mean anything and they can safely be ignored.</p>
+<h5 id="how-the-lpt-triggers-were-sent"><strong>How The LPT Triggers Were Sent</strong></h5>
+<p>The LPT port of the computer was used for sending the triggers and it was done by using the sendTrig function. This function sets the port in a specific state (whatever trigger we want to send) and logs the trigger afterwards, noting if it is sent and what time the command for sending it is executed. For each trigger that is being sent, the port is being reset after a frame to 0.</p>
+<p>In the beginning of the experiment, a few triggers were sent to mark experiment onset and onset of recording. Then, a mini block was initiated. The participant was presented with the target screen and required to press the spacebar to proceed. When the participant pressed the space button, the miniblock ID was sent. Only once the miniblock trigger was sent the fixation appeared. This means that there was a small delay between key press and fixation onset. Following the first fixation, a jitter started, which was also logged. Then, the first stimulus was displayed. Upon the presentation of the stimulus, the successive triggers were initiated. The first trigger occurred directly after the onset of the stimulus, indicating the stimulus ID (1-80). Then, after 2 frames, the orientation trigger (101-103) was sent, followed by the duration trigger (151 to 153) at 4 frames, the task demand trigger (201-203) at 6 frames, and finally, the trial ID trigger (111 to 148) at 8 frames.</p>
+<h4 id="empty-room-recording">Empty Room Recording</h4>
+<p>Prior to each experiment, MEG signals from the empty room were recorded for 3-minutes.</p>
+<h4 id="resting-state-rm-eeg">Resting-State (rM-EEG)</h4>
+<p>The resting-state data for each participant was also recorded for 5-minutes and the subjects were asked to keep their eyes open and fixated on a point presented at the center of the screen. M-EEG signals were sampled at a rate of 1 kHz and band-pass filtered between 0.01 and 330 Hz prior to sampling.</p>
+<h4 id="task-tm-eeg">Task (tM-EEG)</h4>
+<p>Following the empty room and rM-EEG recordings, subjects were asked to complete the task defined in the <a href="#procedure">Procedure</a> section. tM-EEG consisted of 10 runs, with 4 blocks each. During each block, a ratio of 34-38 trials was presented, with 32 non-targets (8 of each category), 2-6 targets (number chosen randomly), and  each  trial  lasting  2.4 s approximately. Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task</strong></td>
+<td><strong>Runs</strong></td>
+<td><strong>Blocks</strong></td>
+<td><strong>Trials</strong></td>
+<td><strong>Total trials</strong></td>
+</tr>
+<tr>
+<td>Experiment 1</td>
+<td>10</td>
+<td>4</td>
+<td>34-38 per block</td>
+<td>1440</td>
+</tr>
+</tbody>
+</table>
+<h4 id="full-structure-of-session">Full Structure of Session</h4>
+<p>Complete standard procedure of an M-EEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/MEG%20SOP_v1.0.pdf" target="_blank">MEG Standard Operating Procedure</a>.</p>
+<h4 id="inclusion-criteria">Inclusion Criteria</h4>
+<p>The items below were assessed for the subjects before the data was acquired:</p>
+<ul>
+<li>Age range: 18 to 35 (since over the age of 35 subjects might have a hard time maintaining central focus)</li>
+<li>Handedness: right</li>
+<li>Hearing problems: no</li>
+<li>Hearing aid: no</li>
+<li>Vision problems: no, or corrected-to-normal with soft lenses</li>
+<li>No MRI in the last week</li>
+<li>MRI compatible: no metal, medical implants, etc. No claustrophobia. Note: dental implants are allowed (particularly for non-magnetic materials) unless it generates big impacts on MEG signals, and this will be checked prior to MEG recording.</li>
+<li>No known history of psychiatric or neurological disorders, e.g.,</li>
+<li>Not have been formally diagnosed with attention deficit (hyperactivity) disorder (AD(H)D).</li>
+<li>Not have been formally diagnosed with autism spectrum disorder (ASD)</li>
+<li>Not suffer from epilepsy</li>
+</ul>
+<h4 id="quality-check-and-exclusion-criteria">Quality Check and Exclusion Criteria</h4>
+<p>For M-EEG, the first stage of the third-level checks focused on system-related and external noise generators. It was tested using the signal spectra in the empty room recording, the resting state session, and the experiment itself for all sensors. Any sensor and/or specific frequency revealing extensive noise using visual inspection, was flagged to document potential problems. Ultimately, this did not lead to any exclusions. Next, all experimental data blocks were visually inspected for abnormalities in spectra (peaks not explainable by physiology), and in ICA components, and checked for extremely noisy (based on the score of differences between the original and Maxwell-filtered data &gt; 7) and flat sensors. The latter step was performed in a collaboration between the data monitoring team and members of the centers where data was acquired to check whether any potential changes in preprocessing for particular subjects were needed. Finally, we tested if all experimental cells (i.e. task-relevant non-targets and task-irrelevant stimuli for each one of the four categories) have enough trials.</p>
+<h4 id="deviations-and-missing-data">Deviations and Missing Data</h4>
+<p><span style="background-color: red"><b>Attention 1:</b></span>
+<strong>For the subjects listed below, the anatomical MRI scans are missing. Consequently, there is no folder containing the “sub-CX???_ses-1_trans.fif” file under /derivatives/coreg for these subjects. Instead, the FreeSurfer standard template (fsaverage) was used.</strong></p>
+<p><strong>Subject_ID:</strong> CA101, CA102, CA104, CA110, CA111, CA152</p>
+<p><span style="background-color: red"><b>Attention 2:</b></span>
+<strong>The “Exit Questionnaire” is not available for CB003.</strong></p>
+<p><span style="background-color: red"><b>Attention 3:</b></span>
+<strong>The “RestinEO” file is missing for the ET data of the below subjects:</strong></p>
+<p><strong>Subject_ID:</strong> CA172, CA176, CB999</p>
+<p><span style="background-color: red"><b>Attention 4:</b></span>
+<strong>The ET data is missing for CA151.</strong></p>
+<h3 id="ieeg-data-acquisition">iEEG Data Acquisition</h3>
+<p>iEEG recordings were obtained from patients with pharmacologically resistant epilepsy undergoing invasive electrophysiological monitoring at the Comprehensive Epilepsy Center at New York University (NYU) Langone Health Center, Brigham and Women’s Hospital, Children’s Hospital Boston (Harvard Medical School), and University of Wisconsin School of Medicine and Public Health (WU).</p>
+<h4 id="hardware_1">Hardware</h4>
+<p>Brain activity was recorded with a combination of intracranially subdural platinum-iridium electrodes embedded in SILASTIC sheets (2.3 mm diameter contacts, Ad-Tech Medical Instrument and PMT Corporation) and/or depth stereo-electroencephalographic platinum- iridium electrodes (PMT Corporation; 0.8-mm diameter, 2.0-mm length cylinders; separated from adjacent contacts by 1.5 to 2.43 mm), or Behnke-Fried depth stereo- electroencephalographic platinum-iridium electrodes (Ad-Tech Medical, BF08R-SP21X-0C2, 1.28 mm in diameter, 1.57 mm in length, 3 to 5.5 mm spacing). The decision to implant, electrode targeting, and the duration of invasive monitoring was solely determined on clinical grounds and without reference to this or any other study. Electrodes were arranged as grid arrays (either 8 × 8 with 10 mm center-to-center spacing, 8 x 16 contacts with 3 mm spacing, or hybrid macro/micro 8 x 8 contacts with 10 mm spacing and 64 integrated microcontacts with 5 mm spacing), linear strips (1 × 8/12 contacts), depth electrodes (1 × 8/12 contacts), or a combination thereof. Subdural electrodes covered extensive portions of lateral and medial frontal, parietal, occipital, and temporal cortex of the left and/or right hemisphere. Recordings from grid, strip and depth electrode arrays were done using a Natus Quantum amplifier (Pleasonton, CA) or a Neuralynx Atlas amplifier (Bozeman, MT). A total of 4057 electrodes (892 grids, 346 strips, 2819 depths) were implanted across 32 patients with drug-resistant focal epilepsy undergoing clinically motivated invasive monitoring. 3512 electrodes (780 grids, 307 strips, 2425 depths) that were unaffected by epileptic activity, artifacts, or electrical noise were used in subsequent analyses. To determine the electrode localization for each patient, a postoperative CT (computed tomography) scan and a pre-operative T1 MRI were acquired and co-registered. Recordings were obtained continuously during the patients’ stay in the hospital. All data was stored with stimulus and timing markers permitting offline synchronization.</p>
+<h4 id="anatomical-mri-data-acquisition_1">Anatomical MRI Data Acquisition</h4>
+<p>Before the participants underwent surgery and electrode implantation, T1-weighted MR data were acquired from them. At NYU, imaging was performed using the Siemens Biograph mMR scanner. At Harvard, the imaging sequence utilized was MPRAGE (magnetization-prepared rapid gradient-echo), with a Siemens Skyra 3T scanner. At WU, imaging was conducted using different models of scanners from GE MEDICAL SYSTEMS. The rationale behind acquiring MR scans was the spatial resolution it offers for brain tissue visualization.</p>
+<h4 id="ct-data-acquisition">CT Data Acquisition</h4>
+<p>Following surgery, post-operative CT scans were obtained from the subjects to assist in localizing the electrodes on specific brain tissue. At NYU, scans were performed using a Siemens SOMATOM Force scanner. At Harvard, imaging was conducted using the Medtronic O-arm MVS O2, manufactured by Medtronic. At WU, scans were acquired using various scanners manufactured by GE MEDICAL SYSTEMS.</p>
+<h4 id="behavioral-data-acquisition_1">Behavioral Data Acquisition</h4>
+<p>The task was implemented using Matlab (Harvard: R2020b; NYU: R2020a, WU: 2021a), Psychtoolbox v.3 (Pelli, 1997), and run on a Dell Precision 5540 laptop, with a 15.6" Ultrasharp screen (screen size 345 x 195 mm2; resolution 1920 x 1080) at NYU and Harvard and on a Dell D29M PC with an Acer V196WL 19" LED LCD monitor (screen size 406.4 x 254 mm2; resolution 1440 x 990) at WU. The distance between the subject’s eyes and the screen was 80 cm. But the actual distance was measured for each subject before the start of recording to ensure that the size of the stimulus was 6 x 6 of visual angle. Participants responded using an 8-button response box (Millikey LH-8; response hand(s) varied based on the setting in the patient’s room).</p>
+<h4 id="eye-tracking-data-acquisition_1">Eye Tracking Data Acquisition</h4>
+<p>At Harvard and Wisconsin, EyeLink 1000 Plus Camera was used to collect eye-tracking data, and a thirteen-point calibration was performed several times during the experiment. The calibration was performed at the beginning of the experiment, and recalibrated in-between blocks, if necessary to meet precision requirements. At NYU, eye-tracking data was collected throughout the duration of the experiment using a Tobii-4C eye-tracker, and a nine-point calibration was performed several times during the experiment. Pupil size and corneal reflection data were collected at a sampling rate of 500 Hz at Harvard and Wisconsin and at a sampling rate of 90 Hz at NYU. The Eyelink system recorded monocular data, while the Tobii system recorded binocular data. For the former cases, only one eye was recorded as determined by ocular dominance. The experiment was not influenced by the Eye-tracking recording.</p>
+<h4 id="behavioral-data-code-scheme_1">Behavioral Data Code Scheme</h4>
+<p>The behavioral code scheme is similar to the M-EEG modality which is explained in <a href="#behavioral-data-code-scheme">this section</a>.</p>
+<h4 id="eye-tracker-data-code">Eye Tracker Data Code</h4>
+<p>The eye tracker code scheme for the iEEG modality follows a similar structure to that described for M-EEG data. You can find detailed explanations <a href="#eye-tracker-and-meg-code-scheme">here</a>.</p>
+<h4 id="ieeg-code-scheme">iEEG Code Scheme</h4>
+<h5 id="photodiode-trigger-scheme">Photodiode Trigger Scheme</h5>
+<p>For ECOG patients, the type of port utilized by the M-EEG team (LPT) was incompatible with our recording system. Consequently, a photodiode was employed. A photodiode is an electronic device that records changes in luminance and converts them into voltage.</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/photodiode.png" alt="An example of a photodiode" style="width:50%;">
+  <p>An example of a photodiode</p>
+</div>
+
+<p>In the experimental code, it was ensured that when a new event occurred on the screen (such as stimulus onset or stimulus offset), a white flash appeared in the bottom right corner. The photodiode device was positioned atop the flashing square and connected to the amplifier recording the iEEG channel signals. This additional channel facilitated the identification of event onsets in our task. This type of recording only allows binary signals (the photodiode is either on or off). However, specific events were encoded with varying numbers of subsequent pulses.</p>
+<p><strong>Stimulus Presentation Onset</strong></p>
+<p>The flashing square was flashed only once at the onset of each new stimulus.</p>
+<p><strong>Stimulus Presentation Offset</strong></p>
+<p>The flashing square was flashed only once at the offset of each stimulus.</p>
+<p><strong>Start of the Inter-Trial Interval</strong></p>
+<p>The flashing square was flashed only once at the beginning of the inter-trial interval. The inter-trial interval was initiated 2 seconds after stimulus onset and persisted for a random duration (following a truncated exponential distribution between 0.2 and 2 seconds, with a mean of 0.4 seconds).</p>
+<p><strong>Block Start</strong></p>
+<p>The start of an experimental block was marked by sending 4 consecutive pulses.</p>
+<p><strong>Block End</strong></p>
+<p>The end of an experimental block was marked by sending 2 consecutive pulses.</p>
+<p><strong>Experiment Start and End</strong></p>
+<p>The beginning and end of the experiment were marked by sending 3 consecutive pulses.</p>
+<p><a name="schematic-representation-of-the-photodiode-channel"></a></p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/Schematic%20representation%20of%20the%20photodiode%20channel.png" alt="Schematic representation of the photodiode channel">
+  <p>Schematic representation of the photodiode channel</p>
+</div>
+
+<h5 id="log-file-alignment">Log File Alignment</h5>
+<p>The photodiode channel solely indicates when a specific event occurred in the iEEG signals, lacking any information about the nature of the event (unlike an LPT trigger in MEG). To identify specific events in the signal, the timing information from the log file was combined with that from the photodiode.</p>
+<p>The log file contains a description of each presented event along with a corresponding time stamp from the experimental computer. The photodiode channel recorded time stamps for each event, indicating when it occurred according to the acquisition computer clock. The goal was to align the log file and the photodiode to associate each event in the photodiode signal with the corresponding event description in the log file. This step was crucial since misalignment could lead to incorrect event descriptions in the iEEG signal, compromising the entire analysis.</p>
+<p>The procedure relies on the fact that both the log file and the photodiode had timestamps. These timestamps were recorded on different clocks. Unfortunately, computer clocks tend to drift apart from one another, and these deviations accumulate significantly over extended periods of time. For instance, they could be several seconds apart after just one hour. Therefore, the timestamps of the photodiode and the log file could not be used interchangeably. However, over short periods of time, these drifts were negligible. What this meant was that the interval between two successive timestamps in the log file should be quite consistent with the intervals between two successive events in the photodiode. This provided us with the most thorough check possible: if the events in the log file and in the photodiode were aligned, then there should be only tiny differences between the differences between successive events in both. Here is a step-by-step description of the alignment procedure.</p>
+<p><strong>Extract the Photodiode Timestamps</strong></p>
+<p>The timestamps from the photodiode triggers were extracted as the first step. As illustrated in the figure <a href="#schematic-representation-of-the-photodiode-channel">Schematic representation of the photodiode channel</a>, a square pulse was generated for each event during the recording. The onset of each of these pulses was sought. To achieve this, a threshold was initially established, below which the photodiode was considered to be in the off state and above which it was considered to be on (based on visual inspection of the data, which was facilitated by the clean nature of photodiode signals). Subsequently, the signal was binarized using this threshold (signal_bin = signal &gt; threshold), resulting in a signal consisting only of ones and zeros. Next, the discrete difference of the binary signal was computed (y(i + 1) = y(i + 1) - y(i)). This operation produced a “1” when the photodiode transitioned from off to on (onset) and a “-1” when it transitioned from on to off (offset). Since only the onset was of interest, the timestamps of the ones were extracted, representing the timestamps of the photodiode.</p>
+<p><strong>Verify Event Count Alignment</strong></p>
+<p>The first step in aligning the photodiode events and the log files was to check if the number of events in each matched. If they did not match, then there was a problem.</p>
+<p><strong>Aligning the Two Signals</strong></p>
+<p>To ensure alignment of both signals, the discrete difference between the photodiode and log file timestamps was computed, providing the interval between successive events for each signal. The resulting arrays were then plotted atop each other. Misalignment between the two sources of timing information could be easily detected, as they did not overlap. Perfect overlap between the two was necessary to consider the signals aligned. Additionally, the difference between the two signals was computed to ensure minimal deviation.</p>
+<p><strong>Integrating Information</strong></p>
+<p>Once the two signals were properly aligned, the log file events could be used as descriptors of the events marked at the timestamps from the photodiode.</p>
+<p>The alignment procedure allowed the information from the log file to be utilized in generating well-described events in the iEEG data. The events were encoded as “/” separated strings and stored in an events.tsv table. An extensive description of each event type and their levels are as follows:</p>
+<p><strong>Task Name:</strong> Dur</p>
+<p><strong>Task Description:</strong> Description of the experimental factors and their level with the correct syntax to access them from the MNE epochs object. Note that factor and level names are case-sensitive. We describe the syntax for each condition separately. However, note that you can fetch a combination of factors from the epochs using a forward slash. For example, if you wish to fetch the face target trials, you can combine both conditions like so: epochs['face/Relevant target'] will fetch all face target trials. In addition, the epochs objects are equipped with metadata, where the name of the column is the name of the factor, and the level follows the same nomenclature as below. This can be used for more sophisticated trial filtering and retrieval.</p>
+<p><strong>Experimental Design:</strong></p>
+<ul>
+<li>Event Type:</li>
+<li>Marks the different events occurring within a trial.</li>
+<li>Factor Type: Categorical</li>
+<li>Factor 1:<ul>
+<li>Name: stimulus onset</li>
+<li>Description: Marks the onset of the visual stimuli. With epochs['stimulus onset'], extract all epochs time-locked to the visual stimulus onset.</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
+<li>Name: stimulus offset</li>
+<li>Description: Marks the offset of the visual stimuli. With epochs['stimulus offset'], extract all epochs time-locked to the offset of the visual stimulus.</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
+<li>Name: jitter onset</li>
+<li>Description: Marks the beginning of the inter-trial jitter. All trials lasted 2 sec., with an added jitter of 400ms on average. With epochs['jitter onset'], extract all epochs time-locked to the beginning of the jitter period (2 sec. after stimulus onset).</li>
+</ul>
+</li>
+<li>Block:</li>
+<li>Marks the experimental blocks.</li>
+<li>Factor Type: Discrete</li>
+<li>Factor 1:<ul>
+<li>Name: block_*</li>
+<li>Description: Experimental blocks. Our experiment consisted of 5 blocks, in between which participants were allowed to take a break. With epochs['block_1'], extract all epochs of the first experimental block.</li>
+</ul>
+</li>
+<li>Miniblock:</li>
+<li>Marks the experimental miniblocks.</li>
+<li>Factor Type: Discrete</li>
+<li>Factor 1:<ul>
+<li>Name: miniblock_*</li>
+<li>Description: Experimental miniblocks. Each experimental block consisted of 4 miniblocks. At the beginning of each miniblock, the two target stimuli were presented to the participant, which the participant had to remember to be able to detect in the stream of stimuli. With epochs['miniblock_1'], extract all epochs of the first experimental miniblock.</li>
+</ul>
+</li>
+<li>Category:</li>
+<li>Category of the visual stimuli.</li>
+<li>Factor Type: Categorical</li>
+<li>Factor 1:<ul>
+<li>Name: face</li>
+<li>Description: Identifies face trials. With epochs['face'], extract all epochs in which a face was presented.</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
+<li>Name: object</li>
+<li>Description: Identifies object trials. With epochs['object'], extract all epochs in which an object was presented.</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
+<li>Name: letter</li>
+<li>Description: Identifies letter trials. With epochs['letter'], extract all epochs in which a letter was presented.</li>
+</ul>
+</li>
+<li>Factor 4:<ul>
+<li>Name: false</li>
+<li>Description: Identifies false font trials (i.e., symbols). With epochs['false'], extract all epochs in which a false font was presented.</li>
+</ul>
+</li>
+<li>Identity:</li>
+<li>Identity of the visual stimuli.</li>
+<li>Factor Type: Categorical</li>
+<li>Factor 1:<ul>
+<li>Name: face_*</li>
+<li>Description: Identifies the identity of face trials. With epochs['face_*'], extract all epochs in which that specific face was presented. From 1-9, leading 0.</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
+<li>Name: object_*</li>
+<li>Description: Identifies the identity of object trials. With epochs['object_*'], extract all epochs in which that specific object was presented. From 1-9, leading 0.</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
+<li>Name: letter_*</li>
+<li>Description: Identifies the identity of letter trials. With epochs['letter_*'], extract all epochs in which that specific letter was presented. From 1-9, leading 0.</li>
+</ul>
+</li>
+<li>Factor 4:<ul>
+<li>Name: false_*</li>
+<li>Description: Identifies the identity of false font trials (i.e., symbols). With epochs['false__*'], extract all epochs in which that specific false font was presented. From 1-9, leading 0.</li>
+</ul>
+</li>
+<li>Orientation:</li>
+<li>Orientation of the displayed stimuli.</li>
+<li>Factor Type: Categorical</li>
+<li>Factor 1:<ul>
+<li>Name: Center</li>
+<li>Description: Identifies stimuli presented in the center orientation. With epochs['Center'], extract all epochs in which a stimulus was presented in the center orientation.</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
+<li>Name: Left</li>
+<li>Description: Identifies stimuli presented in the Left orientation. With epochs['Left'], extract all epochs in which a stimulus was presented in the Left orientation.</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
+<li>Name: Right</li>
+<li>Description: Identifies stimuli presented in the Right orientation. With epochs['Right'], extract all epochs in which a stimulus was presented in the Right orientation.</li>
+</ul>
+</li>
+<li>Duration:</li>
+<li>Duration a visual stimulus was presented for.</li>
+<li>Factor Type: Categorical</li>
+<li>Factor 1:<ul>
+<li>Name: 500ms</li>
+<li>Description: Identifies stimuli presented for 500ms. With epochs['500ms'], extract all epochs in which the stimulus was displayed for 500ms.</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
+<li>Name: 1000ms</li>
+<li>Description: Identifies stimuli presented for 1000ms. With epochs['1000ms'], extract all epochs in which the stimulus was displayed for 1000ms.</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
+<li>Name: 1500ms</li>
+<li>Description: Identifies stimuli presented for 1500ms. With epochs['1500ms'], extract all epochs in which the stimulus was displayed for 1500ms.</li>
+</ul>
+</li>
+<li>Task Relevance:</li>
+<li>Task relevance of a given trial.</li>
+<li>Factor Type: Categorical</li>
+<li>Factor 1:<ul>
+<li>Name: Relevant target</li>
+<li>Description: Identifies target stimuli. Target stimuli are presented at the beginning of each miniblock, and participants must detect them among the sequence of presented stimuli by pressing a button. With epochs['Relevant target'], extract all target trials.</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
+<li>Name: Relevant non-target</li>
+<li>Description: Identifies task-relevant non-target stimuli. We considered task-relevant stimuli that were of the same category as the target but of a different identity. With epochs['Relevant non-target'], extract all task-relevant non-target trials.</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
+<li>Name: Irrelevant</li>
+<li>Description: Identifies task-irrelevant non-target stimuli. We considered task-irrelevant stimuli that were of a different category than the target. With epochs['Irrelevant'], extract all task-irrelevant non-target trials.</li>
+</ul>
+</li>
+<li>Response:</li>
+<li>Rated response of the participants.</li>
+<li>Factor Type: Categorical</li>
+<li>Factor 1:<ul>
+<li>Name: Hit</li>
+<li>Description: Participants correctly identified a target by pressing a button. With epochs['Hit'], extract all target trials for which the participants pressed a key.</li>
+</ul>
+</li>
+<li>Factor 2:<ul>
+<li>Name: CorrRej</li>
+<li>Description: Participants correctly rejected a non-target stimulus and did not press any button. With epochs['CorrRej'], extract all non-target trials for which the participants did not press a key.</li>
+</ul>
+</li>
+<li>Factor 3:<ul>
+<li>Name: Miss</li>
+<li>Description: Participants failed to press a button when a target stimulus was presented. With epochs['Miss'], extract all target trials in which participants failed to press a button.</li>
+</ul>
+</li>
+<li>Factor 4:<ul>
+<li>Name: FA</li>
+<li>Description: Participants mistakenly pressed a button when a non-target stimulus was presented. With epochs['FA'], extract all non-target trials in which participants pressed a button.</li>
+</ul>
+</li>
+<li>Factor 5:<ul>
+<li>Name: n.a.</li>
+<li>Description: For the events stimulus offset and jitter onset, the response is set to n.a. as the response relates to the visual stimulus, not to the other events. This should not be used to access the data.</li>
+</ul>
+</li>
+</ul>
+<h4 id="surface-reconstruction-and-electrode-localization">Surface Reconstruction and Electrode Localization</h4>
+<p>Subject-specific pial surfaces were automatically reconstructed based on a pre-implant T1 weighted MR image using the <a href="http://surfer.nmr.mgh.harvard.edu" target="_blank">Freesurfer</a> image analysis suite (‘recon-all’, Dale et al., 1999). Post-implant CT images were co-registered with the pre-implant MR images using FLIRT (Jenkinson and Smith, 2001), as implemented in <a href="http://fsl.fmrib.ox.ac.uk/fsl/" target="_blank">FSL</a> (Smith et al., 2004). For NYU patients, we used a semi-automatic approach to generating electrode labels. For manual cases, co-registered MR and CT slices were examined using FSLView (Smith et al., 2004). For grids, we localized three corner electrodes and the remaining electrodes coordinates were then automatically interpolated along the shared plane using the known inter-electrode distances. Strip and depth electrodes were localized manually when they did not follow straight trajectories. When depth electrodes were in a straight line, the first and last electrodes were localized manually, and electrodes in between were automatically interpolated and labeled based on known inter-electrode distances and serial labeling convention. For WU patients, electrodes were localized manually using the <a href="https://github.com/ckovach/SubNuclear/tree/master" target="_blank">SubNuclear</a> toolbox. Electrode locations were further refined within the space of the pre-operative MRI using three-dimensional non-linear thin-plate spline warping (Rohr et al., 2001), which corrected for post-operative shift and distortion. The warping was constrained with manually selected points through the brain, which was visually aligned with landmarks in pre-implantation MRI and post-implantation CT. For Harvard subjects, individual contacts from depth electrodes were labeled manually from the CT image using the <a href="https://bioimagesuiteweb.github.io/webapp/" target="_blank">BioImageSuite</a>’s  Electrode Editor tool (legacy version 3.5; Joshi, et al., 2011). The coordinates in CT image-space were converted to coordinates within the patient’s segmented MRI brain-space using the <a href="https://github.com/iELVis/iELVis" target="_blank">iELVis</a> toolbox (yangWangElecPjct; Yang, Wang, et al., 2012; Groppe et al., 2017). For all sites, the electrode spatial coordinates were transformed from the individual patient space into the standard space of the Montreal Neurological Institute (MNI-152) template for plotting purposes. At NYU, this transformation was performed using the DARTEL algorithm (Ashburner, 2007) implemented in SPM8 (Wellcome Department of Imaging Neuroscience, London, United Kingdom). At Harvard, this transformation was performed using the <a href="https://github.com/iELVis/iELVis" target="_blank">iELVis</a> toolkit. At WU the transformation was performed with the <a href="https://github.com/ckovach/SubNuclear/tree/master" target="_blank">SubNuclear</a> toolbox using img2imgcoord utility.</p>
+<p>Each electrode was labeled using the Desikan and Destrieux atlases with the MNE function “mne.get_montage_volume_labels”.</p>
+<h4 id="finger-localizer-task">Finger Localizer Task</h4>
+<p>In the Finger Localizer task, participants were presented with four circles, one of which was filled with a specific color, serving as a cue for participants to press the corresponding colored button on the response box. The filled state of the circle persisted for the duration of the response time, followed by an additional delay of 200 milliseconds. The Inter-Trial Intervals (ITIs) were uniformly distributed, with a mean of 0.55 seconds and a range from 0.400 to 0.700 seconds. The experimental protocol comprised 80 trials, distributed equally among the four colors, with 20 trials per color, and the sequence of trials was randomized. This task aimed to identify brain regions responsible for motor control, particularly those governing finger movements, and to pinpoint electrodes selectively activated by specific motor responses, such as button presses.</p>
+<div style="text-align:center;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/FingerLoc.png" alt="An illustration depicting a trial in which the participant is required to press the blue button" style="width:50%;">
+  <p>An illustration depicting a trial in which the participant is required to press the blue button</p>
+</div>
+
+<p><span style="background-color: red"><b>Please note:</b></span> <strong>Although participants completed this task concurrently with <a href="../02_overview/#experiment-1-conscious-perception">Experiment 1</a>, we did not utilize the data in the analysis, as it was primarily acquired for use in <a href="../02_overview/#experiment-2-video-game-engagement">Experiment 2</a>. Consequently, the data pertaining to the Finger Localizer task is not included in this version of our data release.</strong></p>
+<h4 id="task-tieeg">Task (tiEEG)</h4>
+<p>Participants proceeded to Experiment 1 either after or before completing the <a href="#finger-localizer-task">Finger Localizer task</a>. tiEEG consisted of 5 runs containing 4 blocks each, and 34-38 trials per block, 32 non-targets (8 of each category) and 2-6 targets, with each trial lasting 2.4 s approximately, for a total of 720 trials. Rest breaks between runs and blocks were included. Random jitter was added at the end of each trial (mean inter-trial interval of 0.4 s jittered 0.2-2.0 s, truncated exponential distribution) to avoid periodic presentation of the stimuli. Additional information about the task can be found <a href="#procedure">here</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task</strong></td>
+<td><strong>Runs</strong></td>
+<td><strong>Blocks</strong></td>
+<td><strong>Trials</strong></td>
+<td><strong>Total trials</strong></td>
+</tr>
+<tr>
+<td>Experiment 1</td>
+<td>5</td>
+<td>4</td>
+<td>34-38 per block</td>
+<td>720</td>
+</tr>
+</tbody>
+</table>
+<h4 id="full-structure-of-session_1">Full Structure of Session</h4>
+<p>Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG Standard Operating Procedure</a>.</p>
+<h4 id="inclusion-criteria_1">Inclusion Criteria</h4>
+<p>For the iEEG studies, subjects were 10-65 years old, able to provide informed consent, had IQ &gt; 70, fluent in English, with self-reported normal hearing, normal or corrected-to-normal vision, and cognitive and language abilities within or above the normal range in formal neuropsychological testing performed before surgery. They must not have had an electrographic seizure within 3-hours prior to testing.</p>
+<h4 id="quality-check_1">Quality Check</h4>
+<p>A comprehensive quality assessment was conducted on the iEEG data. The data underwent manual annotation by epileptologists, excluding channels within the epileptic onset zone, as well as those exhibiting artifacts or showing complete flatness due to electrode contact issues. Channel rejection was independently performed by both the data monitoring and iEEG teams, with results compared to ensure consistency. Additionally, electrode reconstruction was verified to align with subjects' CT scans. Finally, we inspected for significant disturbances in the spectra.</p>
+<h4 id="exclusion-criteria_1">Exclusion Criteria</h4>
+<p>Subjects who were unable to complete a sufficient number of trials due to excessive muscular artifacts, movement, noisy recordings, or a decision by the subject to terminate the experiment were excluded. In addition, data was also excluded if it did not pass any of the pre-defined data quality checks.</p>
+<h4 id="deviations-and-missing-data_1">Deviations and Missing Data</h4>
+<p><span style="background-color: red"><b>Attention 1:</b></span>
+<strong>The iEEG data for the seven subjects listed below do not have the correct sampling rate in the original EDF files. The correct sampling rate for these subjects is 2048 Hz. The raw data has not been updated with the correct sampling rate to avoid alignment issues when constructing the events. However, the same measurements in the BIDS release, provided in the <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a> format, have the correct sampling rate as expected.</strong></p>
+<p><strong>Subject_ID:</strong> CE106, CE107, CE108, CE112, CE115, CE118, CE120</p>
+<p><span style="background-color: red"><b>Attention 2:</b></span>
+<strong>For the subjects listed below, some scans are missing. The subject IDs and the names of the missing scans are as follows:</strong></p>
+<table style="width: 100%; margin: 0 auto; text-align: center; border-collapse: collapse;">
+  <tr style="background-color: #d3d3d3; color: #000000;">
+    <th style="width: 25%; padding: 10px;">Subject_ID</th>
+    <th style="width: 25%; padding: 10px;">Missing Scan</th>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CE118</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR5</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CG102</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR1</td>
+  </tr>
+</table>
+
+<p><span style="background-color: red"><b>Attention 3:</b></span>
+<strong>The following subjects are missing “Exit Questionnaires”:</strong></p>
+<p><strong>Subject_ID:</strong> CF103, CF104, CF105, CF106, CF110, CF112, CF113, CF116, CF117, CF119, CF120, CF121, CF122, CF124, CF125, CF126</p>
+<p><span style="background-color: red"><b>Attention 4:</b></span>
+<strong>The following subjects are missing “FingerLoc” scan:</strong></p>
+<p><strong>Subject_ID:</strong> CE106, CE107, CE110, CE118, CE119, CE120, CE121, CF117, CG101, CG102, CG103, CG104, CG105, CG106</p>
+<p><span style="background-color: red"><b>Attention 5:</b></span>
+<strong>Eye tracking (ET) data is missing for the subjects listed below. The subject IDs and the names of the missing data are as follows:</strong></p>
+<table style="width: 100%; margin: 0 auto; text-align: center; border-collapse: collapse;">
+  <tr style="background-color: #d3d3d3; color: #000000;">
+    <th style="width: 25%; padding: 10px;">Subject_ID</th>
+    <th style="width: 25%; padding: 10px;">Missing Data</th>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CE109</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">Not having “ET” data</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CE121</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">Not having “ET” data</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CF103</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR2_ABORTED</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CG103</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">Not having “ET” data</td>
+  </tr>
+</table>
+
+<p><span style="background-color: red"><b>Please note:</b></span>
+<strong>MR and CT data were collected for the subjects at Brigham and Women’s Hospital and Children’s Hospital Boston. However, due to the data protection policies, they are not included in the COGITATE Data Release.</strong></p>
+<hr />
+<h3 id="fmri-data-acquisition">fMRI Data Acquisition</h3>
+<p>Imaging was conducted at the Yale Magnetic Resonance Research Center (MRRC) in New Haven and at the Donders Centre for Cognitive Neuroimaging (DCCN), of Radboud University Nijmegen in the Netherlands.</p>
+<h4 id="hardware_2">Hardware</h4>
+<p>Both centers have a Siemens 3T Prisma research scanner (Siemens, Erlangen, Germany) with high-performance gradients (max. gradient strength 80 mT/m, 200 mT/m/s rise time, 100% duty cycle), 32-channel parallel imaging, and a 32-channel head coil.</p>
+<h4 id="anatomical-mri-data-acquisition_2">Anatomical MRI Data Acquisition</h4>
+<p>Anatomical images were acquired on a 3T Prisma scanner using a 32-channel head coil. The images were captured using a T1-weighted magnetization prepared rapid gradient echo sequence (MP-RAGE) with a GRAPPA acceleration factor of 2, TR/TE of 2300/3.03 ms, a voxel size of 1 mm isotropic, a field of view (FOV) of 256 x 256 x 192 mm (192 slices), and a 8° flip angle.</p>
+<h4 id="functional-mri-data-acquisition">Functional MRI Data Acquisition</h4>
+<p>Functional images were acquired on the same scanner using a whole-brain T2<em>-weighted multiband-4 sequence with TR/TE of 1500/39.6 ms, a voxel size of 2.019 x 2.019 x 2 mm, a 75° flip angle, an A/P phase encoding direction, a FOV of 210 x 210 x 136 mm (68 slices), a bandwidth (BW) of 2090 Hz/Px and different number of volumes. A single-band reference (SBRef) image was acquired before each run. The first three volumes of each run were discarded to allow for signal stabilization. Additionally, to correct for susceptibility distortions, extra scans using the same T2</em>-weighted sequence with inverted phase encoding direction (inverted RO/PE polarity) were collected while the subject was at rest at multiple points throughout the experiments.</p>
+<h4 id="behavioral-data-acquisition_2">Behavioral Data Acquisition</h4>
+<p>The task was run on Matlab (DCCN and Yale: R2019b) using Psychtoolbox v.3 (Pelli, 1997). The fMRI version was executed on an MSI laptop at Yale and a Dell Desktop PC at DCCN. Both centers were equipped with behavioral testing apparatus, including a visual display projected onto a mirror fixed to the head coil, a button response system, and software for displaying and recording behavioral tasks synchronized with MRI data acquisition. At DCCN, stimuli were presented on an MRI-compatible Cambridge Research Systems BOLDscreen 32” IPS LCD monitor (1920 x 1080 pixels, 60 Hz; viewing distance ~134 cm). At Yale, stimuli were projected using a Psychology Software Tools Hyperion projection system (1920 x 1080 pixels, 60 Hz; viewing distance ~113 cm). Subjects responded with their right hand using a 2x2 Current Designs response box at Yale and a 1x4 Current Designs response box at DCCN.</p>
+<h4 id="eye-tracking-data-acquisition_2">Eye Tracking Data Acquisition</h4>
+<p>The fMRI labs used the MR-compatible EyeLink 1000 Plus eye-tracker system (SR Research Ltd., Ottawa, Canada) to collect data at 1000 Hz. Eye position was monitored monocularly, with data acquired from the left eye at DCCN and the right eye at Yale. Pupil and corneal reflection were sampled at 1000 Hz. A nine-point calibration was performed at the beginning of each experiment session and recalibrated as needed at the beginning of each block/run.</p>
+<h4 id="behavioral-data-code-scheme_2">Behavioral Data Code Scheme</h4>
+<p>The behavioral code scheme aligns closely with the M-EEG modality, as detailed in <a href="#behavioral-data-code-scheme">this section</a>.</p>
+<h4 id="eye-tracker-data-code_1">Eye Tracker Data Code</h4>
+<p>The eye tracker code scheme used in fMRI follows a structure akin to the one outlined for M-EEG data. More detailed explanations can be found <a href="#eye-tracker-and-meg-code-scheme">here</a>.</p>
+<h4 id="task-tfmri">Task (tfMRI)</h4>
+<p>For the fMRI protocol, there were 8 runs, each containing 4 blocks with 17-19 trials per block. Each trial lasted approximately 5.5 seconds, with 16 non-targets (4 per category) and 1-3 targets, totaling 576 trials. The timing was adjusted by increasing the random jitter between trials (mean inter-trial interval of 3 seconds, jittered 2.5-10 seconds with a truncated exponential distribution). Breaks and pauses were included between runs and blocks, with runs separated by short breaks. This process involved stopping and restarting the EPI acquisition sequences.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task</strong></td>
+<td><strong>Runs</strong></td>
+<td><strong>Blocks</strong></td>
+<td><strong>Trials</strong></td>
+<td><strong>Total trials</strong></td>
+</tr>
+<tr>
+<td>Experiment 1</td>
+<td>8</td>
+<td>4</td>
+<td>17-19 per block</td>
+<td>576</td>
+</tr>
+</tbody>
+</table>
+<h4 id="full-structure-of-session_2">Full Structure of Session</h4>
+<p>The complete session structure includes:</p>
+<p><strong>Anatomical scan:</strong> Taken when subjects are at rest and not engaged in the experiment.
+<strong>Single-band reference scan for distortion correction (DC1_SBRef):</strong> Conducted when subjects are at rest.
+Distortion correction scans (DC1): Performed when subjects are at rest.
+Single-band reference scan for functional scans (DurR1_SBRef): Administered at the start of the experiment.
+Functional scans (DurR1)
+Single-band reference scan for functional scans (DurR2_SBRef): Done while the subjects are at rest.
+Functional scans (DurR2)
+Single-band reference scan for functional scans (DurR3_SBRef)
+Functional scans (DurR3)
+Single-band reference scan for functional scans (DurR4_SBRef)
+Functional scans (DurR4)
+Single-band reference scan for distortion correction (DC2_SBRef): Conducted when subjects are at rest.
+Distortion correction scans (DC2): Done when subjects are at rest.
+Single-band reference scan for functional scans (DurR5_SBRef): Performed during the experiment.
+Functional scans (DurR5)
+Single-band reference scan for functional scans (DurR6_SBRef): Conducted during the experiment.
+Functional scans (DurR6)
+Single-band reference scan for functional scans (DurR7_SBRef)
+Functional scans (DurR7)
+Single-band reference scan for functional scans (DurR8_SBRef)
+Functional scans (DurR8)
+Single-band reference scan for distortion correction (DC3_SBRef): Conducted when subjects are at rest.
+Distortion correction scans (DC3): Performed when subjects are at rest.</p>
+<p>For a comprehensive understanding of the fMRI session protocol, please refer to the <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.3/linked_files_v1.3/fMRI%20SOP_v1.0.pdf" target="_blank">fMRI Standard Operating Procedure</a> document.</p>
+<h4 id="inclusion-criteria_2">Inclusion Criteria</h4>
+<p>For the iEEG studies, subjects were 10-65 years old, able to provide informed consent, had IQ &gt; 70, fluent in English, with self-reported normal hearing, normal or corrected-to-normal vision, and cognitive and language abilities within or above the normal range in formal neuropsychological testing performed before surgery. They must not have had an electrographic seizure within 3-hours prior to testing.</p>
+<h4 id="quality-check_2">Quality Check</h4>
+<p>A comprehensive quality assessment was conducted on the iEEG data. The data underwent manual annotation by epileptologists, excluding channels within the epileptic onset zone, as well as those exhibiting artifacts or showing complete flatness due to electrode contact issues. Channel rejection was independently performed by both the data monitoring and iEEG teams, with results compared to ensure consistency. Additionally, electrode reconstruction was verified to align with subjects' CT scans. Finally, we inspected for significant disturbances in the spectra.</p>
+<h4 id="exclusion-criteria_2">Exclusion Criteria</h4>
+<p>Subjects who were unable to complete a sufficient number of trials due to excessive muscular artifacts, movement, noisy recordings, or a decision by the subject to terminate the experiment were excluded. In addition, data was also excluded if it did not pass any of the pre-defined data quality checks.</p>
+<h4 id="deviations-and-missing-data_2">Deviations and Missing Data</h4>
+<p><span style="background-color: red"><b>Attention 1:</b></span>
+<strong>The iEEG data for the seven subjects listed below do not have the correct sampling rate in the original EDF files. The correct sampling rate for these subjects is 2048 Hz. The raw data has not been updated with the correct sampling rate to avoid alignment issues when constructing the events. However, the same measurements in the BIDS release, provided in the <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a> format, have the correct sampling rate as expected.</strong></p>
+<p><strong>Subject_ID:</strong> CE106, CE107, CE108, CE112, CE115, CE118, CE120</p>
+<p><span style="background-color: red"><b>Attention 2:</b></span>
+<strong>Subject “CG102” is missing the first “Run” and contains only DurR2, DurR3, DurR4, DurR5.</strong></p>
+<p><span style="background-color: red"><b>Attention 3:</b></span>
+<strong>The following subjects are missing “Exit Questionnaires”:</strong></p>
+<p><strong>Subject_ID:</strong> CF103, CF105, CF106, CF110, CF112, CF113, CF116, CF117, CF119, CF120, CF121, CF122, CF124, CF125, CF126</p>
+<p><span style="background-color: red"><b>Please note:</b></span>
+<strong>MR and CT data were collected for the subjects at Brigham and Women’s Hospital and Children’s Hospital Boston. However, due to the data protection policies, they are not included in the COGITATE Data Release.</strong></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../02_overview/" class="btn btn-neutral float-left" title="Overview of COGITATE"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../04_data/" class="btn btn-neutral float-right" title="Curation Procedures">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../02_overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../04_data/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
