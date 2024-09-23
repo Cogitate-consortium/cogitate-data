@@ -20,7 +20,7 @@ To address this issue, we implemented a slightly different workflow that allowed
 4. Verification: This step involved checking the quality of the defaced NIFTI images using 2D/3D image plots to compare before and after the defacing stage.
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png" alt="Alternative workflow for defacing 12 challenging MR/CT DICOM Images">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/Alternative%20workflow%20for%20defacing%20challenging%20DICOM%20Images.png" alt="Alternative workflow for defacing 12 challenging MR/CT DICOM Images">
   <p>Alternative workflow for defacing 12 challenging MR/CT DICOM Images</p>
 </div>
 
@@ -28,4 +28,4 @@ To address this issue, we implemented a slightly different workflow that allowed
 
 ## Metadata Curation Procedure
 
-Comprehensive guidance on extracting and managing metadata relevant to the COGITATE project is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/metadata-curation-doc_2024-05-14_v1.0.pdf" target="_blank">Appendix 8</a>.
+Comprehensive guidance on extracting and managing metadata relevant to the COGITATE project is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/metadata-curation-doc_2024-05-14_v1.0.pdf" target="_blank">Appendix 8</a>.

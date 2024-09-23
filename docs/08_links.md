@@ -4,7 +4,7 @@
 <a href="https://doi.org/10.1371/journal.pone.0268577" target="_blank">**COGITATE Main Scientific Paper**</a>  
 <a href="https://osf.io/gm3vd" target="_blank">**COGITATE Preregistration v4 - December 2022**</a>  
 <a href="https://github.com/Cogitate-consortium" target="_blank">**COGITATE GitHub Repositories**</a>  
-<a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx" target="_blank">**Subjects Demography**</a>  
+<a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx" target="_blank">**Subjects Demography**</a>  
 <a href="https://www.youtube.com/@ARC-COGITATE" target="_blank">**YouTube Channel**</a> videos:  
 &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://www.youtube.com/watch?v=V93Agvo4G2Y" target="_blank">COGITATE Experiment 1</a>  
 &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://www.youtube.com/watch?v=FFqN5Pech0w" target="_blank">HOW TO create a COGITATE Data User account</a>  
@@ -15,10 +15,10 @@
 |   |   |   |   |
 |---|---|---|---|
 |Modality|Place of Acquisition|Number of <br>Subjects|Reference Materials|
-|M-EEG|University of <br>Birmingham, <br>Center for <br>Human Brain <br>Health (CHBH)|102|<a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/cogitate_wiring_diagrams_MEEG.pdf" target="_blank">M-EEG Wiring Diagram</a><br><a href="https://github.com/Cogitate-consortium/cogitate-experiment-code/tree/MEEG-Exp1" target="_blank">M-EEG Experiment 1 Code</a><br><a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/MEG%20SOP_v1.0.pdf" target="_blank">M-EEG SOP</a>|
+|M-EEG|University of <br>Birmingham, <br>Center for <br>Human Brain <br>Health (CHBH)|102|<a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/cogitate_wiring_diagrams_MEEG.pdf" target="_blank">M-EEG Wiring Diagram</a><br><a href="https://github.com/Cogitate-consortium/cogitate-experiment-code/tree/MEEG-Exp1" target="_blank">M-EEG Experiment 1 Code</a><br><a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/MEG%20SOP_v1.0.pdf" target="_blank">M-EEG SOP</a>|
 | |Peking University <br>(PKU)|
 |fMRI|Donders <br>Center for <br>Cognitive <br>Neuroimaging <br>(DCCN)|122||
 | |Yale <br>Magnetic <br>Resonance <br> Research <br>Center <br>(MRRC)|
-|ECoG (iEEG)|Harvard <br>University at <br>Boston <br>Children’s <br>Hospital|38|<a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/cogitate-wiring-diagrams_ECOG_2024-04-26_v1.1.pdf" target="_blank">iEEG Wiring Diagram</a><br><a href="https://github.com/Cogitate-consortium/cogitate-experiment-code/tree/ECOG-Exp1-Latest" target="_blank">iEEG Experiment 1 Code</a><br><a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG SOP</a>|
+|ECoG (iEEG)|Harvard <br>University at <br>Boston <br>Children’s <br>Hospital|38|<a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/cogitate-wiring-diagrams_ECOG_2024-04-26_v1.1.pdf" target="_blank">iEEG Wiring Diagram</a><br><a href="https://github.com/Cogitate-consortium/cogitate-experiment-code/tree/ECOG-Exp1-Latest" target="_blank">iEEG Experiment 1 Code</a><br><a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG SOP</a>|
 | |New York <br>University <br>Langone (NYU)|
 | |University of <br>Wisconsin|

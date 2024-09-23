@@ -2,7 +2,7 @@
 
 The COGITATE dataset is a comprehensive collection of multimodal neuroimaging data, encompassing a total of 256 subjects. COGITATE employs three distinct neuroimaging techniques: fMRI, M-EEG, and iEEG/ECoG.
 
-![Cogitate overview map](https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/overview_map.png)
+![Cogitate overview map](https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/overview_map.png)
 
 The MEG modality comprised 100 healthy subjects, also above the age of 18, with no known psychiatric or neurological issues. These participants were sourced from the Centre for Human Brain Health at the University of Birmingham (Birmingham, United Kingdom) and the Center for MRI Research of Peking University (Beijing, China).
 
@@ -11,23 +11,23 @@ Similarly, the fMRI modality included 118 healthy volunteers, all of whom were a
 In contrast, the iEEG modality involved a more specialized cohort of 38 patients diagnosed with pharmaco-resistant focal epilepsy. These participants ranged in age from 10 to 65 years, had an IQ above 70, and met specific health criteria. They were recruited from multiple medical centers specializing in epilepsy treatment, including the Comprehensive Epilepsy Center at New York University (New York, NY, United States), Brigham and Women’s Hospital, Boston Children’s Hospital (Boston, MA, United States), and the University of Wisconsin School of Medicine and Public Health (Madison, WI, United States).
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/age%20histograms%20across%20modalities_2024-04-26_v1.1.png" alt="Age histograms across modalities">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/age%20histograms%20across%20modalities_2024-04-26_v1.1.png" alt="Age histograms across modalities">
   <p>Age histograms across modalities</p>
 </div>
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/sex%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Sex proportions across modalities">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/sex%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Sex proportions across modalities">
   <p>Sex proportions across modalities</p>
 </div>
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/handedness%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Handedness proportions across modalities">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/handedness%20proportions%20across%20modalities_2024-04-26_v1.1.png" alt="Handedness proportions across modalities">
   <p>Handedness proportions across modalities</p>
 </div>
 
 ## Demography of Subjects
 
-You can find the profile of participants for all modalities at <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx" target="_blank">subjects_demography</a>. Here is a brief explanation about the information collected from the subjects.
+You can find the profile of participants for all modalities at <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/subjects_demography-EXP1-released-data_2024-04-026_v1.1.xlsx" target="_blank">subjects_demography</a>. Here is a brief explanation about the information collected from the subjects.
 
 ### **Demographic Information for M-EEG**
 
@@ -196,7 +196,7 @@ Both centers had a 306-channel, whole-head TRIUX MEG system from MEGIN (York Ins
 The location of the fiducials, the positions of the 64 EEG electrodes and the participant’s head shape were recorded using a 3-D digitizer system (Polhemus Isotrak). A set of bipolar electrodes were placed on the subject’s chest (upper left and upper right chest position) to record the cardiac signal (ECG). Two sets of bipolar electrodes were placed around the eyes (two located at the outer canthi of the right and left eyes and two above and below the center of the right eye) to record eye movements and blinks (EOG). Ground and reference electrodes were placed on the back of the neck and on the right cheek, respectively. The impedance of all of the electrodes was checked to be below 10 kOhm.
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/eog_ecg_electrodes_meg.png" alt="Standard Locations of EOG and ECG electrodes">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/eog_ecg_electrodes_meg.png" alt="Standard Locations of EOG and ECG electrodes">
   <p>Standard Locations of EOG and ECG electrodes</p>
 </div>
 
@@ -205,7 +205,7 @@ The location of the fiducials, the positions of the 64 EEG electrodes and the pa
 The participant’s head position inside the MEG system was measured at the beginning and at the end of each run using four head position indicator (HPI) coils placed on the EEG cap. Specifically, the HPI coils were placed next to the left and right mastoids and on the left and right forehead. Their location relative to anatomical landmarks was digitized with a Polhemus Isotrak System. During the measurement, high frequency (>200 Hz) signals were produced by those coils and the localization of these signals was used to estimate the head position in the sensor space. To avoid the potential artifacts produced by the non-linear interaction between the signals generated by these coils, head position measurement was performed only during resting periods (as opposed to continuously).
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/hpi_coils_meg.png">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/hpi_coils_meg.png">
   <p>Standard locations of HPI coils. Coil Numbers: 1. Blue, 2. White, 3. Red, 4. Black, 5. Yellow</p>
 </div>
 
@@ -318,7 +318,7 @@ Following the empty room and rM-EEG recordings, subjects were asked to complete 
 
 #### Full Structure of Session
 
-Complete standard procedure of an M-EEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/MEG%20SOP_v1.0.pdf" target="_blank">MEG Standard Operating Procedure</a>.
+Complete standard procedure of an M-EEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/MEG%20SOP_v1.0.pdf" target="_blank">MEG Standard Operating Procedure</a>.
 
 #### Inclusion Criteria
 
@@ -391,7 +391,7 @@ The eye tracker code scheme for the iEEG modality follows a similar structure to
 For ECOG patients, the type of port utilized by the M-EEG team (LPT) was incompatible with our recording system. Consequently, a photodiode was employed. A photodiode is an electronic device that records changes in luminance and converts them into voltage.
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/photodiode.png" alt="An example of a photodiode" style="width:50%;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/photodiode.png" alt="An example of a photodiode" style="width:50%;">
   <p>An example of a photodiode</p>
 </div>
 
@@ -424,7 +424,7 @@ The beginning and end of the experiment were marked by sending 3 consecutive pul
 <a name="schematic-representation-of-the-photodiode-channel"></a>
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/Schematic%20representation%20of%20the%20photodiode%20channel.png" alt="Schematic representation of the photodiode channel">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/Schematic%20representation%20of%20the%20photodiode%20channel.png" alt="Schematic representation of the photodiode channel">
   <p>Schematic representation of the photodiode channel</p>
 </div>
 
@@ -580,7 +580,7 @@ Each electrode was labeled using the Desikan and Destrieux atlases with the MNE 
 In the Finger Localizer task, participants were presented with four circles, one of which was filled with a specific color, serving as a cue for participants to press the corresponding colored button on the response box. The filled state of the circle persisted for the duration of the response time, followed by an additional delay of 200 milliseconds. The Inter-Trial Intervals (ITIs) were uniformly distributed, with a mean of 0.55 seconds and a range from 0.400 to 0.700 seconds. The experimental protocol comprised 80 trials, distributed equally among the four colors, with 20 trials per color, and the sequence of trials was randomized. This task aimed to identify brain regions responsible for motor control, particularly those governing finger movements, and to pinpoint electrodes selectively activated by specific motor responses, such as button presses.
 
 <div style="text-align:center;">
-  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/merge_docs/assets/documentation/graphics/FingerLoc.png" alt="An illustration depicting a trial in which the participant is required to press the blue button" style="width:50%;">
+  <img src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/FingerLoc.png" alt="An illustration depicting a trial in which the participant is required to press the blue button" style="width:50%;">
   <p>An illustration depicting a trial in which the participant is required to press the blue button</p>
 </div>
 
@@ -597,7 +597,7 @@ Participants proceeded to Experiment 1 either after or before completing the [Fi
 
 #### Full Structure of Session
 
-Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/merge_docs/assets/documentation/linked_files/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG Standard Operating Procedure</a>.
+Complete standard procedure of an iEEG session is available in <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG Standard Operating Procedure</a>.
 
 #### Inclusion Criteria
 
