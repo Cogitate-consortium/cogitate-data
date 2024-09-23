@@ -927,10 +927,61 @@
 <strong>The iEEG data for the seven subjects listed below do not have the correct sampling rate in the original EDF files. The correct sampling rate for these subjects is 2048 Hz. The raw data has not been updated with the correct sampling rate to avoid alignment issues when constructing the events. However, the same measurements in the BIDS release, provided in the <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a> format, have the correct sampling rate as expected.</strong></p>
 <p><strong>Subject_ID:</strong> CE106, CE107, CE108, CE112, CE115, CE118, CE120</p>
 <p><span style="background-color: red"><b>Attention 2:</b></span>
-<strong>Subject “CG102” is missing the first “Run” and contains only DurR2, DurR3, DurR4, DurR5.</strong></p>
+<strong>For the subjects listed below, some scans are missing. The subject IDs and the names of the missing scans are as follows:</strong></p>
+<table style="width: 100%; margin: 0 auto; text-align: center; border-collapse: collapse;">
+  <tr style="background-color: #d3d3d3; color: #000000;">
+    <th style="width: 25%; padding: 10px;">Subject_ID</th>
+    <th style="width: 25%; padding: 10px;">Missing Scan</th>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CE118</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR5</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CF103</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR2_ABORTED</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CG102</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR1</td>
+  </tr>
+</table>
+
 <p><span style="background-color: red"><b>Attention 3:</b></span>
 <strong>The following subjects are missing “Exit Questionnaires”:</strong></p>
-<p><strong>Subject_ID:</strong> CF103, CF105, CF106, CF110, CF112, CF113, CF116, CF117, CF119, CF120, CF121, CF122, CF124, CF125, CF126</p>
+<p><strong>Subject_ID:</strong> CF103, CF104, CF105, CF106, CF110, CF112, CF113, CF116, CF117, CF119, CF120, CF121, CF122, CF124, CF125, CF126</p>
+<p><span style="background-color: red"><b>Attention 4:</b></span>
+<strong>The following subjects are missing “FingerLoc” scan:</strong></p>
+<p><strong>Subject_ID:</strong> CE106, CE107, CE110, CE118, CE119, CE120, CE121, CF117, CG101, CG102, CG103, CG104, CG105, CG106</p>
+<p><span style="background-color: red"><b>Attention 5:</b></span>
+<strong>Eye tracking (ET) data is missing for the subjects listed below. The subject IDs and the names of the missing data are as follows:</strong></p>
+<table style="width: 100%; margin: 0 auto; text-align: center; border-collapse: collapse;">
+  <tr style="background-color: #d3d3d3; color: #000000;">
+    <th style="width: 25%; padding: 10px;">Subject_ID</th>
+    <th style="width: 25%; padding: 10px;">Missing Data</th>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CE109</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">Not having “ET” data</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CE118</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR5</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CE121</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">Not having “ET” data</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CF103</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DurR5</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CG103</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">Not having “ET” data</td>
+  </tr>
+</table>
+
 <p><span style="background-color: red"><b>Please note:</b></span>
 <strong>MR and CT data were collected for the subjects at Brigham and Women’s Hospital and Children’s Hospital Boston. However, due to the data protection policies, they are not included in the COGITATE Data Release.</strong></p>
 <hr />
@@ -982,7 +1033,7 @@
 <h4 id="full-structure-of-session_2">Full Structure of Session</h4>
 <p>The complete session structure includes:</p>
 <p><strong>Anatomical scan:</strong> Taken when subjects are at rest and not engaged in the experiment.
-Single-band reference scan for distortion correction (DC1_SBRef): Conducted when subjects are at rest.
+<strong>Single-band reference scan for distortion correction (DC1_SBRef):</strong> Conducted when subjects are at rest.
 Distortion correction scans (DC1): Performed when subjects are at rest.
 Single-band reference scan for functional scans (DurR1_SBRef): Administered at the start of the experiment.
 Functional scans (DurR1)
