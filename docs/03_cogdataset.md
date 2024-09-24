@@ -197,6 +197,7 @@ Trial division was pseudorandomized with respect to two factors: the assignment 
 Only half of the stimuli were used as targets for the iEEG experiments. The selection of target faces kept the balance of gender and ethnicity. Letters were chosen in equal amounts from the first and second parts of the alphabet, and the corresponding false-fonts were used. All stimuli were presented as relevant non-targets and irrelevant stimuli, matching the designs of the aforementioned procedure.
 
 #### fMRI Related Modifications of the Design
+
 For the fMRI experiment, timing was adjusted as follows: the random jitter between trials was increased (mean inter-trial interval of 3 s, jittered 2.5-10 s, with truncated exponential distribution), with each trial lasting approximately 5.5 s. This modification served to improve decoding and fitting of GLMs to the fMRI data (Glover, 1999). Second, to increase detection efficacy for amplitude-based analyses, three additional baseline periods (blank screen) of 12 s each were included per run (total = 24). The identity of the stimuli was randomized with the constraint that they appeared equally across durations and tasks conditions.
 
 ### M-EEG Data Acquisition
@@ -727,7 +728,7 @@ The fMRI labs used the MR-compatible EyeLink 1000 Plus eye-tracker system (SR Re
 
 The behavioral code scheme aligns closely with the M-EEG modality, as detailed in [this section](#behavioral-data-code-scheme).
 
-#### Eye Tracker Data Code 
+#### Eye Tracker Data Code
 
 The eye tracker code scheme used in fMRI follows a structure akin to the one outlined for M-EEG data. More detailed explanations can be found [here](#eye-tracker-and-meg-code-scheme).
 
@@ -768,7 +769,7 @@ Functional scans (DurR8)
 Single-band reference scan for distortion correction (DC3_SBRef): Conducted when subjects are at rest.
 Distortion correction scans (DC3): Performed when subjects are at rest.
 
-For a comprehensive understanding of the fMRI session protocol, please refer to the <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation_v1.3/linked_files_v1.3/fMRI%20SOP_v1.0.pdf" target="_blank">fMRI Standard Operating Procedure</a> document.
+For a comprehensive understanding of the fMRI session protocol, please refer to the <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/fMRI%20SOP_v1.0.pdf" target="_blank">fMRI Standard Operating Procedure</a> document.
 
 #### Inclusion Criteria
 
