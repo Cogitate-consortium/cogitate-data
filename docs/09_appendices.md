@@ -133,4 +133,4 @@ This Form should be filled by the participant after the experiment and asks the 
 
 ## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/SOP%20iEEG%20General_v2.pdf" target="_blank">Appendix 9. iEEG Standard Operating Procedure</a>
 
-## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/fMRI%20SOP_v1.0.pdf" target="_blank">Appendix 10. iEEG Standard Operating Procedure</a>
+## <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/fMRI%20SOP_v1.0.pdf" target="_blank">Appendix 10. fMRI Standard Operating Procedure</a>
