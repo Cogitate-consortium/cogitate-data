@@ -27,6 +27,6 @@
   </tr>
   <tr>
     <th style="text-align: center; background-color: #f0f0f0; font-size: 16px; vertical-align: middle;">Date Last Edited</th>
-    <td style="text-align: left; background-color: white;">Sep 11, 2024</td>
+    <td style="text-align: left; background-color: white;">Sep 27, 2024</td>
   </tr>
 </table>
