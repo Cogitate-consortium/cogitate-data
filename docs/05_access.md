@@ -5,10 +5,10 @@ There are two ways of accessing the COGITATE data:
 1. "Live" Database Release: <a href="https://wiki.xnat.org/documentation/" target="_blank">XNAT</a> (eXtensible Neuroimaging Archive Toolkit)
 2. Archival Format: Bundles
 
-<table>
+<table style="border: none; background-color: white; border-collapse: collapse;">
     <tr>
-        <td>
-            <a href="https://cogitate-data.ae.mpg.de">
+        <td style="border: none; background-color: white;">
+            <a href="https://cogitate-data.ae.mpg.de" target="_blank">
                 <img
                     src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/xnat.png"
                     width=""
@@ -16,7 +16,7 @@ There are two ways of accessing the COGITATE data:
                     title="XNAT login page"
             /></a>
         </td>
-        <td>
+        <td style="border: none; background-color: white;">
             <a href="https://www.arc-cogitate.com/data-bundles-active" target="_blank">
                 <img
                     src="https://github.com/Cogitate-consortium/cogitate-data/raw/main/assets/documentation/graphics/bundles.png"
