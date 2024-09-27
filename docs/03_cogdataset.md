@@ -750,58 +750,71 @@ For the fMRI protocol, there were 8 runs, each containing 4 blocks with 17-19 tr
 
 The complete session structure includes:
 
-**Anatomical scan:** Taken when subjects are at rest and not engaged in the experiment.
-**Single-band reference scan for distortion correction (DC1_SBRef):** Conducted when subjects are at rest.
-Distortion correction scans (DC1): Performed when subjects are at rest.
-Single-band reference scan for functional scans (DurR1_SBRef): Administered at the start of the experiment.
-Functional scans (DurR1)
-Single-band reference scan for functional scans (DurR2_SBRef): Done while the subjects are at rest.
-Functional scans (DurR2)
-Single-band reference scan for functional scans (DurR3_SBRef)
-Functional scans (DurR3)
-Single-band reference scan for functional scans (DurR4_SBRef)
-Functional scans (DurR4)
-Single-band reference scan for distortion correction (DC2_SBRef): Conducted when subjects are at rest.
-Distortion correction scans (DC2): Done when subjects are at rest.
-Single-band reference scan for functional scans (DurR5_SBRef): Performed during the experiment.
-Functional scans (DurR5)
-Single-band reference scan for functional scans (DurR6_SBRef): Conducted during the experiment.
-Functional scans (DurR6)
-Single-band reference scan for functional scans (DurR7_SBRef)
-Functional scans (DurR7)
-Single-band reference scan for functional scans (DurR8_SBRef)
-Functional scans (DurR8)
-Single-band reference scan for distortion correction (DC3_SBRef): Conducted when subjects are at rest.
-Distortion correction scans (DC3): Performed when subjects are at rest.
+1. **Anatomical scan:** Taken when subjects are at rest and not engaged in the experiment.
+2. **Single-band reference scan for distortion correction (DC1_SBRef):** Conducted when subjects are at rest.
+3. **Distortion correction scans (DC1):** Performed when subjects are at rest.
+4. **Single-band reference scan for functional scans (DurR1_SBRef):** Administered at the start of the experiment.
+5. **Functional scans (DurR1)**
+6. **Single-band reference scan for functional scans (DurR2_SBRef):** Done while the subjects are at rest and waiting for the next run to start.
+7. **Functional scans (DurR2)**
+8. **Single-band reference scan for functional scans (DurR3_SBRef)**
+9. **Functional scans (DurR3)**
+10. **Single-band reference scan for functional scans (DurR4_SBRef)**
+11. **Functional scans (DurR4)**
+12. **Single-band reference scan for distortion correction (DC2_SBRef):** Conducted when subjects are at rest.
+13. **Distortion correction scans (DC2):** Done when subjects are at rest.
+14. **Single-band reference scan for functional scans (DurR5_SBRef):** Performed during the experiment.
+15. **Functional scans (DurR5)**
+16. **Single-band reference scan for functional scans (DurR6_SBRef):** Conducted during the experiment.
+17. **Functional scans (DurR6)**
+18. **Single-band reference scan for functional scans (DurR7_SBRef)**
+19. **Functional scans (DurR7)**
+20. **Single-band reference scan for functional scans (DurR8_SBRef)**
+21. **Functional scans (DurR8)**
+22. **Single-band reference scan for distortion correction (DC3_SBRef):** Conducted when subjects are at rest.
+23. **Distortion correction scans (DC3):** Performed when subjects are at rest.
 
 For a comprehensive understanding of the fMRI session protocol, please refer to the <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/fMRI%20SOP_v1.0.pdf" target="_blank">fMRI Standard Operating Procedure</a> document.
 
 #### Inclusion Criteria
 
-For the iEEG studies, subjects were 10-65 years old, able to provide informed consent, had IQ > 70, fluent in English, with self-reported normal hearing, normal or corrected-to-normal vision, and cognitive and language abilities within or above the normal range in formal neuropsychological testing performed before surgery. They must not have had an electrographic seizure within 3-hours prior to testing.
+Inclusion criteria were defined to ensure participant suitability for fMRI scanning and data analysis. Criteria included age range from 18 to 35 years due to potential challenges in maintaining central focus beyond this age. Participants were required to be right-handed, have no hearing impairments or use of hearing aids, possess corrected-to-normal vision with soft lenses or no vision problems, and demonstrate good English comprehension. Additionally, participants were required to be MRI-compatible with no metal or medical implants, no history of claustrophobia, and no braces. Exclusion criteria encompassed a lack of psychiatric or neurological disorders, including no formal diagnosis of attention deficit (hyperactivity) disorder (AD(H)D), autism spectrum disorder (ASD), epilepsy, brain surgery, or severe cerebral concussion.
 
-#### Quality Check
+#### Quality Check and Exclusion Criteria
 
-A comprehensive quality assessment was conducted on the iEEG data. The data underwent manual annotation by epileptologists, excluding channels within the epileptic onset zone, as well as those exhibiting artifacts or showing complete flatness due to electrode contact issues. Channel rejection was independently performed by both the data monitoring and iEEG teams, with results compared to ensure consistency. Additionally, electrode reconstruction was verified to align with subjects' CT scans. Finally, we inspected for significant disturbances in the spectra.
-
-#### Exclusion Criteria
-
-Subjects who were unable to complete a sufficient number of trials due to excessive muscular artifacts, movement, noisy recordings, or a decision by the subject to terminate the experiment were excluded. In addition, data was also excluded if it did not pass any of the pre-defined data quality checks.
+For fMRI, we combined visual inspection of structural and functional images with automatic criteria for motion-related artifacts. Third level checks of data quality were done using both MRIQC (Esteban et al., 2017) and fMRIprep (Esteban et al., 2020), separately for phase 2 and phase 3 datasets. The output from MRIQC and fMRIprep was visually inspected. Datasets with clear artifacts and other indicators of low data quality (incorrect reconstructions, and substantial signal dropout or distortion) were marked by a trained observer, and if the detected problems were judged severe enough to warrant potential exclusion, data were additionally inspected together by the data monitoring team and collaborators at DCCN and Yale. In practice, we rejected subjects where a significant part of the cortex, roughly > 5%, was not covered by the brain mask (tissue was not segmented). Next, datasets were checked for extensive motion, using MRIQC image quality metrics. Specifically, the percentage of fMRI volumes that exceeded a threshold of 0.2 mm framewise displacement (FD) and DVARS (Power et al., 2014) measure were calculated per run and averaged per session. Finally, each MRI session whose percentage framewise displacement or DVARS deviated by more than 2 standard deviations above the group mean was marked for rejection.
 
 #### Deviations and Missing Data
 
 <span style="background-color: red"><b>Attention 1:</b></span>
-**The iEEG data for the seven subjects listed below do not have the correct sampling rate in the original EDF files. The correct sampling rate for these subjects is 2048 Hz. The raw data has not been updated with the correct sampling rate to avoid alignment issues when constructing the events. However, the same measurements in the BIDS release, provided in the <a href="https://www.brainproducts.com/support-resources/brainvision-core-data-format-1-0/" target="_blank">BrainVision</a> format, have the correct sampling rate as expected.**
+**For the subjects listed below, some scans are missing. The subject IDs and the names of the missing scans are as follows:**
 
-**Subject_ID:** CE106, CE107, CE108, CE112, CE115, CE118, CE120
+<table style="width: 100%; margin: 0 auto; text-align: center; border-collapse: collapse;">
+  <tr style="background-color: #d3d3d3; color: #000000;">
+    <th style="width: 25%; padding: 10px;">Subject_ID</th>
+    <th style="width: 25%; padding: 10px;">Missing Scan</th>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CD101</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">All SBRef scans are missing</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CD103</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">All SBRef scans are missing</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CD134</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DC3 and DC3 SBRef scans are missing</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CD140</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DC3 and DC3 SBRef scans are missing</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">CD142</td>
+    <td style="background-color: #ffffff; padding: 10px; color: #000000;">DC3 and DC3 SBRef scans are missing</td>
+  </tr>
+</table>
 
 <span style="background-color: red"><b>Attention 2:</b></span>
-**Subject “CG102” is missing the first “Run” and contains only DurR2, DurR3, DurR4, DurR5.**
-
-<span style="background-color: red"><b>Attention 3:</b></span>
-**The following subjects are missing “Exit Questionnaires”:**
-
-**Subject_ID:** CF103, CF105, CF106, CF110, CF112, CF113, CF116, CF117, CF119, CF120, CF121, CF122, CF124, CF125, CF126
-
-<span style="background-color: red"><b>Please note:</b></span>
-**MR and CT data were collected for the subjects at Brigham and Women’s Hospital and Children’s Hospital Boston. However, due to the data protection policies, they are not included in the COGITATE Data Release.**
+**The “Exit Questionnaire” is not available for CD179.**
