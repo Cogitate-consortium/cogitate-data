@@ -51,7 +51,7 @@
         <td rowspan="3" style="background-color: white; text-align: center; vertical-align: middle;">38</td>
         <td rowspan="3" style="background-color: white;">
             <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/cogitate-wiring-diagrams_ECOG_2024-04-26_v1.1.pdf" target="_blank">iEEG Wiring Diagram</a><br>
-            <a href="https://github.com/Cogitate-consortium/cogitate-experiment-code/tree/ECOG-Exp1-Latest" target="_blank">iEEG Experiment 1 Code</a><br>
+            <a href="https://github.com/Cogitate-consortium/cogitate-experiment-code/tree/ECOG-Exp1" target="_blank">iEEG Experiment 1 Code</a><br>
             <a href="https://github.com/Cogitate-consortium/cogitate-data/blob/main/assets/documentation/linked_files/SOP%20iEEG%20General_v2.pdf" target="_blank">iEEG SOP</a>
         </td>
     </tr>
