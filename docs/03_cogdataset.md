@@ -695,6 +695,11 @@ Subjects who were unable to complete a sufficient number of trials due to excess
   </tr>
 </table>
 
+<span style="background-color: red"><b>Attention 6:</b></span>
+**The following subjects are missing “BEHFingerLoc” data:**
+
+**Subject_ID:** CE107, CE110, CE118, CE119, CE120, CE121, CG101, CG102, CG103, CG104, CG105, CG106
+
 <span style="background-color: red"><b>Please note:</b></span>
 **MR and CT data were collected for the subjects at Brigham and Women’s Hospital and Children’s Hospital Boston. However, due to the data protection policies, they are not included in the COGITATE Data Release.**
 
